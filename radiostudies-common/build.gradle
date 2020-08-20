@@ -1,0 +1,16 @@
+apply from: "$rootDir/android-module-base.gradle"
+
+android {
+    sourceSets {
+        test {
+            resources.srcDirs += ['src/test/res']
+        }
+        androidTest {
+            resources.srcDirs += ['src/androidTest/res']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+}

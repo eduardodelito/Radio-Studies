@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="loginViewModel"
+            type="com.radiostudies.main.ui.viewmodel.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_bg"
+        android:padding="@dimen/padding16">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/radio_studies_label"
+            style="@style/AvenirHeavy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin50"
+            android:text="@string/radio_studies"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText_username"
+            style="@style/AvenirMedium.Black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin50"
+            android:ems="10"
+            android:hint="@string/user_name"
+            android:inputType="textEmailAddress"
+            android:onTextChanged="@{(text, start, before, count) -> loginViewModel.onUsernameTextChanged(text)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_studies_label" />
+
+        <EditText
+            android:id="@+id/editText_password"
+            style="@style/AvenirMedium.Black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin20"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:onTextChanged="@{(text, start, before, count) -> loginViewModel.onPasswordTextChanged(text)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_username" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_error_message"
+            style="@style/AvenirMedium.Red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding16"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginEnd="@dimen/padding16"
+            android:gravity="center_horizontal|center_vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_password" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_button"
+            style="@style/AvenirMedium"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height50"
+            android:layout_marginTop="@dimen/margin100"
+            android:background="@color/disabledColorPrimary"
+            android:enabled="false"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_password" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

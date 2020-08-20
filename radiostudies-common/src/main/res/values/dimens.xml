@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Margin-->
+    <dimen name="margin20">20dp</dimen>
+    <dimen name="margin50">50dp</dimen>
+    <dimen name="margin100">100dp</dimen>
+
+    <!--Padding-->
+    <dimen name="padding16">16dp</dimen>
+
+    <!--Height-->
+    <dimen name="height50">50dp</dimen>
+
+    <!--Font Size-->
+    <dimen name="font16">16sp</dimen>
+    <dimen name="font18">18sp</dimen>
+    <dimen name="font30">30sp</dimen>
+</resources>

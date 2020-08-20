@@ -1,0 +1,29 @@
+import dependencies.*
+
+apply plugin: 'com.android.application'
+apply from: '../core-dependencies.gradle'
+
+android {
+    defaultConfig {
+        applicationId Application.applicationId
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        dataBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(':radiostudies-ui')
+    implementation project(':radiostudies-common')
+    // enable for the debug only to test database in the app
+//    debugImplementation 'im.dino:dbinspector:4.0.0@aar'
+}

@@ -1,0 +1,71 @@
+import dependencies.*
+
+apply from: "../ktlint.gradle"
+/**
+ * Gradle file that is shared to all libraries and the app
+ */
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+ext {
+    appCompatVersion = Versions.appcompat
+}
+
+android {
+    compileSdkVersion Versions.compileSdkVersion
+    buildToolsVersion Versions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion Versions.minSdkVersion
+        targetSdkVersion Versions.targetSdkVersion
+        versionCode Versions.versionCode
+        versionName Versions.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    implementation Libs.Android.kotlin_stdlib
+    implementation Libs.Android.core_ktx
+    implementation Libs.Android.appcompat
+    implementation Libs.Android.constraint_layout
+    implementation Libs.Android.navigation_ui_ktx
+    implementation Libs.Android.navigation_fragment_ktx
+    implementation Libs.Android.materialDesign
+    implementation Libs.Android.legacySupport
+
+//    implementation Libs.Android.lifecycleCommon
+//    implementation Libs.Android.lifecycleRuntime
+    implementation Libs.Android.lifecycleExtensions
+//    implementation Libs.Android.lifecycleLivedataKtx
+    implementation Libs.Android.lifecycle_viewmodel_ktx
+//
+    implementation Libs.Google.core
+    implementation Libs.Google.android
+    implementation Libs.Google.androidSupport
+
+    kapt Libs.Google.processor
+    kapt Libs.Google.compiler
+//
+//    implementation Libs.Google.playServicesMaps
+//
+//    implementation Libs.Database.roomRuntime
+//    kapt Libs.Database.roomCompiler
+//
+//    implementation Libs.Database.roomKtx
+//    implementation Libs.Database.roomRxJava
+//    implementation Libs.Database.roomGuava
+//
+//    implementation Libs.Retrofit.retrofit
+//    implementation Libs.Retrofit.retrofitGSONConverter
+//    implementation Libs.Retrofit.loggingInterceptor
+//
+//    testImplementation Libs.Test.junit
+//    androidTestImplementation Libs.Test.ext_junit
+//    androidTestImplementation Libs.Test.espresso_core
+}

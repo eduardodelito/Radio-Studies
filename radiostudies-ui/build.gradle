@@ -1,0 +1,21 @@
+apply from: "$rootDir/android-module-base.gradle"
+apply plugin: 'kotlin-android'
+
+android {
+    sourceSets {
+        test {
+            resources.srcDirs += ['src/test/res']
+        }
+        androidTest {
+            resources.srcDirs += ['src/androidTest/res']
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(':radiostudies-common')
+}
