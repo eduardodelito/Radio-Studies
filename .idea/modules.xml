@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Radio_Studies.iml" filepath="$PROJECT_DIR$/.idea/modules/Radio_Studies.iml" group="Radio_Studies" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Radio_Studies_buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/Radio_Studies_buildSrc.iml" group="Radio Studies/Radio_Studies_buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="Radio Studies/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/radiostudies-common/radiostudies-common.iml" filepath="$PROJECT_DIR$/.idea/modules/radiostudies-common/radiostudies-common.iml" group="Radio Studies/radiostudies-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/radiostudies-ui/radiostudies-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/radiostudies-ui/radiostudies-ui.iml" group="Radio Studies/radiostudies-ui" />
+    </modules>
+  </component>
+</project>
