@@ -3,7 +3,6 @@ package com.radiostudies.main.db.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
 
 /**
  * Created by eduardo.delito on 8/22/20.
@@ -21,5 +20,5 @@ data class UserEntity(
     @ColumnInfo(name = "userType") var userType: String,
     @ColumnInfo(name = "status") var status: Boolean,
     @ColumnInfo(name = "area") var area: String,
-    @ColumnInfo(name = "createDate") var createDate: Date
+    @ColumnInfo(name = "createDate") var createDate: String
 )

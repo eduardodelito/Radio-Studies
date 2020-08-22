@@ -3,6 +3,8 @@ package com.radiostudies.main.ui.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.radiostudies.main.common.viewmodel.BaseViewModel
+import com.radiostudies.main.db.entity.UserEntity
+import com.radiostudies.main.db.manager.DBManager
 import com.radiostudies.main.ui.fragment.R
 import com.radiostudies.main.ui.model.ErrorModel
 import com.radiostudies.main.ui.model.LoginSuccessModel
@@ -12,9 +14,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.*
+import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
-class LoginViewModel : BaseViewModel(), CoroutineScope {
+class LoginViewModel @Inject constructor(var dbManager: DBManager) : BaseViewModel(),
+    CoroutineScope {
 
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
@@ -23,6 +28,39 @@ class LoginViewModel : BaseViewModel(), CoroutineScope {
     internal fun getLoginLiveData(): LiveData<LoginViewState> = login
     private var userName: String = EMPTY_STRING
     private var password: String = EMPTY_STRING
+
+    fun insertUser() {
+        // Load default user
+        var users = mutableListOf<UserEntity>()
+        users.add(
+            UserEntity(
+                0,
+                "Eduardo",
+                "Delito",
+                "edelito",
+                "123456",
+                "1234",
+                "subCon",
+                "userType",
+                false,
+                "cavite",
+                Calendar.getInstance().time.toString()
+            )
+        )
+        launch {
+            insertUserToDB(users)
+        }
+    }
+
+    private suspend fun insertUserToDB(users: List<UserEntity>) {
+        withContext(Dispatchers.IO) {
+            try {
+                dbManager.insertUsers(users)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
 
     /**
      * Textwatcher method for username.
@@ -74,8 +112,7 @@ class LoginViewModel : BaseViewModel(), CoroutineScope {
     private suspend fun login(userName: String, password: String) {
         withContext(Dispatchers.IO) {
             try {
-//                if (accountRepository.isUsernamePasswordValid(userName, password)) {
-                if (!userName.isNullOrEmpty() && !password.isNullOrEmpty()) {
+                if (dbManager.isUsernamePasswordValid(userName, password)) {
                     login.postValue(LoginSuccessModel(true))
                 } else {
                     login.postValue(ErrorModel(R.string.invalid))

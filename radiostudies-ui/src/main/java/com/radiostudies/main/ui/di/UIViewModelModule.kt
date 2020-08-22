@@ -2,6 +2,7 @@ package com.radiostudies.main.ui.di
 
 import androidx.lifecycle.ViewModel
 import com.radiostudies.main.common.viewmodel.ViewModelKey
+import com.radiostudies.main.db.manager.DBManager
 import com.radiostudies.main.ui.viewmodel.LoginViewModel
 import com.radiostudies.main.ui.viewmodel.MainViewModel
 import dagger.Module
@@ -16,8 +17,8 @@ class UIViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(LoginViewModel::class)
-    fun provideLoginViewModel(): ViewModel =
-        LoginViewModel()
+    fun provideLoginViewModel(dbManager: DBManager): ViewModel =
+        LoginViewModel(dbManager)
 
     @Provides
     @IntoMap

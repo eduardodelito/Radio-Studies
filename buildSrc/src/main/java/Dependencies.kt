@@ -51,9 +51,7 @@ object Libs {
         const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
         const val lifecycle_viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
 
-
         // Navigation
-
         const val navigationPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
         const val navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
         const val navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"

@@ -39,6 +39,7 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
     override fun subscribeUi() {
         with(viewModel) {
             reObserve(getLoginLiveData(), ::onLoginStateChanged)
+            insertUser()
         }
     }
 
