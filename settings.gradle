@@ -1,2 +1,3 @@
+include ':radiostudies-db'
 include ':app', ':radiostudies-ui', ':radiostudies-common'
 rootProject.name = "Radio Studies"

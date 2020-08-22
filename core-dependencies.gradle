@@ -45,26 +45,26 @@ dependencies {
 //    implementation Libs.Android.lifecycleLivedataKtx
     implementation Libs.Android.lifecycle_viewmodel_ktx
 //
-    implementation Libs.Google.core
-    implementation Libs.Google.android
-    implementation Libs.Google.androidSupport
+    implementation Libs.Dagger.core
+    implementation Libs.Dagger.android
+    implementation Libs.Dagger.androidSupport
 
-    kapt Libs.Google.processor
-    kapt Libs.Google.compiler
-//
+    kapt Libs.Dagger.processor
+    kapt Libs.Dagger.compiler
+
 //    implementation Libs.Google.playServicesMaps
-//
-//    implementation Libs.Database.roomRuntime
-//    kapt Libs.Database.roomCompiler
-//
-//    implementation Libs.Database.roomKtx
-//    implementation Libs.Database.roomRxJava
-//    implementation Libs.Database.roomGuava
-//
+
+    implementation Libs.Room.roomRuntime
+    kapt Libs.Room.roomCompiler
+
+    implementation Libs.Room.roomKtx
+    implementation Libs.Room.roomRxJava
+    implementation Libs.Room.roomGuava
+
 //    implementation Libs.Retrofit.retrofit
 //    implementation Libs.Retrofit.retrofitGSONConverter
 //    implementation Libs.Retrofit.loggingInterceptor
-//
+
 //    testImplementation Libs.Test.junit
 //    androidTestImplementation Libs.Test.ext_junit
 //    androidTestImplementation Libs.Test.espresso_core

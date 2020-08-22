@@ -25,6 +25,7 @@ object Versions {
     const val material = "1.2.0-alpha03"
     const val legacy_support = "1.0.0"
     const val lifecycle = "2.2.0"
+    const val room = "2.2.3"
 
     //Google
     const val dagger = "2.25.3"
@@ -60,12 +61,21 @@ object Libs {
         const val materialDesign = "com.google.android.material:material:${Versions.material}"
     }
 
-    private object Google {
+    private object Dagger {
         const val core = "com.google.dagger:dagger:${Versions.dagger}"
         const val android = "com.google.dagger:dagger-android:${Versions.dagger}"
         const val androidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
         const val processor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
         const val compiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    }
+
+    private object Room {
+        const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
+        const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+        const val roomKtx = "androidx.room:room-ktx:${Versions.room}"
+        const val roomRxJava = "androidx.room:room-rxjava2:${Versions.room}"
+        const val roomGuava = "androidx.room:room-guava:${Versions.room}"
+        const val roomTesting = "androidx.room:room-testing:${Versions.room}"
     }
 
     private object Test {

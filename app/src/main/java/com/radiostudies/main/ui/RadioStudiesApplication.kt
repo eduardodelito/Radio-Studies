@@ -1,5 +1,6 @@
 package com.radiostudies.main.ui
 
+import com.radiostudies.main.di.DBModule
 import com.radiostudies.main.ui.di.component.DaggerRadioStudiesComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
@@ -13,6 +14,7 @@ class RadioStudiesApplication : DaggerApplication() {
         return DaggerRadioStudiesComponent
             .builder()
             .application(this)
+            .database(DBModule(this))
             .build()
     }
 }
