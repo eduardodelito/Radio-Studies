@@ -1,12 +1,8 @@
 package com.radiostudies.main.ui.di
 
 import androidx.lifecycle.ViewModelProvider
-import com.radiostudies.main.ui.fragment.InitialQuestionsFragment
-import com.radiostudies.main.ui.fragment.LoginFragment
-import com.radiostudies.main.ui.fragment.MainInfoFragment
-import com.radiostudies.main.ui.viewmodel.InitialQuestionsViewModel
-import com.radiostudies.main.ui.viewmodel.LoginViewModel
-import com.radiostudies.main.ui.viewmodel.MainInfoViewModel
+import com.radiostudies.main.ui.fragment.*
+import com.radiostudies.main.ui.viewmodel.*
 import dagger.Module
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector
@@ -50,5 +46,29 @@ abstract class UIBindingModule {
             factory: ViewModelProvider.Factory,
             target: MainInfoFragment
         ) = ViewModelProvider(target, factory).get(MainInfoViewModel::class.java)
+    }
+
+    @ContributesAndroidInjector(modules = [InjectActualQuestionsViewModelModule::class])
+    abstract fun bindActualQuestionsFragment(): ActualQuestionsFragment
+
+    @Module
+    class InjectActualQuestionsViewModelModule {
+        @Provides
+        internal fun provideActualQuestionsViewModel(
+            factory: ViewModelProvider.Factory,
+            target: ActualQuestionsFragment
+        ) = ViewModelProvider(target, factory).get(ActualQuestionsViewModel::class.java)
+    }
+
+    @ContributesAndroidInjector(modules = [InjectActualQuestionsPage2ViewModelModule::class])
+    abstract fun bindActualQuestionsPage2Fragment(): ActualQuestionsPage2Fragment
+
+    @Module
+    class InjectActualQuestionsPage2ViewModelModule {
+        @Provides
+        internal fun provideActualQuestionsPage2ViewModel(
+            factory: ViewModelProvider.Factory,
+            target: ActualQuestionsPage2Fragment
+        ) = ViewModelProvider(target, factory).get(ActualQuestionsPage2ViewModel::class.java)
     }
 }
