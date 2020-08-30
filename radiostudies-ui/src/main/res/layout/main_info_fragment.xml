@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="mainViewModel"
-            type="com.radiostudies.main.ui.viewmodel.MainViewModel" />
+            name="mainInfoViewModel"
+            type="com.radiostudies.main.ui.viewmodel.MainInfoViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Initial Screen-->
+    <string name="initial_question1">Q1 : Are you willing to participate in the study?</string>
+    <string name="initial_question2">Q2 : Are you or any of your immediately family members / relatives / close friends currently working for the following types of companies?</string>
+    <string name="initial_question3">Q3 : Have you or any of your immediately family members / relatives / close friends worked in the following types of companies for the past 6 months?</string>
+    <string name="initial_question4">Q4 : Have you or any immediate member of your family participated in any form of TV or Radio Survey in your barangay within the last six (6) months?</string>
+    <string name="initial_question5">Q5 : Have you or any immediate member of your family participated in any promos in your barangay in the past six (6) months?</string>
+
+    <string name="agree_label">AGREE</string>
+    <string name="disagree_label">DISAGREE</string>
+
+    <string name="yes_label">Yes</string>
+    <string name="no_label">No</string>
+
+    <string name="option1">Research Company</string>
+    <string name="option2">TV Station</string>
+    <string name="option3">Cable TV Station</string>
+    <string name="option4">Radio Station</string>
+    <string name="option5">Newspaper &amp; Magazine</string>
+    <string name="option6">Advertising Agencies</string>
+    <string name="option7">Associations or Groups of People voluntarily serving media companies (TV/Radio/Newspaper/Magazines</string>
+    <string name="option8">NONE OF THE ABOVE</string>
+
+</resources>

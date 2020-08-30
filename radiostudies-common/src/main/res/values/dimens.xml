@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Margin-->
+    <dimen name="margin10">10dp</dimen>
     <dimen name="margin20">20dp</dimen>
     <dimen name="margin50">50dp</dimen>
     <dimen name="margin100">100dp</dimen>
@@ -14,5 +15,6 @@
     <!--Font Size-->
     <dimen name="font16">16sp</dimen>
     <dimen name="font18">18sp</dimen>
+    <dimen name="font20">20sp</dimen>
     <dimen name="font30">30sp</dimen>
 </resources>

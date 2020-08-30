@@ -9,20 +9,39 @@
         android:name="com.radiostudies.main.ui.fragment.LoginFragment"
         android:label="LoginFragment" >
         <action
-            android:id="@+id/action_loginFragment_to_mainFragment"
-            app:destination="@id/mainFragment"
+            android:id="@+id/action_loginFragment_to_initialQuestionsFragment"
+            app:destination="@id/initialQuestionsFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.radiostudies.main.ui.fragment.MainFragment"
-        android:label="MainFragment" >
+        android:id="@+id/initialQuestionsFragment"
+        android:name="com.radiostudies.main.ui.fragment.InitialQuestionsFragment"
+        android:label="InitialQuestionsFragment" >
         <action
-            android:id="@+id/action_mainFragment_to_loginFragment"
+            android:id="@+id/action_initialQuestionsFragment_to_loginFragment"
             app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_initialQuestionsFragment_to_mainInfoFragment"
+            app:destination="@id/mainInfoFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainInfoFragment"
+        android:name="com.radiostudies.main.ui.fragment.MainInfoFragment"
+        android:label="MainInfoFragment" >
+        <action
+            android:id="@+id/action_mainInfoFragment_to_initialQuestionsFragment"
+            app:destination="@id/initialQuestionsFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"

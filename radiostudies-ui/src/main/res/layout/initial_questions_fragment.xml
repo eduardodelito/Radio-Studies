@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="initialViewModel"
+            type="com.radiostudies.main.ui.viewmodel.InitialQuestionsViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding16">
+
+                <RadioGroup
+                    android:id="@+id/radio_group1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/initialQuestion1"
+                        style="@style/AvenirHeavy.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/initial_question1" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/agree_radio_btn"
+                        style="@style/AvenirMedium.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/agree_label" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/disagree_radio_btn"
+                        style="@style/AvenirMedium.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disagree_label" />
+                </RadioGroup>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/initialQuestion2"
+                    style="@style/AvenirHeavy.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/initial_question2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radio_group1" />
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/option1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/initialQuestion2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+                <CheckBox
+                    android:id="@+id/checkBox7"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox8"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/initialQuestion3"
+                    style="@style/AvenirHeavy.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/initial_question3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+
+                <CheckBox
+                    android:id="@+id/checkBox9"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/option1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/initialQuestion3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox10"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
+
+                <CheckBox
+                    android:id="@+id/checkBox11"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+
+                <CheckBox
+                    android:id="@+id/checkBox12"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
+
+                <CheckBox
+                    android:id="@+id/checkBox13"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox12" />
+
+                <CheckBox
+                    android:id="@+id/checkBox14"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox13" />
+
+                <CheckBox
+                    android:id="@+id/checkBox15"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox14" />
+
+                <CheckBox
+                    android:id="@+id/checkBox16"
+                    style="@style/AvenirMedium.Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox15" />
+
+                <RadioGroup
+                    android:id="@+id/radio_group2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox16">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/initialQuestion4"
+                        style="@style/AvenirHeavy.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/initial_question4" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/yes_q4_radio_btn"
+                        style="@style/AvenirMedium.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/yes_label" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/no_q4_radio_btn"
+                        style="@style/AvenirMedium.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_label" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radio_group3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radio_group2">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/initialQuestion5"
+                        style="@style/AvenirHeavy.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/initial_question5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/initialQuestion4" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/yes_q5_radio_btn"
+                        style="@style/AvenirMedium.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/yes_label" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/no_q5_radio_btn"
+                        style="@style/AvenirMedium.Black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_label" />
+                </RadioGroup>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/continue_button"
+                    style="@style/AvenirMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height50"
+                    android:layout_marginTop="@dimen/margin50"
+                    android:background="@drawable/btn_selector_shape"
+                    android:enabled="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:onClick="onClick"
+                    android:text="@string/continue_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radio_group3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
