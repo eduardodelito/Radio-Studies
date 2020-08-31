@@ -67,7 +67,7 @@
                     android:id="@+id/actual_q2_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q1_cardView">
 
@@ -106,7 +106,6 @@
                     android:id="@+id/actual_q2a_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q2_cardView">
 
@@ -146,7 +145,7 @@
                     android:id="@+id/actual_q3_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q2a_cardView">
 
@@ -186,7 +185,7 @@
                     android:id="@+id/actual_q4_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q3_cardView">
 
@@ -226,7 +225,7 @@
                     android:id="@+id/actual_q5a_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q4_cardView">
 
@@ -266,7 +265,6 @@
                     android:id="@+id/actual_q5b_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5a_cardView">
 
@@ -306,7 +304,6 @@
                     android:id="@+id/actual_q5b1_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b_cardView">
 
@@ -408,7 +405,6 @@
                     android:id="@+id/actual_q5b2_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b1_cardView">
 
@@ -510,7 +506,6 @@
                     android:id="@+id/actual_q5b3_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b2_cardView">
 
@@ -612,7 +607,6 @@
                     android:id="@+id/actual_q5b4_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b3_cardView">
 
@@ -714,7 +708,6 @@
                     android:id="@+id/actual_q5b5_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b4_cardView">
 
@@ -816,7 +809,6 @@
                     android:id="@+id/actual_q5b6_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b5_cardView">
 
@@ -918,7 +910,6 @@
                     android:id="@+id/actual_q5b7_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b6_cardView">
 
@@ -1020,7 +1011,6 @@
                     android:id="@+id/actual_q5b8_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b7_cardView">
 
@@ -1122,7 +1112,6 @@
                     android:id="@+id/actual_q5b9_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b8_cardView">
 
@@ -1224,7 +1213,6 @@
                     android:id="@+id/actual_q5b10_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b9_cardView">
 
@@ -1326,7 +1314,6 @@
                     android:id="@+id/actual_q5b11_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/actual_q5b10_cardView">
 

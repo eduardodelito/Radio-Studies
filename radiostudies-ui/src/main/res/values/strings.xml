@@ -42,81 +42,82 @@
     <string name="female">FEMALE</string>
 
     <!--Actual Questions-->
-    <string name="actual_q1_label">Area</string>
+    <string name="actual_q1_label">Q1: Area</string>
 
-    <string name="actual_q2_label">Do you own the house or are you renting?</string>
-    <string name="actual_q2a_label">How much is your monthly rent for this house?</string>
+    <string name="actual_q2_label">Q2: Do you own the house or are you renting?</string>
+    <string name="actual_q2a_label">Q2a: How much is your monthly rent for this house?</string>
 
-    <string name="actual_q3_label">What is the first/primary language of the home?</string>
-    <string name="actual_q4_label">What is the primary religion of the home? </string>
+    <string name="actual_q3_label">Q3: What is the first/primary language of the home?</string>
+    <string name="actual_q4_label">Q4: What is the primary religion of the home? </string>
 
-    <string name="actual_q5a_label">What type of radio device do you have in your home?</string>
-    <string name="actual_q5b_label">Does it have AM or FM radio broadcast?</string>
-    <string name="actual_q5b1_label">Radio Cassette Recorder</string>
-    <string name="actual_q5b2_label">Stereo Component</string>
-    <string name="actual_q5b3_label">Karaoke</string>
-    <string name="actual_q5b4_label">DVD/CD Players</string>
-    <string name="actual_q5b5_label">Car Radio</string>
-    <string name="actual_q5b6_label">Transistor Radio</string>
-    <string name="actual_q5b7_label">Cellphone</string>
-    <string name="actual_q5b8_label">MP3</string>
-    <string name="actual_q5b9_label">iPod/iPad</string>
-    <string name="actual_q5b10_label">Internet Streaming (PC/ Laptop)</string>
-    <string name="actual_q5b11_label">Others</string>
+    <string name="actual_q5a_label">Q5a: What type of radio device do you have in your home?</string>
+    <string name="actual_q5b_label">Q5b: Does it have AM or FM radio broadcast?</string>
+    <string name="actual_q5b1_label">Q5b1: Radio Cassette Recorder</string>
+    <string name="actual_q5b2_label">Q5b2: Stereo Component</string>
+    <string name="actual_q5b3_label">Q5b3: Karaoke</string>
+    <string name="actual_q5b4_label">Q5b4: DVD/CD Players</string>
+    <string name="actual_q5b5_label">Q5b5: Car Radio</string>
+    <string name="actual_q5b6_label">Q5b6: Transistor Radio</string>
+    <string name="actual_q5b7_label">Q5b7: Cellphone</string>
+    <string name="actual_q5b8_label">Q5b8: MP3</string>
+    <string name="actual_q5b9_label">Q5b9: iPod/iPad</string>
+    <string name="actual_q5b10_label">Q5b10: Internet Streaming (PC/ Laptop)</string>
+    <string name="actual_q5b11_label">Q5b11: Others</string>
 
-    <string name="actual_q6_label">Number of Radio Sets Owned in the Household (including Car radio, portable radio, cellular phones with radio, etc.)</string>
-    <string name="actual_q7_label">How many people live in this household permanently? Please include yourself, your relatives, boarders and maids.</string>
+    <string name="actual_q6_label">Q6: Number of Radio Sets Owned in the Household (including Car radio, portable radio, cellular phones with radio, etc.)</string>
+    <string name="actual_q7_label">Q7: How many people live in this household permanently? Please include yourself, your relatives, boarders and maids. \nPlease include yourself, your relatives, boarders and maids.</string>
 
-    <string name="actual_q8_label">Names of all members of your household from the eldest to the youngest (Name)</string>
-    <string name="actual_q8a_label">Member Number</string>
+    <string name="actual_q8_label">Q8: Names of all members of your household from the eldest to the youngest (Name)</string>
+    <string name="actual_q8a_label">Q8a: Member Number</string>
+    <string name="actual_q8_header_label">FOR EACH MEMBER OF THE FAMILY LISTED ON Q8</string>
 
-    <string name="actual_q9_label">Age Group</string>
-    <string name="actual_q10_label">Sex/Gender</string>
-    <string name="actual_q11_label">Role in Household</string>
-    <string name="actual_q12_label">Civil Status</string>
-    <string name="actual_q13_label">Highest educational attainment</string>
+    <string name="actual_q9_label">Q9: Age Group</string>
+    <string name="actual_q10_label">Q10: Sex/Gender</string>
+    <string name="actual_q11_label">Q11: Role in Household</string>
+    <string name="actual_q12_label">Q12: Civil Status</string>
+    <string name="actual_q13_label">Q13: Highest educational attainment</string>
 
-    <string name="actual_q14_label">Does (NAME) have children?</string>
-    <string name="actual_q14a_label">Mother or Not</string>
-    <string name="actual_q14b_label">Father or Not</string>
-    <string name="actual_q14c_label">Mother with Children 0-2</string>
-    <string name="actual_q14d_label">Mother with Children 3-6</string>
-    <string name="actual_q14e_label">Mother with Children 7-12</string>
+    <string name="actual_q14_label">Q14: Does (NAME) have children?</string>
+    <string name="actual_q14a_label">Q14a: Mother or Not</string>
+    <string name="actual_q14b_label">Q14b: Father or Not</string>
+    <string name="actual_q14c_label">Q14c: Mother with Children 0-2</string>
+    <string name="actual_q14d_label">Q14d: Mother with Children 3-6</string>
+    <string name="actual_q14e_label">Q14e: Mother with Children 7-12</string>
 
-    <string name="actual_q15_label">Occupation</string>
-    <string name="actual_q15a_label">Employer</string>
+    <string name="actual_q15_label">Q15: Occupation</string>
+    <string name="actual_q15a_label">Q15a: Employer</string>
 
-    <string name="actual_q16_label">Recency of Radio Listenership</string>
-    <string name="actual_q17_label">Frequency of AM Listening/Exposure</string>
-    <string name="actual_q18_label">Frequency of FM Listening/Exposure</string>
+    <string name="actual_q16_label">Q16: Recency of Radio Listenership</string>
+    <string name="actual_q17_label">Q17: Frequency of AM Listening/Exposure</string>
+    <string name="actual_q18_label">Q18: Frequency of FM Listening/Exposure</string>
 
-    <string name="actual_q19a_label">Times of Day Listening to AM Station/s</string>
-    <string name="actual_q19b_label">Times of Day Listening to FM Station/s</string>
+    <string name="actual_q19a_label">Q19a: Times of Day Listening to AM Station/s</string>
+    <string name="actual_q19b_label">Q19b: Times of Day Listening to FM Station/s</string>
 
-    <string name="actual_q20_label">AM Radio Stations Listened To</string>
-    <string name="actual_q20a_label">What AM stations do you usually listen to?</string>
-    <string name="actual_q20b_label">How many hours in a day do you usually listen to these AM stations?</string>
+    <string name="actual_q20_label">Q20: AM Radio Stations Listened To</string>
+    <string name="actual_q20a_label">Q20a: What AM stations do you usually listen to?</string>
+    <string name="actual_q20b_label">Q20b: How many hours in a day do you usually listen to these AM stations?</string>
 
     <string name="actual_q21_label">FM Radio Stations Listened To</string>
-    <string name="actual_q21a_label">What FM stations do you usually listen to?</string>
-    <string name="actual_q21b_label">How many hours in a day do you usually listen to these AM stations?</string>
+    <string name="actual_q21a_label">Q21a: What FM stations do you usually listen to?</string>
+    <string name="actual_q21b_label">Q21b: How many hours in a day do you usually listen to these AM stations?</string>
 
-    <string name="actual_q22_label">Internet Connection at Home</string>
-    <string name="actual_q23_label">Internet Connection Outside of Home</string>
-    <string name="actual_q24_label">Frequency of Internet Usage</string>
+    <string name="actual_q22_label">Q22: Internet Connection at Home</string>
+    <string name="actual_q23_label">Q23: Internet Connection Outside of Home</string>
+    <string name="actual_q24_label">Q24: Frequency of Internet Usage</string>
 
-    <string name="actual_q25_label">Devices Used to Access the Internet</string>
-    <string name="actual_q25a_label">Desktop PC</string>
-    <string name="actual_q25b_label">Laptop/Notebook/Netbook</string>
-    <string name="actual_q25c_label">Smartphone/Feature Phone/Phablet</string>
-    <string name="actual_q25d_label">Tablet</string>
-    <string name="actual_q25e_label">Game Console</string>
-    <string name="actual_q25f_label">Internet-enabled TV/Smart TV</string>
-    <string name="actual_q25g_label">Smartwatch</string>
-    <string name="actual_q25h_label">Others(Specify)</string>
+    <string name="actual_q25_label">Q25: Devices Used to Access the Internet</string>
+    <string name="actual_q25a_label">Q25a: Desktop PC</string>
+    <string name="actual_q25b_label">Q25b: Laptop/Notebook/Netbook</string>
+    <string name="actual_q25c_label">Q25c: Smartphone/Feature Phone/Phablet</string>
+    <string name="actual_q25d_label">Q25d: Tablet</string>
+    <string name="actual_q25e_label">Q25e: Game Console</string>
+    <string name="actual_q25f_label">Q25f: Internet-enabled TV/Smart TV</string>
+    <string name="actual_q25g_label">Q25g: Smartwatch</string>
+    <string name="actual_q25h_label">Q25h: Others(Specify)</string>
 
-    <string name="actual_q26_label">How much is the household monthly income?</string>
-    <string name="actual_q27_label">Which of the following do you have in your household and are operable / in working order?</string>
+    <string name="actual_q26_label">Q26: How much is the household monthly income?</string>
+    <string name="actual_q27_label">Q27: Which of the following do you have in your household and are operable / in working order?</string>
 
     <string name="radio_am">AM</string>
     <string name="radio_fm">FM</string>
