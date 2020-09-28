@@ -23,6 +23,7 @@ object Versions {
     const val constraint_layout = "1.1.3"
     const val navigation = "2.3.0"
     const val material = "1.2.0-alpha03"
+    const val gson = "2.8.6"
     const val legacy_support = "1.0.0"
     const val lifecycle = "2.2.0"
     const val room = "2.2.3"
@@ -57,6 +58,8 @@ object Libs {
         const val navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
 
         const val materialDesign = "com.google.android.material:material:${Versions.material}"
+
+        const val gson = "com.google.code.gson:gson:${Versions.gson}"
     }
 
     private object Dagger {

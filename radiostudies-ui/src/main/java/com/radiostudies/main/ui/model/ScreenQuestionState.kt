@@ -5,4 +5,4 @@ package com.radiostudies.main.ui.model
  */
 sealed class ScreenQuestionState
 class ScreenQuestionModel(val fileName: String?) : ScreenQuestionState()
-class ScreenQuestionListModel(val screenQuestion: ScreenQuestion?) : ScreenQuestionState()
+class ScreenQuestionListModel(val screenQuestion: ScreenQuestion? = null, val isNextScreen: Boolean = false) : ScreenQuestionState()

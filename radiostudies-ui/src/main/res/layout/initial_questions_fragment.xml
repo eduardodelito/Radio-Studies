@@ -63,6 +63,7 @@
             android:layout_marginStart="@dimen/margin5"
             android:background="@drawable/btn_selector_shape"
             android:text="Next"
+            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/prev_btn" />

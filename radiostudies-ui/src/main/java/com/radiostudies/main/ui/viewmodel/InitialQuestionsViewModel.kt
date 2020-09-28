@@ -13,7 +13,10 @@ class InitialQuestionsViewModel : BaseViewModel() {
     private val screenState = MediatorLiveData<ScreenQuestionState>()
     internal fun getScreenLiveData(): LiveData<ScreenQuestionState> = screenState
     private val list = mutableListOf<ScreenQuestion>()
+    private val selectedData = mutableListOf<ScreenQuestion>()
+
     private var index = -1
+
     init {
         screenState.postValue(ScreenQuestionModel(SCREEN_QUESTIONS))
     }
@@ -39,16 +42,26 @@ class InitialQuestionsViewModel : BaseViewModel() {
                     type == SINGLE_ANSWER
                 )
             )
+            selectedData.add(
+                ScreenQuestion(
+                    number,
+                    questionString,
+                    type,
+                    emptyList(),
+                    parseJSONArray(actions),
+                    type == SINGLE_ANSWER
+                )
+            )
         }
         updateNextQuestion()
     }
 
     fun updateNextQuestion() {
-        if (index < list.size) {
+        if (index < list.size - 1) {
             index++
             screenState.postValue(ScreenQuestionListModel(list[index]))
         } else {
-            index = list.size - 1
+            screenState.postValue(ScreenQuestionListModel(isNextScreen = true))
         }
     }
 
@@ -76,9 +89,22 @@ class InitialQuestionsViewModel : BaseViewModel() {
         return value
     }
 
+    fun updateSelectedData(options: List<String>) {
+        if (index < selectedData.size - 1) {
+            val screenQuestion = selectedData[index]
+            selectedData[index] = ScreenQuestion(
+                screenQuestion.number,
+                screenQuestion.type,
+                screenQuestion.question,
+                options,
+                screenQuestion.actions,
+                screenQuestion.isSingleAnswer
+            )
+        }
+    }
+
     companion object {
         private const val SCREEN_QUESTIONS = "screen_questions.json"
         private const val SINGLE_ANSWER = "Single Answer"
-        private const val MULTIPLE_ANSWER = "Multiple Answer"
     }
 }

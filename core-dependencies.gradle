@@ -37,6 +37,7 @@ dependencies {
     implementation Libs.Android.navigation_ui_ktx
     implementation Libs.Android.navigation_fragment_ktx
     implementation Libs.Android.materialDesign
+    implementation Libs.Android.gson
     implementation Libs.Android.legacySupport
 
 //    implementation Libs.Android.lifecycleCommon
