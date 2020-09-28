@@ -1,0 +1,2196 @@
+[
+  {
+    "question": "Area",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "Mega Manila",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "Dagupan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "Baguio",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "Batangas",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "Naga",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "Legazpi",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "7",
+        "value": "Tarlac",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "8",
+        "value": "Cabanatuan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "9",
+        "value": "Puerto Princesa",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": ":",
+        "value": "San Fernando",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": ";",
+        "value": "Laoag",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "<",
+        "value": "Olongapo",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "=",
+        "value": "Angeles",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": ">",
+        "value": "San Pablo",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "?",
+        "value": "Cebu",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "@",
+        "value": "Bacolod",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "A",
+        "value": "Iloilo",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "B",
+        "value": "Tacloban",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "C",
+        "value": "Vigan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "D",
+        "value": "Tuguegarao",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "E",
+        "value": "Cauayan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "F",
+        "value": "Cagayan De Oro",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "G",
+        "value": "Davao",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "H",
+        "value": "General Santos",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "I",
+        "value": "Santiago",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "J",
+        "value": "San Fernando, La Union",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "K",
+        "value": "Lucena",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "L",
+        "value": "Daet",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "M",
+        "value": "Sorsogon",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "N",
+        "value": "Dumaguete",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "O",
+        "value": "Kalibo",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "P",
+        "value": "Roxas",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "Q",
+        "value": "Tagbilaran",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "R",
+        "value": "Iligan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "S",
+        "value": "Butuan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "T",
+        "value": "Cotabato",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "U",
+        "value": "Surigao",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "V",
+        "value": "Koronadal",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "W",
+        "value": "Ozamis",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "X",
+        "value": "Pagadian",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "Y",
+        "value": "Malaybalay",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "Z",
+        "value": "Zamboanga",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "0",
+        "value": "NOT KNOWN/REFUSED",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "\\",
+        "value": "Rural Pangasinan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "]",
+        "value": "Rural Cebu",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "^",
+        "value": "Rural Davao",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "h",
+        "value": "Metro Manila",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "i",
+        "value": "Tagum City",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "j",
+        "value": "Catanduanes",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "k",
+        "value": "Bayombong, Nueva Viscaya",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "l",
+        "value": "Kidapawan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "m",
+        "value": "Valencia",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "n",
+        "value": "Dipolog",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "Do you own the house or are you renting?",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "OWN HOUSE",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "NEITHER OWN NOR RENT",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "RENTING",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "0",
+        "value": "NOT KNOWN/REFUSED",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "How much is your monthly rent for this house?",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "0",
+        "value": "₱1,000 & below",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "1",
+        "value": "1,001 – 2,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "2,001 – 3,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "3,001 – 5,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "5,001 – 7,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "7,001 – 10,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "10,001 – 15,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "7",
+        "value": "15,001 – 20,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "8",
+        "value": "20,001 – 25,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "9",
+        "value": "25,001 & up",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "What is the first/primary language of the home?",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "Tagalog",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "Cebuano/Bisaya",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "Ilocano",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "Kapampangan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "Bicolano",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "Cebuano",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "7",
+        "value": "Bisaya",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "8",
+        "value": "Ilonggo",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "9",
+        "value": "Others",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "A",
+        "value": "English",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "B",
+        "value": "Pangasinense",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "C",
+        "value": "Chavacano",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "D",
+        "value": "Waray",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "E",
+        "value": "Chinese",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "0",
+        "value": "NOT KNOWN/REFUSED",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "What is the primary religion of the home? ",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "Roman Catholic",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "Protestant/Christian",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "INC",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "Aglipayan",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "Islam",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "Other",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "7",
+        "value": "None",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "0",
+        "value": "NOT KNOWN/REFUSED",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "What type of radio device do you have in your home?",
+    "type": "Multiple Answer",
+    "options": [
+      {
+        "code": "A",
+        "value": "Radio Cassette Recorder",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "B",
+        "value": "Stereo Component",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "C",
+        "value": "Karaoke",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "D",
+        "value": "DVD/CD Players",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "E",
+        "value": "Car Radio",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "F",
+        "value": "Transistor Radio",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "G",
+        "value": "Cellphone",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "H",
+        "value": "MP3",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "I",
+        "value": "iPod/iPad",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "J",
+        "value": "Internet Streaming (PC/ Laptop)",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "K",
+        "value": "Others",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "L",
+        "value": "None",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "Does it have AM or FM radio broadcast?",
+    "type": "See Choices",
+    "options": [],
+    "subQuestions": [
+      {
+        "questionType": "Radio Cassette Recorder",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Stereo Component",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Karaoke",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "DVD/CD Players",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Car Radio",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Transistor Radio",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Cellphone",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "MP3",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "iPod/iPad",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Internet Streaming (PC/ Laptop)",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Others",
+        "choices": [
+          {
+            "choice": "AM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "FM",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          },
+          {
+            "choice": "BOTH",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "isManualInput": false
+  },
+  {
+    "question": "Number of Radio Sets Owned in the Household (including Car radio, portable radio, cellular phones with radio, etc.) ",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "One only",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "Two",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "Three",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "Four",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "Five or More",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "None",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "How many people live in this household permanently? Please include yourself, your relatives, boarders and maids.",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "1 Person HH",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "2 Person HH",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "3 Person HH",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "4 Person HH",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "5 Person HH",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "6 Person HH",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "7",
+        "value": "7 Person HH",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "8",
+        "value": "8+ Person HH",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "0",
+        "value": "NOT KNOWN/REFUSED",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "Names of all members of your household from the eldest to the youngest (Name)",
+    "type": "Multiple Answer",
+    "options": [],
+    "subQuestions": [],
+    "isManualInput": true
+  },
+  {
+    "questions": "MemberNumber",
+    "type": "Single Answer",
+    "options": [
+    ],
+    "subQuestions": [],
+    "isManualInput": true
+  },
+  {
+    "question": "Age Group",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "2 - 6 YEARS OLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "7 -12 YEARS OLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "13-15 YEARS OLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "16-19 YEARS OLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "20-24 YEARS OLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "25-29 YEARS OLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "7",
+        "value": "30-34 YEARS OLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "8",
+        "value": "35-39 YEARS OLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "9",
+        "value": "40-44 YEARS OLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "0",
+        "value": "45 YEARS OLD AND UP",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "Sex/Gender",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "MALE",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "FEMALE",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "Role in Household",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "HEAD OF HOUSEHOLD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "HOUSEWIFE",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "SON",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "DAUGHTER",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "OTHERS",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "Both Household Head & Housewife",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "8",
+        "value": "Non-relatives",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "Civil Status",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "SINGLE",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "MARRIED",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "SEPARATED/DIVORCED",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "WIDOWED",
+        "otherValue": ""
+      },
+      {
+        "code": "0",
+        "value": "NOT KNOWN/REFUSED",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "Highest educational attainment",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "No Schooling at All",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "Some Grade School ",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "Completed Grade School",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "Some High School",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "Completed High School",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "C",
+        "value": "Some Senior High",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "D",
+        "value": "Completed Senior High",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "7",
+        "value": "Some College",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "8",
+        "value": "Completed College",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "9",
+        "value": "Some/Completed Vocational",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "B",
+        "value": "Completed/Some Master’s Degree",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "A",
+        "value": "Completed/Some PHD",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "0",
+        "value": "Refused",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "question": "Devices Used to Access the Internet",
+    "type": "Single Answer",
+    "options": [],
+    "subQuestions": [
+      {
+        "questionType": "Desktop PC",
+        "choices": [
+          {
+            "choice": "Desktop PC",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "2",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Laptop/Notebook/Netbook",
+        "choices": [
+          {
+            "choice": "Laptop/Notebook/Netbook",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "2",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Smartphone/Feature Phone/Phablet",
+        "choices": [
+          {
+            "choice": "Smartphone/Feature Phone/Phablet",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "2",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Tablet",
+        "choices": [
+          {
+            "choice": "Tablet",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "2",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Game Console",
+        "choices": [
+          {
+            "choice": "Game Console",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "2",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Internet-enabled TV/Smart TV",
+        "choices": [
+          {
+            "choice": "Internet-enabled TV/Smart TV",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "2",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Smartwatch",
+        "choices": [
+          {
+            "choice": "Smartwatch",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "2",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Others",
+        "choices": [
+          {
+            "choice": "Others",
+            "option": [
+              {
+                "code": "1",
+                "value": "YES",
+                "otherValue": "",
+                "isManualInput": false
+              },
+              {
+                "code": "2",
+                "value": "NO",
+                "otherValue": "",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "isManualInput": false
+  },
+  {
+    "questions": "How much is the household monthly income?",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "4,000 and Below",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "1",
+        "value": "4,001 - 6,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "6,001 - 10,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "10,001 - 15,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "15,001 - 20,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "5",
+        "value": "20,001 - 25,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "6",
+        "value": "25,001 - 30,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "7",
+        "value": "30,001 - 35,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "8",
+        "value": "35,001 - 40,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "9",
+        "value": "40,001 - 45,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "0",
+        "value": "45,001 - 50,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "A",
+        "value": "50,001 - 75,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "B",
+        "value": "75,001 - 100,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "C",
+        "value": "100,001 - 150,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "C",
+        "value": "150,001 - 300,000",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "C",
+        "value": "300,001 & up",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "E",
+        "value": "None",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "D",
+        "value": "Don’t Know/Refused",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [],
+    "isManualInput": false
+  },
+  {
+    "questions": "Which of the following do you have in your household and are operable / in working order?",
+    "type": "Multiple Answer",
+    "options": [
+      {
+        "code": "1",
+        "value": "SINGLE",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "2",
+        "value": "MARRIED",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "3",
+        "value": "SEPARATED/DIVORCED",
+        "otherValue": "",
+        "isManualInput": false
+      },
+      {
+        "code": "4",
+        "value": "WIDOWED",
+        "otherValue": ""
+      },
+      {
+        "code": "0",
+        "value": "NOT KNOWN/REFUSED",
+        "otherValue": "",
+        "isManualInput": false
+      }
+    ],
+    "subQuestions": [
+      {
+        "questionType": "UTILITIES",
+        "choices": [
+          {
+            "choice": "UTILITIES",
+            "option": [
+              {
+                "code": "1",
+                "value": "Running water",
+                "isManualInput": false
+              },
+              {
+                "code": "2",
+                "value": "Deep well / Poso",
+                "isManualInput": false
+              },
+              {
+                "code": "3",
+                "value": "Electricity",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "TOILET FACILITIES",
+        "choices": [
+          {
+            "choice": "TOILET FACILITIES",
+            "option": [
+              {
+                "code": "4",
+                "value": "Flush toilet",
+                "isManualInput": false
+              },
+              {
+                "code": "5",
+                "value": "De buhos",
+                "isManualInput": false
+              },
+              {
+                "code": "6",
+                "value": "Antipolo system",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "KITCHEN FACILITIES FOR FOOD PREPARATION",
+        "choices": [
+          {
+            "choice": "KITCHEN FACILITIES FOR FOOD PREPARATION",
+            "option": [
+              {
+                "code": "7",
+                "value": "Gas/Electric Stove (w/o Oven)",
+                "isManualInput": false
+              },
+              {
+                "code": "8",
+                "value": "Cooking Range / Conventional Oven",
+                "isManualInput": false
+              },
+              {
+                "code": "9",
+                "value": "Microwave Oven",
+                "isManualInput": false
+              },
+              {
+                "code": "0",
+                "value": "Dishwashing Machine",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "KITCHEN FACILITIES FOR FOOD STORAGE",
+        "choices": [
+          {
+            "choice": "KITCHEN FACILITIES FOR FOOD STORAGE",
+            "option": [
+              {
+                "code": "A",
+                "value": "Refrigerator",
+                "isManualInput": false
+              },
+              {
+                "code": "B",
+                "value": "Freezer",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "OTHER ELECTRICAL PRODUCTS",
+        "choices": [
+          {
+            "choice": "OTHER ELECTRICAL PRODUCTS",
+            "option": [
+              {
+                "code": "C",
+                "value": "Air Conditioner",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "Washing Machine (probe type)",
+        "choices": [
+          {
+            "choice": "Washing Machine (probe type)",
+            "option": [
+              {
+                "code": "D",
+                "value": "- Washer only",
+                "isManualInput": false
+              },
+              {
+                "code": "E",
+                "value": "- With Spinner / Dryer",
+                "isManualInput": false
+              },
+              {
+                "code": "F",
+                "value": "- Fully Automatic",
+                "isManualInput": false
+              },
+              {
+                "code": "G",
+                "value": "Installed Water Heater",
+                "isManualInput": false
+              },
+              {
+                "code": "H",
+                "value": "Generator",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "questionType": "AUTOMOBILE",
+        "choices": [
+          {
+            "choice": "AUTOMOBILE",
+            "option": [
+              {
+                "code": "C",
+                "value": "With Car Radio",
+                "isManualInput": false
+              },
+              {
+                "code": "C",
+                "value": "Without Car Radio",
+                "isManualInput": false
+              },
+              {
+                "code": "C",
+                "value": "TELEPHONE (LANDLINE #)",
+                "isManualInput": true
+              },
+              {
+                "code": "C",
+                "value": "VIDEO CAMERA (Tape/Digital format)",
+                "isManualInput": false
+              },
+              {
+                "code": "C",
+                "value": "DIGITAL CAMERA",
+                "isManualInput": false
+              },
+              {
+                "code": "C",
+                "value": "PIANO/ORGAN",
+                "isManualInput": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "isManualInput": false
+  }
+]

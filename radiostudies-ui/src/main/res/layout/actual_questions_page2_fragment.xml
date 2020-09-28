@@ -1723,7 +1723,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/continue_button"
+                    android:id="@+id/submit_button"
                     style="@style/AvenirMedium"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/height50"
@@ -1731,7 +1731,6 @@
                     android:background="@drawable/btn_selector_shape"
                     android:enabled="true"
                     android:gravity="center_vertical|center_horizontal"
-                    android:onClick="onClick"
                     android:text="@string/submit_btn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

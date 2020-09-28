@@ -1,8 +1,10 @@
 package com.radiostudies.main.ui.fragment
 
+import android.widget.Toast
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.ui.fragment.databinding.ActualQuestionsPage2FragmentBinding
 import com.radiostudies.main.ui.viewmodel.ActualQuestionsPage2ViewModel
+import kotlinx.android.synthetic.main.actual_questions_page2_fragment.*
 import javax.inject.Inject
 
 class ActualQuestionsPage2Fragment : BaseFragment<ActualQuestionsPage2FragmentBinding, ActualQuestionsPage2ViewModel>() {
@@ -15,7 +17,9 @@ class ActualQuestionsPage2Fragment : BaseFragment<ActualQuestionsPage2FragmentBi
     override fun getBindingVariable() = BR.actualQuestionsPage2ViewModel
 
     override fun initViews() {
-
+        submit_button.setOnClickListener {
+            Toast.makeText(context, "Successfully submitted survey!", Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun subscribeUi() {

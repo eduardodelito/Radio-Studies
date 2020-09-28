@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
@@ -64,5 +65,17 @@ fun AppCompatTextView.setViewVisibility(message: String?) {
             text = message
             View.VISIBLE
         } ?: View.GONE
+    }
+}
+
+fun Button.setEnable(enable: Boolean) {
+    with(this) {
+        if (enable) {
+            isEnabled = true
+            alpha = 1f
+        } else {
+            isEnabled = false
+            alpha = 0.5f
+        }
     }
 }

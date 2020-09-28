@@ -1,0 +1,37 @@
+[
+  {
+    "number" : 1,
+    "question" : "Are you willing to participate in the study?",
+    "type" : "Single Answer",
+    "options" : ["AGREE", "DISAGREE"],
+    "action" : ["Continue", "Terminate"]
+  },
+  {
+    "number" : 2,
+    "question": "Are you or any of your immediately family members / relatives / close friends currently working for the following types of companies?",
+    "type" : "Multiple Answer",
+    "options" : ["Research Company", "TV Station", "Cable TV Station", "Radio Station", "Newspaper & Magazine", "Advertising Agencies", "Associations or Groups of People voluntarily serving media companies (TV/Radio/Newspaper/Magazines)", "NONE OF THE ABOVE"],
+    "action" : ["Continue", "Terminate"]
+  },
+  {
+    "number" : 3,
+    "question" : "Have you or any of your immediately family members / relatives / close friends worked in the following types of companies for the past 6 months?",
+    "type" : "Multiple Answer",
+    "options" : ["Research Company", "TV Station", "Cable TV Station", "Radio Station", "Newspaper & Magazine", "Advertising Agencies", "Associations or Groups of People voluntarily serving media companies (TV/Radio/Newspaper/Magazines)", "NONE OF THE ABOVE"],
+    "action" : ["Continue", "Terminate"]
+  },
+  {
+    "number" : 4,
+    "question": "Have you or any immediate member of your family participated in any form of TV or Radio Survey in your barangay within the last six (6) months?",
+    "type" : "Single Answer",
+    "options": ["Yes", "No"],
+    "action" : ["Continue", "Terminate"]
+  },
+  {
+    "number" : 5,
+    "question": "Have you or any immediate member of your family participated in any promos in your barangay in the past six (6) months",
+    "type" : "Single Answer",
+    "options" : ["Yes", "No"],
+    "action" : []
+  }
+]
