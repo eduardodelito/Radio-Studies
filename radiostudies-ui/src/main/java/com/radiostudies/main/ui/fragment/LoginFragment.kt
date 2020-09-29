@@ -67,7 +67,7 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
             is LoginSuccessModel -> {
                 if (state.isSuccess) {
                     hideKeyboard()
-                    view?.let { listener?.navigateToMainScreen(it) }
+                    view?.let { listener?.navigateToInitialScreen(it) }
                     clearFields()
                 }
             }
@@ -98,6 +98,6 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
     }
 
     interface LoginFragmentListener {
-        fun navigateToMainScreen(view: View?)
+        fun navigateToInitialScreen(view: View?)
     }
 }

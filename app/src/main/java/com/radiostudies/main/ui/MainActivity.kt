@@ -14,7 +14,7 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
         setContentView(R.layout.activity_main)
     }
 
-    override fun navigateToMainScreen(view: View?) {
+    override fun navigateToInitialScreen(view: View?) {
         val action = LoginFragmentDirections.actionLoginFragmentToInitialQuestionsFragment()
         view?.findNavController()?.navigate(action)
     }
@@ -25,12 +25,10 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
     }
 
     override fun navigateToActualQuestions(view: View?) {
-        val action = MainInfoFragmentDirections.actionMainInfoFragmentToActualQuestionsFragment()
-        view?.findNavController()?.navigate(action)
+        //Do nothing
     }
 
     override fun navigateToActualQuestionsPage2(view: View?) {
-        val action = ActualQuestionsFragmentDirections.actionActualQuestionsFragmentToActualQuestionsPage2Fragment()
-        view?.findNavController()?.navigate(action)
+
     }
 }

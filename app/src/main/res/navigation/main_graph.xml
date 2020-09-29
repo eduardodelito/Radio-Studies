@@ -4,6 +4,7 @@
     android:id="@+id/main_graph"
     app:startDestination="@id/loginFragment">
 
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.radiostudies.main.ui.fragment.LoginFragment"
@@ -13,76 +14,47 @@
             app:destination="@id/initialQuestionsFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/initialQuestionsFragment"
         android:name="com.radiostudies.main.ui.fragment.InitialQuestionsFragment"
         android:label="InitialQuestionsFragment" >
         <action
-            android:id="@+id/action_initialQuestionsFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-        <action
             android:id="@+id/action_initialQuestionsFragment_to_mainInfoFragment"
             app:destination="@id/mainInfoFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/mainInfoFragment"
         android:name="com.radiostudies.main.ui.fragment.MainInfoFragment"
         android:label="MainInfoFragment" >
         <action
-            android:id="@+id/action_mainInfoFragment_to_initialQuestionsFragment"
-            app:destination="@id/initialQuestionsFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-        <action
             android:id="@+id/action_mainInfoFragment_to_actualQuestionsFragment"
             app:destination="@id/actualQuestionsFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/actualQuestionsFragment"
         android:name="com.radiostudies.main.ui.fragment.ActualQuestionsFragment"
         android:label="ActualQuestionsFragment" >
         <action
-            android:id="@+id/action_actualQuestionsFragment_to_mainInfoFragment"
-            app:destination="@id/mainInfoFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-        <action
             android:id="@+id/action_actualQuestionsFragment_to_actualQuestionsPage2Fragment"
             app:destination="@id/actualQuestionsPage2Fragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/actualQuestionsPage2Fragment"
         android:name="com.radiostudies.main.ui.fragment.ActualQuestionsPage2Fragment"
-        android:label="ActualQuestionsPage2Fragment" >
-        <action
-            android:id="@+id/action_actualQuestionsPage2Fragment_to_actualQuestionsFragment"
-            app:destination="@id/actualQuestionsFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-    </fragment>
+        android:label="ActualQuestionsPage2Fragment" />
 </navigation>

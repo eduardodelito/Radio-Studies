@@ -32,6 +32,6 @@
     "question": "Have you or any immediate member of your family participated in any promos in your barangay in the past six (6) months",
     "type" : "Single Answer",
     "options" : ["Yes", "No"],
-    "action" : []
+    "action" : ["Continue", "Terminate"]
   }
 ]

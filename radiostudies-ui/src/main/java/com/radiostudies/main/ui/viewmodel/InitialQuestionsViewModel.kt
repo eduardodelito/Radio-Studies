@@ -3,19 +3,29 @@ package com.radiostudies.main.ui.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.radiostudies.main.common.viewmodel.BaseViewModel
-import com.radiostudies.main.ui.model.ScreenQuestion
-import com.radiostudies.main.ui.model.ScreenQuestionListModel
-import com.radiostudies.main.ui.model.ScreenQuestionModel
-import com.radiostudies.main.ui.model.ScreenQuestionState
+import com.radiostudies.main.db.manager.QuestionManager
+import com.radiostudies.main.ui.mapper.questionModelToQuestionEntity
+import com.radiostudies.main.ui.model.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.json.JSONArray
+import javax.inject.Inject
+import kotlin.coroutines.CoroutineContext
 
-class InitialQuestionsViewModel : BaseViewModel() {
+class InitialQuestionsViewModel @Inject constructor(private val questionManager: QuestionManager) :
+    BaseViewModel(), CoroutineScope {
+
+    override val coroutineContext: CoroutineContext
+        get() = Dispatchers.Main
+
     private val screenState = MediatorLiveData<ScreenQuestionState>()
     internal fun getScreenLiveData(): LiveData<ScreenQuestionState> = screenState
     private val list = mutableListOf<ScreenQuestion>()
-    private val selectedData = mutableListOf<ScreenQuestion>()
 
-    private var index = -1
+    var index = -1
+    var currentQuestion: String? = null
 
     init {
         screenState.postValue(ScreenQuestionModel(SCREEN_QUESTIONS))
@@ -24,6 +34,7 @@ class InitialQuestionsViewModel : BaseViewModel() {
     fun parseScreenQuestion(question: String?) {
         list.clear()
         val jsonArray = JSONArray(question)
+        val questions = mutableListOf<Question>()
         for (i in 0 until jsonArray.length()) {
             val item = jsonArray.getJSONObject(i)
 
@@ -42,32 +53,26 @@ class InitialQuestionsViewModel : BaseViewModel() {
                     type == SINGLE_ANSWER
                 )
             )
-            selectedData.add(
-                ScreenQuestion(
-                    number,
-                    questionString,
-                    type,
-                    emptyList(),
-                    parseJSONArray(actions),
-                    type == SINGLE_ANSWER
-                )
-            )
+
+            questions.add(Question(questionString, ""))
         }
+        insertQuestions(questions)
         updateNextQuestion()
     }
 
     fun updateNextQuestion() {
-        if (index < list.size - 1) {
-            index++
+        index++
+        if (index < list.size) {
             screenState.postValue(ScreenQuestionListModel(list[index]))
         } else {
-            screenState.postValue(ScreenQuestionListModel(isNextScreen = true))
+            index = 5
         }
     }
 
     fun updatePrevQuestion() {
+        index--
+        println("index0=============$index")
         if (index > -1) {
-            index--
             screenState.postValue(ScreenQuestionListModel(list[index]))
         } else {
             index = 1
@@ -89,17 +94,35 @@ class InitialQuestionsViewModel : BaseViewModel() {
         return value
     }
 
-    fun updateSelectedData(options: List<String>) {
-        if (index < selectedData.size - 1) {
-            val screenQuestion = selectedData[index]
-            selectedData[index] = ScreenQuestion(
-                screenQuestion.number,
-                screenQuestion.type,
-                screenQuestion.question,
-                options,
-                screenQuestion.actions,
-                screenQuestion.isSingleAnswer
-            )
+    private fun insertQuestions(questions: List<Question>) {
+        launch {
+            insertInitialQuestions(questions)
+        }
+    }
+
+    private suspend fun insertInitialQuestions(questions: List<Question>) {
+        withContext(Dispatchers.IO) {
+            try {
+                questionManager.insertQuestions(questions.questionModelToQuestionEntity())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    fun updateQuestion(answers: MutableList<String>) {
+        launch {
+            updateInitialQuestion(currentQuestion, answers.toString())
+        }
+    }
+
+    private suspend fun updateInitialQuestion(question: String?, answers: String?) {
+        withContext(Dispatchers.IO) {
+            try {
+                questionManager.updateQuestion(question, answers)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
 

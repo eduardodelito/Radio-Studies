@@ -37,9 +37,15 @@ class InitialQuestionsFragment :
         }
 
         next_btn.setOnClickListener {
-            viewModel.updateSelectedData(loadOptions())
-            viewModel.updateNextQuestion()
-            next_btn.setEnable(false)
+            with(viewModel) {
+                updateQuestion(loadOptions())
+                updateNextQuestion()
+                next_btn.setEnable(false)
+                if (this.index == 5) {
+                    this.index = 4
+                    listener?.navigateToMainInfo(it)
+                }
+            }
         }
         next_btn.setEnable(false)
     }
@@ -62,21 +68,19 @@ class InitialQuestionsFragment :
             })
 
             is ScreenQuestionListModel -> {
-                if (state.isNextScreen) {
-                    listener?.navigateToMainInfo(requireView())
+                var screenQuestion = state.screenQuestion
+                viewModel.currentQuestion = screenQuestion?.question
+
+                question_number.text = "Question No. ${screenQuestion?.number}"
+                question_label.text = screenQuestion?.question
+                prev_btn.setEnable(screenQuestion?.number != 1)
+
+                if (screenQuestion?.isSingleAnswer == true) {
+                    screenQuestion.options?.let { loadSingleOption(it) }
                 } else {
-                    var screenQuestion = state.screenQuestion
-
-                    question_number.text = "Question No. ${screenQuestion?.number}"
-                    question_label.text = screenQuestion?.question
-                    prev_btn.setEnable(screenQuestion?.number != 1)
-
-                    if (screenQuestion?.isSingleAnswer == true) {
-                        screenQuestion.options?.let { loadSingleOption(it) }
-                    } else {
-                        screenQuestion?.options?.let { loadMultipleOptions(it) }
-                    }
+                    screenQuestion?.options?.let { loadMultipleOptions(it) }
                 }
+
             }
         }
     }
