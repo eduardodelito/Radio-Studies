@@ -7,9 +7,7 @@ import android.view.View
 import android.widget.DatePicker
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.AppCompatEditText
 import com.radiostudies.main.common.fragment.BaseFragment
-import com.radiostudies.main.common.util.afterTextChanged
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.ui.fragment.databinding.MainInfoFragmentBinding
 import com.radiostudies.main.ui.model.MainInfoForm
@@ -24,6 +22,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     DatePickerDialog.OnDateSetListener {
 
     private var listener: MainInfoFragmentListener? = null
+    private val cal: Calendar = Calendar.getInstance()
 
     @Inject
     override lateinit var viewModel: MainInfoViewModel
@@ -33,9 +32,6 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     override fun getBindingVariable() = BR.mainInfoViewModel
 
     override fun initViews() {
-        panel_number_field.afterTextChanged {
-
-        }
         continue_button.setOnClickListener {
             if (viewModel.mainInfoDataChanged(
                     panel_number_field.text.toString(),
@@ -162,27 +158,6 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         }
     }
 
-    private fun afterTextChangedView(view: AppCompatEditText) {
-        view.afterTextChanged {
-            viewModel.mainInfoDataChanged(
-                panel_number_field.text.toString(),
-                member_number_field.text.toString(),
-                municipality_field.text.toString(),
-                barangay_field.text.toString(),
-                name_of_respondent_field.text.toString(),
-                address_field.text.toString(),
-                age_field.text.toString(),
-                gender_field.text.toString(),
-                date_of_interview_field.text.toString(),
-                time_start_field.text.toString(),
-                time_end_field.text.toString(),
-                day_of_week_field.text.toString(),
-                contact_number_field.text.toString(),
-                eco_class_label.text.toString()
-            )
-        }
-    }
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is MainInfoFragmentListener) {
@@ -200,16 +175,14 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     }
 
     private fun openDatePicker() {
-        val calendar: Calendar = Calendar.getInstance()
-        var day = calendar.get(Calendar.DAY_OF_MONTH)
-        var month = calendar.get(Calendar.MONTH)
-        var year = calendar.get(Calendar.YEAR)
+        var day = cal.get(Calendar.DAY_OF_MONTH)
+        var month = cal.get(Calendar.MONTH)
+        var year = cal.get(Calendar.YEAR)
         val datePickerDialog = DatePickerDialog(requireActivity(), this, year, month, day)
         datePickerDialog.show()
     }
 
     private fun openTimePicker(view: EditText) {
-        val cal = Calendar.getInstance()
         val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
