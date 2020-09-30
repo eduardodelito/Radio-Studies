@@ -20,6 +20,7 @@ class MainInfoViewModel : BaseViewModel() {
         nameOfRespondent: String,
         address: String,
         age: String,
+        gender: String,
         dateOfInterview: String,
         timeStart: String,
         timeEnd: String,
@@ -41,6 +42,8 @@ class MainInfoViewModel : BaseViewModel() {
             mainInfoState.postValue(MainInfoForm(address = R.string.address_error))
         } else if (!isValueValid(age, 3)) {
             mainInfoState.postValue(MainInfoForm(age = R.string.address_error))
+        } else if (!isValueValid(gender, 6)) {
+            mainInfoState.postValue(MainInfoForm(gender = R.string.gender_error))
         } else if (!isValueValid(dateOfInterview, 10)) {
             mainInfoState.postValue(MainInfoForm(dateOfInterview = R.string.date_of_interview_error))
         } else if (!isValueValid(timeStart, 17)) {

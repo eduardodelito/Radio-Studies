@@ -12,6 +12,7 @@ data class MainInfoForm(
     val nameOfRespondent: Int? = null,
     val address: Int? = null,
     val age: Int? = null,
+    val gender: Int? = null,
     val dateOfInterview: Int? = null,
     val timeStart: Int? = null,
     val timeEnd: Int? = null,

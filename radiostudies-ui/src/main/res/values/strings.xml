@@ -48,11 +48,11 @@
     <string name="barangay_error">Barangay cannot be empty.</string>
     <string name="name_of_respondent_error">Name of respondent cannot be empty.</string>
     <string name="address_error">Address cannot be empty.</string>
-    <string name="age_error">Not valid age</string>
-    <string name="gender_error">Not valid gender</string>
-    <string name="date_of_interview_error">Cannot be empty.</string>
-    <string name="time_start_error">Not valid time start.</string>
-    <string name="time_end_error">Not valid time end.</string>
+    <string name="age_error">Age cannot be empty.</string>
+    <string name="gender_error">Gender cannot be empty.</string>
+    <string name="date_of_interview_error">Date of interview cannot be empty.</string>
+    <string name="time_start_error">Time start cannot be empty.</string>
+    <string name="time_end_error">Time end cannot be empty.</string>
     <string name="day_of_week_error">Not valid day of week.</string>
     <string name="contact_number_error">Contact number cannot be empty.</string>
     <string name="eco_class_error">Not valid eco class.</string>

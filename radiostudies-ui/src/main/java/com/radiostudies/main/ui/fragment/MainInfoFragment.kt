@@ -45,6 +45,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                     name_of_respondent_field.text.toString(),
                     address_field.text.toString(),
                     age_field.text.toString(),
+                    gender_field.text.toString(),
                     date_of_interview_field.text.toString(),
                     time_start_field.text.toString(),
                     time_end_field.text.toString(),
@@ -78,6 +79,10 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 dialogList(this, arrayOf(AB, C1, C2, D, E))
             }
         }
+
+        gender_field.apply { setOnClickListener {
+            dialogList(this, arrayOf(MALE, FEMALE))
+        } }
     }
 
     override fun subscribeUi() {
@@ -167,6 +172,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 name_of_respondent_field.text.toString(),
                 address_field.text.toString(),
                 age_field.text.toString(),
+                gender_field.text.toString(),
                 date_of_interview_field.text.toString(),
                 time_start_field.text.toString(),
                 time_end_field.text.toString(),
@@ -243,6 +249,9 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     }
 
     companion object {
+        private const val MALE = "MALE"
+        private const val FEMALE = "FEMALE"
+
         private const val SUN = "Sun"
         private const val MON = "Mon"
         private const val TUE = "Tue"
