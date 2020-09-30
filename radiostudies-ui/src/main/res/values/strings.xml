@@ -22,7 +22,7 @@
     <string name="option7">Associations or Groups of People voluntarily serving media companies (TV/Radio/Newspaper/Magazines</string>
     <string name="option8">NONE OF THE ABOVE</string>
 
-    <!--Main Info Scree-->
+    <!--Main Info Screen-->
     <string name="panel_number_label">PANEL NUMBER</string>
     <string name="member_number_label">MEMBER NUMBER</string>
     <string name="municipality_label">MUNICIPALITY</string>
@@ -36,10 +36,26 @@
     <string name="time_end_label">TIME END</string>
     <string name="day_of_week_label">DAY OF WEEK</string>
     <string name="contact_number_label">CONTACT NUMBER</string>
-    <string name="eco_class_label">ECO_CLASS</string>
+    <string name="eco_class_label">ECO CLASS</string>
 
     <string name="male">MALE</string>
     <string name="female">FEMALE</string>
+
+    <!--Main Info Screen Error message-->
+    <string name="panel_number_error">Must be equal to 7 character.</string>
+    <string name="member_number_error">Must be equal to 2 character.</string>
+    <string name="municipality_error">Municipality annot be empty.</string>
+    <string name="barangay_error">Barangay cannot be empty.</string>
+    <string name="name_of_respondent_error">Name of respondent cannot be empty.</string>
+    <string name="address_error">Address cannot be empty.</string>
+    <string name="age_error">Not valid age</string>
+    <string name="gender_error">Not valid gender</string>
+    <string name="date_of_interview_error">Cannot be empty.</string>
+    <string name="time_start_error">Not valid time start.</string>
+    <string name="time_end_error">Not valid time end.</string>
+    <string name="day_of_week_error">Not valid day of week.</string>
+    <string name="contact_number_error">Contact number cannot be empty.</string>
+    <string name="eco_class_error">Not valid eco class.</string>
 
     <!--Actual Questions-->
     <string name="actual_q1_label">Q1: Area</string>

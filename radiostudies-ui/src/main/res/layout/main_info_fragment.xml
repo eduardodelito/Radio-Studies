@@ -11,6 +11,7 @@
     </data>
 
     <ScrollView
+        android:id="@+id/mainScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -25,6 +26,17 @@
                 android:background="@color/color_bg"
                 android:padding="@dimen/padding16">
 
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/main_info_title"
+                    style="@style/AvenirHeavy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/main_info_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <EditText
                     android:id="@+id/panel_number_field"
                     style="@style/AvenirMedium.Black"
@@ -34,8 +46,9 @@
                     android:ems="10"
                     android:hint="@string/panel_number_label"
                     android:inputType="textPersonName"
+                    android:maxLength="7"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/main_info_title" />
 
                 <EditText
                     android:id="@+id/member_number_field"
@@ -45,6 +58,7 @@
                     android:ems="10"
                     android:hint="@string/member_number_label"
                     android:inputType="textPersonName"
+                    android:maxLength="2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/panel_number_field" />
 
@@ -55,7 +69,8 @@
                     android:layout_marginTop="@dimen/margin5"
                     android:ems="10"
                     android:hint="@string/municipality_label"
-                    android:inputType="textPersonName"
+                    android:inputType="textMultiLine"
+                    android:maxLength="60"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/member_number_field" />
 
@@ -66,7 +81,8 @@
                     android:layout_marginTop="@dimen/margin5"
                     android:ems="10"
                     android:hint="@string/barangay_label"
-                    android:inputType="textPersonName"
+                    android:inputType="textMultiLine"
+                    android:maxLength="60"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/municipality_field" />
 
@@ -78,6 +94,7 @@
                     android:ems="10"
                     android:hint="@string/name_of_respondent_label"
                     android:inputType="textPersonName"
+                    android:maxLength="80"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/barangay_field" />
 
@@ -88,7 +105,8 @@
                     android:layout_marginTop="@dimen/margin5"
                     android:ems="10"
                     android:hint="@string/address_label"
-                    android:inputType="textPersonName"
+                    android:inputType="textMultiLine"
+                    android:maxLength="120"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/name_of_respondent_field" />
 
@@ -139,7 +157,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin5"
-                    android:ems="10"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:hint="@string/date_of_interview_label"
                     android:inputType="textPersonName"
                     app:layout_constraintStart_toStartOf="parent"
@@ -150,7 +169,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin5"
+                    android:clickable="true"
                     android:ems="10"
+                    android:focusable="false"
                     android:hint="@string/time_start_label"
                     android:inputType="textPersonName"
                     app:layout_constraintStart_toStartOf="parent"
@@ -161,7 +182,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin5"
+                    android:clickable="true"
                     android:ems="10"
+                    android:focusable="false"
                     android:hint="@string/time_end_label"
                     android:inputType="textPersonName"
                     app:layout_constraintStart_toStartOf="parent"
@@ -172,9 +195,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin5"
+                    android:clickable="true"
                     android:ems="10"
+                    android:focusable="false"
                     android:hint="@string/day_of_week_label"
                     android:inputType="textPersonName"
+                    android:maxLength="3"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/time_end_field" />
 
@@ -186,6 +212,7 @@
                     android:ems="10"
                     android:hint="@string/contact_number_label"
                     android:inputType="number"
+                    android:maxLength="20"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/day_of_week_field" />
 
@@ -194,9 +221,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin5"
+                    android:clickable="true"
                     android:ems="10"
+                    android:focusable="false"
                     android:hint="@string/eco_class_label"
                     android:inputType="textPersonName"
+                    android:maxLength="2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/contact_number_field" />
 

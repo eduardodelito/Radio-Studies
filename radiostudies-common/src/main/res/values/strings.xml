@@ -2,11 +2,15 @@
 <resources>
     <string name="radio_studies">Radio Studies</string>
 
+    <string name="initial_question_title">Initial Questions</string>
+    <string name="main_info_title">Main Information</string>
+
     <string name="user_name">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="continue_btn">Continue</string>
     <string name="submit_btn">Submit</string>
+    <string name="prev_btn">Prev</string>
     <string name="next_btn">Next</string>
 
     <string name="invalid">Invalid username or password, please try again or create account if not yet registered.</string>

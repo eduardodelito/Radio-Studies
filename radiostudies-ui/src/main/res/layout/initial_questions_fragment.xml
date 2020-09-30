@@ -16,14 +16,26 @@
         android:padding="@dimen/padding16">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/screen_label"
+            style="@style/AvenirHeavy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin20"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/initial_question_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/question_number"
             style="@style/AvenirHeavy.Black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin100"
+            android:layout_marginTop="@dimen/margin20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/screen_label" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/question_label"
@@ -52,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin5"
             android:background="@drawable/btn_selector_shape"
-            android:text="Prev"
+            android:text="@string/prev_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/next_btn"
             app:layout_constraintStart_toStartOf="parent" />
@@ -64,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin5"
             android:background="@drawable/btn_selector_shape"
-            android:text="Next"
+            android:text="@string/next_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/prev_btn" />

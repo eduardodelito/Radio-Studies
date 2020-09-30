@@ -25,7 +25,8 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
     }
 
     override fun navigateToActualQuestions(view: View?) {
-        //Do nothing
+        val action = MainInfoFragmentDirections.actionMainInfoFragmentToActualQuestionsFragment()
+        view?.findNavController()?.navigate(action)
     }
 
     override fun navigateToActualQuestionsPage2(view: View?) {

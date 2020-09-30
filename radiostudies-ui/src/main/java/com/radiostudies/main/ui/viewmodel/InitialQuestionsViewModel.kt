@@ -71,7 +71,6 @@ class InitialQuestionsViewModel @Inject constructor(private val questionManager:
 
     fun updatePrevQuestion() {
         index--
-        println("index0=============$index")
         if (index > -1) {
             screenState.postValue(ScreenQuestionListModel(list[index]))
         } else {
