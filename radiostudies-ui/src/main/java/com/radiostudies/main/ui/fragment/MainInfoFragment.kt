@@ -43,13 +43,13 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 name_of_respondent_field.text.toString(),
                 address_field.text.toString(),
                 age_field.text.toString(),
-                gender_field.text.toString(),
+                gender_field.tag.toString(),
                 date_of_interview_field.text.toString(),
                 time_start_field.text.toString(),
                 time_end_field.text.toString(),
-                day_of_week_field.text.toString(),
+                day_of_week_field.tag.toString(),
                 contact_number_field.text.toString(),
-                eco_class_label.text.toString()
+                eco_class_label.tag.toString()
             )
         }
 

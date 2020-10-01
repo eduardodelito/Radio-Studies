@@ -45,7 +45,7 @@
                     android:layout_marginTop="@dimen/margin20"
                     android:ems="10"
                     android:hint="@string/panel_number_label"
-                    android:inputType="textPersonName"
+                    android:inputType="text"
                     android:maxLength="7"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/main_info_title" />
@@ -57,7 +57,7 @@
                     android:layout_marginTop="@dimen/margin5"
                     android:ems="10"
                     android:hint="@string/member_number_label"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:maxLength="2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/panel_number_field" />
@@ -117,7 +117,7 @@
                     android:layout_marginTop="@dimen/margin5"
                     android:ems="10"
                     android:hint="@string/age_label"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/address_field" />
 

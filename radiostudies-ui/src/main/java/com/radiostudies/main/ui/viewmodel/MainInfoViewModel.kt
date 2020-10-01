@@ -55,7 +55,7 @@ class MainInfoViewModel @Inject constructor(private val mainInfoManager: MainInf
             mainInfoState.postValue(MainInfoForm(address = R.string.address_error))
         } else if (!isValueValid(age, 3)) {
             mainInfoState.postValue(MainInfoForm(age = R.string.address_error))
-        } else if (!isValueValid(gender, 6)) {
+        } else if (!isValueValid(gender, 1)) {
             mainInfoState.postValue(MainInfoForm(gender = R.string.gender_error))
         } else if (!isValueValid(dateOfInterview, 10)) {
             mainInfoState.postValue(MainInfoForm(dateOfInterview = R.string.date_of_interview_error))
@@ -63,11 +63,11 @@ class MainInfoViewModel @Inject constructor(private val mainInfoManager: MainInf
             mainInfoState.postValue(MainInfoForm(timeStart = R.string.time_start_error))
         } else if (!isValueValid(timeEnd, 17)) {
             mainInfoState.postValue(MainInfoForm(timeEnd = R.string.time_end_error))
-        } else if (!isValueValid(dayOfWeek, 3)) {
+        } else if (!isValueValid(dayOfWeek, 1)) {
             mainInfoState.postValue(MainInfoForm(dayOfWeek = R.string.day_of_week_error))
         } else if (!isValueValid(contactNumber, 20)) {
             mainInfoState.postValue(MainInfoForm(contactNumber = R.string.contact_number_error))
-        } else if (!isValueValid(ecoClass, 2)) {
+        } else if (!isValueValid(ecoClass, 1)) {
             mainInfoState.postValue(MainInfoForm(ecoClass = R.string.eco_class_error))
         } else {
             insertMainInfo(
