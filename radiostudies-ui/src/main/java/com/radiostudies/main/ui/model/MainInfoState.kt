@@ -21,3 +21,5 @@ data class MainInfoForm(
     val ecoClass: Int? = null
 ) :
     MainInfoState()
+
+data class MainInfoValid(val isSuccess: Boolean = false) : MainInfoState()

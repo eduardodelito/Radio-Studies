@@ -1,16 +1,29 @@
 package com.radiostudies.main.ui.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
+import com.radiostudies.main.common.livedata.SingleLiveEvent
 import com.radiostudies.main.common.viewmodel.BaseViewModel
+import com.radiostudies.main.db.manager.MainInfoManager
 import com.radiostudies.main.ui.fragment.R
+import com.radiostudies.main.ui.mapper.mainInfoModelToMainInfoEntity
+import com.radiostudies.main.ui.model.MainInfo
 import com.radiostudies.main.ui.model.MainInfoForm
 import com.radiostudies.main.ui.model.MainInfoState
+import com.radiostudies.main.ui.model.MainInfoValid
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import kotlin.coroutines.CoroutineContext
 
-class MainInfoViewModel : BaseViewModel() {
+class MainInfoViewModel @Inject constructor(private val mainInfoManager: MainInfoManager) :
+    BaseViewModel(), CoroutineScope {
 
-    private val mainInfoState = MediatorLiveData<MainInfoState>()
-    internal fun getMainInfoLiveData(): LiveData<MainInfoState> = mainInfoState
+    override val coroutineContext: CoroutineContext
+        get() = Dispatchers.Main
+
+    private val mainInfoState = SingleLiveEvent<MainInfoState>()
+    internal fun getMainInfoLiveData(): SingleLiveEvent<MainInfoState> = mainInfoState
 
     fun mainInfoDataChanged(
         panelNumber: String,
@@ -27,7 +40,7 @@ class MainInfoViewModel : BaseViewModel() {
         dayOfWeek: String,
         contactNumber: String,
         ecoClass: String
-    ): Boolean {
+    ) {
         if (!isEqualValueValid(panelNumber, 7)) {
             mainInfoState.postValue(MainInfoForm(panelNumber = R.string.panel_number_error))
         } else if (!isEqualValueValid(memberNumber, 2)) {
@@ -57,9 +70,25 @@ class MainInfoViewModel : BaseViewModel() {
         } else if (!isValueValid(ecoClass, 2)) {
             mainInfoState.postValue(MainInfoForm(ecoClass = R.string.eco_class_error))
         } else {
-            return true
+            insertMainInfo(
+                MainInfo(
+                    panelNumber,
+                    memberNumber,
+                    municipality,
+                    barangay,
+                    nameOfRespondent,
+                    address,
+                    age,
+                    gender,
+                    dateOfInterview,
+                    timeStart,
+                    timeEnd,
+                    dayOfWeek,
+                    contactNumber,
+                    ecoClass
+                )
+            )
         }
-        return false
     }
 
     /**
@@ -74,5 +103,23 @@ class MainInfoViewModel : BaseViewModel() {
      */
     private fun isEqualValueValid(value: String, max: Int): Boolean {
         return value.length == max
+    }
+
+    private fun insertMainInfo(mainInfo: MainInfo) {
+        launch {
+            insertMainInfoToDB(mainInfo)
+        }
+    }
+
+    private suspend fun insertMainInfoToDB(mainInfo: MainInfo) {
+        withContext(Dispatchers.IO) {
+            try {
+                mainInfoManager.insertMainInfo(mainInfo.mainInfoModelToMainInfoEntity())
+                mainInfoState.postValue(MainInfoValid(isSuccess = true))
+            } catch (e: Exception) {
+                mainInfoState.postValue(MainInfoValid(isSuccess = false))
+                e.printStackTrace()
+            }
+        }
     }
 }

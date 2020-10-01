@@ -3,6 +3,7 @@ package com.radiostudies.main.ui.di
 import androidx.lifecycle.ViewModel
 import com.radiostudies.main.common.viewmodel.ViewModelKey
 import com.radiostudies.main.db.manager.DBManager
+import com.radiostudies.main.db.manager.MainInfoManager
 import com.radiostudies.main.db.manager.QuestionManager
 import com.radiostudies.main.ui.viewmodel.*
 import dagger.Module
@@ -29,8 +30,8 @@ class UIViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(MainInfoViewModel::class)
-    fun provideMainInfoViewModel(): ViewModel =
-        MainInfoViewModel()
+    fun provideMainInfoViewModel(mainInfoManager: MainInfoManager): ViewModel =
+        MainInfoViewModel(mainInfoManager)
 
     @Provides
     @IntoMap

@@ -3,12 +3,10 @@ package com.radiostudies.main.di
 import android.app.Application
 import androidx.room.Room
 import com.radiostudies.main.db.RadioStudiesDB
+import com.radiostudies.main.db.dao.MainInfoDao
 import com.radiostudies.main.db.dao.QuestionDao
 import com.radiostudies.main.db.dao.UserDao
-import com.radiostudies.main.db.manager.DBManager
-import com.radiostudies.main.db.manager.DBManagerImpl
-import com.radiostudies.main.db.manager.QuestionManager
-import com.radiostudies.main.db.manager.QuestionManagerImpl
+import com.radiostudies.main.db.manager.*
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -52,12 +50,22 @@ class DBModule(private var application: Application) {
 
     @Singleton
     @Provides
-    fun providesQuestionDao(radioStudiesDB: RadioStudiesDB): QuestionDao {
-        return radioStudiesDB.questionDao()
-    }
+    fun providesQuestionDao(radioStudiesDB: RadioStudiesDB): QuestionDao =
+        radioStudiesDB.questionDao()
 
     @Singleton
     @Provides
     fun providesQuestionManager(questionDao: QuestionDao): QuestionManager =
         QuestionManagerImpl(questionDao)
+
+    @Singleton
+    @Provides
+    fun providesMainInfoDao(radioStudiesDB: RadioStudiesDB): MainInfoDao =
+        radioStudiesDB.mainInfoDao()
+
+
+    @Singleton
+    @Provides
+    fun providesMainInfoManager(mainInfoDao: MainInfoDao): MainInfoManager =
+        MainInfoManagerImpl(mainInfoDao)
 }

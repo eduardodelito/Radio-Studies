@@ -12,6 +12,7 @@ import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.ui.fragment.databinding.MainInfoFragmentBinding
 import com.radiostudies.main.ui.model.MainInfoForm
 import com.radiostudies.main.ui.model.MainInfoState
+import com.radiostudies.main.ui.model.MainInfoValid
 import com.radiostudies.main.ui.viewmodel.MainInfoViewModel
 import kotlinx.android.synthetic.main.main_info_fragment.*
 import java.text.SimpleDateFormat
@@ -33,23 +34,23 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
 
     override fun initViews() {
         continue_button.setOnClickListener {
-            if (viewModel.mainInfoDataChanged(
-                    panel_number_field.text.toString(),
-                    member_number_field.text.toString(),
-                    municipality_field.text.toString(),
-                    barangay_field.text.toString(),
-                    name_of_respondent_field.text.toString(),
-                    address_field.text.toString(),
-                    age_field.text.toString(),
-                    gender_field.text.toString(),
-                    date_of_interview_field.text.toString(),
-                    time_start_field.text.toString(),
-                    time_end_field.text.toString(),
-                    day_of_week_field.text.toString(),
-                    contact_number_field.text.toString(),
-                    eco_class_label.text.toString()
-                )
-            ) listener?.navigateToActualQuestions(it)
+
+            viewModel.mainInfoDataChanged(
+                panel_number_field.text.toString(),
+                member_number_field.text.toString(),
+                municipality_field.text.toString(),
+                barangay_field.text.toString(),
+                name_of_respondent_field.text.toString(),
+                address_field.text.toString(),
+                age_field.text.toString(),
+                gender_field.text.toString(),
+                date_of_interview_field.text.toString(),
+                time_start_field.text.toString(),
+                time_end_field.text.toString(),
+                day_of_week_field.text.toString(),
+                contact_number_field.text.toString(),
+                eco_class_label.text.toString()
+            )
         }
 
         date_of_interview_field.setOnClickListener {
@@ -76,9 +77,11 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
             }
         }
 
-        gender_field.apply { setOnClickListener {
-            dialogList(this, arrayOf(MALE, FEMALE))
-        } }
+        gender_field.apply {
+            setOnClickListener {
+                dialogList(this, arrayOf(MALE, FEMALE))
+            }
+        }
     }
 
     override fun subscribeUi() {
@@ -153,6 +156,12 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 if (state.ecoClass != null) {
                     eco_class_label.error = getString(state.ecoClass)
                     eco_class_label.requestFocus()
+                }
+            }
+
+            is MainInfoValid -> {
+                if (state.isSuccess) {
+                    listener?.navigateToActualQuestions(view)
                 }
             }
         }
