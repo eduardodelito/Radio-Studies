@@ -1,0 +1,320 @@
+[
+  {
+    "code": "1",
+    "value": "Mega Manila",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "2",
+    "value": "Dagupan",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "3",
+    "value": "Baguio",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "4",
+    "value": "Batangas",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "5",
+    "value": "Naga",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "6",
+    "value": "Legazpi",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "7",
+    "value": "Tarlac",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "8",
+    "value": "Cabanatuan",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "9",
+    "value": "Puerto Princesa",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": ":",
+    "value": "San Fernando",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": ";",
+    "value": "Laoag",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "<",
+    "value": "Olongapo",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "=",
+    "value": "Angeles",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": ">",
+    "value": "San Pablo",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "?",
+    "value": "Cebu",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "@",
+    "value": "Bacolod",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "A",
+    "value": "Iloilo",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "B",
+    "value": "Tacloban",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "C",
+    "value": "Vigan",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "D",
+    "value": "Tuguegarao",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "E",
+    "value": "Cauayan",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "F",
+    "value": "Cagayan De Oro",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "G",
+    "value": "Davao",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "H",
+    "value": "General Santos",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "I",
+    "value": "Santiago",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "J",
+    "value": "San Fernando, La Union",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "K",
+    "value": "Lucena",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "L",
+    "value": "Daet",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "M",
+    "value": "Sorsogon",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "N",
+    "value": "Dumaguete",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "O",
+    "value": "Kalibo",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "P",
+    "value": "Roxas",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "Q",
+    "value": "Tagbilaran",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "R",
+    "value": "Iligan",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "S",
+    "value": "Butuan",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "T",
+    "value": "Cotabato",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "U",
+    "value": "Surigao",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "V",
+    "value": "Koronadal",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "W",
+    "value": "Ozamis",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "X",
+    "value": "Pagadian",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "Y",
+    "value": "Malaybalay",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "Z",
+    "value": "Zamboanga",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "0",
+    "value": "NOT KNOWN/REFUSED",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "\\",
+    "value": "Rural Pangasinan",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "]",
+    "value": "Rural Cebu",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "^",
+    "value": "Rural Davao",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "h",
+    "value": "Metro Manila",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "i",
+    "value": "Tagum City",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "j",
+    "value": "Catanduanes",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "k",
+    "value": "Bayombong, Nueva Viscaya",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "l",
+    "value": "Kidapawan",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "m",
+    "value": "Valencia",
+    "otherValue": "",
+    "isManualInput": false
+  },
+  {
+    "code": "n",
+    "value": "Dipolog",
+    "otherValue": "",
+    "isManualInput": false
+  }
+]

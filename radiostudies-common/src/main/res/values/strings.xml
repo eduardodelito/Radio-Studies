@@ -4,6 +4,7 @@
 
     <string name="initial_question_title">Initial Questions</string>
     <string name="main_info_title">Main Information</string>
+    <string name="actual_question_title">Actual Questions</string>
 
     <string name="user_name">Username</string>
     <string name="password">Password</string>
