@@ -3,9 +3,7 @@ package com.radiostudies.main.di
 import android.app.Application
 import androidx.room.Room
 import com.radiostudies.main.db.RadioStudiesDB
-import com.radiostudies.main.db.dao.MainInfoDao
-import com.radiostudies.main.db.dao.QuestionDao
-import com.radiostudies.main.db.dao.UserDao
+import com.radiostudies.main.db.dao.*
 import com.radiostudies.main.db.manager.*
 import dagger.Module
 import dagger.Provides
@@ -68,4 +66,14 @@ class DBModule(private var application: Application) {
     @Provides
     fun providesMainInfoManager(mainInfoDao: MainInfoDao): MainInfoManager =
         MainInfoManagerImpl(mainInfoDao)
+
+    @Singleton
+    @Provides
+    fun providesActualQuestion(radioStudiesDB: RadioStudiesDB): ActualQuestionDao =
+        radioStudiesDB.actualQuestionDao()
+
+    @Singleton
+    @Provides
+    fun providesAreaDao(radioStudiesDB: RadioStudiesDB): AreaDao =
+        radioStudiesDB.areaDao()
 }

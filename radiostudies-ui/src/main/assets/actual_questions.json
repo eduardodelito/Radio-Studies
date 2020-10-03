@@ -4,7 +4,9 @@
     "header": "",
     "question": "Area",
     "type": "Single Answer",
-    "options": [],
+    "options": [
+      "Area"
+    ],
     "subQuestions": [],
     "isManualInput": false
   },
@@ -73,54 +75,14 @@
     "question": "What is the primary religion of the home? ",
     "type": "Single Answer",
     "options": [
-      {
-        "code": "1",
-        "value": "Roman Catholic",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "2",
-        "value": "Protestant/Christian",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "3",
-        "value": "INC",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "4",
-        "value": "Aglipayan",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "5",
-        "value": "Islam",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "6",
-        "value": "Other",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "7",
-        "value": "None",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "0",
-        "value": "NOT KNOWN/REFUSED",
-        "otherValue": "",
-        "isManualInput": false
-      }
+      "Roman Catholic",
+      "Protestant/Christian",
+      "INC",
+      "Aglipayan",
+      "Islam",
+      "Other",
+      "None",
+      "NOT KNOWN/REFUSED"
     ],
     "subQuestions": [],
     "isManualInput": false
@@ -131,78 +93,18 @@
     "question": "What type of radio device do you have in your home?",
     "type": "Multiple Answer",
     "options": [
-      {
-        "code": "A",
-        "value": "Radio Cassette Recorder",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "B",
-        "value": "Stereo Component",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "C",
-        "value": "Karaoke",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "D",
-        "value": "DVD/CD Players",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "E",
-        "value": "Car Radio",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "F",
-        "value": "Transistor Radio",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "G",
-        "value": "Cellphone",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "H",
-        "value": "MP3",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "I",
-        "value": "iPod/iPad",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "J",
-        "value": "Internet Streaming (PC/ Laptop)",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "K",
-        "value": "Others",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "L",
-        "value": "None",
-        "otherValue": "",
-        "isManualInput": false
-      }
+      "Radio Cassette Recorder",
+      "Stereo Component",
+      "Karaoke",
+      "DVD/CD Players",
+      "Car Radio",
+      "Transistor Radio",
+      "Cellphone",
+      "MP3",
+      "iPod/iPad",
+      "Internet Streaming (PC/ Laptop)",
+      "Others(Specify)",
+      "None"
     ],
     "subQuestions": [],
     "isManualInput": false
