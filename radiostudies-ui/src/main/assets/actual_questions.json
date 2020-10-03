@@ -510,42 +510,12 @@
     "question": "Number of Radio Sets Owned in the Household (including Car radio, portable radio, cellular phones with radio, etc.) ",
     "type": "Single Answer",
     "options": [
-      {
-        "code": "1",
-        "value": "One only",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "2",
-        "value": "Two",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "3",
-        "value": "Three",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "4",
-        "value": "Four",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "5",
-        "value": "Five or More",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "6",
-        "value": "None",
-        "otherValue": "",
-        "isManualInput": false
-      }
+      "One only",
+      "Two",
+      "Three",
+      "Four",
+      "Five or More",
+      "None"
     ],
     "subQuestions": [],
     "isManualInput": false
@@ -556,66 +526,22 @@
     "question": "Please include yourself, your relatives, boarders and maids.",
     "type": "Single Answer",
     "options": [
-      {
-        "code": "1",
-        "value": "1 Person HH",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "2",
-        "value": "2 Person HH",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "3",
-        "value": "3 Person HH",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "4",
-        "value": "4 Person HH",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "5",
-        "value": "5 Person HH",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "6",
-        "value": "6 Person HH",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "7",
-        "value": "7 Person HH",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "8",
-        "value": "8+ Person HH",
-        "otherValue": "",
-        "isManualInput": false
-      },
-      {
-        "code": "0",
-        "value": "NOT KNOWN/REFUSED",
-        "otherValue": "",
-        "isManualInput": false
-      }
+      "1 Person HH",
+      "2 Person HH",
+      "3 Person HH",
+      "4 Person HH",
+      "5 Person HH",
+      "6 Person HH",
+      "7 Person HH",
+      "8+ Person HH",
+      "NOT KNOWN/REFUSED"
     ],
     "subQuestions": [],
     "isManualInput": false
   },
   {
     "code": "Q8",
+    "header": "",
     "question": "Names of all members of your household from the eldest to the youngest (Name)",
     "type": "Multiple Answer",
     "options": [],
@@ -624,6 +550,7 @@
   },
   {
     "code": "Q8a",
+    "header": "",
     "questions": "MemberNumber",
     "type": "Single Answer",
     "options": [
@@ -633,6 +560,7 @@
   },
   {
     "code": "Q9",
+    "header": "",
     "question": "Age Group",
     "type": "Single Answer",
     "options": [
@@ -652,6 +580,7 @@
   },
   {
     "code": "Q10",
+    "header": "",
     "question": "Sex/Gender",
     "type": "Single Answer",
     "options": [
@@ -663,6 +592,7 @@
   },
   {
     "code": "Q11",
+    "header": "",
     "question": "Role in Household",
     "type": "Single Answer",
     "options": [
@@ -679,6 +609,7 @@
   },
   {
     "code": "Q12",
+    "header": "",
     "question": "Civil Status",
     "type": "Single Answer",
     "options": [
@@ -693,6 +624,7 @@
   },
   {
     "code": "Q13",
+    "header": "",
     "question": "Highest educational attainment",
     "type": "Single Answer",
     "options": [
@@ -775,6 +707,7 @@
   },
   {
     "code": "Q15",
+    "header": "",
     "question": "Occupation",
     "type": "Single Answer",
     "options": [
@@ -798,6 +731,7 @@
   },
   {
     "code": "Q15a",
+    "header": "",
     "question": "Employer",
     "type": "Single Answer",
     "options": [],
@@ -806,6 +740,7 @@
   },
   {
     "code": "Q16",
+    "header": "",
     "question": "Recency of Radio Listenership",
     "type": "Single Answer",
     "options": [
@@ -819,6 +754,7 @@
   },
   {
     "code": "Q17",
+    "header": "",
     "question": "Frequency of AM Listening/Exposure",
     "type": "Single Answer",
     "options": [
@@ -833,6 +769,7 @@
   },
   {
     "code": "Q18",
+    "header": "",
     "question": "Frequency of FM Listening/Exposure",
     "type": "Single Answer",
     "options": [
@@ -847,6 +784,7 @@
   },
   {
     "code": "Q19a",
+    "header": "",
     "question": "Times of Day Listening to AM Station/s",
     "type": "Multiple Answer",
     "options": [
@@ -861,6 +799,7 @@
   },
   {
     "code": "Q19b",
+    "header": "",
     "question": "Times of Day Listening to FM Station/s",
     "type": "Multiple Answer",
     "options": [
@@ -911,6 +850,7 @@
   },
   {
     "code": "Q22",
+    "header": "",
     "question": "Internet Connection at Home",
     "type": "Single Answer",
     "options": [
@@ -922,6 +862,7 @@
   },
   {
     "code": "Q23",
+    "header": "",
     "question": "Internet Connection Outside of Home",
     "type": "Single Answer",
     "options": [
@@ -933,6 +874,7 @@
   },
   {
     "code": "Q24",
+    "header": "",
     "question": "Frequency of Internet Usage",
     "type": "Single Answer",
     "options": [
@@ -1046,6 +988,7 @@
   },
   {
     "code": "Q26",
+    "header": "",
     "question": "How much is the household monthly income?",
     "type": "Single Answer",
     "options": [
