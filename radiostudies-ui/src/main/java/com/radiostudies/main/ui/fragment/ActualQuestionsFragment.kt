@@ -83,7 +83,13 @@ class ActualQuestionsFragment :
                 actual_question_label.text = actualQuestion?.question
                 actual_prev_btn.setEnable(state.isPrevEnable)
                 actual_next_btn.setEnable(state.isNextEnable)
-                actualQuestion?.options?.let { viewModel.currentOptions = it }
+                actualQuestion?.options?.let {
+                    if (it.contains(AREA)) {
+                        viewModel.loadAreas()
+                    } else {
+                        viewModel.currentOptions = it
+                    }
+                }
                 actualQuestion?.type?.let {
                     viewModel.isSingleAnswer = it == SINGLE_ANSWER
                     load_options_label.text = String.format(getString(R.string.load_options_label), it)
@@ -106,6 +112,7 @@ class ActualQuestionsFragment :
                 tv.text = "[${i + 1}] ${selectedList[i]}"
                 addView(tv)
             }
+            actual_next_btn.setEnable(true)
         }
     }
 
@@ -166,6 +173,7 @@ class ActualQuestionsFragment :
     companion object {
         private const val SINGLE_ANSWER = "Single Answer"
         private const val DONE = "Done"
+        private const val AREA = "Area"
         fun newInstance() = ActualQuestionsFragment()
     }
 }

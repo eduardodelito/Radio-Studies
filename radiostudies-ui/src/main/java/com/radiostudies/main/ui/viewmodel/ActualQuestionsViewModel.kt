@@ -35,7 +35,6 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
 
     init {
         actualState.postValue(AreaForm(AREA))
-        actualState.postValue(ActualQuestionForm(ACTUAL_QUESTIONS))
     }
 
     fun parseArea(area: String?) {
@@ -65,6 +64,7 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
                 e.printStackTrace()
             }
         }
+        actualState.postValue(ActualQuestionForm(ACTUAL_QUESTIONS))
     }
 
     fun parseActualQuestions(actual: String?) {
@@ -136,16 +136,22 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
         }
     }
 
-//    fun loadAreas() = launch { loadAreasFromDB() }
-//
-//    private suspend fun loadAreasFromDB() =
-//        withContext(Dispatchers.IO) {
-//            try {
-//                actualManager.queryArea()?.areaEntityListModelToAreaList() ?: listOf()
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            }
-//        }
+    fun loadAreas() {
+        launch {
+            loadAreasFromDB()
+        }
+
+    }
+
+    private suspend fun loadAreasFromDB() {
+        withContext(Dispatchers.IO) {
+            try {
+                currentOptions = actualManager.queryAreas()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
 
     private suspend fun queryActualQuestionFromDB(qId: Int) {
         withContext(Dispatchers.IO) {
@@ -154,7 +160,7 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
                     ActualQuestionModel(
                         actualManager.queryQuestion(qId),
                         id != 0,
-                        id != actualQuestions.size - 1
+                        false
                     )
                 )
             } catch (e: Exception) {
