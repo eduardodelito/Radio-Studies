@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
+import org.json.JSONArray
 
 /**
  * Created by eduardo.delito on 8/17/20.
@@ -100,3 +101,5 @@ fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
         override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
     })
 }
+
+fun JSONArray.toMutableList(): MutableList<Any> = MutableList(length(), this::get)

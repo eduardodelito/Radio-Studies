@@ -12,7 +12,6 @@ data class AreaEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
     @ColumnInfo(name = "code") var code: String?,
-    @ColumnInfo(name = "value") var value: String?,
-    @ColumnInfo(name = "otherValue") var otherValue: String?,
-    @ColumnInfo(name = "isManualInput") var isManualInput: Boolean?
+    @ColumnInfo(name = "place") var place: String?,
+    @ColumnInfo(name = "isManualInput") var isManualInput: Int
 )

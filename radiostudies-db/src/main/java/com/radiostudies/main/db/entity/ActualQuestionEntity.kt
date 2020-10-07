@@ -11,10 +11,11 @@ import androidx.room.PrimaryKey
 data class ActualQuestionEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
+    @ColumnInfo(name = "qId") var qId: Int?,
     @ColumnInfo(name = "code") var code: String?,
     @ColumnInfo(name = "header") var header: String?,
     @ColumnInfo(name = "question") var question: String?,
     @ColumnInfo(name = "type") var type: String?,
-    @ColumnInfo(name = "options") var options: String?,
+    @ColumnInfo(name = "options") var options: List<String>?,
     @ColumnInfo(name = "isManualInput") var isManualInput: Boolean?
 )

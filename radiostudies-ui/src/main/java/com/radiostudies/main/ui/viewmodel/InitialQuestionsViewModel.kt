@@ -5,7 +5,7 @@ import androidx.lifecycle.MediatorLiveData
 import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.manager.QuestionManager
 import com.radiostudies.main.ui.mapper.questionModelToQuestionEntity
-import com.radiostudies.main.ui.model.*
+import com.radiostudies.main.ui.model.initial.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

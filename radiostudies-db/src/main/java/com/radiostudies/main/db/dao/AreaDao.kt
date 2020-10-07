@@ -14,6 +14,9 @@ interface AreaDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertArea(areaEntity: List<AreaEntity>)
 
+    @Query("SELECT * from AreaEntity ORDER BY id ASC")
+    fun queryArea(): List<AreaEntity>?
+
     @Query("DELETE FROM AreaEntity")
     fun deleteArea()
 }

@@ -1,4 +1,4 @@
-package com.radiostudies.main.ui.model
+package com.radiostudies.main.ui.model.initial
 
 /**
  * Created by eduardo.delito on 9/19/20.

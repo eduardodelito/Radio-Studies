@@ -10,9 +10,9 @@ import androidx.appcompat.app.AlertDialog
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.ui.fragment.databinding.MainInfoFragmentBinding
-import com.radiostudies.main.ui.model.MainInfoForm
-import com.radiostudies.main.ui.model.MainInfoState
-import com.radiostudies.main.ui.model.MainInfoValid
+import com.radiostudies.main.ui.model.main.MainInfoForm
+import com.radiostudies.main.ui.model.main.MainInfoState
+import com.radiostudies.main.ui.model.main.MainInfoValid
 import com.radiostudies.main.ui.viewmodel.MainInfoViewModel
 import kotlinx.android.synthetic.main.main_info_fragment.*
 import java.text.SimpleDateFormat

@@ -2,6 +2,8 @@ package com.radiostudies.main.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.radiostudies.main.db.converter.QuestionsConverter
 import com.radiostudies.main.db.dao.*
 import com.radiostudies.main.db.entity.*
 
@@ -19,6 +21,7 @@ import com.radiostudies.main.db.entity.*
     version = 1,
     exportSchema = false
 )
+@TypeConverters(QuestionsConverter::class)
 abstract class RadioStudiesDB : RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun questionDao(): QuestionDao

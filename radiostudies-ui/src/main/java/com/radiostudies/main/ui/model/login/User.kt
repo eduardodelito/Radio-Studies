@@ -1,4 +1,4 @@
-package com.radiostudies.main.ui.model
+package com.radiostudies.main.ui.model.login
 
 import java.util.*
 

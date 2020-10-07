@@ -1,7 +1,7 @@
 package com.radiostudies.main.ui.mapper
 
 import com.radiostudies.main.db.entity.MainInfoEntity
-import com.radiostudies.main.ui.model.MainInfo
+import com.radiostudies.main.ui.model.main.MainInfo
 
 /**
  * Created by eduardo.delito on 10/1/20.

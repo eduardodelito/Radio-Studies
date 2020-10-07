@@ -6,10 +6,10 @@ import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.entity.UserEntity
 import com.radiostudies.main.db.manager.DBManager
 import com.radiostudies.main.ui.fragment.R
-import com.radiostudies.main.ui.model.ErrorModel
-import com.radiostudies.main.ui.model.LoginSuccessModel
-import com.radiostudies.main.ui.model.LoginValidModel
-import com.radiostudies.main.ui.model.LoginViewState
+import com.radiostudies.main.ui.model.login.ErrorModel
+import com.radiostudies.main.ui.model.login.LoginSuccessModel
+import com.radiostudies.main.ui.model.login.LoginValidModel
+import com.radiostudies.main.ui.model.login.LoginViewState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

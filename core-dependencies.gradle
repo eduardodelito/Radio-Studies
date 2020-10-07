@@ -66,7 +66,7 @@ dependencies {
 //    implementation Libs.Retrofit.retrofitGSONConverter
 //    implementation Libs.Retrofit.loggingInterceptor
 
-//    testImplementation Libs.Test.junit
-//    androidTestImplementation Libs.Test.ext_junit
-//    androidTestImplementation Libs.Test.espresso_core
+    testImplementation Libs.Test.junit
+    androidTestImplementation Libs.Test.ext_junit
+    androidTestImplementation Libs.Test.espresso_core
 }

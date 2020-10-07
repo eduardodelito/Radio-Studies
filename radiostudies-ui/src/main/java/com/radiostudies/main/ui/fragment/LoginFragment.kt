@@ -7,10 +7,10 @@ import com.radiostudies.main.common.util.hideKeyboard
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.common.util.setViewVisibility
 import com.radiostudies.main.ui.fragment.databinding.LoginFragmentBinding
-import com.radiostudies.main.ui.model.ErrorModel
-import com.radiostudies.main.ui.model.LoginSuccessModel
-import com.radiostudies.main.ui.model.LoginValidModel
-import com.radiostudies.main.ui.model.LoginViewState
+import com.radiostudies.main.ui.model.login.ErrorModel
+import com.radiostudies.main.ui.model.login.LoginSuccessModel
+import com.radiostudies.main.ui.model.login.LoginValidModel
+import com.radiostudies.main.ui.model.login.LoginViewState
 import com.radiostudies.main.ui.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.login_fragment.*
 import javax.inject.Inject

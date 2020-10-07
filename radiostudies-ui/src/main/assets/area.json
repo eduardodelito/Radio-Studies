@@ -1,320 +1,267 @@
 [
   {
     "code": "1",
-    "value": "Mega Manila",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Mega Manila",
+    "isManualInput": 0
   },
   {
     "code": "2",
-    "value": "Dagupan",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Dagupan",
+    "isManualInput": 0
   },
   {
     "code": "3",
-    "value": "Baguio",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Baguio",
+    "isManualInput": 0
   },
   {
     "code": "4",
-    "value": "Batangas",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Batangas",
+    "isManualInput": 0
   },
   {
     "code": "5",
-    "value": "Naga",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Naga",
+    "isManualInput": 0
   },
   {
     "code": "6",
-    "value": "Legazpi",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Legazpi",
+    "isManualInput": 0
   },
   {
     "code": "7",
-    "value": "Tarlac",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Tarlac",
+    "isManualInput": 0
   },
   {
     "code": "8",
-    "value": "Cabanatuan",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Cabanatuan",
+    "isManualInput": 0
   },
   {
     "code": "9",
-    "value": "Puerto Princesa",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Puerto Princesa",
+    "isManualInput": 0
   },
   {
     "code": ":",
-    "value": "San Fernando",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "San Fernando",
+    "isManualInput": 0
   },
   {
     "code": ";",
-    "value": "Laoag",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Laoag",
+    "isManualInput": 0
   },
   {
     "code": "<",
-    "value": "Olongapo",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Olongapo",
+    "isManualInput": 0
   },
   {
     "code": "=",
-    "value": "Angeles",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Angeles",
+    "isManualInput": 0
   },
   {
     "code": ">",
-    "value": "San Pablo",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "San Pablo",
+    "isManualInput": 0
   },
   {
     "code": "?",
-    "value": "Cebu",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Cebu",
+    "isManualInput": 0
   },
   {
     "code": "@",
-    "value": "Bacolod",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Bacolod",
+    "isManualInput": 0
   },
   {
     "code": "A",
-    "value": "Iloilo",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Iloilo",
+    "isManualInput": 0
   },
   {
     "code": "B",
-    "value": "Tacloban",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Tacloban",
+    "isManualInput": 0
   },
   {
     "code": "C",
-    "value": "Vigan",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Vigan",
+    "isManualInput": 0
   },
   {
     "code": "D",
-    "value": "Tuguegarao",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Tuguegarao",
+    "isManualInput": 0
   },
   {
     "code": "E",
-    "value": "Cauayan",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Cauayan",
+    "isManualInput": 0
   },
   {
     "code": "F",
-    "value": "Cagayan De Oro",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Cagayan De Oro",
+    "isManualInput": 0
   },
   {
     "code": "G",
-    "value": "Davao",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Davao",
+    "isManualInput": 0
   },
   {
     "code": "H",
-    "value": "General Santos",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "General Santos",
+    "isManualInput": 0
   },
   {
     "code": "I",
-    "value": "Santiago",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Santiago",
+    "isManualInput": 0
   },
   {
     "code": "J",
-    "value": "San Fernando, La Union",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "San Fernando, La Union",
+    "isManualInput": 0
   },
   {
     "code": "K",
-    "value": "Lucena",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Lucena",
+    "isManualInput": 0
   },
   {
     "code": "L",
-    "value": "Daet",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Daet",
+    "isManualInput": 0
   },
   {
     "code": "M",
-    "value": "Sorsogon",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Sorsogon",
+    "isManualInput": 0
   },
   {
     "code": "N",
-    "value": "Dumaguete",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Dumaguete",
+    "isManualInput": 0
   },
   {
     "code": "O",
-    "value": "Kalibo",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Kalibo",
+    "isManualInput": 0
   },
   {
     "code": "P",
-    "value": "Roxas",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Roxas",
+    "isManualInput": 0
   },
   {
     "code": "Q",
-    "value": "Tagbilaran",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Tagbilaran",
+    "isManualInput": 0
   },
   {
     "code": "R",
-    "value": "Iligan",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Iligan",
+    "isManualInput": 0
   },
   {
     "code": "S",
-    "value": "Butuan",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Butuan",
+    "isManualInput": 0
   },
   {
     "code": "T",
-    "value": "Cotabato",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Cotabato",
+    "isManualInput": 0
   },
   {
     "code": "U",
-    "value": "Surigao",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Surigao",
+    "isManualInput": 0
   },
   {
     "code": "V",
-    "value": "Koronadal",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Koronadal",
+    "isManualInput": 0
   },
   {
     "code": "W",
-    "value": "Ozamis",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Ozamis",
+    "isManualInput": 0
   },
   {
     "code": "X",
-    "value": "Pagadian",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Pagadian",
+    "isManualInput": 0
   },
   {
     "code": "Y",
-    "value": "Malaybalay",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Malaybalay",
+    "isManualInput": 0
   },
   {
     "code": "Z",
-    "value": "Zamboanga",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Zamboanga",
+    "isManualInput": 0
   },
   {
     "code": "0",
-    "value": "NOT KNOWN/REFUSED",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "NOT KNOWN/REFUSED",
+    "isManualInput": 0
   },
   {
     "code": "\\",
-    "value": "Rural Pangasinan",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Rural Pangasinan",
+    "isManualInput": 0
   },
   {
     "code": "]",
-    "value": "Rural Cebu",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Rural Cebu",
+    "isManualInput": 0
   },
   {
     "code": "^",
-    "value": "Rural Davao",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Rural Davao",
+    "isManualInput": 0
   },
   {
     "code": "h",
-    "value": "Metro Manila",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Metro Manila",
+    "isManualInput": 0
   },
   {
     "code": "i",
-    "value": "Tagum City",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Tagum City",
+    "isManualInput": 0
   },
   {
     "code": "j",
-    "value": "Catanduanes",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Catanduanes",
+    "isManualInput": 0
   },
   {
     "code": "k",
-    "value": "Bayombong, Nueva Viscaya",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Bayombong, Nueva Viscaya",
+    "isManualInput": 0
   },
   {
     "code": "l",
-    "value": "Kidapawan",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Kidapawan",
+    "isManualInput": 0
   },
   {
     "code": "m",
-    "value": "Valencia",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Valencia",
+    "isManualInput": 0
   },
   {
     "code": "n",
-    "value": "Dipolog",
-    "otherValue": "",
-    "isManualInput": false
+    "place": "Dipolog",
+    "isManualInput": 0
   }
 ]

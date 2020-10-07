@@ -10,9 +10,9 @@ import com.radiostudies.main.common.util.getJsonDataFromAsset
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.common.util.setEnable
 import com.radiostudies.main.ui.fragment.databinding.InitialQuestionsFragmentBinding
-import com.radiostudies.main.ui.model.ScreenQuestionListModel
-import com.radiostudies.main.ui.model.ScreenQuestionModel
-import com.radiostudies.main.ui.model.ScreenQuestionState
+import com.radiostudies.main.ui.model.initial.ScreenQuestionListModel
+import com.radiostudies.main.ui.model.initial.ScreenQuestionModel
+import com.radiostudies.main.ui.model.initial.ScreenQuestionState
 import com.radiostudies.main.ui.viewmodel.InitialQuestionsViewModel
 import kotlinx.android.synthetic.main.initial_questions_fragment.*
 import javax.inject.Inject

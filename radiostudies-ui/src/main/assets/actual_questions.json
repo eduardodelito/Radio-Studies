@@ -7,8 +7,7 @@
     "options": [
       "Area"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q2",
@@ -21,8 +20,7 @@
       "RENTING",
       "NOT KNOWN/REFUSED"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q2a",
@@ -41,8 +39,7 @@
       "20,001 – 25,000",
       "25,001 & up"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q3",
@@ -66,8 +63,7 @@
       "Chinese",
       "NOT KNOWN/REFUSED"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q4",
@@ -84,8 +80,7 @@
       "None",
       "NOT KNOWN/REFUSED"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5a",
@@ -106,407 +101,374 @@
       "Others(Specify)",
       "None"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b1a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Radio Cassette Recorder - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b1b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Radio Cassette Recorder - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b1c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Radio Cassette Recorder - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b2a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Stereo Component - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b2b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Stereo Component - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b2c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Stereo Component - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b3a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Karaoke - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b3b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Karaoke - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b3c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Karaoke - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b4a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "DVD/CD Players - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b4b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "DVD/CD Players - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b4c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "DVD/CD Players - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b5a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Car Radio - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b5b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Car Radio - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b5c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Car Radio - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b6a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Transistor Radio - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b6b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Transistor Radio - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b6c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Transistor Radio - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b7a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Cellphone - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b7b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Cellphone - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b7c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Cellphone - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b8a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "MP3 - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b8b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "MP3 - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b8c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "MP3 - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b9a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "iPod/iPad - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b9b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "iPod/iPad - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b9c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "iPod/iPad - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b10a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Internet Streaming (PC/ Laptop) - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b10b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Internet Streaming (PC/ Laptop) - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b10c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Internet Streaming (PC/ Laptop) - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b11a",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Others - AM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b11b",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Others - FM",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q5b11c",
     "header": "Does it have AM or FM radio broadcast?",
     "question": "Others - BOTH",
-    "type": "See Choices",
+    "type": "Single Answer",
     "options": [
       "YES",
       "NO"
     ],
-    "subQuestions": "",
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q6",
+    "header": "",
     "question": "Number of Radio Sets Owned in the Household (including Car radio, portable radio, cellular phones with radio, etc.) ",
     "type": "Single Answer",
     "options": [
@@ -517,8 +479,7 @@
       "Five or More",
       "None"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q7",
@@ -536,8 +497,7 @@
       "8+ Person HH",
       "NOT KNOWN/REFUSED"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q8",
@@ -545,18 +505,16 @@
     "question": "Names of all members of your household from the eldest to the youngest (Name)",
     "type": "Multiple Answer",
     "options": [],
-    "subQuestions": [],
-    "isManualInput": true
+    "isManualInput": 1
   },
   {
     "code": "Q8a",
     "header": "",
-    "questions": "MemberNumber",
+    "question": "MemberNumber",
     "type": "Single Answer",
     "options": [
     ],
-    "subQuestions": [],
-    "isManualInput": true
+    "isManualInput": 1
   },
   {
     "code": "Q9",
@@ -575,8 +533,7 @@
       "40-44 YEARS OLD",
       "45 YEARS OLD AND UP"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q10",
@@ -587,8 +544,7 @@
       "MALE",
       "FEMALE"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q11",
@@ -604,8 +560,7 @@
       "Both Household Head & Housewife",
       "Non-relatives"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q12",
@@ -619,8 +574,7 @@
       "WIDOWED",
       "NOT KNOWN/REFUSED"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q13",
@@ -642,8 +596,7 @@
       "Completed/Some PHD",
       "Refused"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q14a",
@@ -654,8 +607,7 @@
       "Yes",
       "No"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q14b",
@@ -666,8 +618,7 @@
       "Yes",
       "No"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q14c",
@@ -678,8 +629,7 @@
       "Yes",
       "No"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q14d",
@@ -690,8 +640,7 @@
       "Yes",
       "No"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q14e",
@@ -702,8 +651,7 @@
       "Yes",
       "No"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q15",
@@ -726,8 +674,7 @@
       "NOT GAINFULLY EMPLOYED",
       "NOT KNOWN/REFUSED"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q15a",
@@ -735,8 +682,7 @@
     "question": "Employer",
     "type": "Single Answer",
     "options": [],
-    "subQuestions": [],
-    "isManualInput": true
+    "isManualInput": 1
   },
   {
     "code": "Q16",
@@ -749,8 +695,7 @@
       "More than 7 days ago",
       "More than one month ago"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q17",
@@ -764,8 +709,7 @@
       "Once a week",
       "Never listen/never exposed"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q18",
@@ -779,8 +723,7 @@
       "Once a week",
       "Never listen/never exposed"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q19a",
@@ -794,8 +737,7 @@
       "09:00 pm – 12:00 am",
       "12:00 midnight – 02:00 am"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q19b",
@@ -809,8 +751,7 @@
       "09:00 pm – 12:00 am",
       "12:00 midnight – 02:00 am"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q20a",
@@ -818,8 +759,7 @@
     "question": "What AM stations do you usually listen to?",
     "type": "Multiple Answer",
     "options": [],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q20b",
@@ -827,8 +767,7 @@
     "question": "How many hours in a day do you usually listen to these AM stations?",
     "type": "Multiple Answer",
     "options": [],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q21a",
@@ -836,8 +775,7 @@
     "question": "What FM stations do you usually listen to?",
     "type": "Multiple Answer",
     "options": [],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q21b",
@@ -845,8 +783,7 @@
     "question": "How many hours in a day do you usually listen to these AM stations?",
     "type": "Multiple Answer",
     "options": [],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q22",
@@ -857,8 +794,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q23",
@@ -869,8 +805,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q24",
@@ -887,8 +822,7 @@
       "Less often than once a month",
       "Never"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q25a",
@@ -899,8 +833,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q25b",
@@ -911,8 +844,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q25c",
@@ -923,8 +855,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q25d",
@@ -935,8 +866,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q25e",
@@ -947,8 +877,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q25f",
@@ -959,8 +888,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q25g",
@@ -971,8 +899,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q25h",
@@ -983,8 +910,7 @@
       "YES",
       "NO"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q26",
@@ -1011,8 +937,7 @@
       "None",
       "Don’t Know/Refused"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q27a",
@@ -1024,8 +949,7 @@
       "Deep well / Poso",
       "Electricity"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q27b",
@@ -1037,8 +961,7 @@
       "De buhos",
       "Antipolo system"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q27c",
@@ -1051,8 +974,7 @@
       "Microwave Oven",
       "Dishwashing Machine"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q27d",
@@ -1063,8 +985,7 @@
       "Refrigerator",
       "Refrigerator"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q27e",
@@ -1074,8 +995,7 @@
     "options": [
       "Air Conditioner"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q27f",
@@ -1090,8 +1010,7 @@
       "Installed Water Heater",
       "Generator"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   },
   {
     "code": "Q27g",
@@ -1106,7 +1025,6 @@
       "DIGITAL CAMERA",
       "PIANO/ORGAN"
     ],
-    "subQuestions": [],
-    "isManualInput": false
+    "isManualInput": 0
   }
 ]

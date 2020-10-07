@@ -5,10 +5,10 @@ import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.manager.MainInfoManager
 import com.radiostudies.main.ui.fragment.R
 import com.radiostudies.main.ui.mapper.mainInfoModelToMainInfoEntity
-import com.radiostudies.main.ui.model.MainInfo
-import com.radiostudies.main.ui.model.MainInfoForm
-import com.radiostudies.main.ui.model.MainInfoState
-import com.radiostudies.main.ui.model.MainInfoValid
+import com.radiostudies.main.ui.model.main.MainInfo
+import com.radiostudies.main.ui.model.main.MainInfoForm
+import com.radiostudies.main.ui.model.main.MainInfoState
+import com.radiostudies.main.ui.model.main.MainInfoValid
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
