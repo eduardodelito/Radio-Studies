@@ -84,7 +84,10 @@ class ActualQuestionsFragment :
                 actual_prev_btn.setEnable(state.isPrevEnable)
                 actual_next_btn.setEnable(state.isNextEnable)
                 actualQuestion?.options?.let { viewModel.currentOptions = it }
-                actualQuestion?.type?.let { viewModel.isSingleAnswer = it == SINGLE_ANSWER }
+                actualQuestion?.type?.let {
+                    viewModel.isSingleAnswer = it == SINGLE_ANSWER
+                    load_options_label.text = String.format(getString(R.string.load_options_label), it)
+                }
             }
         }
     }

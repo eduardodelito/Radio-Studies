@@ -139,6 +139,6 @@
     <string name="radio_fm">FM</string>
     <string name="radio_both">Both</string>
 
-    <string name="load_options_label">[ Click Options Here ]</string>
+    <string name="load_options_label">[ Select %1s Here ]</string>
     <string name="choose_items">Choose Items</string>
 </resources>
