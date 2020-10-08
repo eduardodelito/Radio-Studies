@@ -60,15 +60,15 @@ abstract class UIBindingModule {
         ) = ViewModelProvider(target, factory).get(ActualQuestionsViewModel::class.java)
     }
 
-    @ContributesAndroidInjector(modules = [InjectActualQuestionsPage2ViewModelModule::class])
-    abstract fun bindActualQuestionsPage2Fragment(): ActualQuestionsPage2Fragment
+    @ContributesAndroidInjector(modules = [InjectDiaryViewModelModule::class])
+    abstract fun bindDiaryFragment(): DiaryFragment
 
     @Module
-    class InjectActualQuestionsPage2ViewModelModule {
+    class InjectDiaryViewModelModule {
         @Provides
-        internal fun provideActualQuestionsPage2ViewModel(
+        internal fun provideDiaryViewModel(
             factory: ViewModelProvider.Factory,
-            target: ActualQuestionsPage2Fragment
-        ) = ViewModelProvider(target, factory).get(ActualQuestionsPage2ViewModel::class.java)
+            target: DiaryFragment
+        ) = ViewModelProvider(target, factory).get(DiaryViewModel::class.java)
     }
 }

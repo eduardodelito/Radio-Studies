@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.appcompat.app.AlertDialog
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.getJsonDataFromAsset
 import com.radiostudies.main.common.util.reObserve
@@ -38,12 +39,19 @@ class InitialQuestionsFragment :
 
         next_btn.setOnClickListener {
             with(viewModel) {
-                updateQuestion(loadOptions())
-                updateNextQuestion()
-                next_btn.setEnable(false)
-                if (this.index == 5) {
-                    this.index = 4
-                    listener?.navigateToMainInfo(it)
+                if (loadOptions().contains(DISAGREE) && index == 0 ||
+                    !loadOptions().contains(NONE_OF_THE_ABOVE) && (index == 1 || index == 2) ||
+                    loadOptions().contains(YES) && (index == 3 || index == 4)
+                ) {
+                    dialog()
+                } else {
+                    updateQuestion(loadOptions())
+                    updateNextQuestion()
+                    next_btn.setEnable(false)
+                    if (this.index == 5) {
+                        this.index = 4
+                        listener?.navigateToMainInfo(it)
+                    }
                 }
             }
         }
@@ -114,7 +122,8 @@ class InitialQuestionsFragment :
                     } else if (isChecked && !buttonView.text.contains("NONE")) {
                         uncheckCheckBoxes(false)
                     }
-                    next_btn.setEnable(true)
+
+                    next_btn.setEnable(validateCheckBoxes())
                 }
                 // set text for the radio button
                 cb.text = list[i]
@@ -159,6 +168,17 @@ class InitialQuestionsFragment :
         }
     }
 
+    fun validateCheckBoxes(): Boolean {
+        selection_layout.apply {
+            val count: Int = this.childCount
+            for (i in 0 until count) {
+                val cb = getChildAt(i) as CheckBox
+                if (cb.isChecked) return true
+            }
+        }
+        return false
+    }
+
     private fun loadSingleOption(list: List<String>) {
         selection_layout.apply {
             tag = 0
@@ -199,6 +219,20 @@ class InitialQuestionsFragment :
         }
     }
 
+    private fun dialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle(R.string.terminate_msg)
+        builder.setPositiveButton(YES) { dialog, _ ->
+            listener?.navigateBack()
+            dialog.dismiss()
+        }
+        builder.setNegativeButton(NO) { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
+    }
+
     override fun onDetach() {
         super.onDetach()
         listener = null
@@ -206,9 +240,17 @@ class InitialQuestionsFragment :
 
     interface InitialQuestionsFragmentListener {
         fun navigateToMainInfo(view: View?)
+
+        fun navigateBack()
     }
 
     companion object {
+        private const val YES = "Yes"
+        private const val NO = "No"
+
+        private const val DISAGREE = "DISAGREE"
+        private const val NONE_OF_THE_ABOVE = "NONE OF THE ABOVE"
+
         fun newInstance() = InitialQuestionsFragment()
     }
 }

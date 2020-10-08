@@ -53,23 +53,15 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
             )
         }
 
-        date_of_interview_field.setOnClickListener {
-            openDatePicker()
-        }
+        date_of_interview_field.setText(viewModel.getDate())
 
-        time_start_field.setOnClickListener {
-            openTimePicker(time_start_field)
-        }
+        time_start_field.setText(viewModel.getTime())
 
         time_end_field.setOnClickListener {
             openTimePicker(time_end_field)
         }
 
-        day_of_week_field.apply {
-            setOnClickListener {
-                dialogList(this, arrayOf(SUN, MON, TUE, WED, THU, FRI, SAT))
-            }
-        }
+        day_of_week_field.setText(viewModel.getDay())
 
         eco_class_label.apply {
             setOnClickListener {
@@ -196,8 +188,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
 
-            val myFormat = "hh:mm a" // your own format
-            val sdf = SimpleDateFormat(myFormat, Locale.US)
+            val sdf = SimpleDateFormat(TIME_FORMAT, Locale.US)
             val formattedTime = sdf.format(cal.time) //format your time
             view.setText(formattedTime)
         }
@@ -234,19 +225,13 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         private const val MALE = "MALE"
         private const val FEMALE = "FEMALE"
 
-        private const val SUN = "Sun"
-        private const val MON = "Mon"
-        private const val TUE = "Tue"
-        private const val WED = "Wed"
-        private const val THU = "Thu"
-        private const val FRI = "Fri"
-        private const val SAT = "Sat"
-
         private const val AB = "AB"
         private const val C1 = "C1"
         private const val C2 = "C2"
         private const val D = "D"
         private const val E = "E"
+
+        private const val TIME_FORMAT = "hh:mm:ss a"
 
         fun newInstance() = MainInfoFragment()
     }

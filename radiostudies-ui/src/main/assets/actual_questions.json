@@ -500,53 +500,6 @@
     "isManualInput": 0
   },
   {
-    "code": "Q8",
-    "header": "",
-    "question": "Names of all members of your household from the eldest to the youngest (Name)",
-    "type": "Multiple Answer",
-    "options": [],
-    "isManualInput": 1
-  },
-  {
-    "code": "Q8a",
-    "header": "",
-    "question": "MemberNumber",
-    "type": "Single Answer",
-    "options": [
-    ],
-    "isManualInput": 1
-  },
-  {
-    "code": "Q9",
-    "header": "",
-    "question": "Age Group",
-    "type": "Single Answer",
-    "options": [
-      "2 - 6 YEARS OLD",
-      "7 -12 YEARS OLD",
-      "13-15 YEARS OLD",
-      "16-19 YEARS OLD",
-      "20-24 YEARS OLD",
-      "25-29 YEARS OLD",
-      "30-34 YEARS OLD",
-      "35-39 YEARS OLD",
-      "40-44 YEARS OLD",
-      "45 YEARS OLD AND UP"
-    ],
-    "isManualInput": 0
-  },
-  {
-    "code": "Q10",
-    "header": "",
-    "question": "Sex/Gender",
-    "type": "Single Answer",
-    "options": [
-      "MALE",
-      "FEMALE"
-    ],
-    "isManualInput": 0
-  },
-  {
     "code": "Q11",
     "header": "",
     "question": "Role in Household",
@@ -737,7 +690,7 @@
       "09:00 pm – 12:00 am",
       "12:00 midnight – 02:00 am"
     ],
-    "isManualInput": 0
+    "isManualInput": 1
   },
   {
     "code": "Q19b",
@@ -751,7 +704,7 @@
       "09:00 pm – 12:00 am",
       "12:00 midnight – 02:00 am"
     ],
-    "isManualInput": 0
+    "isManualInput": 1
   },
   {
     "code": "Q20a",

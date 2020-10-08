@@ -2,6 +2,7 @@ package com.radiostudies.main.ui.fragment
 
 import android.content.Context
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.hideKeyboard
 import com.radiostudies.main.common.util.reObserve
@@ -67,8 +68,7 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
             is LoginSuccessModel -> {
                 if (state.isSuccess) {
                     hideKeyboard()
-                    view?.let { listener?.navigateToInitialScreen(it) }
-                    clearFields()
+                    dialogOptions()
                 }
             }
 
@@ -97,7 +97,25 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
         listener = null
     }
 
+    private fun dialogOptions() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle(R.string.choose_items)
+        builder.setItems(listOf("HRF", "Diary").toTypedArray()) { dialog, which ->
+            if (which == 0) {
+                view?.let { listener?.navigateToInitialScreen(it) }
+            } else {
+                view?.let { listener?.navigateToDiaryScreen(it) }
+            }
+            clearFields()
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
+    }
+
     interface LoginFragmentListener {
         fun navigateToInitialScreen(view: View?)
+
+        fun navigateToDiaryScreen(view: View?)
     }
 }

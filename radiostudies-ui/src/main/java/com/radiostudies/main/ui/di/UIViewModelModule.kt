@@ -6,7 +6,11 @@ import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.db.manager.DBManager
 import com.radiostudies.main.db.manager.MainInfoManager
 import com.radiostudies.main.db.manager.QuestionManager
-import com.radiostudies.main.ui.viewmodel.*
+import com.radiostudies.main.ui.viewmodel.DiaryViewModel
+import com.radiostudies.main.ui.viewmodel.ActualQuestionsViewModel
+import com.radiostudies.main.ui.viewmodel.InitialQuestionsViewModel
+import com.radiostudies.main.ui.viewmodel.LoginViewModel
+import com.radiostudies.main.ui.viewmodel.MainInfoViewModel
 import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
@@ -42,7 +46,7 @@ class UIViewModelModule {
 
     @Provides
     @IntoMap
-    @ViewModelKey(ActualQuestionsPage2ViewModel::class)
-    fun provideActualQuestionsPage2ViewModel(): ViewModel =
-        ActualQuestionsPage2ViewModel()
+    @ViewModelKey(DiaryViewModel::class)
+    fun provideDiaryViewModel(): ViewModel =
+        DiaryViewModel()
 }

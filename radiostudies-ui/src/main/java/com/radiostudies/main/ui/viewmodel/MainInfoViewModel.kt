@@ -1,6 +1,8 @@
 package com.radiostudies.main.ui.viewmodel
 
 import com.radiostudies.main.common.livedata.SingleLiveEvent
+import com.radiostudies.main.common.util.getCurrentDateTime
+import com.radiostudies.main.common.util.toStringDateTime
 import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.manager.MainInfoManager
 import com.radiostudies.main.ui.fragment.R
@@ -121,5 +123,17 @@ class MainInfoViewModel @Inject constructor(private val mainInfoManager: MainInf
                 e.printStackTrace()
             }
         }
+    }
+
+    fun getDate() = getCurrentDateTime().toStringDateTime(DATE_FORMAT)
+
+    fun getTime() = getCurrentDateTime().toStringDateTime(TIME_FORMAT)
+
+    fun getDay() = getCurrentDateTime().toStringDateTime(DAY_FORMAT)
+
+    companion object {
+        private const val DATE_FORMAT = "MMM/dd/yyyy"
+        private const val TIME_FORMAT = "hh:mm:ss a"
+        private const val DAY_FORMAT = "EEE"
     }
 }

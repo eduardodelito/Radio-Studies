@@ -1,7 +1,5 @@
 package com.radiostudies.main.ui.fragment
 
-import android.content.Context
-import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatTextView
@@ -24,8 +22,6 @@ import javax.inject.Inject
 
 class ActualQuestionsFragment :
     BaseFragment<ActualQuestionsFragmentBinding, ActualQuestionsViewModel>() {
-
-    private var listener: ActualQuestionsFragmentListener? = null
 
     @Inject
     override lateinit var viewModel: ActualQuestionsViewModel
@@ -116,18 +112,6 @@ class ActualQuestionsFragment :
         }
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is ActualQuestionsFragmentListener) {
-            listener = context
-        }
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
-
     private fun dialogOptions(list: List<String?>, isSingleChoice: Boolean) {
         val listItems = list.toTypedArray()
         val checkedItems = BooleanArray(listItems.size)
@@ -164,10 +148,6 @@ class ActualQuestionsFragment :
 
         val dialog = builder.create()
         dialog.show()
-    }
-
-    interface ActualQuestionsFragmentListener {
-        fun navigateToActualQuestionsPage2(view: View?)
     }
 
     companion object {

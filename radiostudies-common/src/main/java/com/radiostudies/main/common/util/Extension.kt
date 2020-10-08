@@ -13,7 +13,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import org.json.JSONArray
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * Created by eduardo.delito on 8/17/20.
@@ -102,4 +103,11 @@ fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
     })
 }
 
-fun JSONArray.toMutableList(): MutableList<Any> = MutableList(length(), this::get)
+fun Date.toStringDateTime(format: String, locale: Locale = Locale.getDefault()): String {
+    val formatter = SimpleDateFormat(format, locale)
+    return formatter.format(this)
+}
+
+fun getCurrentDateTime(): Date {
+    return Calendar.getInstance().time
+}
