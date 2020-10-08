@@ -28,7 +28,7 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
     private val actualState = SingleLiveEvent<ActualQuestionState>()
     internal fun getActualLiveData(): SingleLiveEvent<ActualQuestionState> = actualState
     private val actualQuestions = mutableListOf<ActualQuestion>()
-    var currentOptions = listOf<String?>()
+    var currentOptions = listOf<String>()
     var currentAreas = listOf<Area>()
     var isSingleAnswer = false
     private var id = -1

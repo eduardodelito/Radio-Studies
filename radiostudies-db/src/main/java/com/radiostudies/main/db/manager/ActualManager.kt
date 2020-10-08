@@ -16,7 +16,7 @@ interface ActualManager {
 
     fun queryQuestion(qID: Int): ActualQuestion?
 
-    fun queryAreas(): List<String?>
+    fun queryAreas(): List<String>
 }
 
 class ActualManagerImpl(
@@ -35,5 +35,5 @@ class ActualManagerImpl(
 
     override fun queryQuestion(qID: Int) = actualQuestionDao.queryActualQuestion(qID)
 
-    override fun queryAreas(): List<String?> = areaDao.queryArea()
+    override fun queryAreas(): List<String> = areaDao.queryArea()
 }
