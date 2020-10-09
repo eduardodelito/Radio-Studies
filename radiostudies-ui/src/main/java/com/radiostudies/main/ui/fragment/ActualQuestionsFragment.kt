@@ -12,15 +12,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
 import com.radiostudies.main.common.fragment.BaseFragment
-import com.radiostudies.main.common.util.getJsonDataFromAsset
-import com.radiostudies.main.common.util.reObserve
-import com.radiostudies.main.common.util.setEnable
-import com.radiostudies.main.common.util.setViewVisibility
+import com.radiostudies.main.common.util.*
+import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.ui.fragment.databinding.ActualQuestionsFragmentBinding
-import com.radiostudies.main.ui.model.actual.ActualQuestionForm
-import com.radiostudies.main.ui.model.actual.ActualQuestionModel
-import com.radiostudies.main.ui.model.actual.ActualQuestionState
-import com.radiostudies.main.ui.model.actual.AreaForm
+import com.radiostudies.main.ui.model.actual.*
 import com.radiostudies.main.ui.viewmodel.ActualQuestionsViewModel
 import kotlinx.android.synthetic.main.actual_questions_fragment.*
 import java.util.*
@@ -45,13 +40,36 @@ class ActualQuestionsFragment :
         }
         actual_next_btn.setOnClickListener {
             viewModel.queryActualQuestion(viewModel.plus())
+            viewModel.saveQuestion(
+                DataQuestion(
+                    actual_question_number.text.toString(),
+                    getQuestionLabelText(),
+                    actual_question_label.text.toString(),
+                    viewModel.selectedOptions
+                )
+            )
             actual_selection_layout.removeAllViews()
         }
 
         load_options_label.setOnClickListener {
             dialogOptions(viewModel.currentOptions, viewModel.isSingleAnswer)
         }
+
+        manual_input.afterTextChanged {
+            if (it.isNotEmpty()) {
+                actual_next_btn.setEnable(true)
+            } else {
+                actual_next_btn.setEnable(false)
+            }
+        }
+
+        btn_save.setOnClickListener {
+            dialogComplete()
+        }
     }
+
+    private fun getQuestionLabelText() =
+        if (actual_question_header_label.isShown) actual_question_header_label.text.toString() else ""
 
     override fun subscribeUi() {
         with(viewModel) {
@@ -81,43 +99,56 @@ class ActualQuestionsFragment :
 
             is ActualQuestionModel -> {
                 var actualQuestion = state.actualQuestion
-                actual_question_number.text = actualQuestion?.code
-                actual_question_header_label.setViewVisibility(actualQuestion?.header)
-                actual_question_label.text = actualQuestion?.question
+                actual_question_number.text = actualQuestion.code
+                actual_question_header_label.setViewVisibility(actualQuestion.header)
+                actual_question_label.text = actualQuestion.question
                 actual_prev_btn.setEnable(state.isPrevEnable)
                 actual_next_btn.setEnable(state.isNextEnable)
-                actualQuestion?.options?.let {
-                    if (it.contains(AREA)) {
-                        viewModel.loadAreas()
-                    } else {
-                        viewModel.currentOptions = it
-                    }
+                btn_save.visibility = View.GONE
+
+                if (actualQuestion.options[0].option == AREA) {
+                    viewModel.loadAreas()
+                } else {
+                    viewModel.currentOptions = actualQuestion.options
                 }
-                actualQuestion?.type?.let {
+
+                actualQuestion.type?.let {
                     viewModel.isSingleAnswer = it == SINGLE_ANSWER
                     load_options_label.text = String.format(
                         getString(R.string.load_options_label),
                         it
                     )
                 }
+                if (actualQuestion.isManualInput) {
+                    line3.visibility = View.GONE
+                    load_options_label.visibility = View.GONE
+                    manual_input.visibility = View.VISIBLE
+                    manual_input.setText("")
+                } else {
+                    line3.visibility = View.VISIBLE
+                    load_options_label.visibility = View.VISIBLE
+                    manual_input.visibility = View.GONE
+                }
             }
         }
     }
 
-    private fun addOptions(selectedList: MutableList<String>) {
+    private fun addOptions(selectedList: MutableList<Option>) {
         actual_selection_layout.apply {
+            viewModel.selectedOptions.clear()
             removeAllViews()
             invalidate()
             for (i in selectedList.indices) {
+                val option = selectedList[i]
                 val params = LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
                 )
                 val tv = AppCompatTextView(context)
                 TextViewCompat.setTextAppearance(tv, R.style.AvenirHeavy_Black);
                 tv.layoutParams = params
-                tv.text = "[${i + 1}] ${selectedList[i]}"
+                tv.text = "[${i + 1}] ${selectedList[i].option}"
                 addView(tv)
-                if (selectedList[i].contains(OTHER)) {
+                if (option.option.contains(OTHER)) {
                     val editText = EditText(context)
                     editText.isSingleLine = false
                     editText.imeOptions = EditorInfo.IME_FLAG_NO_ENTER_ACTION
@@ -132,24 +163,39 @@ class ActualQuestionsFragment :
                     editText.scrollBarStyle = View.SCROLLBARS_INSIDE_INSET
                     editText.layoutParams = params
                     addView(editText)
+                    viewModel.selectedOptions.add(Option("0", editText.text.toString()))
+                } else {
+                    viewModel.selectedOptions.add(Option(option.code, option.option))
                 }
             }
-            actual_next_btn.setEnable(true)
+
+            if (viewModel.isEndOfQuestion()) {
+                btn_save.visibility = View.VISIBLE
+                actual_next_btn.setEnable(false)
+            } else {
+                actual_next_btn.setEnable(true)
+            }
         }
     }
 
-    private fun dialogOptions(list: List<String>, isSingleChoice: Boolean) {
-        val listItems = list.toTypedArray()
+    private fun dialogOptions(list: List<Option>, isSingleChoice: Boolean) {
+        val listStr = mutableListOf<String>()
+        list.forEach { listStr.add(it.option) }
+
+        val listItems = listStr.toTypedArray()
         val checkedItems = BooleanArray(listItems.size)
         Arrays.fill(checkedItems, false)
 
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle(R.string.choose_items)
-        val selectedList = mutableListOf<String>()
+        val selectedList = mutableListOf<Option>()
         if (isSingleChoice) {
             // add a list
             builder.setItems(listItems) { dialog, which ->
-                selectedList.add(listItems[which])
+                val item = listItems[which]
+                val code = list.find { option ->  option.option == item}?.code.toString()
+
+                selectedList.add(Option(code, item))
                 addOptions(selectedList)
                 dialog.dismiss()
             }
@@ -195,7 +241,9 @@ class ActualQuestionsFragment :
                 for (i in listItems.indices) {
                     val checked = checkedItems[i]
                     if (checked) {
-                        selectedList.add(listItems[i])
+                        val item = listItems[i]
+                        val code = list.find { option ->  option.option == item}?.code.toString()
+                        selectedList.add(Option(code, item))
                     }
                 }
                 addOptions(selectedList)
@@ -203,6 +251,20 @@ class ActualQuestionsFragment :
             }
         }
 
+        val dialog = builder.create()
+        dialog.show()
+    }
+
+
+    private fun dialogComplete() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setMessage(R.string.terminate_msg)
+        builder.setPositiveButton(getString(R.string.yes_label)) { dialog, _ ->
+            dialog.dismiss()
+        }
+        builder.setNegativeButton(getString(R.string.no_label)) { dialog, _ ->
+            dialog.dismiss()
+        }
         val dialog = builder.create()
         dialog.show()
     }

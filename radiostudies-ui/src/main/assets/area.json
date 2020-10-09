@@ -1,267 +1,214 @@
 [
   {
     "code": "1",
-    "place": "Mega Manila",
-    "isManualInput": 0
+    "option": "Mega Manila"
   },
   {
     "code": "2",
-    "place": "Dagupan",
-    "isManualInput": 0
+    "option": "Dagupan"
   },
   {
     "code": "3",
-    "place": "Baguio",
-    "isManualInput": 0
+    "option": "Baguio"
   },
   {
     "code": "4",
-    "place": "Batangas",
-    "isManualInput": 0
+    "option": "Batangas"
   },
   {
     "code": "5",
-    "place": "Naga",
-    "isManualInput": 0
+    "option": "Naga"
   },
   {
     "code": "6",
-    "place": "Legazpi",
-    "isManualInput": 0
+    "option": "Legazpi"
   },
   {
     "code": "7",
-    "place": "Tarlac",
-    "isManualInput": 0
+    "option": "Tarlac"
   },
   {
     "code": "8",
-    "place": "Cabanatuan",
-    "isManualInput": 0
+    "option": "Cabanatuan"
   },
   {
     "code": "9",
-    "place": "Puerto Princesa",
-    "isManualInput": 0
+    "option": "Puerto Princesa"
   },
   {
     "code": ":",
-    "place": "San Fernando",
-    "isManualInput": 0
+    "option": "San Fernando"
   },
   {
     "code": ";",
-    "place": "Laoag",
-    "isManualInput": 0
+    "option": "Laoag"
   },
   {
     "code": "<",
-    "place": "Olongapo",
-    "isManualInput": 0
+    "option": "Olongapo"
   },
   {
     "code": "=",
-    "place": "Angeles",
-    "isManualInput": 0
+    "option": "Angeles"
   },
   {
     "code": ">",
-    "place": "San Pablo",
-    "isManualInput": 0
+    "option": "San Pablo"
   },
   {
     "code": "?",
-    "place": "Cebu",
-    "isManualInput": 0
+    "option": "Cebu"
   },
   {
     "code": "@",
-    "place": "Bacolod",
-    "isManualInput": 0
+    "option": "Bacolod"
   },
   {
     "code": "A",
-    "place": "Iloilo",
-    "isManualInput": 0
+    "option": "Iloilo"
   },
   {
     "code": "B",
-    "place": "Tacloban",
-    "isManualInput": 0
+    "option": "Tacloban"
   },
   {
     "code": "C",
-    "place": "Vigan",
-    "isManualInput": 0
+    "option": "Vigan"
   },
   {
     "code": "D",
-    "place": "Tuguegarao",
-    "isManualInput": 0
+    "option": "Tuguegarao"
   },
   {
     "code": "E",
-    "place": "Cauayan",
-    "isManualInput": 0
+    "option": "Cauayan"
   },
   {
     "code": "F",
-    "place": "Cagayan De Oro",
-    "isManualInput": 0
+    "option": "Cagayan De Oro"
   },
   {
     "code": "G",
-    "place": "Davao",
-    "isManualInput": 0
+    "option": "Davao"
   },
   {
     "code": "H",
-    "place": "General Santos",
-    "isManualInput": 0
+    "option": "General Santos"
   },
   {
     "code": "I",
-    "place": "Santiago",
-    "isManualInput": 0
+    "option": "Santiago"
   },
   {
     "code": "J",
-    "place": "San Fernando, La Union",
-    "isManualInput": 0
+    "option": "San Fernando, La Union"
   },
   {
     "code": "K",
-    "place": "Lucena",
-    "isManualInput": 0
+    "option": "Lucena"
   },
   {
     "code": "L",
-    "place": "Daet",
-    "isManualInput": 0
+    "option": "Daet"
   },
   {
     "code": "M",
-    "place": "Sorsogon",
-    "isManualInput": 0
+    "option": "Sorsogon"
   },
   {
     "code": "N",
-    "place": "Dumaguete",
-    "isManualInput": 0
+    "option": "Dumaguete"
   },
   {
     "code": "O",
-    "place": "Kalibo",
-    "isManualInput": 0
+    "option": "Kalibo"
   },
   {
     "code": "P",
-    "place": "Roxas",
-    "isManualInput": 0
+    "option": "Roxas"
   },
   {
     "code": "Q",
-    "place": "Tagbilaran",
-    "isManualInput": 0
+    "option": "Tagbilaran"
   },
   {
     "code": "R",
-    "place": "Iligan",
-    "isManualInput": 0
+    "option": "Iligan"
   },
   {
     "code": "S",
-    "place": "Butuan",
-    "isManualInput": 0
+    "option": "Butuan"
   },
   {
     "code": "T",
-    "place": "Cotabato",
-    "isManualInput": 0
+    "option": "Cotabato"
   },
   {
     "code": "U",
-    "place": "Surigao",
-    "isManualInput": 0
+    "option": "Surigao"
   },
   {
     "code": "V",
-    "place": "Koronadal",
-    "isManualInput": 0
+    "option": "Koronadal"
   },
   {
     "code": "W",
-    "place": "Ozamis",
-    "isManualInput": 0
+    "option": "Ozamis"
   },
   {
     "code": "X",
-    "place": "Pagadian",
-    "isManualInput": 0
+    "option": "Pagadian"
   },
   {
     "code": "Y",
-    "place": "Malaybalay",
-    "isManualInput": 0
+    "option": "Malaybalay"
   },
   {
     "code": "Z",
-    "place": "Zamboanga",
-    "isManualInput": 0
+    "option": "Zamboanga"
   },
   {
     "code": "0",
-    "place": "NOT KNOWN/REFUSED",
-    "isManualInput": 0
+    "option": "NOT KNOWN/REFUSED"
   },
   {
     "code": "\\",
-    "place": "Rural Pangasinan",
-    "isManualInput": 0
+    "option": "Rural Pangasinan"
   },
   {
     "code": "]",
-    "place": "Rural Cebu",
-    "isManualInput": 0
+    "option": "Rural Cebu"
   },
   {
     "code": "^",
-    "place": "Rural Davao",
-    "isManualInput": 0
+    "option": "Rural Davao"
   },
   {
     "code": "h",
-    "place": "Metro Manila",
-    "isManualInput": 0
+    "option": "Metro Manila"
   },
   {
     "code": "i",
-    "place": "Tagum City",
-    "isManualInput": 0
+    "option": "Tagum City"
   },
   {
     "code": "j",
-    "place": "Catanduanes",
-    "isManualInput": 0
+    "option": "Catanduanes"
   },
   {
     "code": "k",
-    "place": "Bayombong, Nueva Viscaya",
-    "isManualInput": 0
+    "option": "Bayombong, Nueva Viscaya"
   },
   {
     "code": "l",
-    "place": "Kidapawan",
-    "isManualInput": 0
+    "option": "Kidapawan"
   },
   {
     "code": "m",
-    "place": "Valencia",
-    "isManualInput": 0
+    "option": "Valencia"
   },
   {
     "code": "n",
-    "place": "Dipolog",
-    "isManualInput": 0
+    "option": "Dipolog"
   }
 ]

@@ -44,10 +44,15 @@ fun Context.hideKeyboard(view: View) {
 /**
  * Method to simplified how to set an Observer by just passing the [body] to be executed inside the observer.
  */
-inline fun <T : Any, L : LiveData<T>> LifecycleOwner.observe(liveData: L, crossinline body: (T?) -> Unit) =
+inline fun <T : Any, L : LiveData<T>> LifecycleOwner.observe(
+    liveData: L,
+    crossinline body: (T?) -> Unit
+) =
     liveData.observe(this, Observer<T?> { t -> body(t) })
 
-fun <T : Any, L : LiveData<T>> LifecycleOwner.unObserve(liveData: L) = liveData.removeObservers(this)
+fun <T : Any, L : LiveData<T>> LifecycleOwner.unObserve(liveData: L) =
+    liveData.removeObservers(this)
+
 /**
  * We need to restart the observer because it stays observing until the LifecycleOwner is destroyed.
  * In the case of Fragments, they are not destroyed when the fragment is detached/reattached, and a new
@@ -55,7 +60,10 @@ fun <T : Any, L : LiveData<T>> LifecycleOwner.unObserve(liveData: L) = liveData.
  * By doing this, we make sure we only have ONE observer at a time.
  * Refer to: https://medium.com/@BladeCoder/architecture-components-pitfalls-part-1-9300dd969808
  */
-inline fun <T : Any, L : LiveData<T>> LifecycleOwner.reObserve(liveData: L, crossinline body: (T?) -> Unit) {
+inline fun <T : Any, L : LiveData<T>> LifecycleOwner.reObserve(
+    liveData: L,
+    crossinline body: (T?) -> Unit
+) {
     unObserve(liveData)
     observe(liveData, body)
 }

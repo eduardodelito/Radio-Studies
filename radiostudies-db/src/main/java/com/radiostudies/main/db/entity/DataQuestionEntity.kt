@@ -5,17 +5,16 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 /**
- * Created by eduardo.delito on 10/3/20.
+ * Created by eduardo.delito on 10/8/20.
  */
-@Entity(tableName = "ActualQuestionEntity")
-data class ActualQuestionEntity(
+@Entity(tableName = "DataQuestionEntity")
+data class DataQuestionEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
-    @ColumnInfo(name = "qId") var qId: Int?,
     @ColumnInfo(name = "code") var code: String?,
     @ColumnInfo(name = "header") var header: String?,
     @ColumnInfo(name = "question") var question: String?,
-    @ColumnInfo(name = "type") var type: String?,
-    @ColumnInfo(name = "options") var options: List<Option>,
-    @ColumnInfo(name = "isManualInput") var isManualInput: Boolean?
+    @ColumnInfo(name = "options") var options: List<Option>?
 )
+
+data class Option(var code: String, var option: String)

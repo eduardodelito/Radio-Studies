@@ -16,7 +16,8 @@ import com.radiostudies.main.db.entity.*
         QuestionEntity::class,
         MainInfoEntity::class,
         ActualQuestionEntity::class,
-        AreaEntity::class
+        AreaEntity::class,
+        DataQuestionEntity::class
     ],
     version = 1,
     exportSchema = false
@@ -28,6 +29,7 @@ abstract class RadioStudiesDB : RoomDatabase() {
     abstract fun mainInfoDao(): MainInfoDao
     abstract fun actualQuestionDao(): ActualQuestionDao
     abstract fun areaDao(): AreaDao
+    abstract fun dataQuestionDao(): DataQuestionDao
 
     companion object {
         const val DATABASE_NAME = "RadioStudiesDB"

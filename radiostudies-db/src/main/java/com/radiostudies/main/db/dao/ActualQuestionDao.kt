@@ -16,7 +16,7 @@ interface ActualQuestionDao {
     fun insertActualQuestion(actualQuestionEntity: List<ActualQuestionEntity>)
 
     @Query("SELECT * FROM ActualQuestionEntity WHERE qId = :qId LIMIT 1")
-    fun queryActualQuestion(qId: Int): ActualQuestion?
+    fun queryActualQuestion(qId: Int): ActualQuestion
 
     @Query("DELETE FROM ActualQuestionEntity")
     fun deleteActualQuestion()

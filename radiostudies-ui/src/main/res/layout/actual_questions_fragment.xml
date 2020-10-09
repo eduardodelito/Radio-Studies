@@ -115,15 +115,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/line3" />
 
+        <EditText
+            android:id="@+id/manual_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin5"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:maxLength="60"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actual_selection_layout" />
+
+
         <Button
             android:id="@+id/actual_prev_btn"
             style="@style/AvenirMedium"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin10"
             android:background="@drawable/btn_selector_shape"
             android:text="@string/prev_btn"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_save"
             app:layout_constraintEnd_toStartOf="@+id/next_btn"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -133,10 +147,23 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin10"
             android:background="@drawable/btn_selector_shape"
             android:text="@string/next_btn"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_save"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/prev_btn" />
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/AvenirMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_selector_shape"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

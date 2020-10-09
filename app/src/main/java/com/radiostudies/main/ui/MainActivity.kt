@@ -14,7 +14,7 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
     }
 
     override fun navigateToInitialScreen(view: View?) {
-        val action = LoginFragmentDirections.actionLoginFragmentToInitialQuestionsFragment()
+        val action = LoginFragmentDirections.actionLoginFragmentToActualQuestionsFragment()
         view?.findNavController()?.navigate(action)
     }
 

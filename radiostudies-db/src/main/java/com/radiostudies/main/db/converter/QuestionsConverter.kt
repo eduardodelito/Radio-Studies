@@ -3,6 +3,7 @@ package com.radiostudies.main.db.converter
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.radiostudies.main.db.entity.Option
 import java.lang.reflect.Type
 
 /**
@@ -17,6 +18,18 @@ class QuestionsConverter {
 
     @TypeConverter
     fun fromList(list: List<String?>?): String? {
+        val gson = Gson()
+        return gson.toJson(list)
+    }
+
+    @TypeConverter
+    fun fromOptionString(value: String?): List<Option?>? {
+        val listType: Type = object : TypeToken<List<Option?>?>() {}.type
+        return Gson().fromJson(value, listType)
+    }
+
+    @TypeConverter
+    fun fromOptionList(list: List<Option?>?): String? {
         val gson = Gson()
         return gson.toJson(list)
     }

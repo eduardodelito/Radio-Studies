@@ -11,7 +11,6 @@ import androidx.room.PrimaryKey
 data class AreaEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
-    @ColumnInfo(name = "code") var code: String?,
-    @ColumnInfo(name = "place") var place: String?,
-    @ColumnInfo(name = "isManualInput") var isManualInput: Int
+    @ColumnInfo(name = "code") var code: String,
+    @ColumnInfo(name = "option") var option: String
 )

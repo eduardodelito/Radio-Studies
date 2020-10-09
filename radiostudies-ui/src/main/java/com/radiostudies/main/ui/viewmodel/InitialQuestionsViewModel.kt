@@ -34,7 +34,7 @@ class InitialQuestionsViewModel @Inject constructor(private val questionManager:
     fun parseScreenQuestion(question: String?) {
         list.clear()
         val jsonArray = JSONArray(question)
-        val questions = mutableListOf<Question>()
+        val questions = mutableListOf<QuestionInitial>()
         for (i in 0 until jsonArray.length()) {
             val item = jsonArray.getJSONObject(i)
 
@@ -54,7 +54,7 @@ class InitialQuestionsViewModel @Inject constructor(private val questionManager:
                 )
             )
 
-            questions.add(Question(questionString, ""))
+            questions.add(QuestionInitial(questionString, ""))
         }
         insertQuestions(questions)
         updateNextQuestion()
@@ -93,13 +93,13 @@ class InitialQuestionsViewModel @Inject constructor(private val questionManager:
         return value
     }
 
-    private fun insertQuestions(questions: List<Question>) {
+    private fun insertQuestions(questions: List<QuestionInitial>) {
         launch {
             insertInitialQuestions(questions)
         }
     }
 
-    private suspend fun insertInitialQuestions(questions: List<Question>) {
+    private suspend fun insertInitialQuestions(questions: List<QuestionInitial>) {
         withContext(Dispatchers.IO) {
             try {
                 questionManager.insertQuestions(questions.questionModelToQuestionEntity())

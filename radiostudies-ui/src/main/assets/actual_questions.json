@@ -5,7 +5,10 @@
     "question": "Area",
     "type": "Single Answer",
     "options": [
-      "Area"
+      {
+        "code": "0",
+        "option": "Area"
+      }
     ],
     "isManualInput": 0
   },
@@ -15,10 +18,22 @@
     "question": "Do you own the house or are you renting?",
     "type": "Single Answer",
     "options": [
-      "OWN HOUSE",
-      "NEITHER OWN NOR RENT",
-      "RENTING",
-      "NOT KNOWN/REFUSED"
+      {
+        "code": "1",
+        "option": "OWN HOUSE"
+      },
+      {
+        "code": "2",
+        "option": "NEITHER OWN NOR RENT"
+      },
+      {
+        "code": "3",
+        "option": "RENTING"
+      },
+      {
+        "code": "0",
+        "option": "NOT KNOWN/REFUSED"
+      }
     ],
     "isManualInput": 0
   },
@@ -28,16 +43,46 @@
     "question": "How much is your monthly rent for this house?",
     "type": "Single Answer",
     "options": [
-      "₱1,000 & below",
-      "1,001 – 2,000",
-      "2,001 – 3,000",
-      "3,001 – 5,000",
-      "5,001 – 7,000",
-      "7,001 – 10,000",
-      "10,001 – 15,000",
-      "15,001 – 20,000",
-      "20,001 – 25,000",
-      "25,001 & up"
+      {
+        "code": "0",
+        "option": "₱1,000 & below"
+      },
+      {
+        "code": "1",
+        "option": "1,001 – 2,000"
+      },
+      {
+        "code": "2",
+        "option": "2,001 – 3,000"
+      },
+      {
+        "code": "3",
+        "option": "3,001 – 5,000"
+      },
+      {
+        "code": "4",
+        "option": "5,001 – 7,000"
+      },
+      {
+        "code": "5",
+        "option": "7,001 – 10,000"
+      },
+      {
+        "code": "6",
+        "option": "10,001 – 15,000"
+      },
+      {
+        "code": "7",
+        "option": "15,001 – 20,000"
+      },
+      {
+        "code": "8",
+        "option": "20,001 – 25,000"
+      },
+      {
+        "code": "9",
+        "option": "25,001 & up"
+      }
     ],
     "isManualInput": 0
   },
@@ -47,21 +92,66 @@
     "question": "What is the first/primary language of the home?",
     "type": "Single Answer",
     "options": [
-      "Tagalog",
-      "Cebuano/Bisaya",
-      "Ilocano",
-      "Kapampangan",
-      "Bicolano",
-      "Cebuano",
-      "Bisaya",
-      "Ilonggo",
-      "Others",
-      "English",
-      "Pangasinense",
-      "Chavacano",
-      "Waray",
-      "Chinese",
-      "NOT KNOWN/REFUSED"
+      {
+        "code": "1",
+        "option": "Tagalog"
+      },
+      {
+        "code": "2",
+        "option": "Cebuano/Bisaya"
+      },
+      {
+        "code": "3",
+        "option": "Ilocano"
+      },
+      {
+        "code": "4",
+        "option": "Kapampangan"
+      },
+      {
+        "code": "5",
+        "option": "Bicolano"
+      },
+      {
+        "code": "6",
+        "option": "Cebuano"
+      },
+      {
+        "code": "7",
+        "option": "Bisaya"
+      },
+      {
+        "code": "8",
+        "option": "Ilonggo"
+      },
+      {
+        "code": "9",
+        "option": "Others"
+      },
+      {
+        "code": "A",
+        "option": "English"
+      },
+      {
+        "code": "B",
+        "option": "Pangasinense"
+      },
+      {
+        "code": "C",
+        "option": "Chavacano"
+      },
+      {
+        "code": "D",
+        "option": "Waray"
+      },
+      {
+        "code": "E",
+        "option": "Chinese"
+      },
+      {
+        "code": "0",
+        "option": "NOT KNOWN/REFUSED"
+      }
     ],
     "isManualInput": 0
   },
@@ -71,14 +161,38 @@
     "question": "What is the primary religion of the home? ",
     "type": "Single Answer",
     "options": [
-      "Roman Catholic",
-      "Protestant/Christian",
-      "INC",
-      "Aglipayan",
-      "Islam",
-      "Other",
-      "None",
-      "NOT KNOWN/REFUSED"
+      {
+        "code": "1",
+        "option": "Roman Catholic"
+      },
+      {
+        "code": "2",
+        "option": "Protestant/Christian"
+      },
+      {
+        "code": "3",
+        "option": "INC"
+      },
+      {
+        "code": "4",
+        "option": "Aglipayan"
+      },
+      {
+        "code": "5",
+        "option": "Islam"
+      },
+      {
+        "code": "6",
+        "option": "Other"
+      },
+      {
+        "code": "7",
+        "option": "None"
+      },
+      {
+        "code": "0",
+        "option": "NOT KNOWN/REFUSED"
+      }
     ],
     "isManualInput": 0
   },
@@ -88,18 +202,54 @@
     "question": "What type of radio device do you have in your home?",
     "type": "Multiple Answer",
     "options": [
-      "Radio Cassette Recorder",
-      "Stereo Component",
-      "Karaoke",
-      "DVD/CD Players",
-      "Car Radio",
-      "Transistor Radio",
-      "Cellphone",
-      "MP3",
-      "iPod/iPad",
-      "Internet Streaming (PC/ Laptop)",
-      "Others(Specify)",
-      "None"
+      {
+        "code": "",
+        "option": "Radio Cassette Recorder"
+      },
+      {
+        "code": "",
+        "option": "Stereo Component"
+      },
+      {
+        "code": "",
+        "option": "Karaoke"
+      },
+      {
+        "code": "",
+        "option": "DVD/CD Players"
+      },
+      {
+        "code": "",
+        "option": "Car Radio"
+      },
+      {
+        "code": "",
+        "option": "Transistor Radio"
+      },
+      {
+        "code": "",
+        "option": "Cellphone"
+      },
+      {
+        "code": "",
+        "option": "MP3"
+      },
+      {
+        "code": "",
+        "option": "iPod/iPad"
+      },
+      {
+        "code": "",
+        "option": "Internet Streaming (PC/ Laptop)"
+      },
+      {
+        "code": "",
+        "option": "Others(Specify)"
+      },
+      {
+        "code": "",
+        "option": "None"
+      }
     ],
     "isManualInput": 0
   },
@@ -109,8 +259,14 @@
     "question": "Radio Cassette Recorder - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -120,8 +276,14 @@
     "question": "Radio Cassette Recorder - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -131,8 +293,14 @@
     "question": "Radio Cassette Recorder - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -142,8 +310,14 @@
     "question": "Stereo Component - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -153,8 +327,14 @@
     "question": "Stereo Component - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -164,8 +344,14 @@
     "question": "Stereo Component - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -175,8 +361,14 @@
     "question": "Karaoke - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -186,8 +378,14 @@
     "question": "Karaoke - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -197,8 +395,14 @@
     "question": "Karaoke - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -208,8 +412,14 @@
     "question": "DVD/CD Players - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -219,8 +429,14 @@
     "question": "DVD/CD Players - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -230,8 +446,14 @@
     "question": "DVD/CD Players - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -241,8 +463,14 @@
     "question": "Car Radio - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -252,8 +480,14 @@
     "question": "Car Radio - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -263,8 +497,14 @@
     "question": "Car Radio - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -274,8 +514,14 @@
     "question": "Transistor Radio - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -285,8 +531,14 @@
     "question": "Transistor Radio - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -296,8 +548,14 @@
     "question": "Transistor Radio - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -307,8 +565,14 @@
     "question": "Cellphone - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -318,8 +582,14 @@
     "question": "Cellphone - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -329,8 +599,14 @@
     "question": "Cellphone - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -340,8 +616,14 @@
     "question": "MP3 - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -351,8 +633,14 @@
     "question": "MP3 - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -362,8 +650,14 @@
     "question": "MP3 - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -373,8 +667,14 @@
     "question": "iPod/iPad - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -384,8 +684,14 @@
     "question": "iPod/iPad - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -395,8 +701,14 @@
     "question": "iPod/iPad - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -406,8 +718,14 @@
     "question": "Internet Streaming (PC/ Laptop) - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -417,8 +735,14 @@
     "question": "Internet Streaming (PC/ Laptop) - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -428,8 +752,14 @@
     "question": "Internet Streaming (PC/ Laptop) - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -439,8 +769,14 @@
     "question": "Others - AM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -450,8 +786,14 @@
     "question": "Others - FM",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -461,8 +803,14 @@
     "question": "Others - BOTH",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "0",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -472,12 +820,30 @@
     "question": "Number of Radio Sets Owned in the Household (including Car radio, portable radio, cellular phones with radio, etc.) ",
     "type": "Single Answer",
     "options": [
-      "One only",
-      "Two",
-      "Three",
-      "Four",
-      "Five or More",
-      "None"
+      {
+        "code": "1",
+        "option": "One only"
+      },
+      {
+        "code": "2",
+        "option": "Two"
+      },
+      {
+        "code": "3",
+        "option": "Three"
+      },
+      {
+        "code": "4",
+        "option": "Four"
+      },
+      {
+        "code": "5",
+        "option": "Five or More"
+      },
+      {
+        "code": "6",
+        "option": "None"
+      }
     ],
     "isManualInput": 0
   },
@@ -487,15 +853,42 @@
     "question": "Please include yourself, your relatives, boarders and maids.",
     "type": "Single Answer",
     "options": [
-      "1 Person HH",
-      "2 Person HH",
-      "3 Person HH",
-      "4 Person HH",
-      "5 Person HH",
-      "6 Person HH",
-      "7 Person HH",
-      "8+ Person HH",
-      "NOT KNOWN/REFUSED"
+      {
+        "code": "1",
+        "option": "1 Person HH"
+      },
+      {
+        "code": "2",
+        "option": "2 Person HH"
+      },
+      {
+        "code": "3",
+        "option": "3 Person HH"
+      },
+      {
+        "code": "4",
+        "option": "4 Person HH"
+      },
+      {
+        "code": "5",
+        "option": "5 Person HH"
+      },
+      {
+        "code": "6",
+        "option": "6 Person HH"
+      },
+      {
+        "code": "7",
+        "option": "7 Person HH"
+      },
+      {
+        "code": "8",
+        "option": "8+ Person HH"
+      },
+      {
+        "code": "0",
+        "option": "NOT KNOWN/REFUSED"
+      }
     ],
     "isManualInput": 0
   },
@@ -505,13 +898,34 @@
     "question": "Role in Household",
     "type": "Single Answer",
     "options": [
-      "HEAD OF HOUSEHOLD",
-      "HOUSEWIFE",
-      "SON",
-      "DAUGHTER",
-      "OTHERS",
-      "Both Household Head & Housewife",
-      "Non-relatives"
+      {
+        "code": "1",
+        "option": "HEAD OF HOUSEHOLD"
+      },
+      {
+        "code": "2",
+        "option": "HOUSEWIFE"
+      },
+      {
+        "code": "3",
+        "option": "SON"
+      },
+      {
+        "code": "4",
+        "option": "DAUGHTER"
+      },
+      {
+        "code": "5",
+        "option": "OTHERS"
+      },
+      {
+        "code": "6",
+        "option": "Both Household Head & Housewife"
+      },
+      {
+        "code": "8",
+        "option": "Non-relatives"
+      }
     ],
     "isManualInput": 0
   },
@@ -521,11 +935,26 @@
     "question": "Civil Status",
     "type": "Single Answer",
     "options": [
-      "SINGLE",
-      "MARRIED",
-      "SEPARATED/DIVORCED",
-      "WIDOWED",
-      "NOT KNOWN/REFUSED"
+      {
+        "code": "",
+        "option": "SINGLE"
+      },
+      {
+        "code": "",
+        "option": "MARRIED"
+      },
+      {
+        "code": "",
+        "option": "SEPARATED/DIVORCED"
+      },
+      {
+        "code": "",
+        "option": "WIDOWED"
+      },
+      {
+        "code": "",
+        "option": "NOT KNOWN/REFUSED"
+      }
     ],
     "isManualInput": 0
   },
@@ -535,19 +964,58 @@
     "question": "Highest educational attainment",
     "type": "Single Answer",
     "options": [
-      "No Schooling at All",
-      "Some Grade School ",
-      "Completed Grade School",
-      "Some High School",
-      "Completed High School",
-      "Some Senior High",
-      "Completed Senior High",
-      "Some College",
-      "Completed College",
-      "Some/Completed Vocational",
-      "Completed/Some Master’s Degree",
-      "Completed/Some PHD",
-      "Refused"
+      {
+        "code": "1",
+        "option": "No Schooling at All"
+      },
+      {
+        "code": "3",
+        "option": "Some Grade School"
+      },
+      {
+        "code": "4",
+        "option": "Completed Grade School"
+      },
+      {
+        "code": "5",
+        "option": "Some High School"
+      },
+      {
+        "code": "6",
+        "option": "Completed High School"
+      },
+      {
+        "code": "C",
+        "option": "Some Senior High"
+      },
+      {
+        "code": "D",
+        "option": "Completed Senior High"
+      },
+      {
+        "code": "7",
+        "option": "Some College"
+      },
+      {
+        "code": "8",
+        "option": "Completed College"
+      },
+      {
+        "code": "9",
+        "option": "Some/Completed Vocational"
+      },
+      {
+        "code": "B",
+        "option": "Completed/Some Master’s Degree"
+      },
+      {
+        "code": "A",
+        "option": "Completed/Some PHD"
+      },
+      {
+        "code": "0",
+        "option": "Refused"
+      }
     ],
     "isManualInput": 0
   },
@@ -557,41 +1025,65 @@
     "question": "Mother or Not",
     "type": "Single Answer",
     "options": [
-      "Yes",
-      "No"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
   {
     "code": "Q14b",
     "header": "Does (NAME) have children?",
-    "question": "Does (NAME) have children? Father or Not",
+    "question": "Father or Not",
     "type": "Single Answer",
     "options": [
-      "Yes",
-      "No"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
   {
     "code": "Q14c",
     "header": "Does (NAME) have children?",
-    "question": "Does (NAME) have children? Mother with Children 0-2",
+    "question": "Mother with Children 0-2",
     "type": "Single Answer",
     "options": [
-      "Yes",
-      "No"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
   {
     "code": "Q14d",
     "header": "Does (NAME) have children?",
-    "question": "Does (NAME) have children? Mother with Children 3-6",
+    "question": "Mother with Children 3-6",
     "type": "Single Answer",
     "options": [
-      "Yes",
-      "No"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -601,8 +1093,14 @@
     "question": "Mother with Children 7-12",
     "type": "Single Answer",
     "options": [
-      "Yes",
-      "No"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -612,20 +1110,62 @@
     "question": "Occupation",
     "type": "Single Answer",
     "options": [
-      "PROF, TECH & KINDRED WORKERS",
-      "FARMERS & FARM MANAGERS",
-      "MGRS, OFFICIALS & PROP",
-      "CLERICAL & KINDRED WORKERS",
-      "SALES WORKERS",
-      "CRAFTSMEN, FOREMENT & KINDW",
-      "SERVICE WORKERS (EX. PRIVHH)",
-      "PRIVATE HH WORKERS",
-      "LABORER",
-      "FULL TIME STUDENT",
-      "NON-WORKING HOUSEWIFE",
-      "PENSIONER/RETIRED",
-      "NOT GAINFULLY EMPLOYED",
-      "NOT KNOWN/REFUSED"
+      {
+        "code": "1",
+        "option": "PROF, TECH & KINDRED WORKERS"
+      },
+      {
+        "code": "2",
+        "option": "FARMERS & FARM MANAGERS"
+      },
+      {
+        "code": "3",
+        "option": "MGRS, OFFICIALS & PROP"
+      },
+      {
+        "code": "4",
+        "option": "CLERICAL & KINDRED WORKERS"
+      },
+      {
+        "code": "5",
+        "option": "SALES WORKERS"
+      },
+      {
+        "code": "6",
+        "option": "CRAFTSMEN, FOREMENT & KINDW"
+      },
+      {
+        "code": "7",
+        "option": "SERVICE WORKERS (EX. PRIVHH)"
+      },
+      {
+        "code": "8",
+        "option": "PRIVATE HH WORKERS"
+      },
+      {
+        "code": "9",
+        "option": "LABORER"
+      },
+      {
+        "code": "0",
+        "option": "FULL TIME STUDENT"
+      },
+      {
+        "code": "A",
+        "option": "NON-WORKING HOUSEWIFE"
+      },
+      {
+        "code": "B",
+        "option": "PENSIONER/RETIRED"
+      },
+      {
+        "code": "C",
+        "option": "NOT GAINFULLY EMPLOYED"
+      },
+      {
+        "code": "D",
+        "option": "NOT KNOWN/REFUSED"
+      }
     ],
     "isManualInput": 0
   },
@@ -634,7 +1174,7 @@
     "header": "",
     "question": "Employer",
     "type": "Single Answer",
-    "options": [],
+    "options": [{"code": "", "option": ""}],
     "isManualInput": 1
   },
   {
@@ -643,10 +1183,22 @@
     "question": "Recency of Radio Listenership",
     "type": "Single Answer",
     "options": [
-      "Yesterday",
-      "Within the last 7 days",
-      "More than 7 days ago",
-      "More than one month ago"
+      {
+        "code": "1",
+        "option": "Yesterday"
+      },
+      {
+        "code": "2",
+        "option": "Within the last 7 days"
+      },
+      {
+        "code": "3",
+        "option": "More than 7 days ago"
+      },
+      {
+        "code": "4",
+        "option": "More than one month ago"
+      }
     ],
     "isManualInput": 0
   },
@@ -656,11 +1208,26 @@
     "question": "Frequency of AM Listening/Exposure",
     "type": "Single Answer",
     "options": [
-      "Everyday",
-      "At least 2 to 3 times per week",
-      "At last 4 to 5 times per week",
-      "Once a week",
-      "Never listen/never exposed"
+      {
+        "code": "1",
+        "option": "Everyday"
+      },
+      {
+        "code": "2",
+        "option": "At least 2 to 3 times per week"
+      },
+      {
+        "code": "3",
+        "option": "At last 4 to 5 times per week"
+      },
+      {
+        "code": "4",
+        "option": "Once a week"
+      },
+      {
+        "code": "5",
+        "option": "Never listen/never exposed"
+      }
     ],
     "isManualInput": 0
   },
@@ -670,11 +1237,26 @@
     "question": "Frequency of FM Listening/Exposure",
     "type": "Single Answer",
     "options": [
-      "Everyday",
-      "At least 2 to 3 times per week",
-      "At last 4 to 5 times per week",
-      "Once a week",
-      "Never listen/never exposed"
+      {
+        "code": "1",
+        "option": "Everyday"
+      },
+      {
+        "code": "2",
+        "option": "At least 2 to 3 times per week"
+      },
+      {
+        "code": "3",
+        "option": "At last 4 to 5 times per week"
+      },
+      {
+        "code": "4",
+        "option": "Once a week"
+      },
+      {
+        "code": "5",
+        "option": "Never listen/never exposed"
+      }
     ],
     "isManualInput": 0
   },
@@ -684,13 +1266,28 @@
     "question": "Times of Day Listening to AM Station/s",
     "type": "Multiple Answer",
     "options": [
-      "05:00 am – 12:00 noon",
-      "12:00 noon – 06:00 pm",
-      "06:00 pm – 09:00 pm",
-      "09:00 pm – 12:00 am",
-      "12:00 midnight – 02:00 am"
+      {
+        "code": "0",
+        "option": "05:00 am – 12:00 noon"
+      },
+      {
+        "code": "1",
+        "option": "12:00 noon – 06:00 pm"
+      },
+      {
+        "code": "2",
+        "option": "06:00 pm – 09:00 pm"
+      },
+      {
+        "code": "3",
+        "option": "09:00 pm – 12:00 am"
+      },
+      {
+        "code": "4",
+        "option": "12:00 midnight – 02:00 am"
+      }
     ],
-    "isManualInput": 1
+    "isManualInput": 0
   },
   {
     "code": "Q19b",
@@ -698,20 +1295,40 @@
     "question": "Times of Day Listening to FM Station/s",
     "type": "Multiple Answer",
     "options": [
-      "05:00 am – 12:00 noon",
-      "12:00 noon – 06:00 pm",
-      "06:00 pm – 09:00 pm",
-      "09:00 pm – 12:00 am",
-      "12:00 midnight – 02:00 am"
+      {
+        "code": "0",
+        "option": "05:00 am – 12:00 noon"
+      },
+      {
+        "code": "1",
+        "option": "12:00 noon – 06:00 pm"
+      },
+      {
+        "code": "2",
+        "option": "06:00 pm – 09:00 pm"
+      },
+      {
+        "code": "3",
+        "option": "09:00 pm – 12:00 am"
+      },
+      {
+        "code": "4",
+        "option": "12:00 midnight – 02:00 am"
+      }
     ],
-    "isManualInput": 1
+    "isManualInput": 0
   },
   {
     "code": "Q20a",
     "header": "AM Radio Stations Listened To",
     "question": "What AM stations do you usually listen to?",
     "type": "Multiple Answer",
-    "options": [],
+    "options": [
+      {
+        "code": "0",
+        "option": "stations"
+      }
+    ],
     "isManualInput": 0
   },
   {
@@ -719,7 +1336,12 @@
     "header": "AM Radio Stations Listened To",
     "question": "How many hours in a day do you usually listen to these AM stations?",
     "type": "Multiple Answer",
-    "options": [],
+    "options": [
+      {
+        "code": "0",
+        "option": "stations"
+      }
+    ],
     "isManualInput": 0
   },
   {
@@ -727,7 +1349,12 @@
     "header": "AM Radio Stations Listened To",
     "question": "What FM stations do you usually listen to?",
     "type": "Multiple Answer",
-    "options": [],
+    "options": [
+      {
+        "code": "0",
+        "option": "stations"
+      }
+    ],
     "isManualInput": 0
   },
   {
@@ -735,7 +1362,12 @@
     "header": "AM Radio Stations Listened To",
     "question": "How many hours in a day do you usually listen to these AM stations?",
     "type": "Multiple Answer",
-    "options": [],
+    "options": [
+      {
+        "code": "0",
+        "option": "stations"
+      }
+    ],
     "isManualInput": 0
   },
   {
@@ -744,8 +1376,14 @@
     "question": "Internet Connection at Home",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -755,8 +1393,14 @@
     "question": "Internet Connection Outside of Home",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -766,14 +1410,38 @@
     "question": "Frequency of Internet Usage",
     "type": "Single Answer",
     "options": [
-      "Everyday (7 days per week)",
-      "5-6 days a week",
-      "3-4 days a week",
-      "1-2 days a week",
-      "A few days per month",
-      "Once a month",
-      "Less often than once a month",
-      "Never"
+      {
+        "code": "1",
+        "option": "Everyday (7 days per week)"
+      },
+      {
+        "code": "2",
+        "option": "5-6 days a week"
+      },
+      {
+        "code": "3",
+        "option": "3-4 days a week"
+      },
+      {
+        "code": "4",
+        "option": "1-2 days a week"
+      },
+      {
+        "code": "5",
+        "option": "A few days per month"
+      },
+      {
+        "code": "6",
+        "option": "Once a month"
+      },
+      {
+        "code": "7",
+        "option": "Less often than once a month"
+      },
+      {
+        "code": "8",
+        "option": "Never"
+      }
     ],
     "isManualInput": 0
   },
@@ -783,8 +1451,14 @@
     "question": "Desktop PC",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -794,8 +1468,14 @@
     "question": "Laptop/Notebook/Netbook",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -805,8 +1485,14 @@
     "question": "Smartphone/Feature Phone/Phablet",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -816,8 +1502,14 @@
     "question": "Tablet",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -827,8 +1519,14 @@
     "question": "Game Console",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -838,8 +1536,14 @@
     "question": "Internet-enabled TV/Smart TV",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -849,8 +1553,14 @@
     "question": "Smartwatch",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -860,8 +1570,14 @@
     "question": "Others (Specify)",
     "type": "Single Answer",
     "options": [
-      "YES",
-      "NO"
+      {
+        "code": "1",
+        "option": "YES"
+      },
+      {
+        "code": "2",
+        "option": "NO"
+      }
     ],
     "isManualInput": 0
   },
@@ -871,24 +1587,78 @@
     "question": "How much is the household monthly income?",
     "type": "Single Answer",
     "options": [
-      "₱ 4,000 and Below",
-      "4,001      –     6,000",
-      "6,001      –    10,000",
-      "10,001    –    15,000",
-      "15,001    –    20,000",
-      "20,001    –    25,000",
-      "25,001    –    30,000",
-      "30,001    –    35,000",
-      "35,001    –    40,000",
-      "40,001    –    45,000",
-      "45,001    –    50,000",
-      "50,001    –    75,000",
-      "75,001    –    100,000",
-      "100,001  –    150,000",
-      "150,001  –    300,000",
-      "300,001 & up",
-      "None",
-      "Don’t Know/Refused"
+      {
+        "code": "1",
+        "option": "₱ 4,000 and Below"
+      },
+      {
+        "code": "1",
+        "option": "4,001 – 6,000"
+      },
+      {
+        "code": "2",
+        "option": "6,001 – 10,000"
+      },
+      {
+        "code": "3",
+        "option": "10,001 – 15,000"
+      },
+      {
+        "code": "4",
+        "option": "15,001 – 20,000"
+      },
+      {
+        "code": "5",
+        "option": "20,001 – 25,000"
+      },
+      {
+        "code": "6",
+        "option": "25,001 – 30,000"
+      },
+      {
+        "code": "7",
+        "option": "30,001 – 35,000"
+      },
+      {
+        "code": "8",
+        "option": "35,001 – 40,000"
+      },
+      {
+        "code": "9",
+        "option": "40,001 – 45,000"
+      },
+      {
+        "code": "0",
+        "option": "45,001 – 50,000"
+      },
+      {
+        "code": "A",
+        "option": "50,001 – 75,000"
+      },
+      {
+        "code": "B",
+        "option": "75,001 – 100,000"
+      },
+      {
+        "code": "C",
+        "option": "100,001 – 150,000"
+      },
+      {
+        "code": "C",
+        "option": "150,001 – 300,000"
+      },
+      {
+        "code": "C",
+        "option": "300,001 & up"
+      },
+      {
+        "code": "E",
+        "option": "None"
+      },
+      {
+        "code": "D",
+        "option": "Don’t Know/Refused"
+      }
     ],
     "isManualInput": 0
   },
@@ -898,9 +1668,18 @@
     "question": "UTILITIES",
     "type": "Multiple Answer",
     "options": [
-      "Running water",
-      "Deep well / Poso",
-      "Electricity"
+      {
+        "code": "1",
+        "option": "Running water"
+      },
+      {
+        "code": "2",
+        "option": "Deep well / Poso"
+      },
+      {
+        "code": "3",
+        "option": "Electricity"
+      }
     ],
     "isManualInput": 0
   },
@@ -910,9 +1689,18 @@
     "question": "TOILET FACILITIES",
     "type": "Multiple Answer",
     "options": [
-      "Flush toilet",
-      "De buhos",
-      "Antipolo system"
+      {
+        "code": "4",
+        "option": "Flush toilet"
+      },
+      {
+        "code": "5",
+        "option": "De buhos"
+      },
+      {
+        "code": "6",
+        "option": "Antipolo system"
+      }
     ],
     "isManualInput": 0
   },
@@ -922,10 +1710,22 @@
     "question": "KITCHEN FACILITIES FOR FOOD PREPARATION",
     "type": "Multiple Answer",
     "options": [
-      "Gas/Electric Stove (w/o Oven)",
-      "Cooking Range / Conventional Oven",
-      "Microwave Oven",
-      "Dishwashing Machine"
+      {
+        "code": "7",
+        "option": "Gas/Electric Stove (w/o Oven)"
+      },
+      {
+        "code": "8",
+        "option": "Cooking Range / Conventional Oven"
+      },
+      {
+        "code": "9",
+        "option": "Microwave Oven"
+      },
+      {
+        "code": "0",
+        "option": "Dishwashing Machine"
+      }
     ],
     "isManualInput": 0
   },
@@ -935,8 +1735,14 @@
     "question": "KITCHEN FACILITIES FOR FOOD STORAGE",
     "type": "Multiple Answer",
     "options": [
-      "Refrigerator",
-      "Refrigerator"
+      {
+        "code": "A",
+        "option": "Refrigerator"
+      },
+      {
+        "code": "B",
+        "option": "Freezer"
+      }
     ],
     "isManualInput": 0
   },
@@ -946,7 +1752,10 @@
     "question": "OTHER ELECTRICAL PRODUCTS",
     "type": "Multiple Answer",
     "options": [
-      "Air Conditioner"
+      {
+        "code": "C",
+        "option": "Air Conditioner"
+      }
     ],
     "isManualInput": 0
   },
@@ -956,12 +1765,30 @@
     "question": "Washing Machine (probe type)",
     "type": "Multiple Answer",
     "options": [
-      "- Washer only",
-      "- With Spinner / Dryer",
-      "- Fully Automatic",
-      "Clothes Dryer ",
-      "Installed Water Heater",
-      "Generator"
+      {
+        "code": "D",
+        "option": "- Washer only"
+      },
+      {
+        "code": "E",
+        "option": "- With Spinner / Dryer"
+      },
+      {
+        "code": "F",
+        "option": "- Fully Automatic"
+      },
+      {
+        "code": "G",
+        "option": "Clothes Dryer"
+      },
+      {
+        "code": "H",
+        "option": "Installed Water Heater"
+      },
+      {
+        "code": "I",
+        "option": "Generator"
+      }
     ],
     "isManualInput": 0
   },
@@ -971,12 +1798,30 @@
     "question": "AUTOMOBILE",
     "type": "Multiple Answer",
     "options": [
-      "With Car Radio",
-      "Without Car Radio",
-      "TELEPHONE (LANDLINE #)",
-      "VIDEO CAMERA (Tape/Digital format)",
-      "DIGITAL CAMERA",
-      "PIANO/ORGAN"
+      {
+        "code": "J",
+        "option": "With Car Radio"
+      },
+      {
+        "code": "K",
+        "option": "Without Car Radio"
+      },
+      {
+        "code": "L",
+        "option": "TELEPHONE (LANDLINE #)"
+      },
+      {
+        "code": "M",
+        "option": "VIDEO CAMERA (Tape/Digital format)"
+      },
+      {
+        "code": "N",
+        "option": "DIGITAL CAMERA"
+      },
+      {
+        "code": "2",
+        "option": "PIANO/ORGAN"
+      }
     ],
     "isManualInput": 0
   }

@@ -1,5 +1,6 @@
 package com.radiostudies.main.db.model
 
+import com.radiostudies.main.db.entity.Option
 import java.io.Serializable
 
 /**
@@ -11,6 +12,6 @@ data class ActualQuestion(
     val header: String?,
     val question: String?,
     val type: String?,
-    val options: List<String>?,
+    val options: List<Option>,
     val isManualInput: Boolean
 ) : Serializable

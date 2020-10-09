@@ -41,7 +41,7 @@ class InitialQuestionsFragment :
             with(viewModel) {
                 if (loadOptions().contains(DISAGREE) && index == 0 ||
                     !loadOptions().contains(NONE_OF_THE_ABOVE) && (index == 1 || index == 2) ||
-                    loadOptions().contains(YES) && (index == 3 || index == 4)
+                    loadOptions().contains(getString(R.string.yes_label)) && (index == 3 || index == 4)
                 ) {
                     dialog()
                 } else {
@@ -222,11 +222,11 @@ class InitialQuestionsFragment :
     private fun dialog() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle(R.string.terminate_msg)
-        builder.setPositiveButton(YES) { dialog, _ ->
+        builder.setPositiveButton(getString(R.string.yes_label)) { dialog, _ ->
             listener?.navigateBack()
             dialog.dismiss()
         }
-        builder.setNegativeButton(NO) { dialog, _ ->
+        builder.setNegativeButton(getString(R.string.no_label)) { dialog, _ ->
             dialog.dismiss()
         }
         val dialog = builder.create()
@@ -245,9 +245,6 @@ class InitialQuestionsFragment :
     }
 
     companion object {
-        private const val YES = "Yes"
-        private const val NO = "No"
-
         private const val DISAGREE = "DISAGREE"
         private const val NONE_OF_THE_ABOVE = "NONE OF THE ABOVE"
 

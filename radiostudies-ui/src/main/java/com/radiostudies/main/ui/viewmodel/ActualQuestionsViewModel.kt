@@ -2,15 +2,13 @@ package com.radiostudies.main.ui.viewmodel
 
 import com.radiostudies.main.common.livedata.SingleLiveEvent
 import com.radiostudies.main.common.viewmodel.BaseViewModel
+import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.db.model.ActualQuestion
-import com.radiostudies.main.db.model.Area
 import com.radiostudies.main.ui.mapper.actualQuestionListModelToActualQuestionEntity
 import com.radiostudies.main.ui.mapper.areaListModelToAreaListEntity
-import com.radiostudies.main.ui.model.actual.ActualQuestionForm
-import com.radiostudies.main.ui.model.actual.ActualQuestionModel
-import com.radiostudies.main.ui.model.actual.ActualQuestionState
-import com.radiostudies.main.ui.model.actual.AreaForm
+import com.radiostudies.main.ui.mapper.dataQuestionModelToDataQuestionEntity
+import com.radiostudies.main.ui.model.actual.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -28,8 +26,8 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
     private val actualState = SingleLiveEvent<ActualQuestionState>()
     internal fun getActualLiveData(): SingleLiveEvent<ActualQuestionState> = actualState
     private val actualQuestions = mutableListOf<ActualQuestion>()
-    var currentOptions = listOf<String>()
-    var currentAreas = listOf<Area>()
+    var currentOptions = listOf<Option>()
+    var selectedOptions = mutableListOf<Option>()
     var isSingleAnswer = false
     private var id = -1
 
@@ -39,24 +37,23 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
 
     fun parseArea(area: String?) {
         val jsonArray = JSONArray(area)
-        val areas = mutableListOf<Area>()
+        val areas = mutableListOf<Option>()
         for (i in 0 until jsonArray.length()) {
             val jsonObject = jsonArray.getJSONObject(i)
             var code = jsonObject.getString("code")
-            var place = jsonObject.getString("place")
-            var isManualInput = jsonObject.getInt("isManualInput")
-            areas.add(Area(code, place, isManualInput))
+            var option = jsonObject.getString("option")
+            areas.add(Option(code, option))
         }
         insertArea(areas)
     }
 
-    private fun insertArea(areas: MutableList<Area>) {
+    private fun insertArea(areas: MutableList<Option>) {
         launch {
             insertAreaToDB(areas)
         }
     }
 
-    private suspend fun insertAreaToDB(areas: MutableList<Area>) {
+    private suspend fun insertAreaToDB(areas: MutableList<Option>) {
         withContext(Dispatchers.IO) {
             try {
                 actualManager.insertArea(areas.areaListModelToAreaListEntity())
@@ -76,9 +73,12 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
             val question = jsonObject.getString("question")
             val type = jsonObject.getString("type")
             val optionsJSONArray = jsonObject.getJSONArray("options")
-            val options = mutableListOf<String>()
+            val options = mutableListOf<Option>()
             for (j in 0 until optionsJSONArray.length()) {
-                options.add(optionsJSONArray.getString(j))
+                val jsonArrayObj = optionsJSONArray.getJSONObject(j)
+                val optionCode = jsonArrayObj.getString("code")
+                val optionValue = jsonArrayObj.getString("option")
+                options.add(Option(optionCode, optionValue))
             }
             val isManualInput = jsonObject.getInt("isManualInput") > 0
             actualQuestions.add(
@@ -130,6 +130,8 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
         return id
     }
 
+    fun isEndOfQuestion() = id == (actualQuestions.size - 1)
+
     fun queryActualQuestion(qId: Int) {
         launch {
             queryActualQuestionFromDB(qId)
@@ -169,9 +171,40 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
         }
     }
 
+    fun saveActualQuestions() {
+        launch {
+            saveActualQuestionsIntoDB()
+        }
+    }
+
+    private suspend fun saveActualQuestionsIntoDB() {
+        withContext(Dispatchers.IO) {
+            try {
+                // TODO() do nothing for now
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    fun saveQuestion(dataQuestion: DataQuestion) {
+        launch {
+            saveQuestionIntoDB(dataQuestion)
+        }
+    }
+
+    private suspend fun saveQuestionIntoDB(dataQuestion: DataQuestion) {
+        withContext(Dispatchers.IO) {
+            try {
+                actualManager.saveDataQuestion(dataQuestion.dataQuestionModelToDataQuestionEntity())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
     companion object {
         private const val AREA = "area.json"
         private const val ACTUAL_QUESTIONS = "actual_questions.json"
-        private const val AREA_LABEL = "Area"
     }
 }
