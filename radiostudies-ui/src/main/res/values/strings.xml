@@ -145,4 +145,7 @@
     <string name="terminate_msg">Selected choice/s will not allow you to continue, please confirm.</string>
     <string name="complete_msg">Congratulations! Do you wish to save the completed questions?</string>
 
+    <string name="diary_panel_number">Panel Number: %1s</string>
+    <string name="diary_member_number">Member Number: %1s</string>
+    <string name="diary_name_of_respondent">Name of Respondent: %1s</string>
 </resources>

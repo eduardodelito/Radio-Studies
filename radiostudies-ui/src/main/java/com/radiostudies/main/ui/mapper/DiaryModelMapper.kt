@@ -13,3 +13,12 @@ fun Diary.diaryModelToDiaryEntity(): DiaryEntity {
         dataQuestions = dataQuestions
     )
 }
+
+fun List<DiaryEntity>.diaryEntityModelToDiaryList(): List<Diary> {
+    return this.map {
+        Diary(
+            mainInfo = it.mainInfo,
+            dataQuestions = it.dataQuestions
+        )
+    }
+}
