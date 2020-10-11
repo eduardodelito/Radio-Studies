@@ -9,6 +9,9 @@ sealed class ActualQuestionState
 data class AreaForm(val fileName: String?) :
     ActualQuestionState()
 
+data class StationForm(val fileName: String?) :
+    ActualQuestionState()
+
 data class ActualQuestionForm(val fileName: String?) :
     ActualQuestionState()
 

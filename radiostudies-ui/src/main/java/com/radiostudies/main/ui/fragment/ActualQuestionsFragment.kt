@@ -14,6 +14,7 @@ import androidx.core.widget.TextViewCompat
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.*
 import com.radiostudies.main.db.entity.Option
+import com.radiostudies.main.db.model.DataQuestion
 import com.radiostudies.main.ui.fragment.databinding.ActualQuestionsFragmentBinding
 import com.radiostudies.main.ui.model.actual.*
 import com.radiostudies.main.ui.viewmodel.ActualQuestionsViewModel
@@ -40,14 +41,6 @@ class ActualQuestionsFragment :
         }
         actual_next_btn.setOnClickListener {
             viewModel.queryActualQuestion(viewModel.plus())
-            viewModel.saveQuestion(
-                DataQuestion(
-                    actual_question_number.text.toString(),
-                    getQuestionLabelText(),
-                    actual_question_label.text.toString(),
-                    viewModel.selectedOptions
-                )
-            )
             actual_selection_layout.removeAllViews()
         }
 
@@ -88,6 +81,15 @@ class ActualQuestionsFragment :
                 })
             }
 
+            is StationForm -> {
+                viewModel.parseStation(state.fileName?.let {
+                    getJsonDataFromAsset(
+                        requireContext(),
+                        it
+                    )
+                })
+            }
+
             is ActualQuestionForm -> {
                 viewModel.parseActualQuestions(state.fileName?.let {
                     getJsonDataFromAsset(
@@ -106,10 +108,16 @@ class ActualQuestionsFragment :
                 actual_next_btn.setEnable(state.isNextEnable)
                 btn_save.visibility = View.GONE
 
-                if (actualQuestion.options[0].option == AREA) {
-                    viewModel.loadAreas()
-                } else {
-                    viewModel.currentOptions = actualQuestion.options
+                when (actualQuestion.options[0].option) {
+                    AREA -> {
+                        viewModel.loadAreas()
+                    }
+                    STATIONS -> {
+                        viewModel.loadStations()
+                    }
+                    else -> {
+                        viewModel.currentOptions = actualQuestion.options
+                    }
                 }
 
                 actualQuestion.type?.let {
@@ -134,8 +142,8 @@ class ActualQuestionsFragment :
     }
 
     private fun addOptions(selectedList: MutableList<Option>) {
+        var selectedOptions = mutableListOf<Option>()
         actual_selection_layout.apply {
-            viewModel.selectedOptions.clear()
             removeAllViews()
             invalidate()
             for (i in selectedList.indices) {
@@ -163,11 +171,20 @@ class ActualQuestionsFragment :
                     editText.scrollBarStyle = View.SCROLLBARS_INSIDE_INSET
                     editText.layoutParams = params
                     addView(editText)
-                    viewModel.selectedOptions.add(Option("0", editText.text.toString()))
+                    selectedOptions.add(Option("0", editText.text.toString()))
                 } else {
-                    viewModel.selectedOptions.add(Option(option.code, option.option))
+                    selectedOptions.add(Option(option.code, option.option))
                 }
             }
+
+            viewModel.saveQuestion(
+                DataQuestion(
+                    actual_question_number.text.toString(),
+                    getQuestionLabelText(),
+                    actual_question_label.text.toString(),
+                    selectedOptions
+                )
+            )
 
             if (viewModel.isEndOfQuestion()) {
                 btn_save.visibility = View.VISIBLE
@@ -193,6 +210,9 @@ class ActualQuestionsFragment :
             // add a list
             builder.setItems(listItems) { dialog, which ->
                 val item = listItems[which]
+                if (actual_question_label.text.toString() == AREA) {
+                    viewModel.selectedArea = item
+                }
                 val code = list.find { option ->  option.option == item}?.code.toString()
 
                 selectedList.add(Option(code, item))
@@ -222,12 +242,24 @@ class ActualQuestionsFragment :
                             }
                         }
                     }
+
+                    listItems[which].contains(NOT_LISTEN) -> {
+                        for (i in listItems.indices) {
+                            if (!listItems[i].contains(NOT_LISTEN)) {
+                                dListView.setItemChecked(i, false)
+                                checkedItems[i] = false
+                            }
+                        }
+                    }
                     else -> {
                         for (i in listItems.indices) {
                             if (listItems[i].contains(NONE)) {
                                 dListView.setItemChecked(i, false)
                                 checkedItems[i] = false
                             } else if (listItems[i].contains(OTHER)) {
+                                dListView.setItemChecked(i, false)
+                                checkedItems[i] = false
+                            } else if (listItems[i].contains(NOT_LISTEN)) {
                                 dListView.setItemChecked(i, false)
                                 checkedItems[i] = false
                             }
@@ -258,8 +290,9 @@ class ActualQuestionsFragment :
 
     private fun dialogComplete() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setMessage(R.string.terminate_msg)
+        builder.setMessage(R.string.complete_msg)
         builder.setPositiveButton(getString(R.string.yes_label)) { dialog, _ ->
+            viewModel.saveActualQuestions("", "", "")
             dialog.dismiss()
         }
         builder.setNegativeButton(getString(R.string.no_label)) { dialog, _ ->
@@ -273,8 +306,10 @@ class ActualQuestionsFragment :
         private const val SINGLE_ANSWER = "Single Answer"
         private const val DONE = "Done"
         private const val AREA = "Area"
+        private const val STATIONS = "stations"
         private const val OTHER = "Other"
         private const val NONE = "None"
+        private const val NOT_LISTEN = "Not Listen"
         fun newInstance() = ActualQuestionsFragment()
     }
 }

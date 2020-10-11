@@ -1,4 +1,4 @@
-package com.radiostudies.main.ui.model.actual
+package com.radiostudies.main.db.model
 
 import com.radiostudies.main.db.entity.Option
 
@@ -9,5 +9,5 @@ data class DataQuestion(
     var code: String?,
     var header: String?,
     var question: String?,
-    var options: List<Option>
+    var options: List<Option>?
 )

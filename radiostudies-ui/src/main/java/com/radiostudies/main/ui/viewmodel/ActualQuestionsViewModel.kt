@@ -5,10 +5,11 @@ import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.db.model.ActualQuestion
-import com.radiostudies.main.ui.mapper.actualQuestionListModelToActualQuestionEntity
-import com.radiostudies.main.ui.mapper.areaListModelToAreaListEntity
-import com.radiostudies.main.ui.mapper.dataQuestionModelToDataQuestionEntity
+import com.radiostudies.main.db.model.DataQuestion
+import com.radiostudies.main.db.model.Diary
+import com.radiostudies.main.ui.mapper.*
 import com.radiostudies.main.ui.model.actual.*
+import com.radiostudies.main.ui.model.station.Station
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,8 +28,10 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
     internal fun getActualLiveData(): SingleLiveEvent<ActualQuestionState> = actualState
     private val actualQuestions = mutableListOf<ActualQuestion>()
     var currentOptions = listOf<Option>()
-    var selectedOptions = mutableListOf<Option>()
+
+    //    var selectedOptions = mutableListOf<Option>()
     var isSingleAnswer = false
+    var selectedArea = ""
     private var id = -1
 
     init {
@@ -47,6 +50,25 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
         insertArea(areas)
     }
 
+    fun parseStation(station: String?) {
+        val jsonArray = JSONArray(station)
+        val stations = mutableListOf<Station>()
+        for (i in 0 until jsonArray.length()) {
+            val jsonObject = jsonArray.getJSONObject(i)
+            var place = jsonObject.getString("place")
+            val stationsJSONArray = jsonObject.getJSONArray("stations")
+            val options = mutableListOf<Option>()
+            for (j in 0 until stationsJSONArray.length()) {
+                val jsonArrayObj = stationsJSONArray.getJSONObject(j)
+                val optionCode = jsonArrayObj.getString("code")
+                val optionValue = jsonArrayObj.getString("option")
+                options.add(Option(optionCode, optionValue))
+            }
+            stations.add(Station(place, options))
+        }
+        insertStation(stations)
+    }
+
     private fun insertArea(areas: MutableList<Option>) {
         launch {
             insertAreaToDB(areas)
@@ -57,6 +79,23 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
         withContext(Dispatchers.IO) {
             try {
                 actualManager.insertArea(areas.areaListModelToAreaListEntity())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        actualState.postValue(StationForm(STATION))
+    }
+
+    private fun insertStation(stations: MutableList<Station>) {
+        launch {
+            insertStationToDB(stations)
+        }
+    }
+
+    private suspend fun insertStationToDB(stations: MutableList<Station>) {
+        withContext(Dispatchers.IO) {
+            try {
+                actualManager.insertStation(stations.optionListModelToStationEntity())
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -155,6 +194,22 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
         }
     }
 
+    fun loadStations() {
+        launch {
+            loadStationsFromDB()
+        }
+    }
+
+    private suspend fun loadStationsFromDB() {
+        withContext(Dispatchers.IO) {
+            try {
+                currentOptions = actualManager.getSelectedArea(selectedArea)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
     private suspend fun queryActualQuestionFromDB(qId: Int) {
         withContext(Dispatchers.IO) {
             try {
@@ -171,16 +226,31 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
         }
     }
 
-    fun saveActualQuestions() {
+    fun saveActualQuestions(
+        panelNumber: String,
+        memberNumber: String,
+        date: String
+    ) {
         launch {
-            saveActualQuestionsIntoDB()
+            saveActualQuestionsIntoDB(panelNumber, memberNumber, date)
         }
     }
 
-    private suspend fun saveActualQuestionsIntoDB() {
+    private suspend fun saveActualQuestionsIntoDB(
+        panelNumber: String,
+        memberNumber: String,
+        date: String
+    ) {
         withContext(Dispatchers.IO) {
             try {
-                // TODO() do nothing for now
+                actualManager.saveCompletedActualQuestions(
+                    Diary(
+                        panelNumber,
+                        memberNumber,
+                        date,
+                        actualManager.queryDataQuestions().dataQuestionsEntityToDataQuestions()
+                    ).diaryModelToDiaryEntity()
+                )
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -205,6 +275,7 @@ class ActualQuestionsViewModel @Inject constructor(private val actualManager: Ac
 
     companion object {
         private const val AREA = "area.json"
+        private const val STATION = "radio_stations.json"
         private const val ACTUAL_QUESTIONS = "actual_questions.json"
     }
 }

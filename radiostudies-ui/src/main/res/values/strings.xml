@@ -143,4 +143,6 @@
     <string name="choose_items">Choose Items</string>
 
     <string name="terminate_msg">Selected choice/s will not allow you to continue, please confirm.</string>
+    <string name="complete_msg">Congratulations! Do you wish to save the completed questions?</string>
+
 </resources>

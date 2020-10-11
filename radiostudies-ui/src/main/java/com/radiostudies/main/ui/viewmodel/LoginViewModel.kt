@@ -35,9 +35,9 @@ class LoginViewModel @Inject constructor(var dbManager: DBManager) : BaseViewMod
         users.add(
             UserEntity(
                 0,
-                "Eduardo",
-                "Delito",
-                "edelito",
+                "John",
+                "Doe",
+                "johndoe",
                 "123456",
                 "1234",
                 "subCon",

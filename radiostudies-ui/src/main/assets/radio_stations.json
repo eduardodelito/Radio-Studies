@@ -1,0 +1,4885 @@
+[
+  {
+    "place": "Mega Manila",
+    "stations": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz"
+      },
+      {
+        "code": "008",
+        "option": "DZRJ-810Khz"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz"
+      },
+      {
+        "code": "011",
+        "option": "DZSR-918Khz"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz"
+      },
+      {
+        "code": "013",
+        "option": "DZIQ-990Khz"
+      },
+      {
+        "code": "014",
+        "option": "DZAR-1026Khz"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz"
+      },
+      {
+        "code": "016",
+        "option": "DWAD-1098Khz"
+      },
+      {
+        "code": "017",
+        "option": "DWDD-1134Khz"
+      },
+      {
+        "code": "018",
+        "option": "DWBL-1242Khz"
+      },
+      {
+        "code": "019",
+        "option": "DZRM-1278Khz"
+      },
+      {
+        "code": "020",
+        "option": "DWXI-1314Khz"
+      },
+      {
+        "code": "021",
+        "option": "DWUN-1350Khz"
+      },
+      {
+        "code": "022",
+        "option": "DWSS-1494Khz"
+      },
+      {
+        "code": "023",
+        "option": "DZME-1530Khz"
+      },
+      {
+        "code": "024",
+        "option": "DZUP-1602Khz"
+      },
+      {
+        "code": "025",
+        "option": "DWJM-88.3Mhz"
+      },
+      {
+        "code": "026",
+        "option": "DWAV-89.1Mhz"
+      },
+      {
+        "code": "027",
+        "option": "DWTM-89.9Mhz"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz"
+      },
+      {
+        "code": "029",
+        "option": "DWKY-91.5Mhz"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz"
+      },
+      {
+        "code": "033",
+        "option": "DWLL-94.7Mhz"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz"
+      },
+      {
+        "code": "035",
+        "option": "DWRK-96.3Mhz"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz"
+      },
+      {
+        "code": "037",
+        "option": "DWQZ-97.9Mhz"
+      },
+      {
+        "code": "038",
+        "option": "DZFE-98.7Mhz"
+      },
+      {
+        "code": "039",
+        "option": "DWRT-99.5Mhz"
+      },
+      {
+        "code": "040",
+        "option": "DZRJ-100.3Mhz"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz"
+      },
+      {
+        "code": "044",
+        "option": "DWKX-103.5Mhz"
+      },
+      {
+        "code": "045",
+        "option": "DWBR-104.3Mhz"
+      },
+      {
+        "code": "046",
+        "option": "DWBM-105.1Mhz"
+      },
+      {
+        "code": "047",
+        "option": "DWLA-105.9Mhz"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz"
+      },
+      {
+        "code": "050",
+        "option": "DZUR-107.9Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "346",
+        "option": "DWGV-99.1Mhz"
+      },
+      {
+        "code": "477",
+        "option": "DWSP-101.5Mhz"
+      },
+      {
+        "code": "474",
+        "option": "DWGV-792Khz"
+      },
+      {
+        "code": "636",
+        "option": "107.1Mhz"
+      },
+      {
+        "code": "612",
+        "option": "DWFO 87.5Mhz"
+      },
+      {
+        "code": "618",
+        "option": "SPOTIFY"
+      }
+    ]
+  },
+  {
+    "place": "Baguio",
+    "stations": [
+      {
+        "code": "056",
+        "option": "DZWT-540Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "059",
+        "option": "DZEQ-999Khz"
+      },
+      {
+        "code": "060",
+        "option": "DZWX-1035Khz"
+      },
+      {
+        "code": "061",
+        "option": "DZBS-1368Khz"
+      },
+      {
+        "code": "062",
+        "option": "DWIM-89.5Mhz"
+      },
+      {
+        "code": "063",
+        "option": "DWDJ-91.1Mhz"
+      },
+      {
+        "code": "064",
+        "option": "DZYS-91.9Mhz"
+      },
+      {
+        "code": "065",
+        "option": "DWRA-92.7Mhz"
+      },
+      {
+        "code": "066",
+        "option": "DWMB-95.1Mhz"
+      },
+      {
+        "code": "067",
+        "option": "DWBG-95.9Mhz"
+      },
+      {
+        "code": "068",
+        "option": "DWSK-96.7Mhz"
+      },
+      {
+        "code": "069",
+        "option": "DWLY-97.5Mhz"
+      },
+      {
+        "code": "070",
+        "option": "DWUB-98.7Mhz"
+      },
+      {
+        "code": "071",
+        "option": "DZWR-99.9Mhz"
+      },
+      {
+        "code": "072",
+        "option": "DZYB-102.3Mhz"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz"
+      },
+      {
+        "code": "074",
+        "option": "DWHB-103.9Mhz"
+      },
+      {
+        "code": "046",
+        "option": "DWBM-105.1Mhz"
+      },
+      {
+        "code": "076",
+        "option": "DZLL-107.1Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz"
+      },
+      {
+        "code": "470",
+        "option": "DWSP-612Khz"
+      }
+    ]
+  },
+  {
+    "place": "Batangas",
+    "stations": [
+      {
+        "code": "087",
+        "option": "DZBR-531Khz"
+      },
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz"
+      },
+      {
+        "code": "093",
+        "option": "DWAW-999Khz"
+      },
+      {
+        "code": "026",
+        "option": "DWAV-89.1Mhz"
+      },
+      {
+        "code": "095",
+        "option": "DWCX-91.9Mhz"
+      },
+      {
+        "code": "096",
+        "option": "DWKI-95.1Mhz"
+      },
+      {
+        "code": "097",
+        "option": "DWAL-95.9Mhz"
+      },
+      {
+        "code": "098",
+        "option": "DZLC-98.5Mhz"
+      },
+      {
+        "code": "099",
+        "option": "DWAM-99.1Mhz"
+      },
+      {
+        "code": "100",
+        "option": "DZGV-99.9Mhz"
+      },
+      {
+        "code": "101",
+        "option": "DWEY-104.7Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "103",
+        "option": "DWKV-102.3Mhz"
+      },
+      {
+        "code": "104",
+        "option": "DZUN-88.7Mhz"
+      },
+      {
+        "code": "105",
+        "option": "89.5Mhz"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz"
+      },
+      {
+        "code": "035",
+        "option": "DWRK-96.3Mhz"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz"
+      },
+      {
+        "code": "037",
+        "option": "DWQZ-97.9Mhz"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz"
+      },
+      {
+        "code": "607",
+        "option": "DWPB-107.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Butuan",
+    "stations": [
+      {
+        "code": "112",
+        "option": "DXBC-693Khz"
+      },
+      {
+        "code": "113",
+        "option": "DXJM-756Khz"
+      },
+      {
+        "code": "114",
+        "option": "DXBN-792Khz"
+      },
+      {
+        "code": "115",
+        "option": "DXRB-837Khz"
+      },
+      {
+        "code": "116",
+        "option": "DXDV-945Khz"
+      },
+      {
+        "code": "117",
+        "option": "DXBR-981Khz"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz"
+      },
+      {
+        "code": "119",
+        "option": "DXGL-88.7Mhz"
+      },
+      {
+        "code": "120",
+        "option": "DXJJ-91.7Mhz"
+      },
+      {
+        "code": "121",
+        "option": "DXMB-95.1Mhz"
+      },
+      {
+        "code": "122",
+        "option": "DXEY-96.7Mhz"
+      },
+      {
+        "code": "123",
+        "option": "DXMK-97.5Mhz"
+      },
+      {
+        "code": "124",
+        "option": "DXBB-98.5Mhz"
+      },
+      {
+        "code": "126",
+        "option": "DXXX-100.7Mhz"
+      },
+      {
+        "code": "127",
+        "option": "DXNS-102.3Mhz"
+      },
+      {
+        "code": "129",
+        "option": "DXHR-1323Khz"
+      },
+      {
+        "code": "130",
+        "option": "103.9Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "693",
+        "option": "103.1Mhz"
+      },
+      {
+        "code": "694",
+        "option": "107.8Mhz"
+      },
+      {
+        "code": "521",
+        "option": "DXIM-93.5Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Cabanatuan",
+    "stations": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "142",
+        "option": "DWJJ-684Khz"
+      },
+      {
+        "code": "143",
+        "option": "DYSM-972Khz"
+      },
+      {
+        "code": "144",
+        "option": "DZXO-1188Khz"
+      },
+      {
+        "code": "145",
+        "option": "DWAY-1332Khz"
+      },
+      {
+        "code": "146",
+        "option": "DWWG-101.5Mhz"
+      },
+      {
+        "code": "147",
+        "option": "DWUP-89.7Mhz"
+      },
+      {
+        "code": "148",
+        "option": "DWDC-101.3Mhz"
+      },
+      {
+        "code": "149",
+        "option": "DWNE-900Khz"
+      },
+      {
+        "code": "150",
+        "option": "DWTX-106.5Mhz"
+      },
+      {
+        "code": "151",
+        "option": "DWYC-88.7Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz"
+      }
+    ]
+  },
+  {
+    "place": "Dumaguete",
+    "stations": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz"
+      },
+      {
+        "code": "156",
+        "option": "DYRB-540Khz"
+      },
+      {
+        "code": "160",
+        "option": "DXIC-711Khz"
+      },
+      {
+        "code": "162",
+        "option": "DYWC-801Khz"
+      },
+      {
+        "code": "163",
+        "option": "DYSR-891Khz"
+      },
+      {
+        "code": "164",
+        "option": "DYLA-909Khz "
+      },
+      {
+        "code": "165",
+        "option": "DYMF-963Khz"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz "
+      },
+      {
+        "code": "167",
+        "option": "DXKD-1054Khz"
+      },
+      {
+        "code": "168",
+        "option": "DYTR-1116Khz"
+      },
+      {
+        "code": "169",
+        "option": "DYRM-1134Khz"
+      },
+      {
+        "code": "170",
+        "option": "DYRD-1161Khz"
+      },
+      {
+        "code": "171",
+        "option": "DXIF-729Khz"
+      },
+      {
+        "code": "172",
+        "option": "DYRF-1215Khz "
+      },
+      {
+        "code": "173",
+        "option": "DYDD-1260Khz "
+      },
+      {
+        "code": "174",
+        "option": "DYZZ-1458Khz"
+      },
+      {
+        "code": "175",
+        "option": "DXRJ-1476Khz"
+      },
+      {
+        "code": "176",
+        "option": "DYAB-1512Khz"
+      },
+      {
+        "code": "177",
+        "option": "DYKI-89.9Mhz"
+      },
+      {
+        "code": "178",
+        "option": "DXNA-91.3Mhz"
+      },
+      {
+        "code": "179",
+        "option": "DYGB-91.7Mhz"
+      },
+      {
+        "code": "180",
+        "option": "DYWF-93.1Mhz"
+      },
+      {
+        "code": "181",
+        "option": "DWSR-95.1Mhz"
+      },
+      {
+        "code": "182",
+        "option": "DYIF-95.9Mhz"
+      },
+      {
+        "code": "183",
+        "option": "DYEM-96.7Mhz"
+      },
+      {
+        "code": "184",
+        "option": "DYLS-97.1Mhz "
+      },
+      {
+        "code": "185",
+        "option": "DYRT-99.5Mhz"
+      },
+      {
+        "code": "186",
+        "option": "DYFU-101.3Mhz"
+      },
+      {
+        "code": "187",
+        "option": "DYSK-100.1Mhz"
+      },
+      {
+        "code": "188",
+        "option": "DYSJ-105.7Mhz"
+      },
+      {
+        "code": "189",
+        "option": "DYYD-106.3Mhz"
+      },
+      {
+        "code": "661",
+        "option": "DYMD-93.7Mhz"
+      },
+      {
+        "code": "541",
+        "option": "DYRL-90.5Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Iligan",
+    "stations": [
+      {
+        "code": "200",
+        "option": "DYMR-576Khz"
+      },
+      {
+        "code": 118,
+        "option": "DYHP-612Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "203",
+        "option": "DXDD-657Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "160",
+        "option": "DXIC-711Khz"
+      },
+      {
+        "code": "162",
+        "option": "DYWC-801Khz"
+      },
+      {
+        "code": "207",
+        "option": "DXCC-828Khz"
+      },
+      {
+        "code": "208",
+        "option": "DXWG-855Khz"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz"
+      },
+      {
+        "code": "210",
+        "option": "DXIM-936Khz"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz"
+      },
+      {
+        "code": "212",
+        "option": "DXMI-1026Khz"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz"
+      },
+      {
+        "code": 168,
+        "option": "DYTR-1116Khz"
+      },
+      {
+        "code": "172",
+        "option": "DYRF-1215Khz"
+      },
+      {
+        "code": "216",
+        "option": "DXSY-1242Khz"
+      },
+      {
+        "code": "170",
+        "option": "DYRD-1161Khz"
+      },
+      {
+        "code": 175,
+        "option": "DXRJ-1476Khz"
+      },
+      {
+        "code": "219",
+        "option": "DXND-90.1Mhz"
+      },
+      {
+        "code": "221",
+        "option": "DZMA-95.9Mhz"
+      },
+      {
+        "code": "222",
+        "option": "DXRI-98.3Mhz"
+      },
+      {
+        "code": "223",
+        "option": "DXIX-102.3Mhz"
+      },
+      {
+        "code": "224",
+        "option": "DXIL-103.1Mhz"
+      },
+      {
+        "code": "225",
+        "option": "DXIV-104.1Mhz"
+      },
+      {
+        "code": "226",
+        "option": "DXTL-105.5Mhz"
+      },
+      {
+        "code": "227",
+        "option": "DXLS-107.1Mhz"
+      },
+      {
+        "code": "228",
+        "option": "DXMC-100.1Mhz"
+      },
+      {
+        "code": "229",
+        "option": "DXMA-97.5Mhz"
+      },
+      {
+        "code": "230",
+        "option": "DXTA-92.7Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "674",
+        "option": "DXDY-95.1Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Olongapo",
+    "stations": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "241",
+        "option": "DWHL-756Khz"
+      },
+      {
+        "code": "242",
+        "option": "DWGO-1008Khz"
+      },
+      {
+        "code": "243",
+        "option": "DWSB-89.5Mhz"
+      },
+      {
+        "code": "244",
+        "option": "DWSL-96.7Mhz"
+      },
+      {
+        "code": "245",
+        "option": "DWOK-97.5Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz"
+      },
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz"
+      },
+      {
+        "code": "640",
+        "option": "DWTY-93.5Mhz"
+      },
+      {
+        "code": "527",
+        "option": "DZFQ-95.9Mhz"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz"
+      },
+      {
+        "code": "029",
+        "option": "DWKY-91.5Mhz"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Puerto Princesa",
+    "stations": [
+      {
+        "code": "040",
+        "option": "DZRJ-100.3Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "273",
+        "option": "DWRM-648Khz"
+      },
+      {
+        "code": "274",
+        "option": "DYPH-693Khz"
+      },
+      {
+        "code": "275",
+        "option": "DYAP-765Khz "
+      },
+      {
+        "code": "276",
+        "option": "DWAJ-792Khz"
+      },
+      {
+        "code": "277",
+        "option": "DYSP-909Khz"
+      },
+      {
+        "code": "278",
+        "option": "DYEC-1062Khz"
+      },
+      {
+        "code": "279",
+        "option": "DWJA-1134Khz"
+      },
+      {
+        "code": "280",
+        "option": "DYEH-95.9Mhz"
+      },
+      {
+        "code": "281",
+        "option": "DYHY-97.5Mhz"
+      },
+      {
+        "code": "282",
+        "option": "DYEZ-98.3Mhz"
+      },
+      {
+        "code": "283",
+        "option": "DWWA-98.5Mhz"
+      },
+      {
+        "code": "284",
+        "option": "DYCU-99.9Mhz"
+      },
+      {
+        "code": "287",
+        "option": "DWAR-103.9Mhz"
+      },
+      {
+        "code": "288",
+        "option": "DYWA-106.3Mhz"
+      },
+      {
+        "code": "289",
+        "option": "DZIP-864Khz"
+      },
+      {
+        "code": "650",
+        "option": "88.7Mhz"
+      },
+      {
+        "code": "651",
+        "option": "DYOP-94.3Mhz"
+      },
+      {
+        "code": "652",
+        "option": "DYRT-102.3Mhz"
+      },
+      {
+        "code": "653",
+        "option": "DWYD-103.1Mhz"
+      },
+      {
+        "code": "193",
+        "option": "90.3Mhz"
+      },
+      {
+        "code": "415",
+        "option": "DWIZ-94.3Mhz"
+      },
+      {
+        "code": "452",
+        "option": "DYRJ-99.1Mhz"
+      },
+      {
+        "code": "475",
+        "option": "DWOK-107.9Mhz"
+      },
+      {
+        "code": "197",
+        "option": "91.1Mhz"
+      },
+      {
+        "code": "331",
+        "option": "91.5Mhz"
+      },
+      {
+        "code": "544",
+        "option": "107.1Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Surigao",
+    "stations": [
+      {
+        "code": "164",
+        "option": "DYLA-909Khz"
+      },
+      {
+        "code": "165",
+        "option": "DYMF-963Khz"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz"
+      },
+      {
+        "code": "302",
+        "option": "DXSN-1017Khz"
+      },
+      {
+        "code": "303",
+        "option": "DXKS-1080Khz"
+      },
+      {
+        "code": "304",
+        "option": "DXRS-1206Khz"
+      },
+      {
+        "code": "173",
+        "option": "DYDD-1260Khz"
+      },
+      {
+        "code": "176",
+        "option": "DYAB-1512Khz"
+      },
+      {
+        "code": "307",
+        "option": "DXSJ-93.3Mhz"
+      },
+      {
+        "code": "308",
+        "option": "DYXL-93.9Mhz"
+      },
+      {
+        "code": "309",
+        "option": "DXKE-94.1Mhz"
+      },
+      {
+        "code": "310",
+        "option": "DXSP-96.1Mhz"
+      },
+      {
+        "code": "184",
+        "option": "DYLS-97.1Mhz"
+      },
+      {
+        "code": "312",
+        "option": "DXTS-99.7Mhz"
+      },
+      {
+        "code": "313",
+        "option": "DXRZ-104.7Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "692",
+        "option": "DXHL-94.9Mhz"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz"
+      }
+    ]
+  },
+  {
+    "place": "Tarlac",
+    "stations": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "339",
+        "option": "DZTC-828Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "343",
+        "option": "DZMC-91.1Mhz"
+      },
+      {
+        "code": "344",
+        "option": "DWXT-96.1Mhz"
+      },
+      {
+        "code": "345",
+        "option": "DZRM-99.7Mhz"
+      },
+      {
+        "code": "346",
+        "option": "DWGV-99.1Mhz"
+      },
+      {
+        "code": "347",
+        "option": "DWDU-105.5Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz"
+      },
+      {
+        "code": "027",
+        "option": "DWTM-89.9Mhz"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz"
+      },
+      {
+        "code": "044",
+        "option": "DWKX-103.5Mhz"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz"
+      },
+      {
+        "code": "149",
+        "option": "DWNE-900Khz"
+      },
+      {
+        "code": "639",
+        "option": "DZLT-97.7Mhz"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Zamboanga",
+    "stations": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "358",
+        "option": "DXZH-855Khz"
+      },
+      {
+        "code": "008",
+        "option": "DZRJ-810khz"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz"
+      },
+      {
+        "code": "361",
+        "option": "DXRZ-900Khz"
+      },
+      {
+        "code": "363",
+        "option": "DXXX-1008Khz"
+      },
+      {
+        "code": "364",
+        "option": "DXRH-1080Khz"
+      },
+      {
+        "code": "365",
+        "option": "DXAS-1116Khz"
+      },
+      {
+        "code": "366",
+        "option": "DXMR-1170Khz"
+      },
+      {
+        "code": "368",
+        "option": "DXVP-1467Khz"
+      },
+      {
+        "code": "369",
+        "option": "DXMG-88.7Mhz"
+      },
+      {
+        "code": "370",
+        "option": "DXTZ-90.7Mhz "
+      },
+      {
+        "code": "371",
+        "option": "DXKZ-91.5Mhz"
+      },
+      {
+        "code": "372",
+        "option": "DXRX-93.1Mhz"
+      },
+      {
+        "code": "373",
+        "option": "DXCB-93.9Mhz"
+      },
+      {
+        "code": "374",
+        "option": "DXEL-95.5Mhz"
+      },
+      {
+        "code": "375",
+        "option": "DXWR-96.3Mhz "
+      },
+      {
+        "code": "377",
+        "option": "DXCM-97.9Mhz"
+      },
+      {
+        "code": "378",
+        "option": "DXFH-98.7Mhz"
+      },
+      {
+        "code": "380",
+        "option": "DXTY-101.1Mhz"
+      },
+      {
+        "code": "381",
+        "option": "DXHT-102.7Mhz"
+      },
+      {
+        "code": "382",
+        "option": "DXUE-103.5Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz"
+      },
+      {
+        "code": "671",
+        "option": "DXRC-1287Khz"
+      },
+      {
+        "code": "691",
+        "option": "DXBY-89.9 Mhz"
+      },
+      {
+        "code": "708",
+        "option": "DXWW-105.9Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Tacloban",
+    "stations": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "393",
+        "option": "DYDW-531Khz"
+      },
+      {
+        "code": "394",
+        "option": "DYWR-594Khz"
+      },
+      {
+        "code": "395",
+        "option": "DYBR-711Khz"
+      },
+      {
+        "code": "396",
+        "option": "DYVL-819Khz"
+      },
+      {
+        "code": "397",
+        "option": "DYTH-990Khz"
+      },
+      {
+        "code": "399",
+        "option": "DYMP-1566Khz"
+      },
+      {
+        "code": "400",
+        "option": "DYTM-91.1Mhz"
+      },
+      {
+        "code": "401",
+        "option": "DYTY-93.5Mhz"
+      },
+      {
+        "code": "402",
+        "option": "DYTC-94.3Mhz"
+      },
+      {
+        "code": "403",
+        "option": "DYTX-95.1Mhz"
+      },
+      {
+        "code": "405",
+        "option": "DYOU-97.5Mhz"
+      },
+      {
+        "code": "406",
+        "option": "DYXV-98.3Mhz"
+      },
+      {
+        "code": "407",
+        "option": "DYXY-99.1Mhz"
+      },
+      {
+        "code": "408",
+        "option": "DYDR-100.7Mhz"
+      },
+      {
+        "code": "716",
+        "option": "103.1Mhz"
+      },
+      {
+        "code": "717",
+        "option": "DYAP-104.7Mhz"
+      },
+      {
+        "code": "540",
+        "option": "96.7Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Angeles-San Fernando",
+    "stations": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz"
+      },
+      {
+        "code": "008",
+        "option": "DZRJ-810Khz"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz"
+      },
+      {
+        "code": "011",
+        "option": "DZSR-918Khz"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz"
+      },
+      {
+        "code": "013",
+        "option": "DZIQ-990Khz"
+      },
+      {
+        "code": "014",
+        "option": "DZAR-1026Khz"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz"
+      },
+      {
+        "code": "016",
+        "option": "DWAD-1098Khz"
+      },
+      {
+        "code": "017",
+        "option": "DWDD-1134Khz"
+      },
+      {
+        "code": "018",
+        "option": "DWBL-1242Khz"
+      },
+      {
+        "code": "019",
+        "option": "DZRM-1278Khz"
+      },
+      {
+        "code": "020",
+        "option": "DWXI-1314Khz"
+      },
+      {
+        "code": "021",
+        "option": "DWUN-1350Khz"
+      },
+      {
+        "code": "022",
+        "option": "DWSS-1494Khz"
+      },
+      {
+        "code": "023",
+        "option": "DZME-1530Khz"
+      },
+      {
+        "code": "024",
+        "option": "DZUP-1602Khz"
+      },
+      {
+        "code": "025",
+        "option": "DWJM-88.3Mhz"
+      },
+      {
+        "code": "026",
+        "option": "DWAV-89.1Mhz"
+      },
+      {
+        "code": "027",
+        "option": "DWTM-89.9Mhz"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz"
+      },
+      {
+        "code": "029",
+        "option": "DWKY-91.5Mhz"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz"
+      },
+      {
+        "code": "033",
+        "option": "DWLL-94.7Mhz"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz"
+      },
+      {
+        "code": "035",
+        "option": "DWRK-96.3Mhz"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz"
+      },
+      {
+        "code": "037",
+        "option": "DWQZ-97.9Mhz"
+      },
+      {
+        "code": "038",
+        "option": "DZFE-98.7Mhz"
+      },
+      {
+        "code": "039",
+        "option": "DWRT-99.5Mhz"
+      },
+      {
+        "code": "040",
+        "option": "DZRJ-100.3Mhz"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz"
+      },
+      {
+        "code": "044",
+        "option": "DWKX-103.5Mhz"
+      },
+      {
+        "code": "045",
+        "option": "DWBR-104.3Mhz"
+      },
+      {
+        "code": "046",
+        "option": "DWBM-105.1Mhz"
+      },
+      {
+        "code": "047",
+        "option": "DWLA-105.9Mhz"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz"
+      },
+      {
+        "code": "050",
+        "option": "DZUR-107.9Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "346",
+        "option": "DWGV-99.1Mhz"
+      },
+      {
+        "code": "523",
+        "option": "DWBL-91.9Mhz"
+      },
+      {
+        "code": "525",
+        "option": "DWCL-92.7Mhz"
+      },
+      {
+        "code": "526",
+        "option": "DWRW-95.1Mhz"
+      },
+      {
+        "code": "612",
+        "option": "DWFO 87.5Mhz"
+      },
+      {
+        "code": "474",
+        "option": "DWGV-792Khz"
+      }
+    ]
+  },
+  {
+    "place": "Bacolod",
+    "stations": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "075",
+        "option": "DYEZ-684Khz"
+      },
+      {
+        "code": "077",
+        "option": "DYHB-747Khz"
+      },
+      {
+        "code": "078",
+        "option": "DYRL-1035Khz"
+      },
+      {
+        "code": "079",
+        "option": "DYAF-1143Khz"
+      },
+      {
+        "code": "080",
+        "option": "DYSB-1179Khz"
+      },
+      {
+        "code": "081",
+        "option": "DYVS-1233Khz"
+      },
+      {
+        "code": "082",
+        "option": "DYKB-1404Khz"
+      },
+      {
+        "code": "083",
+        "option": "DYCP-90.3Mhz"
+      },
+      {
+        "code": "084",
+        "option": "DYKS-91.9Mhz"
+      },
+      {
+        "code": "086",
+        "option": "DYHT-94.3Mhz"
+      },
+      {
+        "code": "182",
+        "option": "DYIF-95.9Mhz"
+      },
+      {
+        "code": "089",
+        "option": "DYBM-99.1Mhz"
+      },
+      {
+        "code": "090",
+        "option": "DYFJ-99.9Mhz"
+      },
+      {
+        "code": "091",
+        "option": "DYOO-101.5Mhz"
+      },
+      {
+        "code": "092",
+        "option": "DYBC-102.3Mhz"
+      },
+      {
+        "code": "094",
+        "option": "DYMG-103.1Mhz"
+      },
+      {
+        "code": "102",
+        "option": "DYMY-105.5Mhz"
+      },
+      {
+        "code": "106",
+        "option": "DYBE-106.3Mhz"
+      },
+      {
+        "code": 107,
+        "option": "DYEN-107.1Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "108",
+        "option": "DYWB-630Khz"
+      },
+      {
+        "code": "637",
+        "option": "DYBH-1080Khz"
+      },
+      {
+        "code": "564",
+        "option": "100.5Mhz"
+      },
+      {
+        "code": "619",
+        "option": "103.9Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Cagayan De Oro",
+    "stations": [
+      {
+        "code": "171",
+        "option": "DXIF-729Khz"
+      },
+      {
+        "code": "132",
+        "option": "DXUM-819Khz"
+      },
+      {
+        "code": "207",
+        "option": "DXCC-828Khz"
+      },
+      {
+        "code": "210",
+        "option": "DXIM-936Khz"
+      },
+      {
+        "code": "134",
+        "option": "DXKH-972Khz"
+      },
+      {
+        "code": "135",
+        "option": "DXCO-1044Khz"
+      },
+      {
+        "code": "136",
+        "option": "DXCL-1098Khz"
+      },
+      {
+        "code": "168",
+        "option": "DYTR-1116Khz"
+      },
+      {
+        "code": "170",
+        "option": "DYRD-1161Khz"
+      },
+      {
+        "code": "138",
+        "option": "DXJR-1575Khz"
+      },
+      {
+        "code": "139",
+        "option": "DXRJ-88.5Mhz"
+      },
+      {
+        "code": "140",
+        "option": "DXKB-89.3Mhz"
+      },
+      {
+        "code": "141",
+        "option": "DXEC-91.9Mhz"
+      },
+      {
+        "code": "152",
+        "option": "DXQR-93.5Mhz"
+      },
+      {
+        "code": "153",
+        "option": "DXWZ-94.3Mhz"
+      },
+      {
+        "code": "154",
+        "option": "DXBL-95.7Mhz"
+      },
+      {
+        "code": "155",
+        "option": "DXKS-96.9Mhz"
+      },
+      {
+        "code": "157",
+        "option": "DXVM-99.1Mhz"
+      },
+      {
+        "code": "158",
+        "option": "DXRK-99.9Mhz"
+      },
+      {
+        "code": "159",
+        "option": "DXLX-100.7Mhz"
+      },
+      {
+        "code": "161",
+        "option": "DXRL-101.5Mhz"
+      },
+      {
+        "code": "190",
+        "option": "DXJL-103.3Mhz"
+      },
+      {
+        "code": "191",
+        "option": "DXYR-104.7Mhz"
+      },
+      {
+        "code": "192",
+        "option": "DXHY-106.3Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "194",
+        "option": "DXRU-1188Khz"
+      },
+      {
+        "code": "628",
+        "option": "DXKO-1368Khz"
+      },
+      {
+        "code": "629",
+        "option": "DXYQ-102.5Mhz"
+      },
+      {
+        "code": "630",
+        "option": "DXNY-107.9Mhz"
+      },
+      {
+        "code": "631",
+        "option": "103.9Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Dagupan",
+    "stations": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "199",
+        "option": "DZMQ-576Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "201",
+        "option": "DWAA-684Khz"
+      },
+      {
+        "code": "202",
+        "option": "DWRS-756Khz"
+      },
+      {
+        "code": "205",
+        "option": "DZRD-981Khz"
+      },
+      {
+        "code": "206",
+        "option": "DWDW-1017Khz"
+      },
+      {
+        "code": "060",
+        "option": "DZWX-1035Khz"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz"
+      },
+      {
+        "code": "209",
+        "option": "DWIN-1080Khz"
+      },
+      {
+        "code": "211",
+        "option": "DZWN-1125Khz"
+      },
+      {
+        "code": "213",
+        "option": "DWCM-1161Khz"
+      },
+      {
+        "code": "214",
+        "option": "DZAG-1224Khz"
+      },
+      {
+        "code": "215",
+        "option": "DWPR-1296Khz"
+      },
+      {
+        "code": "217",
+        "option": "DWDH-1440Khz"
+      },
+      {
+        "code": "218",
+        "option": "DZSD-1548Khz"
+      },
+      {
+        "code": "231",
+        "option": "DWIZ-89.3Mhz"
+      },
+      {
+        "code": "232",
+        "option": "DWKT-90.3Mhz"
+      },
+      {
+        "code": "233",
+        "option": "DWTL-93.5Mhz"
+      },
+      {
+        "code": "234",
+        "option": "DWEC-94.3Mhz"
+      },
+      {
+        "code": "235",
+        "option": "DWID-98.3Mhz"
+      },
+      {
+        "code": "236",
+        "option": "DWHY-100.7Mhz"
+      },
+      {
+        "code": "237",
+        "option": "DWON-104.7Mhz"
+      },
+      {
+        "code": "238",
+        "option": "DWHR-106.3Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "627",
+        "option": "DZWM-864Khz"
+      },
+      {
+        "code": "714",
+        "option": "DWRD-102.5 Mhz"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Davao",
+    "stations": [
+      {
+        "code": "249",
+        "option": "DXMF-576Khz"
+      },
+      {
+        "code": "250",
+        "option": "DXDC-621Khz"
+      },
+      {
+        "code": "251",
+        "option": "DXRP-675Khz"
+      },
+      {
+        "code": "252",
+        "option": "DXRD-711Khz"
+      },
+      {
+        "code": "253",
+        "option": "DXRA-783Khz"
+      },
+      {
+        "code": "132",
+        "option": "DXUM-819Khz"
+      },
+      {
+        "code": "254",
+        "option": "DXGO-855Khz"
+      },
+      {
+        "code": "255",
+        "option": "DXIP-900Khz"
+      },
+      {
+        "code": "256",
+        "option": "DXOW-981Khz"
+      },
+      {
+        "code": "257",
+        "option": "DXRR-1017Khz"
+      },
+      {
+        "code": "258",
+        "option": "DXKT-1071Khz"
+      },
+      {
+        "code": "259",
+        "option": "DXGM-1125Khz"
+      },
+      {
+        "code": "260",
+        "option": "DXFE-1197Khz"
+      },
+      {
+        "code": "261",
+        "option": "DXED-1224Khz"
+      },
+      {
+        "code": "262",
+        "option": "DXRF-1260Khz"
+      },
+      {
+        "code": "263",
+        "option": "DXAB-1296Khz"
+      },
+      {
+        "code": "264",
+        "option": "DXAQ-1404Khz"
+      },
+      {
+        "code": "265",
+        "option": "DXDR-88.3Mhz"
+      },
+      {
+        "code": "266",
+        "option": "DXBE-89.1Mhz"
+      },
+      {
+        "code": "267",
+        "option": "DXGN-89.8Mhz"
+      },
+      {
+        "code": "268",
+        "option": "DXBM-90.7Mhz"
+      },
+      {
+        "code": "270",
+        "option": "DXWT-92.3Mhz"
+      },
+      {
+        "code": "271",
+        "option": "DXLR-93.1Mhz"
+      },
+      {
+        "code": "272",
+        "option": "DXXL-93.9Mhz"
+      },
+      {
+        "code": "285",
+        "option": "DXLL-94.7Mhz"
+      },
+      {
+        "code": "286",
+        "option": "DXKR-95.5Mhz"
+      },
+      {
+        "code": "290",
+        "option": "DXFX-96.3Mhz"
+      },
+      {
+        "code": "291",
+        "option": "DXUR-97.1Mhz"
+      },
+      {
+        "code": "292",
+        "option": "DXSS-97.9Mhz"
+      },
+      {
+        "code": "293",
+        "option": "DXQM-98.7Mhz"
+      },
+      {
+        "code": "294",
+        "option": "DXBT-99.5Mhz"
+      },
+      {
+        "code": "295",
+        "option": "DXDJ-100.3Mhz"
+      },
+      {
+        "code": "296",
+        "option": "DXRR-101.1Mhz"
+      },
+      {
+        "code": "297",
+        "option": "DXFM-101.9Mhz"
+      },
+      {
+        "code": "298",
+        "option": "DXRV-103.5Mhz"
+      },
+      {
+        "code": "299",
+        "option": "DXMA-104.3Mhz"
+      },
+      {
+        "code": "300",
+        "option": "DXYS-105.1Mhz"
+      },
+      {
+        "code": "301",
+        "option": "DXMX-105.9Mhz"
+      },
+      {
+        "code": "306",
+        "option": "DXNU-107.5Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "673",
+        "option": "DXKX-91.5Mhz"
+      },
+      {
+        "code": "528",
+        "option": "DXGN-89.9Mhz"
+      },
+      {
+        "code": "531",
+        "option": "102.7Mhz"
+      },
+      {
+        "code": "543",
+        "option": "DXRP-87.5 Mhz"
+      }
+    ]
+  },
+  {
+    "place": "General Santos",
+    "stations": [
+      {
+        "code": "318",
+        "option": "DXCP-585Khz"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz "
+      },
+      {
+        "code": "250",
+        "option": "DXDC-621Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz "
+      },
+      {
+        "code": "320",
+        "option": "DXDX-693Khz"
+      },
+      {
+        "code": "252",
+        "option": "DXRD-711Khz"
+      },
+      {
+        "code": "322",
+        "option": "DXGS-765Khz"
+      },
+      {
+        "code": "323",
+        "option": "DXES-801Khz"
+      },
+      {
+        "code": "325",
+        "option": "DXMD-927Khz"
+      },
+      {
+        "code": "326",
+        "option": "DXBB-1107Khz"
+      },
+      {
+        "code": "328",
+        "option": "DXYM-89.5Mhz"
+      },
+      {
+        "code": "329",
+        "option": "DXCK-91.9Mhz "
+      },
+      {
+        "code": "330",
+        "option": "DYEC-92.7Mhz "
+      },
+      {
+        "code": "332",
+        "option": "DXTS-94.3Mhz"
+      },
+      {
+        "code": "333",
+        "option": "DXRG-96.7Mhz"
+      },
+      {
+        "code": "334",
+        "option": "DXOO-97.5Mhz"
+      },
+      {
+        "code": "335",
+        "option": "DXQS-98.3Mhz"
+      },
+      {
+        "code": "336",
+        "option": "DXRT-99.1Mhz"
+      },
+      {
+        "code": "337",
+        "option": "DXWK-101.5Mhz"
+      },
+      {
+        "code": "338",
+        "option": "DXCJ-102.3Mhz"
+      },
+      {
+        "code": "341",
+        "option": "DXKM-106.3Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "632",
+        "option": "DXGH-531Khz"
+      },
+      {
+        "code": "633",
+        "option": "DXMA-94.9Mhz "
+      },
+      {
+        "code": "634",
+        "option": "DXWW -103.9Mhz"
+      },
+      {
+        "code": "635",
+        "option": "91.1Mhz"
+      },
+      {
+        "code": "560",
+        "option": "103.1Mhz"
+      },
+      {
+        "code": "562",
+        "option": "DXEZ-88.7Mhz"
+      },
+      {
+        "code": "542",
+        "option": "DXIC-95.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Legaspi",
+    "stations": [
+      {
+        "code": "352",
+        "option": "DZBU-621Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "353",
+        "option": "DZGB-729Khz"
+      },
+      {
+        "code": "354",
+        "option": "DWZR-828Khz"
+      },
+      {
+        "code": "355",
+        "option": "DZRC-873Khz"
+      },
+      {
+        "code": "356",
+        "option": "DZLG-927Khz"
+      },
+      {
+        "code": "357",
+        "option": "DWBS-1008Khz"
+      },
+      {
+        "code": "359",
+        "option": "DWRL-1080Khz"
+      },
+      {
+        "code": "360",
+        "option": "DWAS-1125Khz"
+      },
+      {
+        "code": "383",
+        "option": "DWFX-89.9Mhz"
+      },
+      {
+        "code": "384",
+        "option": "DWML-91.5Mhz"
+      },
+      {
+        "code": "385",
+        "option": "DWQA-92.3Mhz"
+      },
+      {
+        "code": "386",
+        "option": "DWRD-93.9Mhz"
+      },
+      {
+        "code": "387",
+        "option": "DWBS-94.7Mhz"
+      },
+      {
+        "code": "388",
+        "option": "DWRC-95.5Mhz"
+      },
+      {
+        "code": "389",
+        "option": "DWCW-96.3Mhz"
+      },
+      {
+        "code": "390",
+        "option": "DWGB-97.1Mhz"
+      },
+      {
+        "code": "391",
+        "option": "DWMR-97.9Mhz"
+      },
+      {
+        "code": "392",
+        "option": "DWCM-99.5Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "669",
+        "option": "DWAY-104.3Mhz"
+      },
+      {
+        "code": "504",
+        "option": "DWHI-100.3Mhz"
+      },
+      {
+        "code": "505",
+        "option": "DWJS-621Khz"
+      },
+      {
+        "code": "506",
+        "option": "DWMV-89.1Mhz"
+      },
+      {
+        "code": "507",
+        "option": "DWML-90.7Mhz"
+      },
+      {
+        "code": "520",
+        "option": "DWCZ-94.7Mhz"
+      },
+      {
+        "code": "590",
+        "option": "DWCT-1557Khz"
+      },
+      {
+        "code": "591",
+        "option": "DWRL-88.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Lucena",
+    "stations": [
+      {
+        "code": "004",
+        "option": "DZRH-666Khz "
+      },
+      {
+        "code": "416",
+        "option": "DWLC-1017Khz"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz"
+      },
+      {
+        "code": "417",
+        "option": "DZLT-1188Khz"
+      },
+      {
+        "code": "419",
+        "option": "DZEL-1260Khz"
+      },
+      {
+        "code": "420",
+        "option": "DZAT-1512Khz"
+      },
+      {
+        "code": "422",
+        "option": "DWQL-91.1Mhz "
+      },
+      {
+        "code": "423",
+        "option": "DWKL-92.7Mhz"
+      },
+      {
+        "code": "424",
+        "option": "DWEJ-93.5Mhz"
+      },
+      {
+        "code": "096",
+        "option": "DWKI-95.1Mhz"
+      },
+      {
+        "code": "426",
+        "option": "DWNG-97.5Mhz "
+      },
+      {
+        "code": "427",
+        "option": "DZLQ-98.3Mhz "
+      },
+      {
+        "code": "428",
+        "option": "DWLW-100.7Mhz "
+      },
+      {
+        "code": "431",
+        "option": "DWVM-103.9Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "432",
+        "option": "DZCT-105.3Mhz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "642",
+        "option": "DWSR-1224Khz"
+      },
+      {
+        "code": "101",
+        "option": "DWEY-104.7Mhz"
+      },
+      {
+        "code": "645",
+        "option": "DWMZ-90.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Malaybalay",
+    "stations": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "191",
+        "option": "DXYR-104.7Mhz"
+      },
+      {
+        "code": "437",
+        "option": "DXDB-594Khz"
+      },
+      {
+        "code": "438",
+        "option": "DXMB-648Khz"
+      },
+      {
+        "code": "439",
+        "option": "DXMV-1134Khz"
+      },
+      {
+        "code": "440",
+        "option": "DXGT-92.1Mhz"
+      },
+      {
+        "code": "441",
+        "option": "DXWB-92.9Mhz"
+      },
+      {
+        "code": "442",
+        "option": "DXEM-96.1Mhz"
+      },
+      {
+        "code": "443",
+        "option": "DXBU-104.5Mhz"
+      },
+      {
+        "code": "444",
+        "option": "MPR-105.3Mhz "
+      },
+      {
+        "code": "445",
+        "option": "DXIQ-106.3Mhz"
+      },
+      {
+        "code": "446",
+        "option": "DXDM-88.7Mhz"
+      },
+      {
+        "code": "672",
+        "option": "94.5Mhz"
+      },
+      {
+        "code": "701",
+        "option": "DXGG-107.1Mhz"
+      },
+      {
+        "code": "508",
+        "option": "88.1 Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Naga",
+    "stations": [
+      {
+        "code": 451,
+        "option": "DWRP-549Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": 453,
+        "option": "DWRN-657Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "454",
+        "option": "DZLW-711Khz "
+      },
+      {
+        "code": "455",
+        "option": "DZGE-855Khz"
+      },
+      {
+        "code": "457",
+        "option": "DZNG-1044Khz"
+      },
+      {
+        "code": "458",
+        "option": "DZKI-1322Khz"
+      },
+      {
+        "code": "459",
+        "option": "DZTR-89.5Mhz"
+      },
+      {
+        "code": "460",
+        "option": "DWNX-91.1Mhz"
+      },
+      {
+        "code": "461",
+        "option": "DZLR-91.1Mhz"
+      },
+      {
+        "code": "462",
+        "option": "DWAC-93.5Mhz"
+      },
+      {
+        "code": "463",
+        "option": "DWQJ-95.1Mhz"
+      },
+      {
+        "code": "465",
+        "option": "DZOK-97.5Mhz"
+      },
+      {
+        "code": "467",
+        "option": "DWYN-99.1Mhz"
+      },
+      {
+        "code": "468",
+        "option": "DWEB-99.9Mhz"
+      },
+      {
+        "code": "469",
+        "option": "DWQW-101.5Mhz"
+      },
+      {
+        "code": "471",
+        "option": "DWBQ-106.3Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "472",
+        "option": "DWOS-103.1Mhz"
+      },
+      {
+        "code": "646",
+        "option": "DWKM-100.7Mhz"
+      },
+      {
+        "code": "509",
+        "option": "DWRV-98.3Mhz"
+      },
+      {
+        "code": "516",
+        "option": "DWJR-96.1Mhz"
+      },
+      {
+        "code": "517",
+        "option": "DWMT-981Khz"
+      },
+      {
+        "code": "518",
+        "option": "103.1Mhz"
+      },
+      {
+        "code": "519",
+        "option": "DWOS-103.9Mhz"
+      },
+      {
+        "code": "592",
+        "option": "DWNX-1611Khz"
+      },
+      {
+        "code": "593",
+        "option": "91.9Mhz"
+      }
+    ]
+  },
+  {
+    "place": "San Pablo",
+    "stations": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz"
+      },
+      {
+        "code": "008",
+        "option": "DZRJ-810Khz"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz"
+      },
+      {
+        "code": "011",
+        "option": "DZSR-918Khz"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz"
+      },
+      {
+        "code": "013",
+        "option": "DZIQ-990Khz"
+      },
+      {
+        "code": "014",
+        "option": "DZAR-1026Khz"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz"
+      },
+      {
+        "code": "016",
+        "option": "DWAD-1098Khz"
+      },
+      {
+        "code": "017",
+        "option": "DWDD-1134Khz"
+      },
+      {
+        "code": "018",
+        "option": "DWBL-1242Khz"
+      },
+      {
+        "code": "019",
+        "option": "DZRM-1278Khz"
+      },
+      {
+        "code": "020",
+        "option": "DWXI-1314Khz"
+      },
+      {
+        "code": "021",
+        "option": "DWUN-1350Khz"
+      },
+      {
+        "code": "022",
+        "option": "DWSS-1494Khz"
+      },
+      {
+        "code": "023",
+        "option": "DZME-1530Khz"
+      },
+      {
+        "code": "024",
+        "option": "DZUP-1602Khz"
+      },
+      {
+        "code": "025",
+        "option": "DWJM-88.3Mhz"
+      },
+      {
+        "code": "026",
+        "option": "DWAV-89.1Mhz"
+      },
+      {
+        "code": "027",
+        "option": "DWTM-89.9Mhz"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz"
+      },
+      {
+        "code": "029",
+        "option": "DWKY-91.5Mhz"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz"
+      },
+      {
+        "code": "033",
+        "option": "DWLL-94.7Mhz"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz"
+      },
+      {
+        "code": "035",
+        "option": "DWRK-96.3Mhz"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz"
+      },
+      {
+        "code": "037",
+        "option": "DWQZ-97.9Mhz"
+      },
+      {
+        "code": "038",
+        "option": "DZFE-98.7Mhz"
+      },
+      {
+        "code": "039",
+        "option": "DWRT-99.5Mhz"
+      },
+      {
+        "code": "040",
+        "option": "DZRJ-100.3Mhz"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz"
+      },
+      {
+        "code": "044",
+        "option": "DWKX-103.5Mhz"
+      },
+      {
+        "code": "045",
+        "option": "DWBR-104.3Mhz"
+      },
+      {
+        "code": "046",
+        "option": "DWBM-105.1Mhz"
+      },
+      {
+        "code": "047",
+        "option": "DWLA-105.9Mhz"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz"
+      },
+      {
+        "code": "050",
+        "option": "DZUR-107.9Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "477",
+        "option": "DWSP-101.5Mhz"
+      },
+      {
+        "code": "096",
+        "option": "DWKI-95.1Mhz"
+      },
+      {
+        "code": "101",
+        "option": "DWEY-104.7Mhz"
+      },
+      {
+        "code": "636",
+        "option": "107.1Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Sorsogon",
+    "stations": [
+      {
+        "code": "319",
+        "option": "DZRS-1179Khz"
+      },
+      {
+        "code": "321",
+        "option": "DZMS-1251Khz"
+      },
+      {
+        "code": "482",
+        "option": "DWCA/DWGA"
+      },
+      {
+        "code": "483",
+        "option": "DWSG-91.9Mhz"
+      },
+      {
+        "code": "484",
+        "option": "DWAM-94.3Mhz"
+      },
+      {
+        "code": "485",
+        "option": "DWLH-101.5Mhz"
+      },
+      {
+        "code": "486",
+        "option": "DZGN-102.3Mhz"
+      },
+      {
+        "code": "487",
+        "option": "DWOL-103.9Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "488",
+        "option": "DWSN-91.9Mhz"
+      },
+      {
+        "code": "489",
+        "option": "DZZH-1287Khz"
+      },
+      {
+        "code": "356",
+        "option": "DZLG-927Khz"
+      },
+      {
+        "code": "386",
+        "option": "DWRD-93.9Mhz"
+      },
+      {
+        "code": "644",
+        "option": "92.7Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Cebu",
+    "stations": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "109",
+        "option": "DYHR-91.5Mhz"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz"
+      },
+      {
+        "code": "156",
+        "option": "DYRB-540Khz"
+      },
+      {
+        "code": "164",
+        "option": "DYLA-909Khz"
+      },
+      {
+        "code": "165",
+        "option": "DYMF-963Khz"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz"
+      },
+      {
+        "code": "172",
+        "option": "DYRF-1215Khz"
+      },
+      {
+        "code": "173",
+        "option": "DYDD-1260Khz"
+      },
+      {
+        "code": "176",
+        "option": "DYAB-1512Khz"
+      },
+      {
+        "code": "177",
+        "option": "DYKI-89.9Mhz"
+      },
+      {
+        "code": "180",
+        "option": "DYWF-93.1Mhz"
+      },
+      {
+        "code": "184",
+        "option": "DYLS-97.1Mhz"
+      },
+      {
+        "code": "185",
+        "option": "DYRT-99.5Mhz"
+      },
+      {
+        "code": "200",
+        "option": "DYMR-576Khz"
+      },
+      {
+        "code": "220",
+        "option": "DYCM-1152Khz"
+      },
+      {
+        "code": "239",
+        "option": "DYAR-765Khz"
+      },
+      {
+        "code": "308",
+        "option": "DYXL-93.9Mhz"
+      },
+      {
+        "code": "340",
+        "option": "DYKC-675Khz"
+      },
+      {
+        "code": "410",
+        "option": "DYBG-864Khz"
+      },
+      {
+        "code": "433",
+        "option": "DYFX-1332Khz"
+      },
+      {
+        "code": "473",
+        "option": "DYXR-1395Khz"
+      },
+      {
+        "code": "490",
+        "option": "DYAP-88.3Mhz"
+      },
+      {
+        "code": "491",
+        "option": "DYDW-89.1Mhz"
+      },
+      {
+        "code": "492",
+        "option": "DYAC-90.7Mhz"
+      },
+      {
+        "code": "545",
+        "option": "DYBN-92.3Mhz"
+      },
+      {
+        "code": "546",
+        "option": "DYLL-94.7Mhz"
+      },
+      {
+        "code": "547",
+        "option": "DYMX-95.5Mhz"
+      },
+      {
+        "code": "548",
+        "option": "DYRK-96.3Mhz"
+      },
+      {
+        "code": "549",
+        "option": "DYBU-97.9Mhz"
+      },
+      {
+        "code": "550",
+        "option": "DYFR-98.7Mhz"
+      },
+      {
+        "code": "551",
+        "option": "DYRJ-100.3Mhz"
+      },
+      {
+        "code": "552",
+        "option": "DYIO-101.1Mhz"
+      },
+      {
+        "code": "553",
+        "option": "DYNC-101.9Mhz"
+      },
+      {
+        "code": "554",
+        "option": "DYTC-102.7Mhz"
+      },
+      {
+        "code": "555",
+        "option": "DYCD-103.5Mhz"
+      },
+      {
+        "code": "556",
+        "option": "DYUR-105.1Mhz"
+      },
+      {
+        "code": "557",
+        "option": "DYBT-105.9Mhz"
+      },
+      {
+        "code": "558",
+        "option": "DYQC-106.7Mhz"
+      },
+      {
+        "code": "559",
+        "option": "DYNU-107.5Mhz"
+      },
+      {
+        "code": "561",
+        "option": "DYRC-648Khz"
+      },
+      {
+        "code": "610",
+        "option": "DYPC-88.7Mhz"
+      },
+      {
+        "code": "611",
+        "option": "DYFX-1305Khz"
+      }
+    ]
+  },
+  {
+    "place": "Iloilo",
+    "stations": [
+      {
+        "code": "565",
+        "option": "DYLL-585Khz"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "566",
+        "option": "DYOK-720Khz"
+      },
+      {
+        "code": "567",
+        "option": "DYRI-774Khz"
+      },
+      {
+        "code": "568",
+        "option": "DYFM-837Khz"
+      },
+      {
+        "code": "569",
+        "option": "DYUP-873Khz"
+      },
+      {
+        "code": "570",
+        "option": "DYBQ-981Khz"
+      },
+      {
+        "code": "571",
+        "option": "DYSI-1323Khz"
+      },
+      {
+        "code": "572",
+        "option": "DYDH-1485Khz"
+      },
+      {
+        "code": "573",
+        "option": "DYKU-88.7Mhz"
+      },
+      {
+        "code": "574",
+        "option": "DYQN-89.5Mhz"
+      },
+      {
+        "code": "575",
+        "option": "DYMC-91.1Mhz"
+      },
+      {
+        "code": "576",
+        "option": "DYYS-92.3Mhz"
+      },
+      {
+        "code": "085",
+        "option": "DYWT-92.7Mhz"
+      },
+      {
+        "code": "577",
+        "option": "DYMK-93.5Mhz"
+      },
+      {
+        "code": "578",
+        "option": "DYIC-95.1Mhz"
+      },
+      {
+        "code": "579",
+        "option": "DYMB-97.5Mhz"
+      },
+      {
+        "code": "580",
+        "option": "DYNJ-98.3Mhz"
+      },
+      {
+        "code": "581",
+        "option": "DYRF-99.5Mhz"
+      },
+      {
+        "code": "582",
+        "option": "DYOZ-100.7Mhz"
+      },
+      {
+        "code": "584",
+        "option": "DYOT-103.5Mhz"
+      },
+      {
+        "code": "585",
+        "option": "101.9Mhz"
+      },
+      {
+        "code": "586",
+        "option": "DYBE-103.9Mhz "
+      },
+      {
+        "code": "587",
+        "option": "DYCR-104.7Mhz "
+      },
+      {
+        "code": "588",
+        "option": "DYTD-105.9Mhz"
+      },
+      {
+        "code": "589",
+        "option": "DYNY-107.9Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "638",
+        "option": "DYSA-1053Khz"
+      },
+      {
+        "code": "715",
+        "option": "106.3Mhz"
+      },
+      {
+        "code": "563",
+        "option": "DYWT-105.9Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Kalibo",
+    "stations": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "595",
+        "option": "DYVR-657Khz"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz"
+      },
+      {
+        "code": "596",
+        "option": "DYOW-900Khz"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz"
+      },
+      {
+        "code": "597",
+        "option": "DYIN-1107Khz"
+      },
+      {
+        "code": "598",
+        "option": "DYKR-1161Khz"
+      },
+      {
+        "code": "599",
+        "option": "DYRG-1251Khz"
+      },
+      {
+        "code": "600",
+        "option": "DYQM-90.7Mhz"
+      },
+      {
+        "code": "601",
+        "option": "DYYR-91.1Mhz"
+      },
+      {
+        "code": "602",
+        "option": "DYRU-92.9Mhz"
+      },
+      {
+        "code": "603",
+        "option": "DYYM-98.5Mhz"
+      },
+      {
+        "code": "604",
+        "option": "DYKY-99.3Mhz"
+      },
+      {
+        "code": "605",
+        "option": "DYSM-100.1Mhz"
+      },
+      {
+        "code": "583",
+        "option": "DYRX-103.7Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "647",
+        "option": "DYAZ-107.7Mhz"
+      },
+      {
+        "code": "648",
+        "option": "88.5Mhz"
+      },
+      {
+        "code": "649",
+        "option": "DYKY-89.3Mhz"
+      },
+      {
+        "code": "615",
+        "option": "DYKP-97.3Mhz"
+      },
+      {
+        "code": "662",
+        "option": "DYSM-98.5Mhz"
+      },
+      {
+        "code": "663",
+        "option": "99.3Mhz"
+      },
+      {
+        "code": "664",
+        "option": "DYMT-100.9Mhz"
+      },
+      {
+        "code": "665",
+        "option": "DYEY-93.5Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Roxas",
+    "stations": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz "
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "075",
+        "option": "DYEZ-684Khz"
+      },
+      {
+        "code": "077",
+        "option": "DYHB-747Khz"
+      },
+      {
+        "code": "080",
+        "option": "DYSB-1179Khz"
+      },
+      {
+        "code": "091",
+        "option": "DYOO-101.5Mhz"
+      },
+      {
+        "code": "566",
+        "option": "DYOK-720Khz"
+      },
+      {
+        "code": "583",
+        "option": "DYRX-103.7Mhz"
+      },
+      {
+        "code": "595",
+        "option": "DYVR-657Khz"
+      },
+      {
+        "code": "596",
+        "option": "DYOW-900Khz"
+      },
+      {
+        "code": "597",
+        "option": "DYIN-1107Khz"
+      },
+      {
+        "code": "598",
+        "option": "DYKR-1161Khz"
+      },
+      {
+        "code": "599",
+        "option": "DYRG-1251Khz"
+      },
+      {
+        "code": "613",
+        "option": "DYCN-88.9Mhz"
+      },
+      {
+        "code": "614",
+        "option": "DYXZ-96.9Mhz"
+      },
+      {
+        "code": "615",
+        "option": "DYKP-97.3Mhz"
+      },
+      {
+        "code": "654",
+        "option": "DYML-105.7Mhz"
+      },
+      {
+        "code": "594",
+        "option": "DYCL-97.7Mhz"
+      },
+      {
+        "code": "606",
+        "option": "DYJJ-1296Khz"
+      }
+    ]
+  },
+  {
+    "place": "Tagbilaran",
+    "stations": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz"
+      },
+      {
+        "code": "164",
+        "option": "DYLA-909Khz"
+      },
+      {
+        "code": "168",
+        "option": "DYTR-1116Khz"
+      },
+      {
+        "code": "170",
+        "option": "DYRD-1161Khz"
+      },
+      {
+        "code": "184",
+        "option": "DYLS-97.1Mhz"
+      },
+      {
+        "code": "308",
+        "option": "DYXL-93.9Mhz"
+      },
+      {
+        "code": "622",
+        "option": "DYZD-1422Khz"
+      },
+      {
+        "code": "623",
+        "option": "DYTR-91.1Mhz"
+      },
+      {
+        "code": "624",
+        "option": "DYRD-102.3Mhz"
+      },
+      {
+        "code": "185",
+        "option": "DYRT-99.5Mhz"
+      },
+      {
+        "code": "109",
+        "option": "DYHR-91.5Mhz"
+      },
+      {
+        "code": "180",
+        "option": "DYWF-93.1Mhz"
+      },
+      {
+        "code": "546",
+        "option": "DYLL-94.7Mhz"
+      },
+      {
+        "code": "548",
+        "option": "DYRK-96.3Mhz"
+      },
+      {
+        "code": "549",
+        "option": "DYBU-97.9Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Santiago",
+    "stations": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "053",
+        "option": "DWRH-648Khz"
+      },
+      {
+        "code": "054",
+        "option": "DZNC-801Khz"
+      },
+      {
+        "code": "055",
+        "option": "DWDY-1107Khz"
+      },
+      {
+        "code": "058",
+        "option": "DWYE-89.7Mhz"
+      },
+      {
+        "code": "110",
+        "option": "DWWC-95.3Mhz"
+      },
+      {
+        "code": "198",
+        "option": "DWTR-93.7Mhz"
+      },
+      {
+        "code": "240",
+        "option": "DWIP-94.5Mhz"
+      },
+      {
+        "code": "246",
+        "option": "DWMX-97.7Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Tuguegarao",
+    "stations": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "316",
+        "option": "DZSR-576Khz"
+      },
+      {
+        "code": "317",
+        "option": "DZTG-621Khz"
+      },
+      {
+        "code": "342",
+        "option": "DZCV-648Khz"
+      },
+      {
+        "code": "348",
+        "option": "DWPE-729Khz"
+      },
+      {
+        "code": "349",
+        "option": "DZYT-765Khz"
+      },
+      {
+        "code": "350",
+        "option": "DZGR-891Khz"
+      },
+      {
+        "code": "351",
+        "option": "DWWQ-89.3Mhz"
+      },
+      {
+        "code": "411",
+        "option": "DWCN-91.7Mhz"
+      },
+      {
+        "code": "412",
+        "option": "DWYA-92.5Mhz"
+      },
+      {
+        "code": "413",
+        "option": "DWIC-93.3Mhz"
+      },
+      {
+        "code": "414",
+        "option": "DWMN-94.1Mhz"
+      },
+      {
+        "code": "434",
+        "option": "DWRJ-96.5Mhz"
+      },
+      {
+        "code": "435",
+        "option": "DWXY-100.5Mhz"
+      },
+      {
+        "code": "436",
+        "option": "101.5Mhz"
+      },
+      {
+        "code": "447",
+        "option": "DWWW-102.1Mhz"
+      },
+      {
+        "code": "616",
+        "option": "DWGN 101.5Mhz"
+      },
+      {
+        "code": "617",
+        "option": "DWDA 105.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "San Fernando, La Union",
+    "stations": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz"
+      },
+      {
+        "code": "204",
+        "option": "DZNL-783Khz"
+      },
+      {
+        "code": "211",
+        "option": "DZWN-1125Khz"
+      },
+      {
+        "code": "213",
+        "option": "DWCM-1161Khz"
+      },
+      {
+        "code": "214",
+        "option": "DZAG-1224Khz"
+      },
+      {
+        "code": "215",
+        "option": "DWPR-1296Khz"
+      },
+      {
+        "code": "532",
+        "option": "DZLU-657Khz"
+      },
+      {
+        "code": "533",
+        "option": "DZSO-720Khz"
+      },
+      {
+        "code": "534",
+        "option": "DZYR-1359Khz"
+      },
+      {
+        "code": "535",
+        "option": "DWLU-88.7Mhz"
+      },
+      {
+        "code": "536",
+        "option": "DWPZ-97.9Mhz"
+      },
+      {
+        "code": "537",
+        "option": "DWST-101.7Mhz"
+      },
+      {
+        "code": "538",
+        "option": "DZUL-104.3Mhz"
+      },
+      {
+        "code": "539",
+        "option": "DWAA-105.5Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Loang",
+    "stations": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "476",
+        "option": "DZRL-639Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "478",
+        "option": "DWLW-675Khz"
+      },
+      {
+        "code": "479",
+        "option": "DZVR-711Khz"
+      },
+      {
+        "code": "480",
+        "option": "DZJC-747Khz"
+      },
+      {
+        "code": "481",
+        "option": "DWAR-819Khz"
+      },
+      {
+        "code": "493",
+        "option": "DZEA-909Khz"
+      },
+      {
+        "code": "494",
+        "option": "DWFB-954Khz"
+      },
+      {
+        "code": "495",
+        "option": "DZMT-990Khz"
+      },
+      {
+        "code": "496",
+        "option": "DWRC-1269Khz"
+      },
+      {
+        "code": "497",
+        "option": "DWIL-90.7Mhz"
+      },
+      {
+        "code": "498",
+        "option": "DWNA-93.1Mhz"
+      },
+      {
+        "code": "499",
+        "option": "DWEL-95.5Mhz"
+      },
+      {
+        "code": "500",
+        "option": "DZLS-97.1Mhz"
+      },
+      {
+        "code": "501",
+        "option": "DWSN-97.9Mhz"
+      },
+      {
+        "code": "502",
+        "option": "DWHP-99.5Mhz"
+      },
+      {
+        "code": "503",
+        "option": "DWPL-103.7Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "641",
+        "option": "DWCK-92.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Marbel (Koronadal)",
+    "stations": [
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "327",
+        "option": "DXKR-639Khz"
+      },
+      {
+        "code": "362",
+        "option": "DXMC-1026Khz"
+      },
+      {
+        "code": "367",
+        "option": "DXKI-1062Khz"
+      },
+      {
+        "code": "376",
+        "option": "DXOM-91.7Mhz"
+      },
+      {
+        "code": "379",
+        "option": "DXME-100.1Mhz"
+      },
+      {
+        "code": "456",
+        "option": "DXCE-95.7 Mhz"
+      },
+      {
+        "code": "666",
+        "option": "DXOM-963Khz"
+      },
+      {
+        "code": "667",
+        "option": "97.9Mhz"
+      },
+      {
+        "code": "668",
+        "option": "97.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Pagadian",
+    "stations": [
+      {
+        "code": "404",
+        "option": "DXPR-603Khz"
+      },
+      {
+        "code": "409",
+        "option": "DXBZ-756Khz"
+      },
+      {
+        "code": "247",
+        "option": "DXKP-1377Khz"
+      },
+      {
+        "code": "248",
+        "option": "88.7Mhz"
+      },
+      {
+        "code": "311",
+        "option": "DXKV-91.1Mhz"
+      },
+      {
+        "code": "314",
+        "option": "DXMD-91.9Mhz"
+      },
+      {
+        "code": "315",
+        "option": "DXLN-94.1Mhz"
+      },
+      {
+        "code": "448",
+        "option": "DXWO-99.9Mhz"
+      },
+      {
+        "code": "449",
+        "option": "DXID-101.5Mhz"
+      },
+      {
+        "code": "450",
+        "option": "DXCA-106.3Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "690",
+        "option": "DXKV-97.1Mhz"
+      },
+      {
+        "code": "698",
+        "option": "DXRC-98.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Ozamis",
+    "stations": [
+      {
+        "code": "398",
+        "option": "DXOC-1494Khz"
+      },
+      {
+        "code": "203",
+        "option": "DXDD-657Khz"
+      },
+      {
+        "code": "418",
+        "option": "DXEL-89.1 Mhz"
+      },
+      {
+        "code": "421",
+        "option": "DXLU-94.5 Mhz"
+      },
+      {
+        "code": "425",
+        "option": "DXSY-96.1 Mhz"
+      },
+      {
+        "code": "429",
+        "option": "DXLM-97.5 Mhz"
+      },
+      {
+        "code": "430",
+        "option": "DXDD-100.7 Mhz"
+      },
+      {
+        "code": "450",
+        "option": "DXCA-106.3 Mhz"
+      },
+      {
+        "code": "464",
+        "option": "DXSY-1242Khz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Cotobato",
+    "stations": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "088",
+        "option": "DXCH-567Khz"
+      },
+      {
+        "code": "128",
+        "option": "DXMY-729Khz"
+      },
+      {
+        "code": "133",
+        "option": "DXMS-882Khz "
+      },
+      {
+        "code": "137",
+        "option": "DXCM-1089Khz"
+      },
+      {
+        "code": "269",
+        "option": "DXOL-92.7Mhz"
+      },
+      {
+        "code": "305",
+        "option": "DXFD-93.7Mhz"
+      },
+      {
+        "code": "324",
+        "option": "DXPS-95.1Mhz"
+      },
+      {
+        "code": "366",
+        "option": "DXMR-1170Khz"
+      },
+      {
+        "code": "404",
+        "option": "DXPR-603Khz"
+      },
+      {
+        "code": "466",
+        "option": "DXTC-95.9Mhz"
+      },
+      {
+        "code": "670",
+        "option": "DXYC-89.3Mhz"
+      },
+      {
+        "code": "529",
+        "option": "DXWD-90.9Mhz"
+      },
+      {
+        "code": "530",
+        "option": "DXJC-99.0Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Cauayan",
+    "stations": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "014",
+        "option": "DZAR-1026Khz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "053",
+        "option": "DWRH-648Khz"
+      },
+      {
+        "code": "054",
+        "option": "DZNC-801Khz"
+      },
+      {
+        "code": "055",
+        "option": "DWDY-1107Khz"
+      },
+      {
+        "code": "057",
+        "option": "DWND-88.5Mhz"
+      },
+      {
+        "code": "058",
+        "option": "DWYE-89.7Mhz"
+      },
+      {
+        "code": "110",
+        "option": "DWWC-95.3Mhz"
+      },
+      {
+        "code": "111",
+        "option": "DWRA-99.7Mhz"
+      },
+      {
+        "code": "240",
+        "option": "DWIP-94.5Mhz"
+      },
+      {
+        "code": "660",
+        "option": "DWIX-90.5Mhz"
+      },
+      {
+        "code": "608",
+        "option": "DWKD-98.5Mhz"
+      },
+      {
+        "code": "609",
+        "option": "DWYI-92.9Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Vigan",
+    "stations": [
+      {
+        "code": "510",
+        "option": "DZVV-603Khz"
+      },
+      {
+        "code": "511",
+        "option": "DZTP-693Khz"
+      },
+      {
+        "code": "480",
+        "option": "DZJC-747Khz"
+      },
+      {
+        "code": "512",
+        "option": "DWRS-927Khz"
+      },
+      {
+        "code": "513",
+        "option": "DZNS-963Khz"
+      },
+      {
+        "code": "514",
+        "option": "DWVN-94.1Mhz"
+      },
+      {
+        "code": "515",
+        "option": "DWNP-100.5Mhz"
+      },
+      {
+        "code": "111",
+        "option": "DWRA-99.7Mhz"
+      },
+      {
+        "code": "538",
+        "option": "DZUL-104.3Mhz"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "065",
+        "option": "DWRA-92.7Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Daet",
+    "stations": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "125",
+        "option": "DWSR-94.1Mhz"
+      },
+      {
+        "code": "131",
+        "option": "DWBY-102.9Mhz"
+      },
+      {
+        "code": "195",
+        "option": "DWSL-103.7Mhz"
+      },
+      {
+        "code": "196",
+        "option": "96.1Mhz"
+      },
+      {
+        "code": "462",
+        "option": "DWAC-93.5Mhz"
+      },
+      {
+        "code": "522",
+        "option": "DZMD-1161Khz"
+      },
+      {
+        "code": "524",
+        "option": "DWKS-95.3Mhz"
+      },
+      {
+        "code": "655",
+        "option": "DWLB-89.7 Mhz"
+      },
+      {
+        "code": "656",
+        "option": "DWKP-96.9Mhz"
+      },
+      {
+        "code": "657",
+        "option": "DWEN-100.5Mhz"
+      },
+      {
+        "code": "658",
+        "option": "DWAT-102.1Mhz"
+      },
+      {
+        "code": "659",
+        "option": "DWYD-102.9Mhz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "469",
+        "option": "DWQW-101.5Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Tagum",
+    "stations": [
+      {
+        "code": "675",
+        "option": "DXDN-936Khz"
+      },
+      {
+        "code": "676",
+        "option": "DXKS-95.1 Mhz"
+      },
+      {
+        "code": "677",
+        "option": "DXKN-98.3Mhz"
+      },
+      {
+        "code": "678",
+        "option": "DXTG-107.9Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "268",
+        "option": "DXBM-90.7Mhz"
+      },
+      {
+        "code": "250",
+        "option": "DXDC-621Khz"
+      },
+      {
+        "code": "265",
+        "option": "DXDR-88.3Mhz"
+      },
+      {
+        "code": "259",
+        "option": "DXGM-1125Khz"
+      },
+      {
+        "code": "254",
+        "option": "DXGO-855Khz"
+      },
+      {
+        "code": "286",
+        "option": "DXKR-95.5Mhz"
+      },
+      {
+        "code": "673",
+        "option": "DXKX-91.5Mhz"
+      },
+      {
+        "code": "249",
+        "option": "DXMF-576Khz"
+      },
+      {
+        "code": "256",
+        "option": "DXOW-981Khz"
+      },
+      {
+        "code": "293",
+        "option": "DXQM-98.7Mhz"
+      },
+      {
+        "code": "296",
+        "option": "DXRR-101.1Mhz"
+      },
+      {
+        "code": "298",
+        "option": "DXRV-103.5Mhz"
+      },
+      {
+        "code": "132",
+        "option": "DXUM-819Khz"
+      },
+      {
+        "code": "270",
+        "option": "DXWT-92.3Mhz"
+      },
+      {
+        "code": "272",
+        "option": "DXXL-93.9Mhz"
+      },
+      {
+        "code": "300",
+        "option": "DXYS-105.1Mhz"
+      },
+      {
+        "code": "695",
+        "option": "100.7Mhz"
+      },
+      {
+        "code": "696",
+        "option": "103.9Mhz"
+      },
+      {
+        "code": "252",
+        "option": "DXRD-711Khz"
+      },
+      {
+        "code": "290",
+        "option": "DXFX-96.3Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Bayombong",
+    "stations": [
+      {
+        "code": "679",
+        "option": "DWRV-1233Khz"
+      },
+      {
+        "code": "680",
+        "option": "DWRV-90.1Mhz"
+      },
+      {
+        "code": "681",
+        "option": "DWGL-104.5Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "148",
+        "option": "DWDC-101.3Mhz"
+      },
+      {
+        "code": "697",
+        "option": "DWMG-1395Khz"
+      },
+      {
+        "code": "054",
+        "option": "DZNC-801Khz"
+      }
+    ]
+  },
+  {
+    "place": "Catanduanes",
+    "stations": [
+      {
+        "code": "682",
+        "option": "DWDF-94.3 Mhz"
+      },
+      {
+        "code": "683",
+        "option": "DWJS-107.1 Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "707",
+        "option": "93.3Mhz"
+      },
+      {
+        "code": "386",
+        "option": "DWRD-93.9Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Dipolog",
+    "stations": [
+      {
+        "code": "684",
+        "option": "DXDR-981Khz"
+      },
+      {
+        "code": "685",
+        "option": "DXFB-93.3Mhz"
+      },
+      {
+        "code": "686",
+        "option": "DXLJ-103.7Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "709",
+        "option": "100.5Mhz"
+      },
+      {
+        "code": "710",
+        "option": "90.9Mhz"
+      },
+      {
+        "code": "711",
+        "option": "DXAA-92.5Mhz"
+      },
+      {
+        "code": "712",
+        "option": "DXFL-88.9Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Kidapawan",
+    "stations": [
+      {
+        "code": "687",
+        "option": "DYCM-1089Khz"
+      },
+      {
+        "code": "446",
+        "option": "DXDM-88.7Mhz"
+      },
+      {
+        "code": "688",
+        "option": "DXYZ-97.5Mhz"
+      },
+      {
+        "code": "689",
+        "option": "102.3Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "371",
+        "option": "DXKZ-91.5Mhz"
+      },
+      {
+        "code": "704",
+        "option": "107.9Mhz"
+      },
+      {
+        "code": "705",
+        "option": "DXCA-90.3Mhz "
+      },
+      {
+        "code": "706",
+        "option": "DXRL-105.7Mhz"
+      },
+      {
+        "code": "713",
+        "option": "DXND-747Khz"
+      }
+    ]
+  },
+  {
+    "place": "Valencia",
+    "stations": [
+      {
+        "code": "438",
+        "option": "DXMB-648Khz"
+      },
+      {
+        "code": "439",
+        "option": "DXMV-1134Khz"
+      },
+      {
+        "code": "672",
+        "option": "94.5Mhz"
+      },
+      {
+        "code": "442",
+        "option": "DXEM-96.1Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "440",
+        "option": "DXGT-92.1Mhz"
+      },
+      {
+        "code": "445",
+        "option": "DXIQ-106.3Mhz"
+      },
+      {
+        "code": "441",
+        "option": "DXWB-92.9Mhz"
+      },
+      {
+        "code": "699",
+        "option": "89.5Mhz"
+      },
+      {
+        "code": "700",
+        "option": "99.9Mhz"
+      },
+      {
+        "code": "701",
+        "option": "DXGG-107.1Mhz"
+      },
+      {
+        "code": "702",
+        "option": "DXJL 93.7Mhz"
+      },
+      {
+        "code": "703",
+        "option": "DXMU-88.9Mhz"
+      }
+    ]
+  }
+]
