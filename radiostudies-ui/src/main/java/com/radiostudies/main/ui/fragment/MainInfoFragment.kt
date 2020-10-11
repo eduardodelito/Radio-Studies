@@ -10,9 +10,9 @@ import androidx.appcompat.app.AlertDialog
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.ui.fragment.databinding.MainInfoFragmentBinding
+import com.radiostudies.main.ui.model.main.MainInfoData
 import com.radiostudies.main.ui.model.main.MainInfoForm
 import com.radiostudies.main.ui.model.main.MainInfoState
-import com.radiostudies.main.ui.model.main.MainInfoValid
 import com.radiostudies.main.ui.viewmodel.MainInfoViewModel
 import kotlinx.android.synthetic.main.main_info_fragment.*
 import java.text.SimpleDateFormat
@@ -47,7 +47,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 date_of_interview_field.text.toString(),
                 time_start_field.text.toString(),
                 time_end_field.text.toString(),
-                day_of_week_field.tag.toString(),
+                viewModel.getCode().toString(),
                 contact_number_field.text.toString(),
                 eco_class_label.tag.toString()
             )
@@ -151,10 +151,8 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 }
             }
 
-            is MainInfoValid -> {
-                if (state.isSuccess) {
-                    listener?.navigateToActualQuestions(view)
-                }
+            is MainInfoData -> {
+                listener?.navigateToActualQuestions(view, state.mainInfo)
             }
         }
     }
@@ -172,7 +170,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     }
 
     interface MainInfoFragmentListener {
-        fun navigateToActualQuestions(view: View?)
+        fun navigateToActualQuestions(view: View?, mainInfo: String?)
     }
 
     private fun openDatePicker() {

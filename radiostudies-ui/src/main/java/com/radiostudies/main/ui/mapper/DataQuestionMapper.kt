@@ -17,3 +17,13 @@ fun List<DataQuestionEntity>.dataQuestionsEntityToDataQuestions(): List<DataQues
         )
     }
 }
+
+fun DataQuestion.dataQuestionModelToDataQuestionEntity(): DataQuestionEntity {
+    return DataQuestionEntity(
+        id = 0,
+        code = code,
+        header = header,
+        question = question,
+        options = options
+    )
+}

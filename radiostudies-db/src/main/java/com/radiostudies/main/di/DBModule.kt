@@ -58,17 +58,6 @@ class DBModule(private var application: Application) {
 
     @Singleton
     @Provides
-    fun providesMainInfoDao(radioStudiesDB: RadioStudiesDB): MainInfoDao =
-        radioStudiesDB.mainInfoDao()
-
-
-    @Singleton
-    @Provides
-    fun providesMainInfoManager(mainInfoDao: MainInfoDao): MainInfoManager =
-        MainInfoManagerImpl(mainInfoDao)
-
-    @Singleton
-    @Provides
     fun providesActualQuestion(radioStudiesDB: RadioStudiesDB): ActualQuestionDao =
         radioStudiesDB.actualQuestionDao()
 
@@ -96,7 +85,8 @@ class DBModule(private var application: Application) {
         areaDao: AreaDao,
         actualQuestionDao: ActualQuestionDao,
         dataQuestionDao: DataQuestionDao,
-        stationDao: StationDao
+        stationDao: StationDao,
+        diaryDao: DiaryDao
     ): ActualManager =
-        ActualManagerImpl(areaDao, actualQuestionDao, dataQuestionDao, stationDao)
+        ActualManagerImpl(areaDao, actualQuestionDao, dataQuestionDao, stationDao, diaryDao)
 }

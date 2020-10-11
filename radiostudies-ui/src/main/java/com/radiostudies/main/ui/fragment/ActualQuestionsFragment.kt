@@ -1,5 +1,6 @@
 package com.radiostudies.main.ui.fragment
 
+import android.content.Context
 import android.text.InputFilter
 import android.text.InputFilter.LengthFilter
 import android.text.InputType
@@ -26,6 +27,8 @@ import javax.inject.Inject
 class ActualQuestionsFragment :
     BaseFragment<ActualQuestionsFragmentBinding, ActualQuestionsViewModel>() {
 
+    private var listener: ActualQuestionsFragmentListener? = null
+
     @Inject
     override lateinit var viewModel: ActualQuestionsViewModel
 
@@ -34,6 +37,9 @@ class ActualQuestionsFragment :
     override fun getBindingVariable() = BR.actualQuestionsViewModel
 
     override fun initViews() {
+
+        val mainInfo = arguments?.getString(PANEL_NUMBER)
+
         activity?.actionBar?.title = getString(R.string.actual_question_title)
         actual_prev_btn.setOnClickListener {
             viewModel.queryActualQuestion(viewModel.minus())
@@ -57,7 +63,7 @@ class ActualQuestionsFragment :
         }
 
         btn_save.setOnClickListener {
-            dialogComplete()
+            dialogComplete(mainInfo)
         }
     }
 
@@ -137,6 +143,10 @@ class ActualQuestionsFragment :
                     load_options_label.visibility = View.VISIBLE
                     manual_input.visibility = View.GONE
                 }
+            }
+
+            is ActualQuestionComplete -> {
+                if(state.isComplete) listener?.navigateBack()
             }
         }
     }
@@ -288,11 +298,11 @@ class ActualQuestionsFragment :
     }
 
 
-    private fun dialogComplete() {
+    private fun dialogComplete(mainInfo: String?) {
         val builder = AlertDialog.Builder(requireContext())
         builder.setMessage(R.string.complete_msg)
         builder.setPositiveButton(getString(R.string.yes_label)) { dialog, _ ->
-            viewModel.saveActualQuestions("", "", "")
+            viewModel.saveActualQuestions(mainInfo)
             dialog.dismiss()
         }
         builder.setNegativeButton(getString(R.string.no_label)) { dialog, _ ->
@@ -300,6 +310,22 @@ class ActualQuestionsFragment :
         }
         val dialog = builder.create()
         dialog.show()
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is ActualQuestionsFragmentListener) {
+            listener = context
+        }
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        listener = null
+    }
+
+    interface ActualQuestionsFragmentListener {
+        fun navigateBack()
     }
 
     companion object {
@@ -310,6 +336,7 @@ class ActualQuestionsFragment :
         private const val OTHER = "Other"
         private const val NONE = "None"
         private const val NOT_LISTEN = "Not Listen"
+        private const val PANEL_NUMBER = "mainInfo"
         fun newInstance() = ActualQuestionsFragment()
     }
 }

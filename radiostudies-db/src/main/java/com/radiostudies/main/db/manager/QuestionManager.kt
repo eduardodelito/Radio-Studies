@@ -10,6 +10,8 @@ interface QuestionManager {
     fun insertQuestions(questions: List<QuestionEntity>)
 
     fun updateQuestion(question: String?, answers: String?)
+
+    fun deleteQuestion()
 }
 
 class QuestionManagerImpl(private val questionDao: QuestionDao) : QuestionManager {
@@ -21,5 +23,9 @@ class QuestionManagerImpl(private val questionDao: QuestionDao) : QuestionManage
 
     override fun updateQuestion(question: String?, answers: String?) {
         questionDao.update(question, answers)
+    }
+
+    override fun deleteQuestion() {
+        questionDao.deleteQuestion()
     }
 }

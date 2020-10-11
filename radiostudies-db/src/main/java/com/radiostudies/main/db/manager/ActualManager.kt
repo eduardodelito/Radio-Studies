@@ -25,6 +25,8 @@ interface ActualManager {
     fun saveCompletedActualQuestions(diaryEntity: DiaryEntity)
 
     fun queryDataQuestions(): List<DataQuestionEntity>
+
+    fun deleteSaveDataQuestions()
 }
 
 class ActualManagerImpl(
@@ -64,4 +66,8 @@ class ActualManagerImpl(
     }
 
     override fun queryDataQuestions() = dataQuestionDao.queryDataQuestions()
+
+    override fun deleteSaveDataQuestions() {
+        dataQuestionDao.deleteDataQuestion()
+    }
 }

@@ -1,24 +1,20 @@
 package com.radiostudies.main.ui.viewmodel
 
+import com.google.gson.Gson
 import com.radiostudies.main.common.livedata.SingleLiveEvent
 import com.radiostudies.main.common.util.getCurrentDateTime
 import com.radiostudies.main.common.util.toStringDateTime
 import com.radiostudies.main.common.viewmodel.BaseViewModel
-import com.radiostudies.main.db.manager.MainInfoManager
 import com.radiostudies.main.ui.fragment.R
-import com.radiostudies.main.ui.mapper.mainInfoModelToMainInfoEntity
 import com.radiostudies.main.ui.model.main.MainInfo
+import com.radiostudies.main.ui.model.main.MainInfoData
 import com.radiostudies.main.ui.model.main.MainInfoForm
 import com.radiostudies.main.ui.model.main.MainInfoState
-import com.radiostudies.main.ui.model.main.MainInfoValid
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
-class MainInfoViewModel @Inject constructor(private val mainInfoManager: MainInfoManager) :
+class MainInfoViewModel :
     BaseViewModel(), CoroutineScope {
 
     override val coroutineContext: CoroutineContext
@@ -59,21 +55,14 @@ class MainInfoViewModel @Inject constructor(private val mainInfoManager: MainInf
             mainInfoState.postValue(MainInfoForm(age = R.string.address_error))
         } else if (!isValueValid(gender, 1)) {
             mainInfoState.postValue(MainInfoForm(gender = R.string.gender_error))
-        } else if (!isValueValid(dateOfInterview, 10)) {
-            mainInfoState.postValue(MainInfoForm(dateOfInterview = R.string.date_of_interview_error))
-        } else if (!isValueValid(timeStart, 17)) {
-            mainInfoState.postValue(MainInfoForm(timeStart = R.string.time_start_error))
         } else if (!isValueValid(timeEnd, 17)) {
             mainInfoState.postValue(MainInfoForm(timeEnd = R.string.time_end_error))
-        } else if (!isValueValid(dayOfWeek, 1)) {
-            mainInfoState.postValue(MainInfoForm(dayOfWeek = R.string.day_of_week_error))
         } else if (!isValueValid(contactNumber, 20)) {
             mainInfoState.postValue(MainInfoForm(contactNumber = R.string.contact_number_error))
         } else if (!isValueValid(ecoClass, 1)) {
             mainInfoState.postValue(MainInfoForm(ecoClass = R.string.eco_class_error))
         } else {
-            insertMainInfo(
-                MainInfo(
+                val mainInfo = MainInfo(
                     panelNumber,
                     memberNumber,
                     municipality,
@@ -89,7 +78,8 @@ class MainInfoViewModel @Inject constructor(private val mainInfoManager: MainInf
                     contactNumber,
                     ecoClass
                 )
-            )
+            val mainInfoString = Gson().toJson(mainInfo)
+            mainInfoState.postValue(MainInfoData(mainInfoString))
         }
     }
 
@@ -107,23 +97,23 @@ class MainInfoViewModel @Inject constructor(private val mainInfoManager: MainInf
         return value.length == max
     }
 
-    private fun insertMainInfo(mainInfo: MainInfo) {
-        launch {
-            insertMainInfoToDB(mainInfo)
-        }
-    }
-
-    private suspend fun insertMainInfoToDB(mainInfo: MainInfo) {
-        withContext(Dispatchers.IO) {
-            try {
-                mainInfoManager.insertMainInfo(mainInfo.mainInfoModelToMainInfoEntity())
-                mainInfoState.postValue(MainInfoValid(isSuccess = true))
-            } catch (e: Exception) {
-                mainInfoState.postValue(MainInfoValid(isSuccess = false))
-                e.printStackTrace()
-            }
-        }
-    }
+//    private fun insertMainInfo(mainInfo: MainInfo) {
+//        launch {
+//            insertMainInfoToDB(mainInfo)
+//        }
+//    }
+//
+//    private suspend fun insertMainInfoToDB(mainInfo: MainInfo) {
+//        withContext(Dispatchers.IO) {
+//            try {
+//                mainInfoManager.insertMainInfo(mainInfo.mainInfoModelToMainInfoEntity())
+//                mainInfoState.postValue(MainInfoValid(isSuccess = true))
+//            } catch (e: Exception) {
+//                mainInfoState.postValue(MainInfoValid(isSuccess = false))
+//                e.printStackTrace()
+//            }
+//        }
+//    }
 
     fun getDate() = getCurrentDateTime().toStringDateTime(DATE_FORMAT)
 
@@ -131,9 +121,27 @@ class MainInfoViewModel @Inject constructor(private val mainInfoManager: MainInf
 
     fun getDay() = getCurrentDateTime().toStringDateTime(DAY_FORMAT)
 
+    fun getCode(): Int {
+        val dayOfWeek= listOf(MON, TUE, WED, THU, FRI, SAT, SUN)
+        for (i in dayOfWeek.indices) {
+            if (dayOfWeek[i] == getDay()) {
+                return (i + 1)
+            }
+        }
+        return 0
+    }
+
     companion object {
         private const val DATE_FORMAT = "MMM/dd/yyyy"
         private const val TIME_FORMAT = "hh:mm:ss a"
         private const val DAY_FORMAT = "EEE"
+
+        private const val MON = "Mon"
+        private const val TUE = "Tue"
+        private const val WED = "Wed"
+        private const val THU = "Thu"
+        private const val FRI = "Fri"
+        private const val SAT = "Sat"
+        private const val SUN = "Sun"
     }
 }

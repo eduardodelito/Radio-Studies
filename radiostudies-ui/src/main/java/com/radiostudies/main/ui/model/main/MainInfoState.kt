@@ -22,4 +22,4 @@ data class MainInfoForm(
 ) :
     MainInfoState()
 
-data class MainInfoValid(val isSuccess: Boolean = false) : MainInfoState()
+data class MainInfoData(val mainInfo: String?) : MainInfoState()

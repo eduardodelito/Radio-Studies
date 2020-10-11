@@ -4,13 +4,8 @@ import androidx.lifecycle.ViewModel
 import com.radiostudies.main.common.viewmodel.ViewModelKey
 import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.db.manager.DBManager
-import com.radiostudies.main.db.manager.MainInfoManager
 import com.radiostudies.main.db.manager.QuestionManager
-import com.radiostudies.main.ui.viewmodel.DiaryViewModel
-import com.radiostudies.main.ui.viewmodel.ActualQuestionsViewModel
-import com.radiostudies.main.ui.viewmodel.InitialQuestionsViewModel
-import com.radiostudies.main.ui.viewmodel.LoginViewModel
-import com.radiostudies.main.ui.viewmodel.MainInfoViewModel
+import com.radiostudies.main.ui.viewmodel.*
 import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
@@ -35,14 +30,17 @@ class UIViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(MainInfoViewModel::class)
-    fun provideMainInfoViewModel(mainInfoManager: MainInfoManager): ViewModel =
-        MainInfoViewModel(mainInfoManager)
+    fun provideMainInfoViewModel(): ViewModel =
+        MainInfoViewModel()
 
     @Provides
     @IntoMap
     @ViewModelKey(ActualQuestionsViewModel::class)
-    fun provideActualQuestionsViewModel(actualManager: ActualManager): ViewModel =
-        ActualQuestionsViewModel(actualManager)
+    fun provideActualQuestionsViewModel(
+        questionManager: QuestionManager,
+        actualManager: ActualManager
+    ): ViewModel =
+        ActualQuestionsViewModel(questionManager, actualManager)
 
     @Provides
     @IntoMap

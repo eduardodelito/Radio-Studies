@@ -7,14 +7,16 @@ import com.radiostudies.main.ui.fragment.*
 import dagger.android.support.DaggerAppCompatActivity
 
 class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListener,
-    InitialQuestionsFragment.InitialQuestionsFragmentListener, MainInfoFragment.MainInfoFragmentListener {
+    InitialQuestionsFragment.InitialQuestionsFragmentListener,
+    MainInfoFragment.MainInfoFragmentListener,
+    ActualQuestionsFragment.ActualQuestionsFragmentListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
     override fun navigateToInitialScreen(view: View?) {
-        val action = LoginFragmentDirections.actionLoginFragmentToActualQuestionsFragment()
+        val action = LoginFragmentDirections.actionLoginFragmentToInitialQuestionsFragment()
         view?.findNavController()?.navigate(action)
     }
 
@@ -28,12 +30,15 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
     }
 
     override fun navigateToMainInfo(view: View?) {
-        val action = InitialQuestionsFragmentDirections.actionInitialQuestionsFragmentToMainInfoFragment()
+        val action =
+            InitialQuestionsFragmentDirections.actionInitialQuestionsFragmentToMainInfoFragment()
         view?.findNavController()?.navigate(action)
     }
 
-    override fun navigateToActualQuestions(view: View?) {
+    override fun navigateToActualQuestions(view: View?, mainInfo: String?) {
         val action = MainInfoFragmentDirections.actionMainInfoFragmentToActualQuestionsFragment()
-        view?.findNavController()?.navigate(action)
+        var bundle = Bundle()
+        bundle.putString("mainInfo", mainInfo)
+        view?.findNavController()?.navigate(action.actionId, bundle)
     }
 }

@@ -15,5 +15,11 @@ data class StationForm(val fileName: String?) :
 data class ActualQuestionForm(val fileName: String?) :
     ActualQuestionState()
 
-data class ActualQuestionModel(val actualQuestion: ActualQuestion, val isPrevEnable: Boolean, val isNextEnable: Boolean) :
+data class ActualQuestionModel(
+    val actualQuestion: ActualQuestion,
+    val isPrevEnable: Boolean,
+    val isNextEnable: Boolean
+) :
     ActualQuestionState()
+
+data class ActualQuestionComplete(val isComplete: Boolean) : ActualQuestionState()

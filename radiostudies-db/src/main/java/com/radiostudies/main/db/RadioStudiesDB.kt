@@ -14,7 +14,6 @@ import com.radiostudies.main.db.entity.*
     entities = [
         UserEntity::class,
         QuestionEntity::class,
-        MainInfoEntity::class,
         ActualQuestionEntity::class,
         AreaEntity::class,
         StationEntity::class,
@@ -28,7 +27,6 @@ import com.radiostudies.main.db.entity.*
 abstract class RadioStudiesDB : RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun questionDao(): QuestionDao
-    abstract fun mainInfoDao(): MainInfoDao
     abstract fun actualQuestionDao(): ActualQuestionDao
     abstract fun areaDao(): AreaDao
     abstract fun dataQuestionDao(): DataQuestionDao

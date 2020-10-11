@@ -12,8 +12,6 @@ import com.radiostudies.main.db.model.DataQuestion
 data class DiaryEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
-    @ColumnInfo(name = "panelNumber") var panelNumber: String?,
-    @ColumnInfo(name = "memberNumber") var memberNumber: String?,
-    @ColumnInfo(name = "date") var date: String?,
+    @ColumnInfo(name = "mainInfo") var mainInfo: String?,
     @ColumnInfo(name = "dataQuestions") var dataQuestions: List<DataQuestion>?
 )

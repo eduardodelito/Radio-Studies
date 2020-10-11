@@ -9,9 +9,7 @@ import com.radiostudies.main.db.model.Diary
 fun Diary.diaryModelToDiaryEntity(): DiaryEntity {
     return DiaryEntity(
         id = 0,
-        panelNumber = panelNumber,
-        memberNumber = memberNumber,
-        date = date,
+        mainInfo = mainInfo,
         dataQuestions = dataQuestions
     )
 }
