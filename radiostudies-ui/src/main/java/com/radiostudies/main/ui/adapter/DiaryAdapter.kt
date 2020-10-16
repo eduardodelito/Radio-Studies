@@ -1,6 +1,7 @@
 package com.radiostudies.main.ui.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,7 @@ import com.radiostudies.main.ui.model.diary.DiaryModel
 /**
  * Created by eduardo.delito on 10/11/20.
  */
-class DiaryAdapter : RecyclerView.Adapter<DiaryAdapter.DiaryViewHolder>() {
+class DiaryAdapter(private val listener: OnDiaryAdapterListener) : RecyclerView.Adapter<DiaryAdapter.DiaryViewHolder>() {
 
     private var list: List<DiaryModel> = mutableListOf()
 
@@ -34,8 +35,25 @@ class DiaryAdapter : RecyclerView.Adapter<DiaryAdapter.DiaryViewHolder>() {
     override fun onBindViewHolder(holder: DiaryViewHolder, position: Int) {
         holder.itemDiaryBinding.diaryModel = list[position]
         holder.itemDiaryBinding.executePendingBindings()
+        holder.itemDiaryBinding.itemLayout.setOnClickListener {
+            listener.onItemSelected(it, list[position])
+        }
     }
 
     inner class DiaryViewHolder(val itemDiaryBinding: ItemDiaryBinding) :
         RecyclerView.ViewHolder(itemDiaryBinding.root)
+
+    /**
+     * Interface to navigate after item selection.
+     *
+     * Adapter listener
+     */
+    interface OnDiaryAdapterListener {
+        /**
+         * onClick method to display details for mobile/tablet.
+         * @param view used to navigate fragment.
+         * @param diaryModel data to display details.
+         */
+        fun onItemSelected(view: View, diaryModel: DiaryModel?)
+    }
 }

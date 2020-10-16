@@ -24,11 +24,7 @@ class DiaryViewModel @Inject constructor(private val actualManager: ActualManage
     private val diaryState = SingleLiveEvent<DiaryModelState>()
     internal fun getDiaryLiveData(): SingleLiveEvent<DiaryModelState> = diaryState
 
-    init {
-        loadDiary()
-    }
-
-    private fun loadDiary() {
+    fun loadDiary() {
         launch {
             loadDiaryFromDB()
         }

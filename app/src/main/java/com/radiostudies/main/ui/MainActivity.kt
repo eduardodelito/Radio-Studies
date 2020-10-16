@@ -2,14 +2,16 @@ package com.radiostudies.main.ui
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import com.radiostudies.main.ui.fragment.*
+import com.radiostudies.main.ui.model.diary.DiaryModel
 import dagger.android.support.DaggerAppCompatActivity
 
 class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListener,
     InitialQuestionsFragment.InitialQuestionsFragmentListener,
     MainInfoFragment.MainInfoFragmentListener,
-    ActualQuestionsFragment.ActualQuestionsFragmentListener {
+    ActualQuestionsFragment.ActualQuestionsFragmentListener, DiaryFragment.OnDiaryFragmentListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -39,6 +41,12 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
         val action = MainInfoFragmentDirections.actionMainInfoFragmentToActualQuestionsFragment()
         var bundle = Bundle()
         bundle.putString("mainInfo", mainInfo)
+        view?.findNavController()?.navigate(action.actionId, bundle)
+    }
+
+    override fun navigateToDiaryDetails(view: View, diaryModel: DiaryModel?) {
+        val action = DiaryFragmentDirections.actionDiaryFragmentToDiaryDetailsFragment()
+        val bundle = bundleOf(DiaryFragment.DIARY_ITEM to diaryModel)
         view?.findNavController()?.navigate(action.actionId, bundle)
     }
 }
