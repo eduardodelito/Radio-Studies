@@ -16,7 +16,7 @@ interface AreaDao {
     fun insertArea(areaEntity: List<AreaEntity>)
 
     @Query("SELECT code, option from AreaEntity ORDER BY id ASC")
-    fun queryArea(): List<Option>
+    fun queryArea(): MutableList<Option>
 
     @Query("DELETE FROM AreaEntity")
     fun deleteArea()

@@ -1,7 +1,7 @@
 [
   {
     "place": "Mega Manila",
-    "stations": [
+    "options": [
       {
         "code": "001",
         "option": "DZXL-558Khz"
@@ -238,7 +238,7 @@
   },
   {
     "place": "Baguio",
-    "stations": [
+    "options": [
       {
         "code": "056",
         "option": "DZWT-540Khz"
@@ -347,7 +347,7 @@
   },
   {
     "place": "Batangas",
-    "stations": [
+    "options": [
       {
         "code": "087",
         "option": "DZBR-531Khz"
@@ -488,7 +488,7 @@
   },
   {
     "place": "Butuan",
-    "stations": [
+    "options": [
       {
         "code": "112",
         "option": "DXBC-693Khz"
@@ -581,7 +581,7 @@
   },
   {
     "place": "Cabanatuan",
-    "stations": [
+    "options": [
       {
         "code": "002",
         "option": "DZBB-594Khz"
@@ -678,7 +678,7 @@
   },
   {
     "place": "Dumaguete",
-    "stations": [
+    "options": [
       {
         "code": "003",
         "option": "DZMM-630Khz"
@@ -835,7 +835,7 @@
   },
   {
     "place": "Iligan",
-    "stations": [
+    "options": [
       {
         "code": "200",
         "option": "DYMR-576Khz"
@@ -976,7 +976,7 @@
   },
   {
     "place": "Olongapo",
-    "stations": [
+    "options": [
       {
         "code": "002",
         "option": "DZBB-594Khz"
@@ -1077,7 +1077,7 @@
   },
   {
     "place": "Puerto Princesa",
-    "stations": [
+    "options": [
       {
         "code": "040",
         "option": "DZRJ-100.3Mhz"
@@ -1198,7 +1198,7 @@
   },
   {
     "place": "Surigao",
-    "stations": [
+    "options": [
       {
         "code": "164",
         "option": "DYLA-909Khz"
@@ -1279,7 +1279,7 @@
   },
   {
     "place": "Tarlac",
-    "stations": [
+    "options": [
       {
         "code": "002",
         "option": "DZBB-594Khz"
@@ -1396,7 +1396,7 @@
   },
   {
     "place": "Zamboanga",
-    "stations": [
+    "options": [
       {
         "code": "002",
         "option": "DZBB-594Khz"
@@ -1521,7 +1521,7 @@
   },
   {
     "place": "Tacloban",
-    "stations": [
+    "options": [
       {
         "code": "051",
         "option": "Not Listen"
@@ -1602,7 +1602,7 @@
   },
   {
     "place": "Angeles-San Fernando",
-    "stations": [
+    "options": [
       {
         "code": "001",
         "option": "DZXL-558Khz"
@@ -1839,7 +1839,7 @@
   },
   {
     "place": "Bacolod",
-    "stations": [
+    "options": [
       {
         "code": "003",
         "option": "DZMM-630Khz"
@@ -1952,7 +1952,7 @@
   },
   {
     "place": "Cagayan De Oro",
-    "stations": [
+    "options": [
       {
         "code": "171",
         "option": "DXIF-729Khz"
@@ -2081,7 +2081,7 @@
   },
   {
     "place": "Dagupan",
-    "stations": [
+    "options": [
       {
         "code": "001",
         "option": "DZXL-558Khz"
@@ -2206,7 +2206,7 @@
   },
   {
     "place": "Davao",
-    "stations": [
+    "options": [
       {
         "code": "249",
         "option": "DXMF-576Khz"
@@ -2391,7 +2391,7 @@
   },
   {
     "place": "General Santos",
-    "stations": [
+    "options": [
       {
         "code": "318",
         "option": "DXCP-585Khz"
@@ -2520,7 +2520,7 @@
   },
   {
     "place": "Legaspi",
-    "stations": [
+    "options": [
       {
         "code": "352",
         "option": "DZBU-621Khz"
@@ -2645,7 +2645,7 @@
   },
   {
     "place": "Lucena",
-    "stations": [
+    "options": [
       {
         "code": "004",
         "option": "DZRH-666Khz "
@@ -2742,7 +2742,7 @@
   },
   {
     "place": "Malaybalay",
-    "stations": [
+    "options": [
       {
         "code": "051",
         "option": "Not Listen"
@@ -2811,7 +2811,7 @@
   },
   {
     "place": "Naga",
-    "stations": [
+    "options": [
       {
         "code": 451,
         "option": "DWRP-549Khz"
@@ -2932,7 +2932,7 @@
   },
   {
     "place": "San Pablo",
-    "stations": [
+    "options": [
       {
         "code": "001",
         "option": "DZXL-558Khz"
@@ -3161,7 +3161,7 @@
   },
   {
     "place": "Sorsogon",
-    "stations": [
+    "options": [
       {
         "code": "319",
         "option": "DZRS-1179Khz"
@@ -3226,7 +3226,7 @@
   },
   {
     "place": "Cebu",
-    "stations": [
+    "options": [
       {
         "code": "051",
         "option": "Not Listen"
@@ -3407,7 +3407,7 @@
   },
   {
     "place": "Iloilo",
-    "stations": [
+    "options": [
       {
         "code": "565",
         "option": "DYLL-585Khz"
@@ -3544,7 +3544,7 @@
   },
   {
     "place": "Kalibo",
-    "stations": [
+    "options": [
       {
         "code": "001",
         "option": "DZXL-558Khz"
@@ -3657,7 +3657,7 @@
   },
   {
     "place": "Roxas",
-    "stations": [
+    "options": [
       {
         "code": "001",
         "option": "DZXL-558Khz"
@@ -3762,7 +3762,7 @@
   },
   {
     "place": "Tagbilaran",
-    "stations": [
+    "options": [
       {
         "code": "051",
         "option": "Not Listen"
@@ -3835,7 +3835,7 @@
   },
   {
     "place": "Santiago",
-    "stations": [
+    "options": [
       {
         "code": "051",
         "option": "Not Listen"
@@ -3880,7 +3880,7 @@
   },
   {
     "place": "Tuguegarao",
-    "stations": [
+    "options": [
       {
         "code": "003",
         "option": "DZMM-630Khz"
@@ -3965,7 +3965,7 @@
   },
   {
     "place": "San Fernando, La Union",
-    "stations": [
+    "options": [
       {
         "code": "002",
         "option": "DZBB-594Khz"
@@ -4050,7 +4050,7 @@
   },
   {
     "place": "Loang",
-    "stations": [
+    "options": [
       {
         "code": "003",
         "option": "DZMM-630Khz"
@@ -4139,7 +4139,7 @@
   },
   {
     "place": "Marbel (Koronadal)",
-    "stations": [
+    "options": [
       {
         "code": "004",
         "option": "DZRH-666Khz"
@@ -4192,7 +4192,7 @@
   },
   {
     "place": "Pagadian",
-    "stations": [
+    "options": [
       {
         "code": "404",
         "option": "DXPR-603Khz"
@@ -4253,7 +4253,7 @@
   },
   {
     "place": "Ozamis",
-    "stations": [
+    "options": [
       {
         "code": "398",
         "option": "DXOC-1494Khz"
@@ -4302,7 +4302,7 @@
   },
   {
     "place": "Cotobato",
-    "stations": [
+    "options": [
       {
         "code": "051",
         "option": "Not Listen"
@@ -4367,7 +4367,7 @@
   },
   {
     "place": "Cauayan",
-    "stations": [
+    "options": [
       {
         "code": "003",
         "option": "DZMM-630Khz"
@@ -4432,7 +4432,7 @@
   },
   {
     "place": "Vigan",
-    "stations": [
+    "options": [
       {
         "code": "510",
         "option": "DZVV-603Khz"
@@ -4489,7 +4489,7 @@
   },
   {
     "place": "Daet",
-    "stations": [
+    "options": [
       {
         "code": "051",
         "option": "Not Listen"
@@ -4558,7 +4558,7 @@
   },
   {
     "place": "Tagum",
-    "stations": [
+    "options": [
       {
         "code": "675",
         "option": "DXDN-936Khz"
@@ -4667,7 +4667,7 @@
   },
   {
     "place": "Bayombong",
-    "stations": [
+    "options": [
       {
         "code": "679",
         "option": "DWRV-1233Khz"
@@ -4704,7 +4704,7 @@
   },
   {
     "place": "Catanduanes",
-    "stations": [
+    "options": [
       {
         "code": "682",
         "option": "DWDF-94.3 Mhz"
@@ -4733,7 +4733,7 @@
   },
   {
     "place": "Dipolog",
-    "stations": [
+    "options": [
       {
         "code": "684",
         "option": "DXDR-981Khz"
@@ -4774,7 +4774,7 @@
   },
   {
     "place": "Kidapawan",
-    "stations": [
+    "options": [
       {
         "code": "687",
         "option": "DYCM-1089Khz"
@@ -4823,7 +4823,7 @@
   },
   {
     "place": "Valencia",
-    "stations": [
+    "options": [
       {
         "code": "438",
         "option": "DXMB-648Khz"

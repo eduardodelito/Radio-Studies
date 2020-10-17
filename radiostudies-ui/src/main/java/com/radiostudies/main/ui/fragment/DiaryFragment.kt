@@ -2,6 +2,7 @@ package com.radiostudies.main.ui.fragment
 
 import android.content.Context
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.radiostudies.main.common.fragment.BaseFragment
@@ -58,6 +59,9 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
         when(state) {
             is DiaryForm -> {
                 diaryAdapter.updateData(state.diaryList)
+                if (state.diaryList.isEmpty()) {
+                    dialog()
+                }
             }
         }
     }
@@ -76,6 +80,19 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
 
     interface OnDiaryFragmentListener {
         fun navigateToDiaryDetails(view: View, diaryModel: DiaryModel?)
+
+        fun navigateBack()
+    }
+
+    private fun dialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle(R.string.no_diary_available_msg)
+        builder.setPositiveButton(getString(R.string.ok_label)) { dialog, _ ->
+            listener?.navigateBack()
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
     }
 
     companion object {

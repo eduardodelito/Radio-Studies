@@ -60,7 +60,7 @@ class ActualQuestionsViewModel @Inject constructor(
         for (i in 0 until jsonArray.length()) {
             val jsonObject = jsonArray.getJSONObject(i)
             var place = jsonObject.getString("place")
-            val stationsJSONArray = jsonObject.getJSONArray("stations")
+            val stationsJSONArray = jsonObject.getJSONArray("options")
             val options = mutableListOf<Option>()
             for (j in 0 until stationsJSONArray.length()) {
                 val jsonArrayObj = stationsJSONArray.getJSONObject(j)

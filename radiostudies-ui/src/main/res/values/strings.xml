@@ -13,6 +13,8 @@
     <string name="yes_label">Yes</string>
     <string name="no_label">No</string>
 
+    <string name="ok_label">OK</string>
+
     <string name="option1">Research Company</string>
     <string name="option2">TV Station</string>
     <string name="option3">Cable TV Station</string>
@@ -148,4 +150,6 @@
     <string name="diary_panel_number">Panel Number: %1s</string>
     <string name="diary_member_number">Member Number: %1s</string>
     <string name="diary_name_of_respondent">Name of Respondent: %1s</string>
+
+    <string name="no_diary_available_msg">No Diary available. Please select HRF.</string>
 </resources>
