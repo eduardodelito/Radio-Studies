@@ -93,6 +93,16 @@ fun Button.setEnable(enable: Boolean) {
     }
 }
 
+fun Button.show(enable: Boolean) {
+    with(this) {
+        visibility = if (enable) {
+            View.VISIBLE
+        } else {
+            View.GONE
+        }
+    }
+}
+
 fun <T> List<T>.replace(newValue: T, block: (T) -> Boolean): List<T> {
     return map {
         if (block(it)) newValue else it

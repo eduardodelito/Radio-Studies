@@ -151,5 +151,20 @@
     <string name="diary_member_number">Member Number: %1s</string>
     <string name="diary_name_of_respondent">Name of Respondent: %1s</string>
 
+    <string name="date_from">Date From: %1s</string>
+    <string name="date_to">Date To: %1s</string>
+
     <string name="no_diary_available_msg">No Diary available. Please select HRF.</string>
+
+    <string name="details_time_of_listening_label">Time of Listening</string>
+    <string name="details_radio_stations_label">Radio Stations</string>
+    <string name="details_place_of_listening_label">Select Place Of Listening</string>
+    <string name="details_device_label">Device</string>
+
+    <string name="tap_select_time_of_listening">[ Tap Here ] Select Time of Listening</string>
+    <string name="tap_select_radio_stations">[ Tap Here ] Select Radio Stations</string>
+    <string name="tap_select_place_of_listening">[ Tap Here ] Select Place Of Listening</string>
+    <string name="tap_select_device">[ Tap Here ] Select Device</string>
+
+    <string name="delete_msg">Are you sure do you want to delete this item?</string>
 </resources>

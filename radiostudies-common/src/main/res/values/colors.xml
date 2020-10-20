@@ -6,4 +6,5 @@
     <color name="color_bg">#E4E5FA</color>
     <color name="disabledColorPrimary">#5931B2</color>
     <color name="red">#E91121</color>
+    <color name="line_bg">#818285</color>
 </resources>

@@ -32,6 +32,7 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
     override fun getBindingVariable() =  BR.loginViewModel
 
     override fun initViews() {
+        listener?.showAppBar(false)
         login_button.setOnClickListener {
             viewModel.onLogin(editText_username.text.toString(), editText_password.text.toString())
         }
@@ -117,5 +118,7 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
         fun navigateToInitialScreen(view: View?)
 
         fun navigateToDiaryScreen(view: View?)
+
+        fun showAppBar(show: Boolean)
     }
 }

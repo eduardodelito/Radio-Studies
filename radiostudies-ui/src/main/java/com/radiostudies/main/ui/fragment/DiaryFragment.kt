@@ -30,6 +30,7 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
     override fun getBindingVariable() = BR.diaryViewModel
 
     override fun initViews() {
+        listener?.showAppBar(false)
         diaryAdapter = DiaryAdapter(object: DiaryAdapter.OnDiaryAdapterListener {
             override fun onItemSelected(view: View, diaryModel: DiaryModel?) {
                 listener?.navigateToDiaryDetails(view, diaryModel)
@@ -58,8 +59,8 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
     private fun onDiaryStateChanged(state: DiaryModelState?) {
         when(state) {
             is DiaryForm -> {
-                diaryAdapter.updateData(state.diaryList)
-                if (state.diaryList.isEmpty()) {
+                diaryAdapter.updateData(state.list)
+                if (state.list.isEmpty()) {
                     dialog()
                 }
             }
@@ -82,6 +83,8 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
         fun navigateToDiaryDetails(view: View, diaryModel: DiaryModel?)
 
         fun navigateBack()
+
+        fun showAppBar(show: Boolean)
     }
 
     private fun dialog() {

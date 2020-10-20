@@ -9,6 +9,7 @@
 
     <!--Padding-->
     <dimen name="padding5">5dp</dimen>
+    <dimen name="padding10">10dp</dimen>
     <dimen name="padding16">16dp</dimen>
 
     <!--Height-->
@@ -19,4 +20,7 @@
     <dimen name="font18">18sp</dimen>
     <dimen name="font20">20sp</dimen>
     <dimen name="font30">30sp</dimen>
+
+    <!--Corner Radius-->
+    <dimen name="radius16">16dp</dimen>
 </resources>

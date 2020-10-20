@@ -37,7 +37,7 @@ class ActualQuestionsFragment :
     override fun getBindingVariable() = BR.actualQuestionsViewModel
 
     override fun initViews() {
-
+        listener?.showAppBar(false)
         val mainInfo = arguments?.getString(PANEL_NUMBER)
 
         activity?.actionBar?.title = getString(R.string.actual_question_title)
@@ -326,6 +326,8 @@ class ActualQuestionsFragment :
 
     interface ActualQuestionsFragmentListener {
         fun navigateBack()
+
+        fun showAppBar(show: Boolean)
     }
 
     companion object {

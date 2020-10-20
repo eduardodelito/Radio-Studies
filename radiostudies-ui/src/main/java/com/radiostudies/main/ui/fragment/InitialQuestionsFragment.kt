@@ -32,7 +32,7 @@ class InitialQuestionsFragment :
     override fun getBindingVariable() = BR.initialViewModel
 
     override fun initViews() {
-
+        listener?.showAppBar(false)
         prev_btn.setOnClickListener {
             viewModel.updatePrevQuestion()
         }
@@ -242,6 +242,8 @@ class InitialQuestionsFragment :
         fun navigateToMainInfo(view: View?)
 
         fun navigateBack()
+
+        fun showAppBar(show: Boolean)
     }
 
     companion object {

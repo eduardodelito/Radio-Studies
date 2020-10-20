@@ -11,7 +11,10 @@ import dagger.android.support.DaggerAppCompatActivity
 class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListener,
     InitialQuestionsFragment.InitialQuestionsFragmentListener,
     MainInfoFragment.MainInfoFragmentListener,
-    ActualQuestionsFragment.ActualQuestionsFragmentListener, DiaryFragment.OnDiaryFragmentListener {
+    ActualQuestionsFragment.ActualQuestionsFragmentListener,
+    DiaryFragment.OnDiaryFragmentListener,
+    DiaryDetailsFragment.DiaryDetailsFragmentListener,
+    AddDiaryFragment.AddDiaryFragmentListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,5 +51,17 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
         val action = DiaryFragmentDirections.actionDiaryFragmentToDiaryDetailsFragment()
         val bundle = bundleOf(DiaryFragment.DIARY_ITEM to diaryModel)
         view?.findNavController()?.navigate(action.actionId, bundle)
+    }
+
+    override fun showAppBar(show: Boolean) {
+        if (show)
+            supportActionBar?.show()
+        else
+            supportActionBar?.hide()
+    }
+
+    override fun navigateToAddDiaryScreen(view: View) {
+        val action = DiaryDetailsFragmentDirections.actionDiaryDetailsFragmentToAddDiaryFragment()
+        view.findNavController().navigate(action)
     }
 }

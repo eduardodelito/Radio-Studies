@@ -33,6 +33,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     override fun getBindingVariable() = BR.mainInfoViewModel
 
     override fun initViews() {
+        listener?.showAppBar(false)
         continue_button.setOnClickListener {
 
             viewModel.mainInfoDataChanged(
@@ -171,6 +172,8 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
 
     interface MainInfoFragmentListener {
         fun navigateToActualQuestions(view: View?, mainInfo: String?)
+
+        fun showAppBar(show: Boolean)
     }
 
     private fun openDatePicker() {

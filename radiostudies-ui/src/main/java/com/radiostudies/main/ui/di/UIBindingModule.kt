@@ -83,4 +83,16 @@ abstract class UIBindingModule {
             target: DiaryDetailsFragment
         ) = ViewModelProvider(target, factory).get(DiaryDetailsViewModel::class.java)
     }
+
+    @ContributesAndroidInjector(modules = [InjectAddDiaryViewModelModule::class])
+    abstract fun bindAddDiaryFragment(): AddDiaryFragment
+
+    @Module
+    class InjectAddDiaryViewModelModule {
+        @Provides
+        internal fun provideAddDiaryViewModel(
+            factory: ViewModelProvider.Factory,
+            target: AddDiaryFragment
+        ) = ViewModelProvider(target, factory).get(AddDiaryViewModel::class.java)
+    }
 }

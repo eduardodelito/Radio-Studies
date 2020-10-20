@@ -8,5 +8,7 @@ import java.io.Serializable
 data class DiaryModel(
     val panelNumber: String?,
     val memberNumber: String?,
-    val nameOfRespondent: String?
+    val nameOfRespondent: String?,
+    val dateFrom: String?,
+    val dateTo: String?
 ) : Serializable

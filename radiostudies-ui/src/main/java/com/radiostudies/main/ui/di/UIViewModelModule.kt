@@ -53,4 +53,10 @@ class UIViewModelModule {
     @ViewModelKey(DiaryDetailsViewModel::class)
     fun provideDiaryDetailsViewModel(): ViewModel =
         DiaryDetailsViewModel()
+
+    @Provides
+    @IntoMap
+    @ViewModelKey(AddDiaryViewModel::class)
+    fun provideAddDiaryViewModel(): ViewModel =
+        AddDiaryViewModel()
 }

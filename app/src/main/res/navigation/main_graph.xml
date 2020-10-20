@@ -75,5 +75,17 @@
     <fragment
         android:id="@+id/diaryDetailsFragment"
         android:name="com.radiostudies.main.ui.fragment.DiaryDetailsFragment"
-        android:label="DiaryDetailsFragment" />
+        android:label="DiaryDetailsFragment" >
+        <action
+            android:id="@+id/action_diaryDetailsFragment_to_addDiaryFragment"
+            app:destination="@id/addDiaryFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDiaryFragment"
+        android:name="com.radiostudies.main.ui.fragment.AddDiaryFragment"
+        android:label="AddDiaryFragment" />
 </navigation>
