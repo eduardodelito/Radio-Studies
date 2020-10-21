@@ -10,5 +10,6 @@ data class DiaryModel(
     val memberNumber: String?,
     val nameOfRespondent: String?,
     val dateFrom: String?,
-    val dateTo: String?
+    val dateTo: String?,
+    val selectedArea: String?
 ) : Serializable

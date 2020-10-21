@@ -17,8 +17,7 @@ import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.common.util.setEnable
 import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.ui.fragment.databinding.AddDiaryFragmentBinding
-import com.radiostudies.main.ui.model.diary.AddDiaryForm
-import com.radiostudies.main.ui.model.diary.DiaryModelState
+import com.radiostudies.main.ui.model.diary.*
 import com.radiostudies.main.ui.viewmodel.AddDiaryViewModel
 import kotlinx.android.synthetic.main.add_diary_fragment.*
 import java.util.*
@@ -41,17 +40,17 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
         add_time_of_listening.setOnClickListener {
             dialogOptions(add_time_of_listening_layout, viewModel.timeOfListeningList, false)
         }
-
+        val selectedArea = arguments?.getString(AREA)
         add_radio_stations.setOnClickListener {
-
+            selectedArea?.let { area -> viewModel.queryStations(area) }
         }
 
         add_place_of_listening.setOnClickListener {
-
+            viewModel.placeOfListening()
         }
 
         add_details_device.setOnClickListener {
-
+            viewModel.device()
         }
 
         btn_add_diary.setOnClickListener {
@@ -77,6 +76,18 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
                         )
                     }
                 )
+            }
+
+            is StationsForm -> {
+                dialogOptions(add_radio_stations_layout, state.list, false)
+            }
+
+            is PlaceOfListeningForm -> {
+                dialogOptions(add_place_of_listening_layout, state.list, true)
+            }
+
+            is DeviceForm -> {
+                dialogOptions(add_device_layout, state.list, true)
             }
         }
     }
@@ -212,15 +223,22 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
                     selectedOptions.add(Option(option.code, option.option))
                 }
             }
-
+            btn_add_diary.setEnable(isLayoutsHasContent())
             //Save here
         }
     }
+
+    private fun isLayoutsHasContent() =
+        add_time_of_listening_layout.childCount > 0 &&
+                add_radio_stations_layout.childCount > 0 &&
+                add_place_of_listening_layout.childCount > 0 &&
+                add_device_layout.childCount > 0
 
     companion object {
         private const val OTHER = "Other"
         private const val NONE = "None"
         private const val DONE = "Done"
+        const val AREA = "area"
 
         fun newInstance() = AddDiaryFragment()
     }

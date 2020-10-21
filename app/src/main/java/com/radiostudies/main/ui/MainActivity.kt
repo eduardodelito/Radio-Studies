@@ -60,8 +60,10 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
             supportActionBar?.hide()
     }
 
-    override fun navigateToAddDiaryScreen(view: View) {
+    override fun navigateToAddDiaryScreen(view: View, selectedArea: String?) {
         val action = DiaryDetailsFragmentDirections.actionDiaryDetailsFragmentToAddDiaryFragment()
-        view.findNavController().navigate(action)
+        val bundle = Bundle()
+        bundle.putString(AddDiaryFragment.AREA, selectedArea)
+        view.findNavController().navigate(action.actionId, bundle)
     }
 }

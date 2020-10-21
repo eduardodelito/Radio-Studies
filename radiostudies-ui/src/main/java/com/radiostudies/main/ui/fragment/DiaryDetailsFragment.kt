@@ -15,6 +15,7 @@ import javax.inject.Inject
 class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDetailsViewModel>() {
 
     private var listener: DiaryDetailsFragmentListener? = null
+    private var diaryModel: DiaryModel? = null
 
     @Inject
     override lateinit var viewModel: DiaryDetailsViewModel
@@ -26,7 +27,7 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
     override fun initViews() {
         listener?.showAppBar(true)
         setHasOptionsMenu(true)
-        val diaryModel = arguments?.getSerializable(DiaryFragment.DIARY_ITEM) as DiaryModel?
+        diaryModel = arguments?.getSerializable(DiaryFragment.DIARY_ITEM) as DiaryModel?
         updateDetails(diaryModel)
     }
 
@@ -42,14 +43,14 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.add_menu -> {
-                listener?.navigateToAddDiaryScreen(requireView())
+                listener?.navigateToAddDiaryScreen(requireView(), diaryModel?.selectedArea)
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
-//    private fun addDetailsItem() {
+//    private fun addDetailsItem() {..
 //        val view = LayoutInflater.from(context).inflate(R.layout.details_item_diary, null)
 //        val params = LinearLayout.LayoutParams(
 //            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
@@ -125,7 +126,7 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
     interface DiaryDetailsFragmentListener {
         fun showAppBar(show: Boolean)
 
-        fun navigateToAddDiaryScreen(view: View)
+        fun navigateToAddDiaryScreen(view: View, selectedArea: String?)
     }
 
 //    private fun deleteDialog(view: View) {
