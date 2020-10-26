@@ -1,14 +1,22 @@
 package com.radiostudies.main.ui.fragment
 
 import android.content.Context
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
+import android.view.*
+import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AppCompatTextView
+import androidx.core.widget.TextViewCompat
 import com.radiostudies.main.common.fragment.BaseFragment
+import com.radiostudies.main.common.util.reObserve
+import com.radiostudies.main.db.entity.Diaries
+import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.fragment.databinding.DiaryDetailsFragmentBinding
+import com.radiostudies.main.ui.model.DiaryDetailsForm
+import com.radiostudies.main.ui.model.DiaryDetailsState
 import com.radiostudies.main.ui.model.diary.DiaryModel
 import com.radiostudies.main.ui.viewmodel.DiaryDetailsViewModel
+import kotlinx.android.synthetic.main.diary_details_fragment.*
 import javax.inject.Inject
 
 
@@ -32,7 +40,18 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
     }
 
     override fun subscribeUi() {
+        with(viewModel) {
+            reObserve(getDiaryDetailsLiveData(), ::onDiaryDetailsStateChanged)
+            diaryModel?.diary?.mainInfo?.let { loadDiaries(it) }
+        }
+    }
 
+    private fun onDiaryDetailsStateChanged(state: DiaryDetailsState?) {
+        when (state) {
+            is DiaryDetailsForm -> {
+                addDetailsItem(state.diaries)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -43,65 +62,85 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.add_menu -> {
-                listener?.navigateToAddDiaryScreen(requireView(), diaryModel?.selectedArea)
+                diaryModel?.diary?.let {
+                    listener?.navigateToAddDiaryScreen(
+                        requireView(), diaryModel?.selectedArea,
+                        it
+                    )
+                }
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
-//    private fun addDetailsItem() {..
-//        val view = LayoutInflater.from(context).inflate(R.layout.details_item_diary, null)
-//        val params = LinearLayout.LayoutParams(
-//            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
-//        )
-//        params.topMargin = 20
-//        view.layoutParams = params
-//        val delete = view.findViewById<ImageView>(R.id.btn_delete)
-//        delete.setOnClickListener {
-//            deleteDialog(view)
-//        }
-//
-//        val layout1 = view.findViewById<LinearLayout>(R.id.details_time_of_listening_layout)
-//        layout1.visibility = View.VISIBLE
-//        val tv1 = AppCompatTextView(context)
-//        TextViewCompat.setTextAppearance(tv1, R.style.AvenirHeavy_Black);
-//        tv1.layoutParams = params
-//        tv1.text = "Testing"
-//
-//        val tv1a = AppCompatTextView(context)
-//        TextViewCompat.setTextAppearance(tv1a, R.style.AvenirHeavy_Black);
-//        tv1a.layoutParams = params
-//        tv1a.text = "Testing"
-//        layout1.addView(tv1)
-//        layout1.addView(tv1a)
-//
-//        val layout2 = view.findViewById<LinearLayout>(R.id.details_radio_stations_layout)
-//        layout2.visibility = View.VISIBLE
-//        val tv2 = AppCompatTextView(context)
-//        TextViewCompat.setTextAppearance(tv2, R.style.AvenirHeavy_Black);
-//        tv2.layoutParams = params
-//        tv2.text = "Testing"
-//        layout2.addView(tv2)
-//
-//        val layout3 = view.findViewById<LinearLayout>(R.id.details_place_of_listening_layout)
-//        layout3.visibility = View.VISIBLE
-//        val tv3 = AppCompatTextView(context)
-//        TextViewCompat.setTextAppearance(tv3, R.style.AvenirHeavy_Black);
-//        tv3.layoutParams = params
-//        tv3.text = "Testing"
-//        layout3.addView(tv3)
-//
-//        val layout4 = view.findViewById<LinearLayout>(R.id.details_device_layout)
-//        layout4.visibility = View.VISIBLE
-//        val tv4 = AppCompatTextView(context)
-//        TextViewCompat.setTextAppearance(tv4, R.style.AvenirHeavy_Black);
-//        tv4.layoutParams = params
-//        tv4.text = "Testing"
-//        layout4.addView(tv4)
-//
-//        details_items_layout.addView(view)
-//    }
+    private fun addDetailsItem(diaries: List<Diaries>) {
+
+        details_items_layout.apply {
+            removeAllViews()
+            invalidate()
+            for (i in diaries.indices) {
+
+                val view = LayoutInflater.from(context).inflate(R.layout.details_item_diary, null)
+                val params = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
+                )
+                params.topMargin = 20
+                view.layoutParams = params
+                val delete = view.findViewById<ImageView>(R.id.btn_delete)
+                delete.setOnClickListener {
+                    diaryModel?.diary?.let { diary -> deleteDialog(diary, diaries, diaries[i]) }
+                }
+
+                val layout1 = view.findViewById<LinearLayout>(R.id.details_time_of_listening_layout)
+                val timeOfListeningList = diaries[i].timeOfListening
+                for (j in timeOfListeningList.indices) {
+                    layout1.visibility = View.VISIBLE
+                    val tv1 = AppCompatTextView(context)
+                    TextViewCompat.setTextAppearance(tv1, R.style.AvenirHeavy_Black);
+                    tv1.layoutParams = params
+                    tv1.text = timeOfListeningList[j].option
+                    layout1.addView(tv1)
+                }
+
+                val layout2 = view.findViewById<LinearLayout>(R.id.details_radio_stations_layout)
+                val radioStationList = diaries[i].stations
+                for (k in radioStationList.indices) {
+                    layout2.visibility = View.VISIBLE
+                    val tv2 = AppCompatTextView(context)
+                    TextViewCompat.setTextAppearance(tv2, R.style.AvenirHeavy_Black);
+                    tv2.layoutParams = params
+                    tv2.text = radioStationList[k].option
+                    layout2.addView(tv2)
+                }
+
+                val layout3 =
+                    view.findViewById<LinearLayout>(R.id.details_place_of_listening_layout)
+                val placeOfListeningList = diaries[i].placeOfListening
+                for (l in placeOfListeningList.indices) {
+                    layout3.visibility = View.VISIBLE
+                    val tv3 = AppCompatTextView(context)
+                    TextViewCompat.setTextAppearance(tv3, R.style.AvenirHeavy_Black);
+                    tv3.layoutParams = params
+                    tv3.text = radioStationList[l].option
+                    layout3.addView(tv3)
+                }
+
+                val layout4 = view.findViewById<LinearLayout>(R.id.details_device_layout)
+                val deviceList = diaries[i].device
+                for (m in deviceList.indices) {
+                    layout4.visibility = View.VISIBLE
+                    val tv4 = AppCompatTextView(context)
+                    TextViewCompat.setTextAppearance(tv4, R.style.AvenirHeavy_Black);
+                    tv4.layoutParams = params
+                    tv4.text = deviceList[m].option
+                    layout4.addView(tv4)
+                }
+
+                addView(view)
+            }
+        }
+    }
 
     private fun updateDetails(mDiaryModel: DiaryModel?) {
         with(viewModel) {
@@ -126,23 +165,22 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
     interface DiaryDetailsFragmentListener {
         fun showAppBar(show: Boolean)
 
-        fun navigateToAddDiaryScreen(view: View, selectedArea: String?)
+        fun navigateToAddDiaryScreen(view: View, selectedArea: String?, diary: Diary)
     }
 
-//    private fun deleteDialog(view: View) {
-//        val builder = AlertDialog.Builder(requireContext())
-//        builder.setTitle(R.string.delete_msg)
-//        builder.setPositiveButton(getString(R.string.yes_label)) { dialog, _ ->
-//            details_items_layout.removeView(view)
-//            details_items_layout.invalidate()
-//            dialog.dismiss()
-//        }
-//        builder.setNegativeButton(getString(R.string.no_label)) { dialog, _ ->
-//            dialog.dismiss()
-//        }
-//        val dialog = builder.create()
-//        dialog.show()
-//    }
+    private fun deleteDialog(diary: Diary, diaryList: List<Diaries>, diaries: Diaries) {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle(R.string.delete_msg)
+        builder.setPositiveButton(getString(R.string.yes_label)) { dialog, _ ->
+            viewModel.deleteSelectedDiaries(diary, diaryList, diaries)
+            dialog.dismiss()
+        }
+        builder.setNegativeButton(getString(R.string.no_label)) { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
+    }
 
     companion object {
         fun newInstance() = DiaryDetailsFragment()

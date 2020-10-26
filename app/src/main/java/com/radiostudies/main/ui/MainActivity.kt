@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
+import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.fragment.*
 import com.radiostudies.main.ui.model.diary.DiaryModel
 import dagger.android.support.DaggerAppCompatActivity
@@ -60,10 +61,11 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
             supportActionBar?.hide()
     }
 
-    override fun navigateToAddDiaryScreen(view: View, selectedArea: String?) {
+    override fun navigateToAddDiaryScreen(view: View, selectedArea: String?, diary: Diary) {
         val action = DiaryDetailsFragmentDirections.actionDiaryDetailsFragmentToAddDiaryFragment()
         val bundle = Bundle()
         bundle.putString(AddDiaryFragment.AREA, selectedArea)
+        bundle.putSerializable(AddDiaryFragment.DIARY, diary)
         view.findNavController().navigate(action.actionId, bundle)
     }
 }

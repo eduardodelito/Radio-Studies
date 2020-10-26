@@ -50,7 +50,7 @@ class DiaryViewModel @Inject constructor(private val actualManager: ActualManage
         val panelNumber = jsonObject.getString(PANEL_NUMBER)
         val memberNumber = jsonObject.getString(MEMBER_NUMBER)
         val memberName = jsonObject.getString(NAME_OF_RESPONDENT)
-        return DiaryModel(panelNumber, memberNumber, memberName, "10/12/2020", "10/17/2020", "Batangas")
+        return DiaryModel(panelNumber, memberNumber, memberName, "10/12/2020", "10/17/2020", "Batangas", diary)
     }
 
     companion object {

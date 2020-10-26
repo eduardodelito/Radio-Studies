@@ -247,7 +247,8 @@ class ActualQuestionsViewModel @Inject constructor(
                 actualManager.saveCompletedActualQuestions(
                     Diary(
                         mainInfo,
-                        list
+                        list,
+                        mutableListOf()
                     ).diaryModelToDiaryEntity()
                 )
                 questionManager.deleteQuestion()

@@ -24,11 +24,15 @@ interface ActualManager {
 
     fun saveCompletedActualQuestions(diaryEntity: DiaryEntity)
 
+    fun updateDiary(diaryEntity: DiaryEntity)
+
     fun queryDataQuestions(): List<DataQuestionEntity>
 
     fun deleteSaveDataQuestions()
 
     fun getDiaryList(): List<DiaryEntity>
+
+    fun getDiaries(mainInfo: String): List<Diaries>?
 }
 
 class ActualManagerImpl(
@@ -67,6 +71,10 @@ class ActualManagerImpl(
         diaryDao.insert(diaryEntity)
     }
 
+    override fun updateDiary(diaryEntity: DiaryEntity) {
+        diaryDao.updateDiary(diaryEntity.mainInfo, diaryEntity.diaries)
+    }
+
     override fun queryDataQuestions() = dataQuestionDao.queryDataQuestions()
 
     override fun deleteSaveDataQuestions() {
@@ -74,4 +82,6 @@ class ActualManagerImpl(
     }
 
     override fun getDiaryList(): List<DiaryEntity> = diaryDao.getDiaryList()
+
+    override fun getDiaries(mainInfo: String) = diaryDao.getDiaries(mainInfo).diaries
 }

@@ -10,7 +10,8 @@ fun Diary.diaryModelToDiaryEntity(): DiaryEntity {
     return DiaryEntity(
         id = 0,
         mainInfo = mainInfo,
-        dataQuestions = dataQuestions
+        dataQuestions = dataQuestions,
+        diaries = diaries
     )
 }
 
@@ -18,7 +19,8 @@ fun List<DiaryEntity>.diaryEntityModelToDiaryList(): List<Diary> {
     return this.map {
         Diary(
             mainInfo = it.mainInfo,
-            dataQuestions = it.dataQuestions
+            dataQuestions = it.dataQuestions,
+            diaries = it.diaries
         )
     }
 }

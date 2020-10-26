@@ -16,6 +16,7 @@ import com.radiostudies.main.common.util.getJsonDataFromAsset
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.common.util.setEnable
 import com.radiostudies.main.db.entity.Option
+import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.fragment.databinding.AddDiaryFragmentBinding
 import com.radiostudies.main.ui.model.diary.*
 import com.radiostudies.main.ui.viewmodel.AddDiaryViewModel
@@ -38,9 +39,10 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
         listener?.showAppBar(false)
 
         add_time_of_listening.setOnClickListener {
-            dialogOptions(add_time_of_listening_layout, viewModel.timeOfListeningList, false)
+            dialogOptions(add_time_of_listening_layout, viewModel.timeOfListeningList, false, viewModel.selectedTimeOfListeningList)
         }
         val selectedArea = arguments?.getString(AREA)
+        val selectedDiary = arguments?.getSerializable(DIARY) as Diary
         add_radio_stations.setOnClickListener {
             selectedArea?.let { area -> viewModel.queryStations(area) }
         }
@@ -54,7 +56,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
         }
 
         btn_add_diary.setOnClickListener {
-            listener?.navigateBack()
+            viewModel.updateAndSaveDiary(selectedDiary)
         }
         btn_add_diary.setEnable(false)
     }
@@ -79,15 +81,23 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
             }
 
             is StationsForm -> {
-                dialogOptions(add_radio_stations_layout, state.list, false)
+                dialogOptions(add_radio_stations_layout, state.list, false, viewModel.selectedStations)
             }
 
             is PlaceOfListeningForm -> {
-                dialogOptions(add_place_of_listening_layout, state.list, true)
+                dialogOptions(add_place_of_listening_layout, state.list, true, viewModel.selectedPlaceOfListening)
             }
 
             is DeviceForm -> {
-                dialogOptions(add_device_layout, state.list, true)
+                dialogOptions(add_device_layout, state.list, true, viewModel.selectedDevice)
+            }
+
+            is CompletedDiaryForm -> {
+                if (state.isCompleted) {
+                    listener?.navigateBack()
+                } else {
+                    // Do nothing for now
+                }
             }
         }
     }
@@ -110,7 +120,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
         fun navigateBack()
     }
 
-    private fun dialogOptions(view: LinearLayout, list: List<Option>, isSingleChoice: Boolean) {
+    private fun dialogOptions(view: LinearLayout, list: List<Option>, isSingleChoice: Boolean, selectedList: MutableList<Option>) {
         val listStr = mutableListOf<String>()
         list.forEach { listStr.add(it.option) }
 
@@ -120,7 +130,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
 
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle(R.string.choose_items)
-        val selectedList = mutableListOf<Option>()
+        selectedList.clear()
         if (isSingleChoice) {
             // add a list
             builder.setItems(listItems) { dialog, which ->
@@ -224,7 +234,6 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
                 }
             }
             btn_add_diary.setEnable(isLayoutsHasContent())
-            //Save here
         }
     }
 
@@ -239,6 +248,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
         private const val NONE = "None"
         private const val DONE = "Done"
         const val AREA = "area"
+        const val DIARY = "diary"
 
         fun newInstance() = AddDiaryFragment()
     }

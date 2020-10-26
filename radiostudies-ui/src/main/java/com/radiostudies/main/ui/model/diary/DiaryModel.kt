@@ -1,5 +1,6 @@
 package com.radiostudies.main.ui.model.diary
 
+import com.radiostudies.main.db.model.Diary
 import java.io.Serializable
 
 /**
@@ -11,5 +12,6 @@ data class DiaryModel(
     val nameOfRespondent: String?,
     val dateFrom: String?,
     val dateTo: String?,
-    val selectedArea: String?
+    val selectedArea: String?,
+    val diary: Diary
 ) : Serializable

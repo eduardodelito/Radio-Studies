@@ -2,8 +2,11 @@ package com.radiostudies.main.ui.viewmodel
 
 import com.radiostudies.main.common.livedata.SingleLiveEvent
 import com.radiostudies.main.common.viewmodel.BaseViewModel
+import com.radiostudies.main.db.entity.Diaries
 import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.db.manager.ActualManager
+import com.radiostudies.main.db.model.Diary
+import com.radiostudies.main.ui.mapper.diaryModelToDiaryEntity
 import com.radiostudies.main.ui.model.diary.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -20,6 +23,11 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
 
     private val diaryState = SingleLiveEvent<DiaryModelState>()
     internal fun getDiaryLiveData(): SingleLiveEvent<DiaryModelState> = diaryState
+
+    var selectedTimeOfListeningList = mutableListOf<Option>()
+    var selectedStations = mutableListOf<Option>()
+    var selectedPlaceOfListening = mutableListOf<Option>()
+    var selectedDevice = mutableListOf<Option>()
 
     var timeOfListeningList = mutableListOf<Option>()
     init {
@@ -83,6 +91,35 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
         options.add(Option("L", NONE))
         options.add(Option("M", CABLE))
         diaryState.postValue(DeviceForm(options))
+    }
+
+    fun updateAndSaveDiary(diary: Diary) {
+        launch {
+            saveDiary(diary)
+        }
+    }
+
+    private suspend fun saveDiary(diary: Diary) {
+        withContext(Dispatchers.IO) {
+            try {
+                val diaries = Diaries(selectedTimeOfListeningList, selectedStations, selectedPlaceOfListening, selectedDevice)
+                val diaryList = mutableListOf<Diaries>()
+                diary.diaries?.forEach { value ->
+                    val timeOfListening = value.timeOfListening
+                    val radioStations = value.stations
+                    val placeOfListening = value.placeOfListening
+                    val devices = value.device
+                    diaryList.add(Diaries(timeOfListening, radioStations, placeOfListening, devices))
+                }
+                diaryList.add(diaries)
+                diary.diaries = diaryList
+                actualManager.updateDiary(diary.diaryModelToDiaryEntity())
+                diaryState.postValue(CompletedDiaryForm(true))
+            } catch (e: Exception) {
+                e.printStackTrace()
+                diaryState.postValue(CompletedDiaryForm(false))
+            }
+        }
     }
 
     companion object {
