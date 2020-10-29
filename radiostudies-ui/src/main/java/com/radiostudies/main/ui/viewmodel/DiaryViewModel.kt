@@ -1,8 +1,11 @@
 package com.radiostudies.main.ui.viewmodel
 
 import com.radiostudies.main.common.livedata.SingleLiveEvent
+import com.radiostudies.main.common.util.getCurrentDateTime
+import com.radiostudies.main.common.util.toStringDateTime
 import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.manager.ActualManager
+import com.radiostudies.main.db.model.DataQuestion
 import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.mapper.diaryEntityModelToDiaryList
 import com.radiostudies.main.ui.model.diary.DiaryForm
@@ -50,12 +53,24 @@ class DiaryViewModel @Inject constructor(private val actualManager: ActualManage
         val panelNumber = jsonObject.getString(PANEL_NUMBER)
         val memberNumber = jsonObject.getString(MEMBER_NUMBER)
         val memberName = jsonObject.getString(NAME_OF_RESPONDENT)
-        return DiaryModel(panelNumber, memberNumber, memberName, "10/12/2020", "10/17/2020", "Batangas", diary)
+        val dateOfInterview = jsonObject.getString(DATE_OF_INTERVIEW)
+
+        val dataQuestions = diary.dataQuestions
+        val selectedQuestion = dataQuestions?.find { dataQuestion ->  dataQuestion.code == Q1} as DataQuestion
+        val selectedOption = selectedQuestion.options
+        val selectedArea = selectedOption?.get(0)?.option
+
+        return DiaryModel(panelNumber, memberNumber, memberName, dateOfInterview, getCurrentDateTime(7).toStringDateTime(DATE_FORMAT
+        ), selectedArea, diary)
     }
 
     companion object {
         private const val PANEL_NUMBER = "panelNumber"
         private const val MEMBER_NUMBER = "memberNumber"
         private const val NAME_OF_RESPONDENT = "nameOfRespondent"
+        private const val DATE_OF_INTERVIEW = "dateOfInterview"
+
+        private const val DATE_FORMAT = "MMM/dd/yyyy"
+        private const val Q1 = "Q1"
     }
 }

@@ -120,6 +120,7 @@ class LoginViewModel @Inject constructor(var dbManager: DBManager) : BaseViewMod
             } catch (e: Exception) {
                 login.postValue(ErrorModel(R.string.invalid))
                 login.postValue(LoginSuccessModel(false))
+                e.printStackTrace()
             }
         }
     }

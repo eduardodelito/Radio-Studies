@@ -115,11 +115,11 @@ class MainInfoViewModel :
 //        }
 //    }
 
-    fun getDate() = getCurrentDateTime().toStringDateTime(DATE_FORMAT)
+    fun getDate() = getCurrentDateTime(0).toStringDateTime(DATE_FORMAT)
 
-    fun getTime() = getCurrentDateTime().toStringDateTime(TIME_FORMAT)
+    fun getTime() = getCurrentDateTime(0).toStringDateTime(TIME_FORMAT)
 
-    fun getDay() = getCurrentDateTime().toStringDateTime(DAY_FORMAT)
+    fun getDay() = getCurrentDateTime(0).toStringDateTime(DAY_FORMAT)
 
     fun getCode(): Int {
         val dayOfWeek= listOf(MON, TUE, WED, THU, FRI, SAT, SUN)

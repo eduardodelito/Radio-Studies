@@ -126,6 +126,10 @@ fun Date.toStringDateTime(format: String, locale: Locale = Locale.getDefault()):
     return formatter.format(this)
 }
 
-fun getCurrentDateTime(): Date {
-    return Calendar.getInstance().time
+fun getCurrentDateTime(additionalDate: Int): Date {
+    val cal = Calendar.getInstance()
+    if (additionalDate > 0) {
+        cal.add(Calendar.DATE, additionalDate)
+    }
+    return cal.time
 }
