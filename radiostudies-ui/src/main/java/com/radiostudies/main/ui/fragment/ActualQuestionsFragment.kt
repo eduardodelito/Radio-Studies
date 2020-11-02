@@ -183,21 +183,31 @@ class ActualQuestionsFragment :
                     editText.movementMethod = ScrollingMovementMethod.getInstance()
                     editText.scrollBarStyle = View.SCROLLBARS_INSIDE_INSET
                     editText.layoutParams = params
+                    editText.afterTextChanged {
+                        selectedOptions.clear()
+                        selectedOptions.add(Option("0", it))
+                        viewModel.saveQuestion(
+                            DataQuestion(
+                                actual_question_number.text.toString(),
+                                getQuestionLabelText(),
+                                actual_question_label.text.toString(),
+                                selectedOptions
+                            )
+                        )
+                    }
                     addView(editText)
-                    selectedOptions.add(Option("0", editText.text.toString()))
                 } else {
                     selectedOptions.add(Option(option.code, option.option))
+                    viewModel.saveQuestion(
+                        DataQuestion(
+                            actual_question_number.text.toString(),
+                            getQuestionLabelText(),
+                            actual_question_label.text.toString(),
+                            selectedOptions
+                        )
+                    )
                 }
             }
-
-            viewModel.saveQuestion(
-                DataQuestion(
-                    actual_question_number.text.toString(),
-                    getQuestionLabelText(),
-                    actual_question_label.text.toString(),
-                    selectedOptions
-                )
-            )
 
             if (viewModel.isEndOfQuestion()) {
                 btn_save.visibility = View.VISIBLE

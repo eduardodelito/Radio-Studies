@@ -24,13 +24,24 @@ interface DataQuestionDao: BaseDao<DataQuestionEntity> {
     @Query("UPDATE DataQuestionEntity SET options=:options WHERE code = :code")
     fun update(code: String?, options: List<Option>?)
 
+    @Query("DELETE FROM DataQuestionEntity WHERE code = :qCode")
+    fun deleteByQCode(qCode: String)
+
     @Transaction
     fun insertOrUpdate(dataQuestionEntity: DataQuestionEntity) {
         val dq = queryDataQuestion(dataQuestionEntity.code)
         if (dq?.code == null) {
             insert(dataQuestionEntity)
         } else {
+            if (dq.code == Q2) {
+                deleteByQCode(Q2a)
+            }
             update(dq.code, dataQuestionEntity.options)
         }
+    }
+
+    companion object {
+        private const val Q2 = "Q2"
+        private const val Q2a = "Q2a"
     }
 }

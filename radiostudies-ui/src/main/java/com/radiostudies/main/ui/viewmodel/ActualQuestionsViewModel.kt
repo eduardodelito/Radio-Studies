@@ -220,7 +220,7 @@ class ActualQuestionsViewModel @Inject constructor(
                 var actualQuestion: ActualQuestion?
                 val dataQuestion =
                     actualManager.queryDataQuestion(Q2)?.dataQuestionEntityToDataQuestionModel()
-                actualQuestion = if (dataQuestion != null && !optionsHasRent(dataQuestion.options) && (id == 2 || id == 4)) {
+                actualQuestion = if (dataQuestion != null && !optionsHasRent(dataQuestion.options) && id == 2) {
                     if (isPlus) {
                         plus()
                     } else {
@@ -230,7 +230,6 @@ class ActualQuestionsViewModel @Inject constructor(
                 } else {
                     actualManager.queryQuestion(qId)
                 }
-
 
                 actualState.postValue(
                     ActualQuestionModel(
