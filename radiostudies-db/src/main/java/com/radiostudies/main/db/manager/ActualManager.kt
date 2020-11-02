@@ -33,6 +33,8 @@ interface ActualManager {
     fun getDiaryList(): List<DiaryEntity>
 
     fun getDiaries(mainInfo: String): List<Diaries>?
+
+    fun queryDataQuestion(qCode: String?): DataQuestionEntity?
 }
 
 class ActualManagerImpl(
@@ -84,4 +86,6 @@ class ActualManagerImpl(
     override fun getDiaryList(): List<DiaryEntity> = diaryDao.getDiaryList()
 
     override fun getDiaries(mainInfo: String) = diaryDao.getDiaries(mainInfo).diaries
+
+    override fun queryDataQuestion(qCode: String?) = dataQuestionDao.queryDataQuestion(qCode)
 }

@@ -160,18 +160,18 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/date_of_interview_field" />
 
-                <EditText
-                    android:id="@+id/time_end_field"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin5"
-                    android:clickable="true"
-                    android:ems="10"
-                    android:focusable="false"
-                    android:hint="@string/time_end_label"
-                    android:inputType="textPersonName"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/time_start_field" />
+<!--                <EditText-->
+<!--                    android:id="@+id/time_end_field"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/margin5"-->
+<!--                    android:clickable="true"-->
+<!--                    android:ems="10"-->
+<!--                    android:focusable="false"-->
+<!--                    android:hint="@string/time_end_label"-->
+<!--                    android:inputType="textPersonName"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/time_start_field" />-->
 
                 <EditText
                     android:id="@+id/day_of_week_field"
@@ -185,7 +185,7 @@
                     android:inputType="textPersonName"
                     android:maxLength="3"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/time_end_field" />
+                    app:layout_constraintTop_toBottomOf="@+id/time_start_field" />
 
                 <EditText
                     android:id="@+id/contact_number_field"
@@ -195,7 +195,7 @@
                     android:ems="10"
                     android:hint="@string/contact_number_label"
                     android:inputType="number"
-                    android:maxLength="20"
+                    android:maxLength="11"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/day_of_week_field" />
 

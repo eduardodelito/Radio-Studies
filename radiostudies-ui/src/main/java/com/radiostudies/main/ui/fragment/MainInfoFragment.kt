@@ -1,7 +1,6 @@
 package com.radiostudies.main.ui.fragment
 
 import android.app.DatePickerDialog
-import android.app.TimePickerDialog
 import android.content.Context
 import android.view.View
 import android.widget.DatePicker
@@ -15,7 +14,6 @@ import com.radiostudies.main.ui.model.main.MainInfoForm
 import com.radiostudies.main.ui.model.main.MainInfoState
 import com.radiostudies.main.ui.viewmodel.MainInfoViewModel
 import kotlinx.android.synthetic.main.main_info_fragment.*
-import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
 
@@ -47,7 +45,6 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 gender_field.tag.toString(),
                 date_of_interview_field.text.toString(),
                 time_start_field.text.toString(),
-                time_end_field.text.toString(),
                 viewModel.getCode().toString(),
                 contact_number_field.text.toString(),
                 eco_class_label.tag.toString()
@@ -58,9 +55,9 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
 
         time_start_field.setText(viewModel.getTime())
 
-        time_end_field.setOnClickListener {
-            openTimePicker(time_end_field)
-        }
+//        time_end_field.setOnClickListener {
+//            openTimePicker(time_end_field)
+//        }
 
         day_of_week_field.setText(viewModel.getDay())
 
@@ -131,10 +128,10 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                     time_start_field.requestFocus()
                 }
 
-                if (state.timeEnd != null) {
-                    time_end_field.error = getString(state.timeEnd)
-                    time_end_field.requestFocus()
-                }
+//                if (state.timeEnd != null) {
+//                    time_end_field.error = getString(state.timeEnd)
+//                    time_end_field.requestFocus()
+//                }
 
                 if (state.dayOfWeek != null) {
                     day_of_week_field.error = getString(state.dayOfWeek)
@@ -184,23 +181,23 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         datePickerDialog.show()
     }
 
-    private fun openTimePicker(view: EditText) {
-        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
-            cal.set(Calendar.HOUR_OF_DAY, hour)
-            cal.set(Calendar.MINUTE, minute)
-
-            val sdf = SimpleDateFormat(TIME_FORMAT, Locale.US)
-            val formattedTime = sdf.format(cal.time) //format your time
-            view.setText(formattedTime)
-        }
-        TimePickerDialog(
-            requireContext(),
-            timeSetListener,
-            cal.get(Calendar.HOUR_OF_DAY),
-            cal.get(Calendar.MINUTE),
-            false
-        ).show()
-    }
+//    private fun openTimePicker(view: EditText) {
+//        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+//            cal.set(Calendar.HOUR_OF_DAY, hour)
+//            cal.set(Calendar.MINUTE, minute)
+//
+//            val sdf = SimpleDateFormat(TIME_FORMAT, Locale.US)
+//            val formattedTime = sdf.format(cal.time) //format your time
+//            view.setText(formattedTime)
+//        }
+//        TimePickerDialog(
+//            requireContext(),
+//            timeSetListener,
+//            cal.get(Calendar.HOUR_OF_DAY),
+//            cal.get(Calendar.MINUTE),
+//            false
+//        ).show()
+//    }
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         date_of_interview_field.setText("${month + 1}/$dayOfMonth/$year")

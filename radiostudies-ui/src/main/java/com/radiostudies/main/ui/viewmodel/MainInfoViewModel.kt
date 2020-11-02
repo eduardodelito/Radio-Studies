@@ -34,7 +34,6 @@ class MainInfoViewModel :
         gender: String,
         dateOfInterview: String,
         timeStart: String,
-        timeEnd: String,
         dayOfWeek: String,
         contactNumber: String,
         ecoClass: String
@@ -55,9 +54,11 @@ class MainInfoViewModel :
             mainInfoState.postValue(MainInfoForm(age = R.string.address_error))
         } else if (!isValueValid(gender, 1)) {
             mainInfoState.postValue(MainInfoForm(gender = R.string.gender_error))
-        } else if (!isValueValid(timeEnd, 17)) {
-            mainInfoState.postValue(MainInfoForm(timeEnd = R.string.time_end_error))
-        } else if (!isValueValid(contactNumber, 20)) {
+        }
+//        else if (!isValueValid(timeEnd, 17)) {
+//            mainInfoState.postValue(MainInfoForm(timeEnd = R.string.time_end_error))
+//        }
+        else if (!isValueValid(contactNumber, 11)) {
             mainInfoState.postValue(MainInfoForm(contactNumber = R.string.contact_number_error))
         } else if (!isValueValid(ecoClass, 1)) {
             mainInfoState.postValue(MainInfoForm(ecoClass = R.string.eco_class_error))
@@ -73,7 +74,7 @@ class MainInfoViewModel :
                     gender,
                     dateOfInterview,
                     timeStart,
-                    timeEnd,
+                    EMPTY_STRING,
                     dayOfWeek,
                     contactNumber,
                     ecoClass
@@ -143,5 +144,7 @@ class MainInfoViewModel :
         private const val FRI = "Fri"
         private const val SAT = "Sat"
         private const val SUN = "Sun"
+
+        private const val EMPTY_STRING = ""
     }
 }

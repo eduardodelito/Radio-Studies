@@ -27,3 +27,12 @@ fun DataQuestion.dataQuestionModelToDataQuestionEntity(): DataQuestionEntity {
         options = options
     )
 }
+
+fun DataQuestionEntity.dataQuestionEntityToDataQuestionModel(): DataQuestion {
+    return DataQuestion(
+        code = code,
+        header = header,
+        question = question,
+        options = options
+    )
+}

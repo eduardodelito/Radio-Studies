@@ -154,7 +154,7 @@ class ActualQuestionsViewModel @Inject constructor(
                 e.printStackTrace()
             }
         }
-        queryActualQuestion(plus())
+        queryActualQuestion(plus(), true)
     }
 
     fun plus(): Int {
@@ -175,9 +175,9 @@ class ActualQuestionsViewModel @Inject constructor(
 
     fun isEndOfQuestion() = id == (actualQuestions.size - 1)
 
-    fun queryActualQuestion(qId: Int) {
+    fun queryActualQuestion(qId: Int, isPlus: Boolean) {
         launch {
-            queryActualQuestionFromDB(qId)
+            queryActualQuestionFromDB(qId, isPlus)
         }
     }
 
@@ -214,12 +214,27 @@ class ActualQuestionsViewModel @Inject constructor(
         }
     }
 
-    private suspend fun queryActualQuestionFromDB(qId: Int) {
+    private suspend fun queryActualQuestionFromDB(qId: Int, isPlus: Boolean) {
         withContext(Dispatchers.IO) {
             try {
+                var actualQuestion: ActualQuestion?
+                val dataQuestion =
+                    actualManager.queryDataQuestion(Q2)?.dataQuestionEntityToDataQuestionModel()
+                actualQuestion = if (dataQuestion != null && !optionsHasRent(dataQuestion.options) && (id == 2 || id == 4)) {
+                    if (isPlus) {
+                        plus()
+                    } else {
+                        minus()
+                    }
+                    actualManager.queryQuestion(id)
+                } else {
+                    actualManager.queryQuestion(qId)
+                }
+
+
                 actualState.postValue(
                     ActualQuestionModel(
-                        actualManager.queryQuestion(qId),
+                        actualQuestion,
                         id != 0,
                         false
                     )
@@ -228,6 +243,15 @@ class ActualQuestionsViewModel @Inject constructor(
                 e.printStackTrace()
             }
         }
+    }
+
+    private fun optionsHasRent(options: List<Option>?): Boolean {
+        options?.forEach {
+            if (it.code == "2" || it.code == "3") {
+                return true
+            }
+        }
+        return false
     }
 
     fun saveActualQuestions(
@@ -280,5 +304,6 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val AREA = "area.json"
         private const val STATION = "radio_stations.json"
         private const val ACTUAL_QUESTIONS = "actual_questions.json"
+        private const val Q2 = "Q2"
     }
 }

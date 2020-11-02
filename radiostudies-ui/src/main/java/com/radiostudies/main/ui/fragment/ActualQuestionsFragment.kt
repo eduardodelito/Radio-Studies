@@ -42,11 +42,11 @@ class ActualQuestionsFragment :
 
         activity?.actionBar?.title = getString(R.string.actual_question_title)
         actual_prev_btn.setOnClickListener {
-            viewModel.queryActualQuestion(viewModel.minus())
+            viewModel.queryActualQuestion(viewModel.minus(), false)
             actual_selection_layout.removeAllViews()
         }
         actual_next_btn.setOnClickListener {
-            viewModel.queryActualQuestion(viewModel.plus())
+            viewModel.queryActualQuestion(viewModel.plus(), true)
             actual_selection_layout.removeAllViews()
         }
 
@@ -121,6 +121,9 @@ class ActualQuestionsFragment :
                     STATIONS -> {
                         viewModel.loadStations()
                     }
+                    HOURS -> {
+                        manual_input.hint = actualQuestion.options[0].option
+                    }
                     else -> {
                         viewModel.currentOptions = actualQuestion.options
                     }
@@ -162,7 +165,7 @@ class ActualQuestionsFragment :
                     LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
                 )
                 val tv = AppCompatTextView(context)
-                TextViewCompat.setTextAppearance(tv, R.style.AvenirHeavy_Black);
+                TextViewCompat.setTextAppearance(tv, R.style.AvenirHeavy_Black)
                 tv.layoutParams = params
                 tv.text = "[${i + 1}] ${selectedList[i].option}"
                 addView(tv)
@@ -335,6 +338,7 @@ class ActualQuestionsFragment :
         private const val DONE = "Done"
         private const val AREA = "Area"
         private const val STATIONS = "stations"
+        private const val HOURS = "hour/s"
         private const val OTHER = "Other"
         private const val NONE = "None"
         private const val NOT_LISTEN = "Not Listen"
