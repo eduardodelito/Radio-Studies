@@ -128,6 +128,9 @@ class ActualQuestionsFragment :
                     HOURS -> {
                         manual_input.hint = actualQuestion.options[0].option
                     }
+                    OTHERS -> {
+                        manual_input.hint = actualQuestion.options[0].option
+                    }
                     else -> {
                         viewModel.currentOptions = actualQuestion.options
                     }
@@ -185,8 +188,7 @@ class ActualQuestionsFragment :
                     val editText = EditText(context)
                     editText.isSingleLine = false
                     editText.imeOptions = EditorInfo.IME_FLAG_NO_ENTER_ACTION
-                    editText.inputType =
-                        InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
+                    editText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
                     val maxLength = 60
                     val fArray = arrayOfNulls<InputFilter>(1)
                     fArray[0] = LengthFilter(maxLength)
@@ -220,8 +222,6 @@ class ActualQuestionsFragment :
                     )
                 }
             }
-
-            println("Device Size===========${viewModel.devicesQuestion.size}")
 
             if (viewModel.isEndOfQuestion()) {
                 btn_save.visibility = View.VISIBLE
@@ -364,6 +364,7 @@ class ActualQuestionsFragment :
         private const val STATIONS = "stations"
         private const val HOURS = "hour/s"
         private const val OTHER = "Other"
+        private const val OTHERS = "Others (Specify)"
         private const val NONE = "None"
         private const val NOT_LISTEN = "Not Listen"
         private const val PANEL_NUMBER = "mainInfo"

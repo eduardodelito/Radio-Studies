@@ -220,18 +220,38 @@ class ActualQuestionsViewModel @Inject constructor(
         withContext(Dispatchers.IO) {
             try {
                 var actualQuestion: ActualQuestion?
-
+                println("$qId==============$id")
                 if (devicesQuestion.size > 0 && deviceIndex < (devicesQuestion.size - 1)) {
                     deviceIndex++
                     actualQuestion = devicesQuestion[deviceIndex]
                     id = 5
                 } else {
-                    val dataQuestion =
-                        actualManager.queryDataQuestion(Q2)?.dataQuestionEntityToDataQuestionModel()
+                    val dataQuestion = actualManager.queryDataQuestion(Q2)?.dataQuestionEntityToDataQuestionModel()
+                    val dataQuestionQ14A = actualManager.queryDataQuestion(Q14A)?.dataQuestionEntityToDataQuestionModel()
+                    val dataQuestionQ14B = actualManager.queryDataQuestion(Q14B)?.dataQuestionEntityToDataQuestionModel()
+
                     actualQuestion = if (dataQuestion != null && !optionsHasRent(dataQuestion.options) && id == 2) {
                         if (isPlus) {
                             plus()
                         } else {
+                            minus()
+                        }
+                        actualManager.queryQuestion(id)
+                    } else if (dataQuestionQ14A != null && optionsIsMother(dataQuestionQ14A.options) && id == 12) {
+                        if (isPlus) {
+                            plus()
+                        } else {
+                            minus()
+                        }
+                        actualManager.queryQuestion(id)
+                    } else if (dataQuestionQ14B != null && !optionsIsMother(dataQuestionQ14A?.options) && (id == 13 || id == 15)) {
+                        if (isPlus) {
+                            plus()
+                            plus()
+                            plus()
+                        } else {
+                            minus()
+                            minus()
                             minus()
                         }
                         actualManager.queryQuestion(id)
@@ -256,6 +276,15 @@ class ActualQuestionsViewModel @Inject constructor(
     private fun optionsHasRent(options: List<Option>?): Boolean {
         options?.forEach {
             if (it.code == CODE_2 || it.code == CODE_3) {
+                return true
+            }
+        }
+        return false
+    }
+
+    private fun optionsIsMother(options: List<Option>?): Boolean {
+        options?.forEach {
+            if (it.code == CODE_1) {
                 return true
             }
         }
@@ -341,6 +370,9 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val STATION = "radio_stations.json"
         private const val ACTUAL_QUESTIONS = "actual_questions.json"
         private const val Q2 = "Q2"
+        private const val Q14A = "Q14a"
+        private const val Q14B = "Q14b"
+        private const val CODE_1 = "1"
         private const val CODE_2 = "2"
         private const val CODE_3 = "3"
         private const val PLACE = "place"

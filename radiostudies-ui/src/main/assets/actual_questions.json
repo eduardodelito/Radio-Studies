@@ -774,7 +774,7 @@
     "code": "Q20b",
     "header": "AM Radio Stations Listened To",
     "question": "How many hours in a day do you usually listen to these AM stations?",
-    "type": "Multiple Answer",
+    "type": "Single Answer",
     "options": [
       {
         "code": "0",
@@ -800,14 +800,14 @@
     "code": "Q21b",
     "header": "AM Radio Stations Listened To",
     "question": "How many hours in a day do you usually listen to these AM stations?",
-    "type": "Multiple Answer",
+    "type": "Single Answer",
     "options": [
       {
         "code": "0",
-        "option": "stations"
+        "option": "hour/s"
       }
     ],
-    "isManualInput": 0
+    "isManualInput": 1
   },
   {
     "code": "Q22",
@@ -1011,14 +1011,10 @@
     "options": [
       {
         "code": "1",
-        "option": "YES"
-      },
-      {
-        "code": "2",
-        "option": "NO"
+        "option": "Others (Specify)"
       }
     ],
-    "isManualInput": 0
+    "isManualInput": 1
   },
   {
     "code": "Q26",
@@ -1260,6 +1256,10 @@
       {
         "code": "2",
         "option": "PIANO/ORGAN"
+      },
+      {
+        "code": "3",
+        "option": "NONE"
       }
     ],
     "isManualInput": 0
