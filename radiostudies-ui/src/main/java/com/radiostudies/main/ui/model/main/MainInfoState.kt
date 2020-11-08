@@ -22,4 +22,4 @@ data class MainInfoForm(
 ) :
     MainInfoState()
 
-data class MainInfoData(val mainInfo: String?) : MainInfoState()
+data class MainInfoData(val mainInfo: MainInfo?) : MainInfoState()

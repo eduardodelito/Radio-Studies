@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.ui.fragment.databinding.MainInfoFragmentBinding
+import com.radiostudies.main.ui.model.main.MainInfo
 import com.radiostudies.main.ui.model.main.MainInfoData
 import com.radiostudies.main.ui.model.main.MainInfoForm
 import com.radiostudies.main.ui.model.main.MainInfoState
@@ -168,7 +169,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     }
 
     interface MainInfoFragmentListener {
-        fun navigateToActualQuestions(view: View?, mainInfo: String?)
+        fun navigateToActualQuestions(view: View?, mainInfo: MainInfo?)
 
         fun showAppBar(show: Boolean)
     }
@@ -230,6 +231,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         private const val E = "E"
 
         private const val TIME_FORMAT = "hh:mm:ss a"
+        const val MAIN_INFO = "main_info"
 
         fun newInstance() = MainInfoFragment()
     }

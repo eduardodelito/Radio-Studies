@@ -79,8 +79,7 @@ class MainInfoViewModel :
                     contactNumber,
                     ecoClass
                 )
-            val mainInfoString = Gson().toJson(mainInfo)
-            mainInfoState.postValue(MainInfoData(mainInfoString))
+            mainInfoState.postValue(MainInfoData(mainInfo))
         }
     }
 

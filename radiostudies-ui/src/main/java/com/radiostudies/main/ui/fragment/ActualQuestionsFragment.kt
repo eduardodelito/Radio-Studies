@@ -18,6 +18,7 @@ import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.db.model.DataQuestion
 import com.radiostudies.main.ui.fragment.databinding.ActualQuestionsFragmentBinding
 import com.radiostudies.main.ui.model.actual.*
+import com.radiostudies.main.ui.model.main.MainInfo
 import com.radiostudies.main.ui.viewmodel.ActualQuestionsViewModel
 import kotlinx.android.synthetic.main.actual_questions_fragment.*
 import java.util.*
@@ -38,7 +39,7 @@ class ActualQuestionsFragment :
 
     override fun initViews() {
         listener?.showAppBar(false)
-        val mainInfo = arguments?.getString(PANEL_NUMBER)
+        val mainInfo = arguments?.getSerializable(MAIN_INFO) as MainInfo
 
         activity?.actionBar?.title = getString(R.string.actual_question_title)
         actual_prev_btn.setOnClickListener {
@@ -325,7 +326,7 @@ class ActualQuestionsFragment :
     }
 
 
-    private fun dialogComplete(mainInfo: String?) {
+    private fun dialogComplete(mainInfo: MainInfo?) {
         val builder = AlertDialog.Builder(requireContext())
         builder.setMessage(R.string.complete_msg)
         builder.setPositiveButton(getString(R.string.yes_label)) { dialog, _ ->
@@ -367,7 +368,7 @@ class ActualQuestionsFragment :
         private const val OTHERS = "Others (Specify)"
         private const val NONE = "None"
         private const val NOT_LISTEN = "Not Listen"
-        private const val PANEL_NUMBER = "mainInfo"
+        private const val MAIN_INFO = "main_info"
         private const val RADIO_DEVICE = "radio_device.json"
         fun newInstance() = ActualQuestionsFragment()
     }

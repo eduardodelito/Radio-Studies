@@ -1,6 +1,9 @@
 package com.radiostudies.main.ui.viewmodel
 
+import com.google.gson.Gson
 import com.radiostudies.main.common.livedata.SingleLiveEvent
+import com.radiostudies.main.common.util.getCurrentDateTime
+import com.radiostudies.main.common.util.toStringDateTime
 import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.db.manager.ActualManager
@@ -10,6 +13,7 @@ import com.radiostudies.main.db.model.DataQuestion
 import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.mapper.*
 import com.radiostudies.main.ui.model.actual.*
+import com.radiostudies.main.ui.model.main.MainInfo
 import com.radiostudies.main.ui.model.station.Station
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -220,7 +224,6 @@ class ActualQuestionsViewModel @Inject constructor(
         withContext(Dispatchers.IO) {
             try {
                 var actualQuestion: ActualQuestion?
-                println("$qId==============$id")
                 if (devicesQuestion.size > 0 && deviceIndex < (devicesQuestion.size - 1)) {
                     deviceIndex++
                     actualQuestion = devicesQuestion[deviceIndex]
@@ -292,7 +295,7 @@ class ActualQuestionsViewModel @Inject constructor(
     }
 
     fun saveActualQuestions(
-        mainInfo: String?
+        mainInfo: MainInfo?
     ) {
         launch {
             saveActualQuestionsIntoDB(mainInfo)
@@ -300,14 +303,16 @@ class ActualQuestionsViewModel @Inject constructor(
     }
 
     private suspend fun saveActualQuestionsIntoDB(
-        mainInfo: String?
+        mainInfo: MainInfo?
     ) {
         withContext(Dispatchers.IO) {
             try {
                 var list = actualManager.queryDataQuestions().dataQuestionsEntityToDataQuestions()
+                mainInfo?.timeEnd = getTime()
+                val mainInfoString = Gson().toJson(mainInfo)
                 actualManager.saveCompletedActualQuestions(
                     Diary(
-                        mainInfo,
+                        mainInfoString,
                         list,
                         mutableListOf()
                     ).diaryModelToDiaryEntity()
@@ -365,6 +370,8 @@ class ActualQuestionsViewModel @Inject constructor(
         }
     }
 
+    private fun getTime() = getCurrentDateTime(0).toStringDateTime(TIME_FORMAT)
+
     companion object {
         private const val AREA = "area.json"
         private const val STATION = "radio_stations.json"
@@ -384,5 +391,6 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val CODE = "code"
         private const val OPTION = "option"
         private const val IS_MANUAL_INPUT = "isManualInput"
+        private const val TIME_FORMAT = "hh:mm:ss a"
     }
 }

@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.fragment.*
 import com.radiostudies.main.ui.model.diary.DiaryModel
+import com.radiostudies.main.ui.model.main.MainInfo
 import dagger.android.support.DaggerAppCompatActivity
 
 class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListener,
@@ -22,7 +23,7 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
     }
 
     override fun navigateToInitialScreen(view: View?) {
-        val action = LoginFragmentDirections.actionLoginFragmentToActualQuestionsFragment()
+        val action = LoginFragmentDirections.actionLoginFragmentToInitialQuestionsFragment()
         view?.findNavController()?.navigate(action)
     }
 
@@ -41,10 +42,9 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
         view?.findNavController()?.navigate(action)
     }
 
-    override fun navigateToActualQuestions(view: View?, mainInfo: String?) {
+    override fun navigateToActualQuestions(view: View?, mainInfo: MainInfo?) {
         val action = MainInfoFragmentDirections.actionMainInfoFragmentToActualQuestionsFragment()
-        var bundle = Bundle()
-        bundle.putString("mainInfo", mainInfo)
+        val bundle = bundleOf(MainInfoFragment.MAIN_INFO to mainInfo)
         view?.findNavController()?.navigate(action.actionId, bundle)
     }
 

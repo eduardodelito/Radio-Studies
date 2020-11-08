@@ -1,5 +1,7 @@
 package com.radiostudies.main.ui.model.main
 
+import java.io.Serializable
+
 /**
  * Created by eduardo.delito on 10/1/20.
  */
@@ -18,4 +20,4 @@ data class MainInfo(
     var dayOfWeek: String?,
     var contactNumber: String?,
     var ecoClass: String?
-)
+) : Serializable
