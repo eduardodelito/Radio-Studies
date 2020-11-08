@@ -105,6 +105,10 @@ class ActualQuestionsFragment :
                 })
             }
 
+            is DeviceForm -> {
+
+            }
+
             is ActualQuestionModel -> {
                 var actualQuestion = state.actualQuestion
                 actual_question_number.text = actualQuestion.code
@@ -159,6 +163,9 @@ class ActualQuestionsFragment :
         actual_selection_layout.apply {
             removeAllViews()
             invalidate()
+            if (viewModel.devicesQuestion.size == viewModel.deviceIndex) {
+                viewModel.devicesQuestion.clear()
+            }
             for (i in selectedList.indices) {
                 val option = selectedList[i]
                 val params = LinearLayout.LayoutParams(
@@ -169,6 +176,11 @@ class ActualQuestionsFragment :
                 tv.layoutParams = params
                 tv.text = "[${i + 1}] ${selectedList[i].option}"
                 addView(tv)
+
+                if (actual_question_number.text.toString() == "Q5a") {
+                    viewModel.parseDevice(getJsonDataFromAsset(requireContext(), RADIO_DEVICE), selectedList[i].option)
+                }
+
                 if (option.option.contains(OTHER)) {
                     val editText = EditText(context)
                     editText.isSingleLine = false
@@ -208,6 +220,8 @@ class ActualQuestionsFragment :
                     )
                 }
             }
+
+            println("Device Size===========${viewModel.devicesQuestion.size}")
 
             if (viewModel.isEndOfQuestion()) {
                 btn_save.visibility = View.VISIBLE
@@ -353,6 +367,7 @@ class ActualQuestionsFragment :
         private const val NONE = "None"
         private const val NOT_LISTEN = "Not Listen"
         private const val PANEL_NUMBER = "mainInfo"
+        private const val RADIO_DEVICE = "radio_device.json"
         fun newInstance() = ActualQuestionsFragment()
     }
 }

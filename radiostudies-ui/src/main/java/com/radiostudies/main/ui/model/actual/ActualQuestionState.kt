@@ -15,6 +15,9 @@ data class StationForm(val fileName: String?) :
 data class ActualQuestionForm(val fileName: String?) :
     ActualQuestionState()
 
+data class DeviceForm(val fileName: String?) :
+    ActualQuestionState()
+
 data class ActualQuestionModel(
     val actualQuestion: ActualQuestion,
     val isPrevEnable: Boolean,
