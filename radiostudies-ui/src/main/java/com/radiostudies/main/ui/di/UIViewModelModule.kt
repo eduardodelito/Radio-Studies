@@ -30,8 +30,8 @@ class UIViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(MainInfoViewModel::class)
-    fun provideMainInfoViewModel(): ViewModel =
-        MainInfoViewModel()
+    fun provideMainInfoViewModel(actualManager: ActualManager): ViewModel =
+        MainInfoViewModel(actualManager)
 
     @Provides
     @IntoMap

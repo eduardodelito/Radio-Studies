@@ -312,6 +312,8 @@ class ActualQuestionsViewModel @Inject constructor(
                 val mainInfoString = Gson().toJson(mainInfo)
                 actualManager.saveCompletedActualQuestions(
                     Diary(
+                        mainInfo?.panelNumber,
+                        mainInfo?.memberNumber,
                         mainInfoString,
                         list,
                         mutableListOf()

@@ -35,6 +35,8 @@ interface ActualManager {
     fun getDiaries(mainInfo: String): List<Diaries>?
 
     fun queryDataQuestion(qCode: String?): DataQuestionEntity?
+
+    fun validateMainInfo(panelNumber: String?, memberNumber: String?): Boolean
 }
 
 class ActualManagerImpl(
@@ -88,4 +90,7 @@ class ActualManagerImpl(
     override fun getDiaries(mainInfo: String) = diaryDao.getDiaries(mainInfo).diaries
 
     override fun queryDataQuestion(qCode: String?) = dataQuestionDao.queryDataQuestion(qCode)
+
+    override fun validateMainInfo(panelNumber: String?, memberNumber: String?) =
+        diaryDao.validateMainInfo(panelNumber, memberNumber)
 }

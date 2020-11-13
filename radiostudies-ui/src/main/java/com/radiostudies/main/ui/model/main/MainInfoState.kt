@@ -23,3 +23,5 @@ data class MainInfoForm(
     MainInfoState()
 
 data class MainInfoData(val mainInfo: MainInfo?) : MainInfoState()
+
+data class MainInfoErrorMessage(val msg: Int) : MainInfoState()

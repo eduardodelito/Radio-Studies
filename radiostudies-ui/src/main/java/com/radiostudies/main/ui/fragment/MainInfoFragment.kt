@@ -9,10 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.ui.fragment.databinding.MainInfoFragmentBinding
-import com.radiostudies.main.ui.model.main.MainInfo
-import com.radiostudies.main.ui.model.main.MainInfoData
-import com.radiostudies.main.ui.model.main.MainInfoForm
-import com.radiostudies.main.ui.model.main.MainInfoState
+import com.radiostudies.main.ui.model.main.*
 import com.radiostudies.main.ui.viewmodel.MainInfoViewModel
 import kotlinx.android.synthetic.main.main_info_fragment.*
 import java.util.*
@@ -153,6 +150,10 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
             is MainInfoData -> {
                 listener?.navigateToActualQuestions(view, state.mainInfo)
             }
+
+            is MainInfoErrorMessage -> {
+                dialog(getString(state.msg))
+            }
         }
     }
 
@@ -216,6 +217,16 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         }
 
         // create and show the alert dialog
+        val dialog = builder.create()
+        dialog.show()
+    }
+
+    private fun dialog(msg: String) {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setMessage(msg)
+        builder.setPositiveButton(getString(R.string.ok_label)) { dialog, _ ->
+            dialog.dismiss()
+        }
         val dialog = builder.create()
         dialog.show()
     }

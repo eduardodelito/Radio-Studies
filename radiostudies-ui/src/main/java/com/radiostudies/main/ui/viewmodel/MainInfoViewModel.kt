@@ -1,20 +1,20 @@
 package com.radiostudies.main.ui.viewmodel
 
-import com.google.gson.Gson
 import com.radiostudies.main.common.livedata.SingleLiveEvent
 import com.radiostudies.main.common.util.getCurrentDateTime
 import com.radiostudies.main.common.util.toStringDateTime
 import com.radiostudies.main.common.viewmodel.BaseViewModel
+import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.ui.fragment.R
-import com.radiostudies.main.ui.model.main.MainInfo
-import com.radiostudies.main.ui.model.main.MainInfoData
-import com.radiostudies.main.ui.model.main.MainInfoForm
-import com.radiostudies.main.ui.model.main.MainInfoState
+import com.radiostudies.main.ui.model.main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
-class MainInfoViewModel :
+class MainInfoViewModel @Inject constructor(private val actualManager: ActualManager) :
     BaseViewModel(), CoroutineScope {
 
     override val coroutineContext: CoroutineContext
@@ -79,7 +79,28 @@ class MainInfoViewModel :
                     contactNumber,
                     ecoClass
                 )
-            mainInfoState.postValue(MainInfoData(mainInfo))
+            validateMainInfo(mainInfo)
+        }
+    }
+
+    private fun validateMainInfo(mainInfo: MainInfo) {
+        launch {
+            validateMainInfoFromDB(mainInfo)
+        }
+    }
+
+    private suspend fun validateMainInfoFromDB(mainInfo: MainInfo) {
+        withContext(Dispatchers.IO) {
+            try {
+                if (!actualManager.validateMainInfo(mainInfo.panelNumber, mainInfo.memberNumber)) {
+                    mainInfoState.postValue(MainInfoData(mainInfo))
+                } else {
+                    mainInfoState.postValue(MainInfoErrorMessage(R.string.main_info_exist_msg))
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                mainInfoState.postValue(MainInfoErrorMessage(R.string.main_info_exist_msg))
+            }
         }
     }
 

@@ -18,4 +18,7 @@ interface DiaryDao : BaseDao<DiaryEntity> {
 
     @Query("SELECT * from DiaryEntity WHERE mainInfo = :mainInfo LIMIT 1")
     fun getDiaries(mainInfo: String?): DiaryEntity
+
+    @Query("SELECT * from DiaryEntity WHERE panelNumber = :panelNumber AND memberNumber =:memberNumber LIMIT 1")
+    fun validateMainInfo(panelNumber: String?, memberNumber: String?): Boolean
 }
