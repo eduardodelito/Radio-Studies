@@ -48,7 +48,7 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
         view?.findNavController()?.navigate(action.actionId, bundle)
     }
 
-    override fun navigateToDiaryDetails(view: View, diaryModel: DiaryModel?) {
+    override fun navigateToDiaryDetails(view: View?, diaryModel: DiaryModel?) {
         val action = DiaryFragmentDirections.actionDiaryFragmentToDiaryDetailsFragment()
         val bundle = bundleOf(DiaryFragment.DIARY_ITEM to diaryModel)
         view?.findNavController()?.navigate(action.actionId, bundle)

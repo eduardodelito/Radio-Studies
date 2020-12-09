@@ -43,12 +43,13 @@ class ActualQuestionsViewModel @Inject constructor(
     var isSingleAnswer = false
     var selectedArea = ""
     private var id = -1
+    private var selectedQId = 0
 
-    init {
-        actualState.postValue(AreaForm(AREA))
+    fun initViews(genderCode: String?) {
+        actualState.postValue(AreaForm(AREA, genderCode))
     }
 
-    fun parseArea(area: String?) {
+    fun parseArea(area: String?, genderCode: String?) {
         val jsonArray = JSONArray(area)
         val areas = mutableListOf<Option>()
         for (i in 0 until jsonArray.length()) {
@@ -57,10 +58,10 @@ class ActualQuestionsViewModel @Inject constructor(
             var option = jsonObject.getString(OPTION)
             areas.add(Option(code, option))
         }
-        insertArea(areas)
+        insertArea(areas, genderCode)
     }
 
-    fun parseStation(station: String?) {
+    fun parseStation(station: String?, genderCode: String?) {
         val jsonArray = JSONArray(station)
         val stations = mutableListOf<Station>()
         for (i in 0 until jsonArray.length()) {
@@ -76,16 +77,16 @@ class ActualQuestionsViewModel @Inject constructor(
             }
             stations.add(Station(place, options))
         }
-        insertStation(stations)
+        insertStation(stations, genderCode)
     }
 
-    private fun insertArea(areas: MutableList<Option>) {
+    private fun insertArea(areas: MutableList<Option>, genderCode: String?) {
         launch {
-            insertAreaToDB(areas)
+            insertAreaToDB(areas, genderCode)
         }
     }
 
-    private suspend fun insertAreaToDB(areas: MutableList<Option>) {
+    private suspend fun insertAreaToDB(areas: MutableList<Option>, genderCode: String?) {
         withContext(Dispatchers.IO) {
             try {
                 actualManager.insertArea(areas.areaListModelToAreaListEntity())
@@ -93,16 +94,16 @@ class ActualQuestionsViewModel @Inject constructor(
                 e.printStackTrace()
             }
         }
-        actualState.postValue(StationForm(STATION))
+        actualState.postValue(StationForm(STATION, genderCode))
     }
 
-    private fun insertStation(stations: MutableList<Station>) {
+    private fun insertStation(stations: MutableList<Station>, genderCode: String?) {
         launch {
-            insertStationToDB(stations)
+            insertStationToDB(stations, genderCode)
         }
     }
 
-    private suspend fun insertStationToDB(stations: MutableList<Station>) {
+    private suspend fun insertStationToDB(stations: MutableList<Station>, genderCode: String?) {
         withContext(Dispatchers.IO) {
             try {
                 actualManager.insertStation(stations.optionListModelToStationEntity())
@@ -110,10 +111,10 @@ class ActualQuestionsViewModel @Inject constructor(
                 e.printStackTrace()
             }
         }
-        actualState.postValue(ActualQuestionForm(ACTUAL_QUESTIONS))
+        actualState.postValue(ActualQuestionForm(ACTUAL_QUESTIONS, genderCode))
     }
 
-    fun parseActualQuestions(actual: String?) {
+    fun parseActualQuestions(actual: String?, genderCode: String?) {
         val jsonArray = JSONArray(actual)
         for (i in 0 until jsonArray.length()) {
             val jsonObject = jsonArray.getJSONObject(i)
@@ -130,17 +131,37 @@ class ActualQuestionsViewModel @Inject constructor(
                 options.add(Option(optionCode, optionValue))
             }
             val isManualInput = jsonObject.getInt(IS_MANUAL_INPUT) > 0
-            actualQuestions.add(
-                ActualQuestion(
-                    i,
-                    code,
-                    header,
-                    question,
-                    type,
-                    options,
-                    isManualInput
+
+            if (!jsonObject.isNull(GENDER_CODE)) {
+                val mGenderCode = jsonObject.getString(GENDER_CODE)
+                if (mGenderCode == genderCode) {
+                    actualQuestions.add(
+                        ActualQuestion(
+                            selectedQId,
+                            code,
+                            header,
+                            question,
+                            type,
+                            options,
+                            isManualInput
+                        )
+                    )
+                    selectedQId++
+                }
+            } else {
+                actualQuestions.add(
+                    ActualQuestion(
+                        selectedQId,
+                        code,
+                        header,
+                        question,
+                        type,
+                        options,
+                        isManualInput
+                    )
                 )
-            )
+                selectedQId++
+            }
         }
 
         insertActualQuestion(actualQuestions)
@@ -230,9 +251,8 @@ class ActualQuestionsViewModel @Inject constructor(
                     id = 5
                 } else {
                     val dataQuestion = actualManager.queryDataQuestion(Q2)?.dataQuestionEntityToDataQuestionModel()
-                    val dataQuestionQ14A = actualManager.queryDataQuestion(Q14A)?.dataQuestionEntityToDataQuestionModel()
-                    val dataQuestionQ14B = actualManager.queryDataQuestion(Q14B)?.dataQuestionEntityToDataQuestionModel()
-
+                    val dataQuestionQ17 = actualManager.queryDataQuestion(Q17)?.dataQuestionEntityToDataQuestionModel()
+                    val dataQuestionQ18 = actualManager.queryDataQuestion(Q18)?.dataQuestionEntityToDataQuestionModel()
                     actualQuestion = if (dataQuestion != null && !optionsHasRent(dataQuestion.options) && id == 2) {
                         if (isPlus) {
                             plus()
@@ -240,26 +260,40 @@ class ActualQuestionsViewModel @Inject constructor(
                             minus()
                         }
                         actualManager.queryQuestion(id)
-                    } else if (dataQuestionQ14A != null && optionsIsMother(dataQuestionQ14A.options) && id == 12) {
-                        if (isPlus) {
-                            plus()
-                        } else {
-                            minus()
-                        }
-                        actualManager.queryQuestion(id)
-                    } else if (dataQuestionQ14B != null && !optionsIsMother(dataQuestionQ14A?.options) && (id == 13 || id == 15)) {
-                        if (isPlus) {
-                            plus()
-                            plus()
-                            plus()
-                        } else {
-                            minus()
-                            minus()
-                            minus()
-                        }
-                        actualManager.queryQuestion(id)
                     } else {
                         actualManager.queryQuestion(qId)
+                    }
+
+                    if (dataQuestionQ17 != null && actualQuestion.code == Q19A && optionsNeverListen(dataQuestionQ17.options)) {
+                        if (isPlus) {
+                            plus()
+                        } else {
+                            minus()
+                        }
+                        actualQuestion = actualManager.queryQuestion(id)
+                        if(dataQuestionQ18 != null && actualQuestion.code == Q19B && optionsNeverListen(dataQuestionQ18.options)) {
+                            if (isPlus) {
+                                plus()
+                            } else {
+                                minus()
+                            }
+                            actualQuestion = actualManager.queryQuestion(id)
+                        }
+                    } else if(dataQuestionQ18 != null && actualQuestion.code == Q19B && optionsNeverListen(dataQuestionQ18.options)) {
+                        if (isPlus) {
+                            plus()
+                        } else {
+                            minus()
+                        }
+                        actualQuestion = actualManager.queryQuestion(id)
+                        if(dataQuestionQ17 != null && actualQuestion.code == Q19A && optionsNeverListen(dataQuestionQ17.options)) {
+                            if (isPlus) {
+                                plus()
+                            } else {
+                                minus()
+                            }
+                            actualQuestion = actualManager.queryQuestion(id)
+                        }
                     }
                 }
 
@@ -278,16 +312,16 @@ class ActualQuestionsViewModel @Inject constructor(
 
     private fun optionsHasRent(options: List<Option>?): Boolean {
         options?.forEach {
-            if (it.code == CODE_2 || it.code == CODE_3) {
+            if (it.code == CODE_3) {
                 return true
             }
         }
         return false
     }
 
-    private fun optionsIsMother(options: List<Option>?): Boolean {
+    private fun optionsNeverListen(options: List<Option>?): Boolean {
         options?.forEach {
-            if (it.code == CODE_1) {
+            if (it.code == CODE_5) {
                 return true
             }
         }
@@ -310,14 +344,15 @@ class ActualQuestionsViewModel @Inject constructor(
                 var list = actualManager.queryDataQuestions().dataQuestionsEntityToDataQuestions()
                 mainInfo?.timeEnd = getTime()
                 val mainInfoString = Gson().toJson(mainInfo)
+                val diary = Diary(
+                    mainInfo?.panelNumber,
+                    mainInfo?.memberNumber,
+                    mainInfoString,
+                    list,
+                    mutableListOf()
+                )
                 actualManager.saveCompletedActualQuestions(
-                    Diary(
-                        mainInfo?.panelNumber,
-                        mainInfo?.memberNumber,
-                        mainInfoString,
-                        list,
-                        mutableListOf()
-                    ).diaryModelToDiaryEntity()
+                    diary.diaryModelToDiaryEntity()
                 )
                 questionManager.deleteQuestion()
                 actualManager.deleteSaveDataQuestions()
@@ -379,16 +414,22 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val STATION = "radio_stations.json"
         private const val ACTUAL_QUESTIONS = "actual_questions.json"
         private const val Q2 = "Q2"
+        private const val Q13 = "Q13"
         private const val Q14A = "Q14a"
         private const val Q14B = "Q14b"
+        private const val Q17 = "Q17"
+        private const val Q18 = "Q18"
+        private const val Q19A = "Q19a"
+        private const val Q19B = "Q19b"
         private const val CODE_1 = "1"
-        private const val CODE_2 = "2"
         private const val CODE_3 = "3"
+        private const val CODE_5 = "5"
         private const val PLACE = "place"
         private const val HEADER = "header"
         private const val CHILD_QUESTIONS = "childQuestions"
         private const val QUESTION = "question"
         private const val TYPE = "type"
+        private const val GENDER_CODE = "genderCode"
         private const val OPTIONS = "options"
         private const val CODE = "code"
         private const val OPTION = "option"

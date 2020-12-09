@@ -26,5 +26,5 @@ dependencies {
     implementation project(':radiostudies-common')
     implementation project(':radiostudies-db')
     // enable for the debug only to test database in the app
-    debugImplementation 'im.dino:dbinspector:4.0.0@aar'
+//    debugImplementation 'im.dino:dbinspector:4.0.0@aar'
 }

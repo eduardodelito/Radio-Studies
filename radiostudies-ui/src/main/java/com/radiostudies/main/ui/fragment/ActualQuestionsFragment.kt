@@ -40,6 +40,7 @@ class ActualQuestionsFragment :
     override fun initViews() {
         listener?.showAppBar(false)
         val mainInfo = arguments?.getSerializable(MAIN_INFO) as MainInfo
+        viewModel.initViews(mainInfo.gender)
 
         activity?.actionBar?.title = getString(R.string.actual_question_title)
         actual_prev_btn.setOnClickListener {
@@ -85,7 +86,7 @@ class ActualQuestionsFragment :
                         requireContext(),
                         it
                     )
-                })
+                }, state.genderCode)
             }
 
             is StationForm -> {
@@ -94,7 +95,7 @@ class ActualQuestionsFragment :
                         requireContext(),
                         it
                     )
-                })
+                }, state.genderCode)
             }
 
             is ActualQuestionForm -> {
@@ -103,7 +104,7 @@ class ActualQuestionsFragment :
                         requireContext(),
                         it
                     )
-                })
+                }, state.genderCode)
             }
 
             is DeviceForm -> {

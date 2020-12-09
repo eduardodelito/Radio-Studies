@@ -80,7 +80,7 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
     }
 
     interface OnDiaryFragmentListener {
-        fun navigateToDiaryDetails(view: View, diaryModel: DiaryModel?)
+        fun navigateToDiaryDetails(view: View?, diaryModel: DiaryModel?)
 
         fun navigateBack()
 

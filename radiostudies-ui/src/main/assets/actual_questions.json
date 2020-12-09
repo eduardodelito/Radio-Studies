@@ -10,7 +10,8 @@
         "option": "Area"
       }
     ],
-    "isManualInput": 0
+    "isManualInput": 0,
+    "show": true
   },
   {
     "code": "Q2",
@@ -463,6 +464,7 @@
     "header": "Does (NAME) have children?",
     "question": "Mother or Not",
     "type": "Single Answer",
+    "genderCode": "2",
     "options": [
       {
         "code": "1",
@@ -480,6 +482,7 @@
     "header": "Does (NAME) have children?",
     "question": "Father or Not",
     "type": "Single Answer",
+    "genderCode": "1",
     "options": [
       {
         "code": "1",
@@ -497,6 +500,7 @@
     "header": "Does (NAME) have children?",
     "question": "Mother with Children 0-2",
     "type": "Single Answer",
+    "genderCode": "2",
     "options": [
       {
         "code": "1",
@@ -514,6 +518,7 @@
     "header": "Does (NAME) have children?",
     "question": "Mother with Children 3-6",
     "type": "Single Answer",
+    "genderCode": "2",
     "options": [
       {
         "code": "1",
@@ -531,6 +536,7 @@
     "header": "Does (NAME) have children?",
     "question": "Mother with Children 7-12",
     "type": "Single Answer",
+    "genderCode": "2",
     "options": [
       {
         "code": "1",
@@ -1252,10 +1258,6 @@
       {
         "code": "N",
         "option": "DIGITAL CAMERA"
-      },
-      {
-        "code": "2",
-        "option": "PIANO/ORGAN"
       },
       {
         "code": "3",

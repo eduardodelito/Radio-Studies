@@ -6,13 +6,13 @@ import com.radiostudies.main.db.model.ActualQuestion
  * Created by eduardo.delito on 10/4/20.
  */
 sealed class ActualQuestionState
-data class AreaForm(val fileName: String?) :
+data class AreaForm(val fileName: String?, val genderCode: String?) :
     ActualQuestionState()
 
-data class StationForm(val fileName: String?) :
+data class StationForm(val fileName: String?, val genderCode: String?) :
     ActualQuestionState()
 
-data class ActualQuestionForm(val fileName: String?) :
+data class ActualQuestionForm(val fileName: String?, val genderCode: String?) :
     ActualQuestionState()
 
 data class DeviceForm(val fileName: String?) :
