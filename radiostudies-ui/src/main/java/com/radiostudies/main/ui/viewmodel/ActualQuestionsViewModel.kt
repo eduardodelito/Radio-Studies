@@ -225,16 +225,22 @@ class ActualQuestionsViewModel @Inject constructor(
         }
     }
 
-    fun loadStations() {
+    fun loadStations(station: String?) {
         launch {
-            loadStationsFromDB()
+            loadStationsFromDB(station)
         }
     }
 
-    private suspend fun loadStationsFromDB() {
+    private suspend fun loadStationsFromDB(station: String?) {
         withContext(Dispatchers.IO) {
             try {
+                var newOptions = mutableListOf<Option>()
                 currentOptions = actualManager.getSelectedArea(selectedArea)
+                currentOptions.forEach {
+                    if (!it.option.contains(station.toString()))
+                        newOptions.add(it)
+                }
+                currentOptions = newOptions
             } catch (e: Exception) {
                 e.printStackTrace()
             }

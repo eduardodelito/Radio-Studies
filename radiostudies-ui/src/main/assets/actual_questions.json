@@ -771,7 +771,7 @@
     "options": [
       {
         "code": "0",
-        "option": "stations"
+        "option": "stations_am"
       }
     ],
     "isManualInput": 0
@@ -791,13 +791,13 @@
   },
   {
     "code": "Q21a",
-    "header": "AM Radio Stations Listened To",
+    "header": "FM Radio Stations Listened To",
     "question": "What FM stations do you usually listen to?",
     "type": "Multiple Answer",
     "options": [
       {
         "code": "0",
-        "option": "stations"
+        "option": "stations_fm"
       }
     ],
     "isManualInput": 0

@@ -81,7 +81,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
             }
 
             is StationsForm -> {
-                dialogOptions(add_radio_stations_layout, state.list, false, viewModel.selectedStations)
+                dialogOptions(add_radio_stations_layout, state.list, true, viewModel.selectedStations)
             }
 
             is PlaceOfListeningForm -> {

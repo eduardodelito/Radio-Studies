@@ -124,8 +124,11 @@ class ActualQuestionsFragment :
                     AREA -> {
                         viewModel.loadAreas()
                     }
-                    STATIONS -> {
-                        viewModel.loadStations()
+                    STATIONS_AM -> {
+                        viewModel.loadStations(FM)
+                    }
+                    STATIONS_FM -> {
+                        viewModel.loadStations(AM)
                     }
                     HOURS -> {
                         manual_input.hint = actualQuestion.options[0].option
@@ -363,7 +366,10 @@ class ActualQuestionsFragment :
         private const val SINGLE_ANSWER = "Single Answer"
         private const val DONE = "Done"
         private const val AREA = "Area"
-        private const val STATIONS = "stations"
+        private const val STATIONS_AM = "stations_am"
+        private const val STATIONS_FM = "stations_fm"
+        private const val AM = "Khz"
+        private const val FM = "Mhz"
         private const val HOURS = "hour/s"
         private const val OTHER = "Other"
         private const val OTHERS = "Others (Specify)"
