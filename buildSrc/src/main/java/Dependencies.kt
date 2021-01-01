@@ -14,15 +14,15 @@ object Versions {
     const val versionCode = 1
     const val versionName = "1.0"
 
-    const val gradle = "4.1.1"
+    const val gradle = "4.2.0-beta02"
 
     //Android
-    const val kotlin_version = "1.3.72"
+    const val kotlin_version = "1.4.20"
     const val core_ktx = "1.3.1"
-    const val appcompat = "1.1.0"
-    const val constraint_layout = "1.1.3"
+    const val appcompat = "1.2.0"
+    const val constraint_layout = "2.0.1"
     const val navigation = "2.3.0"
-    const val material = "1.2.0-alpha03"
+    const val material = "1.2.1"
     const val gson = "2.8.6"
     const val legacy_support = "1.0.0"
     const val lifecycle = "2.2.0"
@@ -32,9 +32,9 @@ object Versions {
     const val dagger = "2.25.3"
 
     //Test
-    const val junit = "4.12"
-    const val ext_junit = "1.1.1"
-    const val espresso_core = "3.2.0"
+    const val junit = "4.+"
+    const val ext_junit = "1.1.2"
+    const val espresso_core = "3.3.0"
 }
 
 object Libs {

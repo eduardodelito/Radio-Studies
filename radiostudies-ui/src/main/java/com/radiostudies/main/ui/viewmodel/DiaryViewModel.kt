@@ -60,7 +60,7 @@ class DiaryViewModel @Inject constructor(private val actualManager: ActualManage
         val selectedOption = selectedQuestion.options
         val selectedArea = selectedOption?.get(0)?.option
 
-        return DiaryModel(panelNumber, memberNumber, memberName, dateOfInterview, getCurrentDateTime(7).toStringDateTime(DATE_FORMAT
+        return DiaryModel(panelNumber, memberNumber, memberName, dateOfInterview, getCurrentDateTime(dateOfInterview, DATE_FORMAT, 7).toStringDateTime(DATE_FORMAT
         ), selectedArea, diary)
     }
 

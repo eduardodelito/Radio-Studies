@@ -136,11 +136,11 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
 //        }
 //    }
 
-    fun getDate() = getCurrentDateTime(0).toStringDateTime(DATE_FORMAT)
+    fun getDate() = getCurrentDateTime(null, null, 0).toStringDateTime(DATE_FORMAT)
 
-    fun getTime() = getCurrentDateTime(0).toStringDateTime(TIME_FORMAT)
+    fun getTime() = getCurrentDateTime(null, null, 0).toStringDateTime(TIME_FORMAT)
 
-    fun getDay() = getCurrentDateTime(0).toStringDateTime(DAY_FORMAT)
+    fun getDay() = getCurrentDateTime(null, null, 0).toStringDateTime(DAY_FORMAT)
 
     fun getCode(): Int {
         val dayOfWeek= listOf(MON, TUE, WED, THU, FRI, SAT, SUN)

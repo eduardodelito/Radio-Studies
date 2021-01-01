@@ -15,6 +15,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.Locale
+
+
+
 
 /**
  * Created by eduardo.delito on 8/17/20.
@@ -126,8 +130,13 @@ fun Date.toStringDateTime(format: String, locale: Locale = Locale.getDefault()):
     return formatter.format(this)
 }
 
-fun getCurrentDateTime(additionalDate: Int): Date {
+fun getCurrentDateTime(stringDate: String?, datePattern: String?, additionalDate: Int): Date {
     val cal = Calendar.getInstance()
+    if (stringDate != null) {
+        val sdf = SimpleDateFormat(datePattern, Locale.ENGLISH)
+        val date = sdf.parse(stringDate) as Date
+        cal.time = date
+    }
     if (additionalDate > 0) {
         cal.add(Calendar.DATE, additionalDate)
     }

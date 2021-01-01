@@ -413,7 +413,7 @@ class ActualQuestionsViewModel @Inject constructor(
         }
     }
 
-    private fun getTime() = getCurrentDateTime(0).toStringDateTime(TIME_FORMAT)
+    private fun getTime() = getCurrentDateTime(null, null,0).toStringDateTime(TIME_FORMAT)
 
     companion object {
         private const val AREA = "area.json"
