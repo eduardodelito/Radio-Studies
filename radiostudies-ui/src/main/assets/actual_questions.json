@@ -619,7 +619,7 @@
     "header": "",
     "question": "Employer",
     "type": "Single Answer",
-    "options": [{"code": "", "option": ""}],
+    "options": [{"code": "", "option": "Employer"}],
     "isManualInput": 1
   },
   {

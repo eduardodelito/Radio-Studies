@@ -9,6 +9,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
@@ -29,6 +30,7 @@ class ActualQuestionsFragment :
     BaseFragment<ActualQuestionsFragmentBinding, ActualQuestionsViewModel>() {
 
     private var listener: ActualQuestionsFragmentListener? = null
+    private var isHours = false
 
     @Inject
     override lateinit var viewModel: ActualQuestionsViewModel
@@ -57,11 +59,27 @@ class ActualQuestionsFragment :
         }
 
         manual_input.afterTextChanged {
-            if (it.isNotEmpty()) {
-                actual_next_btn.setEnable(true)
+            if (isHours) {
+                if (!it.isNullOrEmpty() && it.toInt() <= MAX_HOURS) {
+                    actual_next_btn.setEnable(true)
+                } else {
+                    actual_next_btn.setEnable(false)
+                    if (!it.isNullOrEmpty()) {
+                        Toast.makeText(
+                            context,
+                            "Reach the maximum limit of 24 hours.",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
             } else {
-                actual_next_btn.setEnable(false)
+                if (it.isNotEmpty()) {
+                    actual_next_btn.setEnable(true)
+                } else {
+                    actual_next_btn.setEnable(false)
+                }
             }
+
         }
 
         btn_save.setOnClickListener {
@@ -131,10 +149,22 @@ class ActualQuestionsFragment :
                         viewModel.loadStations(AM)
                     }
                     HOURS -> {
+                        isHours = true
                         manual_input.hint = actualQuestion.options[0].option
+                        manual_input.inputType = EditorInfo.TYPE_CLASS_NUMBER
+                        val maxLength = 2
+                        val fArray = arrayOfNulls<InputFilter>(1)
+                        fArray[0] = LengthFilter(maxLength)
+                        manual_input.filters = fArray
                     }
                     OTHERS -> {
+                        isHours = false
                         manual_input.hint = actualQuestion.options[0].option
+                        manual_input.inputType = EditorInfo.TYPE_CLASS_TEXT
+                        val maxLength = 60
+                        val fArray = arrayOfNulls<InputFilter>(1)
+                        fArray[0] = LengthFilter(maxLength)
+                        manual_input.filters = fArray
                     }
                     else -> {
                         viewModel.currentOptions = actualQuestion.options
@@ -152,11 +182,13 @@ class ActualQuestionsFragment :
                     line3.visibility = View.GONE
                     load_options_label.visibility = View.GONE
                     manual_input.visibility = View.VISIBLE
-                    manual_input.setText("")
+                    manual_input.text.clear()
+
                 } else {
                     line3.visibility = View.VISIBLE
                     load_options_label.visibility = View.VISIBLE
                     manual_input.visibility = View.GONE
+                    manual_input.text.clear()
                 }
             }
 
@@ -377,6 +409,7 @@ class ActualQuestionsFragment :
         private const val NOT_LISTEN = "Not Listen"
         private const val MAIN_INFO = "main_info"
         private const val RADIO_DEVICE = "radio_device.json"
+        private const val MAX_HOURS = 24
         fun newInstance() = ActualQuestionsFragment()
     }
 }
