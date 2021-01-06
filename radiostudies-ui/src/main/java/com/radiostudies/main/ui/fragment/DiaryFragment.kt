@@ -2,6 +2,7 @@ package com.radiostudies.main.ui.fragment
 
 import android.content.Context
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,6 +48,14 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
             adapter = diaryAdapter
         }
 
+        val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                listener?.exit(String.format(getString(R.string.exit), LOGOUT
+                ))
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
+
     }
 
     override fun subscribeUi() {
@@ -85,6 +94,8 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
         fun navigateBack()
 
         fun showAppBar(show: Boolean)
+
+        fun exit(message: String?)
     }
 
     private fun dialog() {
@@ -100,6 +111,7 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
 
     companion object {
         const val DIARY_ITEM = "diary_item"
+        private const val LOGOUT = "logout"
 
         fun newInstance() = DiaryFragment()
     }

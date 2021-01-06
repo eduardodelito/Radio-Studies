@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.getJsonDataFromAsset
@@ -56,6 +57,13 @@ class InitialQuestionsFragment :
             }
         }
         next_btn.setEnable(false)
+
+        val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                listener?.exit(String.format(getString(R.string.exit), LOGOUT))
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
     }
 
     override fun subscribeUi() {
@@ -243,12 +251,15 @@ class InitialQuestionsFragment :
 
         fun navigateBack()
 
+        fun exit(message: String?)
+
         fun showAppBar(show: Boolean)
     }
 
     companion object {
         private const val DISAGREE = "DISAGREE"
         private const val NONE_OF_THE_ABOVE = "NONE OF THE ABOVE"
+        private const val LOGOUT = "logout"
 
         fun newInstance() = InitialQuestionsFragment()
     }

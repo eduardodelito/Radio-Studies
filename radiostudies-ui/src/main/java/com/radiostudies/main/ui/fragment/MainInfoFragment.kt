@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.View
 import android.widget.DatePicker
 import android.widget.EditText
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.reObserve
@@ -70,6 +71,13 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 dialogList(this, arrayOf(MALE, FEMALE))
             }
         }
+
+        val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                listener?.exit(String.format(getString(R.string.exit), EXIT))
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
     }
 
     override fun subscribeUi() {
@@ -173,6 +181,8 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         fun navigateToActualQuestions(view: View?, mainInfo: MainInfo?)
 
         fun showAppBar(show: Boolean)
+
+        fun exit(message: String?)
     }
 
     private fun openDatePicker() {
@@ -182,24 +192,6 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         val datePickerDialog = DatePickerDialog(requireActivity(), this, year, month, day)
         datePickerDialog.show()
     }
-
-//    private fun openTimePicker(view: EditText) {
-//        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
-//            cal.set(Calendar.HOUR_OF_DAY, hour)
-//            cal.set(Calendar.MINUTE, minute)
-//
-//            val sdf = SimpleDateFormat(TIME_FORMAT, Locale.US)
-//            val formattedTime = sdf.format(cal.time) //format your time
-//            view.setText(formattedTime)
-//        }
-//        TimePickerDialog(
-//            requireContext(),
-//            timeSetListener,
-//            cal.get(Calendar.HOUR_OF_DAY),
-//            cal.get(Calendar.MINUTE),
-//            false
-//        ).show()
-//    }
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         date_of_interview_field.setText("${month + 1}/$dayOfMonth/$year")
@@ -243,6 +235,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
 
         private const val TIME_FORMAT = "hh:mm:ss a"
         const val MAIN_INFO = "main_info"
+        const val EXIT = "exit"
 
         fun newInstance() = MainInfoFragment()
     }

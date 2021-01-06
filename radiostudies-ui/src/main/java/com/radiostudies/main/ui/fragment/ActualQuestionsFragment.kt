@@ -10,6 +10,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
@@ -85,6 +86,13 @@ class ActualQuestionsFragment :
         btn_save.setOnClickListener {
             dialogComplete(mainInfo)
         }
+
+        val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                listener?.exit(String.format(getString(R.string.exit), EXIT))
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
     }
 
     private fun getQuestionLabelText() =
@@ -391,6 +399,8 @@ class ActualQuestionsFragment :
     interface ActualQuestionsFragmentListener {
         fun navigateBack()
 
+        fun exit(message: String?)
+
         fun showAppBar(show: Boolean)
     }
 
@@ -410,6 +420,7 @@ class ActualQuestionsFragment :
         private const val MAIN_INFO = "main_info"
         private const val RADIO_DEVICE = "radio_device.json"
         private const val MAX_HOURS = 24
+        private const val EXIT = "exit"
         fun newInstance() = ActualQuestionsFragment()
     }
 }

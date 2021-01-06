@@ -170,4 +170,6 @@
 
     <string name="main_info_exist_msg">Panel Number with Member Number already exist.</string>
     <string name="main_info_error_msg">Unable to save Main info, please try again.</string>
+
+    <string name="exit">Do you want to %1s?</string>
 </resources>

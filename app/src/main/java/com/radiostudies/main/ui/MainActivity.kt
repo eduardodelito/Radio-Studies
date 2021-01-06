@@ -2,6 +2,7 @@ package com.radiostudies.main.ui
 
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import com.radiostudies.main.db.model.Diary
@@ -29,6 +30,20 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
 
     override fun navigateBack() {
         findNavController(R.id.navHostFragment).navigateUp()
+    }
+
+    override fun exit(message: String?) {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(message)
+        builder.setPositiveButton(getString(com.radiostudies.main.ui.fragment.R.string.yes_label)) { dialog, _ ->
+            dialog.dismiss()
+            findNavController(R.id.navHostFragment).navigateUp()
+        }
+        builder.setNegativeButton(getString(com.radiostudies.main.ui.fragment.R.string.no_label)) { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
     }
 
     override fun navigateToDiaryScreen(view: View?) {
