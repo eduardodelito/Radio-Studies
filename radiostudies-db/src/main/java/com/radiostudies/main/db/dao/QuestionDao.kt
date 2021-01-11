@@ -15,7 +15,10 @@ interface QuestionDao {
     fun insertQuestion(questions: List<QuestionEntity>)
 
     @Query("UPDATE QuestionEntity SET answers=:answers WHERE question = :question")
-    fun update(question: String?, answers: String?)
+    fun update(question: String?, answers: List<String>?)
+
+    @Query("SELECT answers FROM QuestionEntity WHERE question = :question LIMIT 1")
+    fun querySelectedIndex(question: String?): List<String>?
 
     @Query("DELETE FROM QuestionEntity")
     fun deleteQuestion()

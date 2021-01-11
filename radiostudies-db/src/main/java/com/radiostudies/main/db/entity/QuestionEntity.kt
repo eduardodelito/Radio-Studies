@@ -12,5 +12,5 @@ data class QuestionEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
     @ColumnInfo(name = "question") var question: String?,
-    @ColumnInfo(name = "answers") var answers: String?
+    @ColumnInfo(name = "answers") var answers: List<String>?
 )

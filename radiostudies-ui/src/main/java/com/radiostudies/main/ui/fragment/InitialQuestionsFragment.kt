@@ -69,6 +69,10 @@ class InitialQuestionsFragment :
     override fun subscribeUi() {
         with(viewModel) {
             reObserve(getScreenLiveData(), ::onScreenStateChanged)
+            //TODO: Update in the future for the default back values.
+            if (index == 4) {
+                querySelectedIndex(DEFAULT_END_QUESTION)
+            }
         }
     }
 
@@ -85,6 +89,7 @@ class InitialQuestionsFragment :
 
             is ScreenQuestionListModel -> {
                 var screenQuestion = state.screenQuestion
+                var selectedOption = state.selectedOption
                 viewModel.currentQuestion = screenQuestion?.question
 
                 question_number.text = "Question No. ${screenQuestion?.number}"
@@ -92,11 +97,10 @@ class InitialQuestionsFragment :
                 prev_btn.setEnable(screenQuestion?.number != 1)
 
                 if (screenQuestion?.isSingleAnswer == true) {
-                    screenQuestion.options?.let { loadSingleOption(it) }
+                    screenQuestion.options?.let { loadSingleOption(it, selectedOption) }
                 } else {
-                    screenQuestion?.options?.let { loadMultipleOptions(it) }
+                    screenQuestion?.options?.let { loadMultipleOptions(it, selectedOption) }
                 }
-
             }
         }
     }
@@ -117,7 +121,7 @@ class InitialQuestionsFragment :
         return selectedOptions
     }
 
-    private fun loadMultipleOptions(list: List<String>) {
+    private fun loadMultipleOptions(list: List<String>, selectedOption: List<String>) {
         selection_layout.apply {
             tag = 1
             removeAllViews()
@@ -135,6 +139,11 @@ class InitialQuestionsFragment :
                 }
                 // set text for the radio button
                 cb.text = list[i]
+
+                if (selectedOption.isNotEmpty() && list[i] == selectedOption[0]) {
+                    cb.isChecked = true
+                    next_btn.setEnable(true)
+                }
                 // assign an automatically generated id to the radio button
                 cb.id = View.generateViewId()
                 // add radio button to the radio group
@@ -176,7 +185,7 @@ class InitialQuestionsFragment :
         }
     }
 
-    fun validateCheckBoxes(): Boolean {
+    private fun validateCheckBoxes(): Boolean {
         selection_layout.apply {
             val count: Int = this.childCount
             for (i in 0 until count) {
@@ -187,7 +196,7 @@ class InitialQuestionsFragment :
         return false
     }
 
-    private fun loadSingleOption(list: List<String>) {
+    private fun loadSingleOption(list: List<String>, selectedOption: List<String>) {
         selection_layout.apply {
             tag = 0
             removeAllViews()
@@ -201,6 +210,11 @@ class InitialQuestionsFragment :
                 }
                 // set text for the radio button
                 rb.text = list[i]
+                if (selectedOption.isNotEmpty() && list[i] == selectedOption[0]) {
+                    rb.isChecked = true
+                    next_btn.setEnable(true)
+                }
+
                 // assign an automatically generated id to the radio button
                 rb.id = View.generateViewId()
                 // add radio button to the radio group
@@ -260,6 +274,7 @@ class InitialQuestionsFragment :
         private const val DISAGREE = "DISAGREE"
         private const val NONE_OF_THE_ABOVE = "NONE OF THE ABOVE"
         private const val LOGOUT = "logout"
+        private const val DEFAULT_END_QUESTION = "Have you or any immediate member of your family participated in any promos in your barangay in the past six (6) months"
 
         fun newInstance() = InitialQuestionsFragment()
     }

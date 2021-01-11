@@ -50,11 +50,12 @@ class InitialQuestionsViewModel @Inject constructor(private val questionManager:
                     type,
                     parseJSONArray(options),
                     parseJSONArray(actions),
+                    mutableListOf(),
                     type == SINGLE_ANSWER
                 )
             )
 
-            questions.add(QuestionInitial(questionString, ""))
+            questions.add(QuestionInitial(questionString, listOf()))
         }
         insertQuestions(questions)
         updateNextQuestion()
@@ -63,7 +64,8 @@ class InitialQuestionsViewModel @Inject constructor(private val questionManager:
     fun updateNextQuestion() {
         index++
         if (index < list.size) {
-            screenState.postValue(ScreenQuestionListModel(list[index]))
+            val screenQuestion = list[index]
+            screenState.postValue(ScreenQuestionListModel(screenQuestion, screenQuestion.selectedOption))
         } else {
             index = 5
         }
@@ -72,9 +74,31 @@ class InitialQuestionsViewModel @Inject constructor(private val questionManager:
     fun updatePrevQuestion() {
         index--
         if (index > -1) {
-            screenState.postValue(ScreenQuestionListModel(list[index]))
+            querySelectedIndex(list[index].question)
         } else {
             index = 1
+        }
+    }
+
+    fun querySelectedIndex(question: String?) {
+        launch {
+            querySelectedIndexFromDB(question)
+        }
+    }
+
+    private suspend fun querySelectedIndexFromDB(question: String?) {
+        withContext(Dispatchers.IO) {
+            try {
+                var selectedAnswer = questionManager.querySelectedInitialQuestions(question) as List<String>
+                screenState.postValue(
+                    ScreenQuestionListModel(
+                        list[index],
+                        selectedAnswer
+                    )
+                )
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
 
@@ -109,13 +133,13 @@ class InitialQuestionsViewModel @Inject constructor(private val questionManager:
         }
     }
 
-    fun updateQuestion(answers: MutableList<String>) {
+    fun updateQuestion(answers: List<String>) {
         launch {
-            updateInitialQuestion(currentQuestion, answers.toString())
+            updateInitialQuestion(currentQuestion, answers)
         }
     }
 
-    private suspend fun updateInitialQuestion(question: String?, answers: String?) {
+    private suspend fun updateInitialQuestion(question: String?, answers: List<String>?) {
         withContext(Dispatchers.IO) {
             try {
                 questionManager.updateQuestion(question, answers)

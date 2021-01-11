@@ -9,5 +9,6 @@ data class ScreenQuestion(
     val type: String?,
     val options: List<String>?,
     val actions: List<String>?,
+    val selectedOption: List<String>,
     val isSingleAnswer: Boolean?
 )

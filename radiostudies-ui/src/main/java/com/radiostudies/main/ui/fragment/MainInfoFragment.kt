@@ -54,10 +54,6 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
 
         time_start_field.setText(viewModel.getTime())
 
-//        time_end_field.setOnClickListener {
-//            openTimePicker(time_end_field)
-//        }
-
         day_of_week_field.setText(viewModel.getDay())
 
         eco_class_label.apply {
@@ -133,11 +129,6 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                     time_start_field.error = getString(state.timeStart)
                     time_start_field.requestFocus()
                 }
-
-//                if (state.timeEnd != null) {
-//                    time_end_field.error = getString(state.timeEnd)
-//                    time_end_field.requestFocus()
-//                }
 
                 if (state.dayOfWeek != null) {
                     day_of_week_field.error = getString(state.dayOfWeek)
