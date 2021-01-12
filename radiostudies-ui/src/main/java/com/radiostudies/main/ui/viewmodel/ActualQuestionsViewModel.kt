@@ -36,8 +36,8 @@ class ActualQuestionsViewModel @Inject constructor(
     internal fun getActualLiveData(): SingleLiveEvent<ActualQuestionState> = actualState
     private val actualQuestions = mutableListOf<ActualQuestion>()
     var currentOptions = listOf<Option>()
-    val devicesQuestion = mutableListOf<ActualQuestion>()
-    var deviceIndex = -1
+//    val devicesQuestion = mutableListOf<ActualQuestion>()
+//    var deviceIndex = -1
 
     //    var selectedOptions = mutableListOf<Option>()
     var isSingleAnswer = false
@@ -54,8 +54,8 @@ class ActualQuestionsViewModel @Inject constructor(
         val areas = mutableListOf<Option>()
         for (i in 0 until jsonArray.length()) {
             val jsonObject = jsonArray.getJSONObject(i)
-            var code = jsonObject.getString(CODE)
-            var option = jsonObject.getString(OPTION)
+            val code = jsonObject.getString(CODE)
+            val option = jsonObject.getString(OPTION)
             areas.add(Option(code, option))
         }
         insertArea(areas, genderCode)
@@ -66,7 +66,7 @@ class ActualQuestionsViewModel @Inject constructor(
         val stations = mutableListOf<Station>()
         for (i in 0 until jsonArray.length()) {
             val jsonObject = jsonArray.getJSONObject(i)
-            var place = jsonObject.getString(PLACE)
+            val place = jsonObject.getString(PLACE)
             val stationsJSONArray = jsonObject.getJSONArray(OPTIONS)
             val options = mutableListOf<Option>()
             for (j in 0 until stationsJSONArray.length()) {
@@ -126,9 +126,19 @@ class ActualQuestionsViewModel @Inject constructor(
             val options = mutableListOf<Option>()
             for (j in 0 until optionsJSONArray.length()) {
                 val jsonArrayObj = optionsJSONArray.getJSONObject(j)
-                val optionCode = jsonArrayObj.getString(CODE)
-                val optionValue = jsonArrayObj.getString(OPTION)
-                options.add(Option(optionCode, optionValue))
+                if (code != Q11) {
+                    val optionCode = jsonArrayObj.getString(CODE)
+                    val optionValue = jsonArrayObj.getString(OPTION)
+                    options.add(Option(optionCode, optionValue))
+                } else {
+                    if (genderCode == "1") {
+                        val male = jsonArrayObj.getJSONArray(MALE)
+                        parseGender(male, options)
+                    } else {
+                        val female = jsonArrayObj.getJSONArray(FEMALE)
+                        parseGender(female, options)
+                    }
+                }
             }
             val isManualInput = jsonObject.getInt(IS_MANUAL_INPUT) > 0
 
@@ -165,6 +175,15 @@ class ActualQuestionsViewModel @Inject constructor(
         }
 
         insertActualQuestion(actualQuestions)
+    }
+
+    private fun parseGender(jsonArray: JSONArray, options: MutableList<Option>) {
+        for (i in 0 until jsonArray.length()) {
+            val jsonArrayObj = jsonArray.getJSONObject(i)
+            val optionCode = jsonArrayObj.getString(CODE)
+            val optionValue = jsonArrayObj.getString(OPTION)
+            options.add(Option(optionCode, optionValue))
+        }
     }
 
     private fun insertActualQuestion(actualQuestions: List<ActualQuestion>) {
@@ -234,7 +253,7 @@ class ActualQuestionsViewModel @Inject constructor(
     private suspend fun loadStationsFromDB(station: String?) {
         withContext(Dispatchers.IO) {
             try {
-                var newOptions = mutableListOf<Option>()
+                val newOptions = mutableListOf<Option>()
                 currentOptions = actualManager.getSelectedArea(selectedArea)
                 currentOptions.forEach {
                     if (!it.option.contains(station.toString()))
@@ -251,11 +270,11 @@ class ActualQuestionsViewModel @Inject constructor(
         withContext(Dispatchers.IO) {
             try {
                 var actualQuestion: ActualQuestion?
-                if (devicesQuestion.size > 0 && deviceIndex < (devicesQuestion.size - 1)) {
-                    deviceIndex++
-                    actualQuestion = devicesQuestion[deviceIndex]
-                    id = 5
-                } else {
+//                if (devicesQuestion.size > 0 && deviceIndex < (devicesQuestion.size - 1)) {
+//                    deviceIndex++
+//                    actualQuestion = devicesQuestion[deviceIndex]
+//                    id = 5
+//                } else {
                     val dataQuestion = actualManager.queryDataQuestion(Q2)?.dataQuestionEntityToDataQuestionModel()
                     val dataQuestionQ17 = actualManager.queryDataQuestion(Q17)?.dataQuestionEntityToDataQuestionModel()
                     val dataQuestionQ18 = actualManager.queryDataQuestion(Q18)?.dataQuestionEntityToDataQuestionModel()
@@ -301,13 +320,14 @@ class ActualQuestionsViewModel @Inject constructor(
                             actualQuestion = actualManager.queryQuestion(id)
                         }
                     }
-                }
+//                }
 
                 actualState.postValue(
                     ActualQuestionModel(
                         actualQuestion,
                         id != 0,
-                        false
+                        false,
+                        isPlus
                     )
                 )
             } catch (e: Exception) {
@@ -347,7 +367,7 @@ class ActualQuestionsViewModel @Inject constructor(
     ) {
         withContext(Dispatchers.IO) {
             try {
-                var list = actualManager.queryDataQuestions().dataQuestionsEntityToDataQuestions()
+                val list = actualManager.queryDataQuestions().dataQuestionsEntityToDataQuestions()
                 mainInfo?.timeEnd = getTime()
                 val mainInfoString = Gson().toJson(mainInfo)
                 val diary = Diary(
@@ -385,30 +405,47 @@ class ActualQuestionsViewModel @Inject constructor(
         }
     }
 
-    fun parseDevice(device: String?, selectedDevice: String?) {
-        val jsonArray = JSONArray(device)
-        for (i in 0 until jsonArray.length()) {
-            val jsonObject = jsonArray.getJSONObject(i)
-//            var code = jsonObject.getString("code")
-            var option = jsonObject.getString(OPTION)
-            if (option == selectedDevice) {
-                var childQuestionsArr = jsonObject.getJSONArray(CHILD_QUESTIONS)
-                for (j in 0 until childQuestionsArr.length()) {
-                    val childQuestionsJObj = childQuestionsArr.getJSONObject(j)
-                    var childCode = childQuestionsJObj.getString(CODE)
-                    var childHeader = childQuestionsJObj.getString(HEADER)
-                    var childQuestion = childQuestionsJObj.getString(QUESTION)
-                    var childType = childQuestionsJObj.getString(TYPE)
-                    val childOptions = mutableListOf<Option>()
-                    var childOptionsArr = childQuestionsJObj.getJSONArray(OPTIONS)
-                    for (k in 0 until childOptionsArr.length()) {
-                        val childOptionsJObj = childOptionsArr.getJSONObject(k)
-                        var subChildCode = childOptionsJObj.getString(CODE)
-                        var subChildOption = childOptionsJObj.getString(OPTION)
-                        childOptions.add(Option(subChildCode, subChildOption))
-                    }
-                    devicesQuestion.add(ActualQuestion(i, childCode, childHeader, childQuestion, childType, childOptions, false))
-                }
+//    fun parseDevice(device: String?, selectedDevice: String?) {
+//        val jsonArray = JSONArray(device)
+//        for (i in 0 until jsonArray.length()) {
+//            val jsonObject = jsonArray.getJSONObject(i)
+////            val code = jsonObject.getString("code")
+//            val option = jsonObject.getString(OPTION)
+//            if (option == selectedDevice) {
+//                val childQuestionsArr = jsonObject.getJSONArray(CHILD_QUESTIONS)
+//                for (j in 0 until childQuestionsArr.length()) {
+//                    val childQuestionsJObj = childQuestionsArr.getJSONObject(j)
+//                    val childCode = childQuestionsJObj.getString(CODE)
+//                    val childHeader = childQuestionsJObj.getString(HEADER)
+//                    val childQuestion = childQuestionsJObj.getString(QUESTION)
+//                    val childType = childQuestionsJObj.getString(TYPE)
+//                    val childOptions = mutableListOf<Option>()
+//                    val childOptionsArr = childQuestionsJObj.getJSONArray(OPTIONS)
+//                    for (k in 0 until childOptionsArr.length()) {
+//                        val childOptionsJObj = childOptionsArr.getJSONObject(k)
+//                        val subChildCode = childOptionsJObj.getString(CODE)
+//                        val subChildOption = childOptionsJObj.getString(OPTION)
+//                        childOptions.add(Option(subChildCode, subChildOption))
+//                    }
+//                    devicesQuestion.add(ActualQuestion(i, childCode, childHeader, childQuestion, childType, childOptions, false))
+//                }
+//            }
+//        }
+//    }
+
+    fun querySelectedAnswer(code: String?) {
+        launch {
+            querySelectedAnswerFromDB(code)
+        }
+    }
+
+    private suspend fun querySelectedAnswerFromDB(code: String?) {
+        withContext(Dispatchers.IO) {
+            try {
+                val selectedOptions = actualManager.queryDataQuestion(code)?.options as MutableList
+                actualState.postValue(SelectedOptionForm(selectedOptions))
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
         }
     }
@@ -420,25 +457,24 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val STATION = "radio_stations.json"
         private const val ACTUAL_QUESTIONS = "actual_questions.json"
         private const val Q2 = "Q2"
-        private const val Q13 = "Q13"
-        private const val Q14A = "Q14a"
-        private const val Q14B = "Q14b"
+        private const val Q11 = "Q11"
         private const val Q17 = "Q17"
         private const val Q18 = "Q18"
         private const val Q19A = "Q19a"
         private const val Q19B = "Q19b"
-        private const val CODE_1 = "1"
         private const val CODE_3 = "3"
         private const val CODE_5 = "5"
         private const val PLACE = "place"
         private const val HEADER = "header"
-        private const val CHILD_QUESTIONS = "childQuestions"
+//        private const val CHILD_QUESTIONS = "childQuestions"
         private const val QUESTION = "question"
         private const val TYPE = "type"
         private const val GENDER_CODE = "genderCode"
         private const val OPTIONS = "options"
         private const val CODE = "code"
         private const val OPTION = "option"
+        private const val MALE = "male"
+        private const val FEMALE = "female"
         private const val IS_MANUAL_INPUT = "isManualInput"
         private const val TIME_FORMAT = "hh:mm:ss a"
     }

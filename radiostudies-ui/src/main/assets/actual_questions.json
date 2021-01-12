@@ -255,6 +255,31 @@
     "isManualInput": 0
   },
   {
+    "code": "Q5b",
+    "header": "Does it have radio broadcast?",
+    "question": "What transistor radio?",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "NONE"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
     "code": "Q6",
     "header": "",
     "question": "Number of Radio Sets Owned in the Household (including Car radio, portable radio, cellular phones with radio, etc.) ",
@@ -339,32 +364,46 @@
     "type": "Single Answer",
     "options": [
       {
-        "code": "1",
-        "option": "HEAD OF HOUSEHOLD"
-      },
-      {
-        "code": "2",
-        "option": "HOUSEWIFE"
-      },
-      {
-        "code": "3",
-        "option": "SON"
-      },
-      {
-        "code": "4",
-        "option": "DAUGHTER"
-      },
-      {
-        "code": "5",
-        "option": "OTHERS"
-      },
-      {
-        "code": "6",
-        "option": "Both Household Head & Housewife"
-      },
-      {
-        "code": "8",
-        "option": "Non-relatives"
+        "male": [
+          {
+            "code": "1",
+            "option": "HEAD OF HOUSEHOLD"
+          },
+          {
+            "code": "3",
+            "option": "SON"
+          },
+          {
+            "code": "5",
+            "option": "OTHERS"
+          },
+          {
+            "code": "8",
+            "option": "Non-relatives"
+          }
+        ],
+        "female": [
+          {
+            "code": "2",
+            "option": "HOUSEWIFE"
+          },
+          {
+            "code": "4",
+            "option": "DAUGHTER"
+          },
+          {
+            "code": "5",
+            "option": "OTHERS"
+          },
+          {
+            "code": "6",
+            "option": "Both Household Head & Housewife"
+          },
+          {
+            "code": "8",
+            "option": "Non-relatives"
+          }
+        ]
       }
     ],
     "isManualInput": 0
@@ -804,7 +843,7 @@
   },
   {
     "code": "Q21b",
-    "header": "AM Radio Stations Listened To",
+    "header": "FM Radio Stations Listened To",
     "question": "How many hours in a day do you usually listen to these AM stations?",
     "type": "Single Answer",
     "options": [
@@ -1120,6 +1159,10 @@
       {
         "code": "3",
         "option": "Electricity"
+      },
+      {
+        "code": "T",
+        "option": "NONE"
       }
     ],
     "isManualInput": 0
@@ -1141,6 +1184,10 @@
       {
         "code": "6",
         "option": "Antipolo system"
+      },
+      {
+        "code": "U",
+        "option": "NONE"
       }
     ],
     "isManualInput": 0
@@ -1166,6 +1213,10 @@
       {
         "code": "0",
         "option": "Dishwashing Machine"
+      },
+      {
+        "code": "V",
+        "option": "NONE"
       }
     ],
     "isManualInput": 0
@@ -1183,6 +1234,10 @@
       {
         "code": "B",
         "option": "Freezer"
+      },
+      {
+        "code": "W",
+        "option": "NONE"
       }
     ],
     "isManualInput": 0
@@ -1196,6 +1251,10 @@
       {
         "code": "C",
         "option": "Air Conditioner"
+      },
+      {
+        "code": "X",
+        "option": "NONE"
       }
     ],
     "isManualInput": 0
@@ -1229,6 +1288,10 @@
       {
         "code": "I",
         "option": "Generator"
+      },
+      {
+        "code": "Y",
+        "option": "NONE"
       }
     ],
     "isManualInput": 0
@@ -1260,7 +1323,7 @@
         "option": "DIGITAL CAMERA"
       },
       {
-        "code": "3",
+        "code": "Z",
         "option": "NONE"
       }
     ],

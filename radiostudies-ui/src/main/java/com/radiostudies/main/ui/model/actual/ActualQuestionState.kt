@@ -1,5 +1,6 @@
 package com.radiostudies.main.ui.model.actual
 
+import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.db.model.ActualQuestion
 
 /**
@@ -21,8 +22,12 @@ data class DeviceForm(val fileName: String?) :
 data class ActualQuestionModel(
     val actualQuestion: ActualQuestion,
     val isPrevEnable: Boolean,
-    val isNextEnable: Boolean
+    val isNextEnable: Boolean,
+    val isPlus: Boolean
 ) :
+    ActualQuestionState()
+
+data class SelectedOptionForm(val selectedOptions: MutableList<Option>) :
     ActualQuestionState()
 
 data class ActualQuestionComplete(val isComplete: Boolean) : ActualQuestionState()

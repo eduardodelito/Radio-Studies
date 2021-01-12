@@ -167,7 +167,19 @@ class ActualQuestionsFragment :
                     }
                     OTHERS -> {
                         isHours = false
-                        manual_input.hint = actualQuestion.options[0].option
+                        val hint = actualQuestion.options[0].option
+                        actual_next_btn.setEnable(true)
+                        manual_input.hint = hint
+                        manual_input.inputType = EditorInfo.TYPE_CLASS_TEXT
+                        val maxLength = 60
+                        val fArray = arrayOfNulls<InputFilter>(1)
+                        fArray[0] = LengthFilter(maxLength)
+                        manual_input.filters = fArray
+                    }
+                    EMPLOYER -> {
+                        isHours = false
+                        val hint = actualQuestion.options[0].option
+                        manual_input.hint = hint
                         manual_input.inputType = EditorInfo.TYPE_CLASS_TEXT
                         val maxLength = 60
                         val fArray = arrayOfNulls<InputFilter>(1)
@@ -198,6 +210,14 @@ class ActualQuestionsFragment :
                     manual_input.visibility = View.GONE
                     manual_input.text.clear()
                 }
+
+                if (!state.isPlus) {
+                    viewModel.querySelectedAnswer(actualQuestion.code)
+                }
+            }
+
+            is SelectedOptionForm -> {
+                addOptions(state.selectedOptions)
             }
 
             is ActualQuestionComplete -> {
@@ -211,9 +231,9 @@ class ActualQuestionsFragment :
         actual_selection_layout.apply {
             removeAllViews()
             invalidate()
-            if (viewModel.devicesQuestion.size == viewModel.deviceIndex) {
-                viewModel.devicesQuestion.clear()
-            }
+//            if (viewModel.devicesQuestion.size == viewModel.deviceIndex) {
+//                viewModel.devicesQuestion.clear()
+//            }
             for (i in selectedList.indices) {
                 val option = selectedList[i]
                 val params = LinearLayout.LayoutParams(
@@ -225,9 +245,9 @@ class ActualQuestionsFragment :
                 tv.text = "[${i + 1}] ${selectedList[i].option}"
                 addView(tv)
 
-                if (actual_question_number.text.toString() == "Q5a") {
-                    viewModel.parseDevice(getJsonDataFromAsset(requireContext(), RADIO_DEVICE), selectedList[i].option)
-                }
+//                if (actual_question_number.text.toString() == "Q5a") {
+//                    viewModel.parseDevice(getJsonDataFromAsset(requireContext(), RADIO_DEVICE), selectedList[i].option)
+//                }
 
                 if (option.option.contains(OTHER)) {
                     val editText = EditText(context)
@@ -414,11 +434,12 @@ class ActualQuestionsFragment :
         private const val FM = "Mhz"
         private const val HOURS = "hour/s"
         private const val OTHER = "Other"
+        private const val EMPLOYER = "Employer"
         private const val OTHERS = "Others (Specify)"
         private const val NONE = "None"
         private const val NOT_LISTEN = "Not Listen"
         private const val MAIN_INFO = "main_info"
-        private const val RADIO_DEVICE = "radio_device.json"
+//        private const val RADIO_DEVICE = "radio_device.json"
         private const val MAX_HOURS = 24
         private const val EXIT = "exit"
         fun newInstance() = ActualQuestionsFragment()

@@ -6,4 +6,3 @@ package com.radiostudies.main.ui.model.initial
 sealed class ScreenQuestionState
 class ScreenQuestionModel(val fileName: String?) : ScreenQuestionState()
 class ScreenQuestionListModel(val screenQuestion: ScreenQuestion? = null, val selectedOption: List<String>) : ScreenQuestionState()
-class SwitchScreenModel(val isSwitchScreen: Boolean) : ScreenQuestionState()
