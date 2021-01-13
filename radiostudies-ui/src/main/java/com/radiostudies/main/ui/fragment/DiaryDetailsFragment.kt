@@ -55,7 +55,7 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_diary, menu);
+        inflater.inflate(R.menu.menu_diary, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
 
@@ -92,49 +92,71 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
                     diaryModel?.diary?.let { diary -> deleteDialog(diary, diaries, diaries[i]) }
                 }
 
-                val layout1 = view.findViewById<LinearLayout>(R.id.details_time_of_listening_layout)
-                val timeOfListeningList = diaries[i].timeOfListening
-                for (j in timeOfListeningList.indices) {
+                val layout0 = view.findViewById<LinearLayout>(R.id.details_day_of_study_layout)
+                val dayOfStudyList = diaries[i].dayOfStudy
+                for (g in dayOfStudyList.indices) {
+                    layout0.visibility = View.VISIBLE
+                    val tv0 = AppCompatTextView(context)
+                    TextViewCompat.setTextAppearance(tv0, R.style.AvenirHeavy_Black)
+                    tv0.layoutParams = params
+                    tv0.text = dayOfStudyList[g].option
+                    layout0.addView(tv0)
+                }
+
+                val layout1 = view.findViewById<LinearLayout>(R.id.details_diary_date_layout)
+                val diaryDateList = diaries[i].diaryDate
+                for (h in diaryDateList.indices) {
                     layout1.visibility = View.VISIBLE
                     val tv1 = AppCompatTextView(context)
-                    TextViewCompat.setTextAppearance(tv1, R.style.AvenirHeavy_Black);
+                    TextViewCompat.setTextAppearance(tv1, R.style.AvenirHeavy_Black)
                     tv1.layoutParams = params
-                    tv1.text = timeOfListeningList[j].option
+                    tv1.text = diaryDateList[h].option
                     layout1.addView(tv1)
                 }
 
-                val layout2 = view.findViewById<LinearLayout>(R.id.details_radio_stations_layout)
-                val radioStationList = diaries[i].stations
-                for (k in radioStationList.indices) {
+                val layout2 = view.findViewById<LinearLayout>(R.id.details_time_of_listening_layout)
+                val timeOfListeningList = diaries[i].timeOfListening
+                for (j in timeOfListeningList.indices) {
                     layout2.visibility = View.VISIBLE
                     val tv2 = AppCompatTextView(context)
-                    TextViewCompat.setTextAppearance(tv2, R.style.AvenirHeavy_Black);
+                    TextViewCompat.setTextAppearance(tv2, R.style.AvenirHeavy_Black)
                     tv2.layoutParams = params
-                    tv2.text = radioStationList[k].option
+                    tv2.text = timeOfListeningList[j].option
                     layout2.addView(tv2)
                 }
 
-                val layout3 =
-                    view.findViewById<LinearLayout>(R.id.details_place_of_listening_layout)
-                val placeOfListeningList = diaries[i].placeOfListening
-                for (l in placeOfListeningList.indices) {
+                val layout3 = view.findViewById<LinearLayout>(R.id.details_radio_stations_layout)
+                val radioStationList = diaries[i].stations
+                for (k in radioStationList.indices) {
                     layout3.visibility = View.VISIBLE
                     val tv3 = AppCompatTextView(context)
-                    TextViewCompat.setTextAppearance(tv3, R.style.AvenirHeavy_Black);
+                    TextViewCompat.setTextAppearance(tv3, R.style.AvenirHeavy_Black)
                     tv3.layoutParams = params
-                    tv3.text = radioStationList[l].option
+                    tv3.text = radioStationList[k].option
                     layout3.addView(tv3)
                 }
 
-                val layout4 = view.findViewById<LinearLayout>(R.id.details_device_layout)
-                val deviceList = diaries[i].device
-                for (m in deviceList.indices) {
+                val layout4 =
+                    view.findViewById<LinearLayout>(R.id.details_place_of_listening_layout)
+                val placeOfListeningList = diaries[i].placeOfListening
+                for (l in placeOfListeningList.indices) {
                     layout4.visibility = View.VISIBLE
                     val tv4 = AppCompatTextView(context)
-                    TextViewCompat.setTextAppearance(tv4, R.style.AvenirHeavy_Black);
+                    TextViewCompat.setTextAppearance(tv4, R.style.AvenirHeavy_Black)
                     tv4.layoutParams = params
-                    tv4.text = deviceList[m].option
+                    tv4.text = radioStationList[l].option
                     layout4.addView(tv4)
+                }
+
+                val layout5 = view.findViewById<LinearLayout>(R.id.details_device_layout)
+                val deviceList = diaries[i].device
+                for (m in deviceList.indices) {
+                    layout5.visibility = View.VISIBLE
+                    val tv5 = AppCompatTextView(context)
+                    TextViewCompat.setTextAppearance(tv5, R.style.AvenirHeavy_Black)
+                    tv5.layoutParams = params
+                    tv5.text = deviceList[m].option
+                    layout5.addView(tv5)
                 }
 
                 addView(view)

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -21,7 +20,7 @@
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/layout1"
+                android:id="@+id/layout0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin10"
@@ -32,11 +31,48 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/add_time_of_listening"
+                    android:id="@+id/add_day_of_study"
                     style="@style/AvenirHeavy.PrimaryDark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tap_select_time_of_listening" />
+                    android:text="@string/tap_select_day_of_study" />
+
+                <View
+                    android:id="@+id/line_layout0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/line_bg" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <LinearLayout
+                android:id="@+id/add_day_of_study_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout0" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_day_of_study_layout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/add_diary_date"
+                    style="@style/AvenirHeavy.PrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tap_select_diary_date" />
 
                 <View
                     android:id="@+id/line_layout1"
@@ -47,18 +83,55 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <LinearLayout
-                android:id="@+id/add_time_of_listening_layout"
+                android:id="@+id/add_diary_date_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
                 android:orientation="vertical"
                 android:visibility="gone"
-                android:layout_marginTop="@dimen/margin5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layout1" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/layout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_diary_date_layout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/add_time_of_listening"
+                    style="@style/AvenirHeavy.PrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tap_select_time_of_listening" />
+
+                <View
+                    android:id="@+id/line_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/line_bg" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <LinearLayout
+                android:id="@+id/add_time_of_listening_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout2" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin20"
@@ -76,7 +149,7 @@
                     android:text="@string/tap_select_radio_stations" />
 
                 <View
-                    android:id="@+id/line_layout2"
+                    android:id="@+id/line_layout3"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/margin5"
@@ -87,15 +160,15 @@
                 android:id="@+id/add_radio_stations_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
                 android:orientation="vertical"
                 android:visibility="gone"
-                android:layout_marginTop="@dimen/margin5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout2" />
+                app:layout_constraintTop_toBottomOf="@+id/layout3" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/layout3"
+                android:id="@+id/layout4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin20"
@@ -113,7 +186,7 @@
                     android:text="@string/tap_select_place_of_listening" />
 
                 <View
-                    android:id="@+id/line_layout3"
+                    android:id="@+id/line_layout4"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/margin5"
@@ -124,15 +197,15 @@
                 android:id="@+id/add_place_of_listening_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
                 android:orientation="vertical"
                 android:visibility="gone"
-                android:layout_marginTop="@dimen/margin5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout3" />
+                app:layout_constraintTop_toBottomOf="@+id/layout4" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/layout4"
+                android:id="@+id/layout5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin20"
@@ -150,7 +223,7 @@
                     android:text="@string/tap_select_device" />
 
                 <View
-                    android:id="@+id/line_layout4"
+                    android:id="@+id/line_layout5"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/margin5"
@@ -161,12 +234,12 @@
                 android:id="@+id/add_device_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
                 android:orientation="vertical"
                 android:visibility="gone"
-                android:layout_marginTop="@dimen/margin5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout4" />
+                app:layout_constraintTop_toBottomOf="@+id/layout5" />
 
 
             <Button
@@ -178,7 +251,7 @@
                 android:background="@drawable/btn_selector_shape"
                 android:paddingLeft="@dimen/padding10"
                 android:paddingRight="@dimen/padding10"
-                android:text="Add Diary"
+                android:text="@string/add_diary_btn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/add_device_layout" />
         </androidx.constraintlayout.widget.ConstraintLayout>

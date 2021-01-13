@@ -131,7 +131,7 @@ class ActualQuestionsViewModel @Inject constructor(
                     val optionValue = jsonArrayObj.getString(OPTION)
                     options.add(Option(optionCode, optionValue))
                 } else {
-                    if (genderCode == "1") {
+                    if (genderCode == CODE_1) {
                         val male = jsonArrayObj.getJSONArray(MALE)
                         parseGender(male, options)
                     } else {
@@ -462,6 +462,7 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val Q18 = "Q18"
         private const val Q19A = "Q19a"
         private const val Q19B = "Q19b"
+        private const val CODE_1 = "1"
         private const val CODE_3 = "3"
         private const val CODE_5 = "5"
         private const val PLACE = "place"

@@ -21,7 +21,7 @@
             app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/layout1"
+            android:id="@+id/layout0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin10"
@@ -32,11 +32,47 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/details_time_of_listening"
+                android:id="@+id/details_day_of_study"
                 style="@style/AvenirHeavy.PrimaryDark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/details_time_of_listening_label" />
+                android:text="@string/details_day_of_study_label" />
+
+            <View
+                android:id="@+id/line_layout0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@color/line_bg" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:id="@+id/details_day_of_study_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout0" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_day_of_study_layout">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/details_diary_date"
+                style="@style/AvenirHeavy.PrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_diary_date_label" />
 
             <View
                 android:id="@+id/line_layout1"
@@ -47,7 +83,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <LinearLayout
-            android:id="@+id/details_time_of_listening_layout"
+            android:id="@+id/details_diary_date_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -65,14 +101,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/details_time_of_listening_layout">
+            app:layout_constraintTop_toBottomOf="@+id/details_diary_date_layout">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/details_radio_stations"
+                android:id="@+id/details_time_of_listening"
                 style="@style/AvenirHeavy.PrimaryDark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/details_radio_stations_label" />
+                android:text="@string/details_time_of_listening_label" />
 
             <View
                 android:id="@+id/line_layout2"
@@ -83,7 +119,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <LinearLayout
-            android:id="@+id/details_radio_stations_layout"
+            android:id="@+id/details_time_of_listening_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -101,14 +137,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/details_radio_stations_layout">
+            app:layout_constraintTop_toBottomOf="@+id/details_time_of_listening_layout">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/details_place_of_listening"
+                android:id="@+id/details_radio_stations"
                 style="@style/AvenirHeavy.PrimaryDark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/details_place_of_listening_label" />
+                android:text="@string/details_radio_stations_label" />
 
             <View
                 android:id="@+id/line_layout3"
@@ -119,7 +155,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <LinearLayout
-            android:id="@+id/details_place_of_listening_layout"
+            android:id="@+id/details_radio_stations_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -137,6 +173,42 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_radio_stations_layout">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/details_place_of_listening"
+                style="@style/AvenirHeavy.PrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_place_of_listening_label" />
+
+            <View
+                android:id="@+id/line_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@color/line_bg" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:id="@+id/details_place_of_listening_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout4" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/details_place_of_listening_layout">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -147,7 +219,7 @@
                 android:text="@string/details_device_label" />
 
             <View
-                android:id="@+id/line_layout4"
+                android:id="@+id/line_layout5"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/margin5"
@@ -162,7 +234,7 @@
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout4" />
+            app:layout_constraintTop_toBottomOf="@+id/layout5" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

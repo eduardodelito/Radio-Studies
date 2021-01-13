@@ -21,9 +21,11 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
 
-    private val diaryState = SingleLiveEvent<DiaryModelState>()
-    internal fun getDiaryLiveData(): SingleLiveEvent<DiaryModelState> = diaryState
+    private val diaryState = SingleLiveEvent<AddDiaryModelState>()
+    internal fun getDiaryLiveData(): SingleLiveEvent<AddDiaryModelState> = diaryState
 
+    var selectedDayOfStudy = mutableListOf<Option>()
+    var selectedDiaryDate = mutableListOf<Option>()
     var selectedTimeOfListeningList = mutableListOf<Option>()
     var selectedStations = mutableListOf<Option>()
     var selectedPlaceOfListening = mutableListOf<Option>()
@@ -44,6 +46,38 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
         }
     }
 
+    fun queryTimeOfListening(mainInfo: String) {
+        launch {
+            queryTimeOfListeningFromDB(mainInfo)
+        }
+    }
+
+    private suspend fun queryTimeOfListeningFromDB(mainInfo: String) {
+        withContext(Dispatchers.IO) {
+            try {
+                val diaries = actualManager.getDiaries(mainInfo) as List<Diaries>
+                val options = mutableListOf<String>()
+                for (i in diaries.indices) {
+                    val times = diaries[i].timeOfListening
+                    for (j in times.indices) {
+                        options.add(times[j].option)
+                    }
+                }
+
+                var newTimeOfListeningList = mutableListOf<Option>()
+
+                for (k in timeOfListeningList.indices) {
+                    if (!options.contains(timeOfListeningList[k].option)) {
+                        newTimeOfListeningList.add(timeOfListeningList[k])
+                    }
+                }
+                diaryState.postValue(TimeOfListeningForm(newTimeOfListeningList))
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
     fun queryStations(place: String) {
         launch {
             stations(place)
@@ -58,6 +92,16 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
                 e.printStackTrace()
             }
         }
+    }
+
+    fun dayOfStudy() {
+        val options = mutableListOf<Option>()
+        options.add(Option("1", DAY_1))
+        options.add(Option("2", DAY_2))
+        options.add(Option("3", DAY_3))
+        options.add(Option("4", DAY_4))
+        options.add(Option("5", DAY_5))
+        diaryState.postValue(AddDayOfStudyForm(options))
     }
 
     fun placeOfListening() {
@@ -102,14 +146,16 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
     private suspend fun saveDiary(diary: Diary) {
         withContext(Dispatchers.IO) {
             try {
-                val diaries = Diaries(selectedTimeOfListeningList, selectedStations, selectedPlaceOfListening, selectedDevice)
+                val diaries = Diaries(selectedDayOfStudy, selectedDiaryDate, selectedTimeOfListeningList, selectedStations, selectedPlaceOfListening, selectedDevice)
                 val diaryList = mutableListOf<Diaries>()
                 diary.diaries?.forEach { value ->
+                    val dayOfStudy = value.dayOfStudy
+                    val diaryDate = value.diaryDate
                     val timeOfListening = value.timeOfListening
                     val radioStations = value.stations
                     val placeOfListening = value.placeOfListening
                     val devices = value.device
-                    diaryList.add(Diaries(timeOfListening, radioStations, placeOfListening, devices))
+                    diaryList.add(Diaries(dayOfStudy, diaryDate, timeOfListening, radioStations, placeOfListening, devices))
                 }
                 diaryList.add(diaries)
                 diary.diaries = diaryList
@@ -151,5 +197,11 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
         private const val NONE = "None"
         private const val CABLE = "Cable/TV with Radio"
 
+        //Day of Study
+        private const val DAY_1 = "Day 1"
+        private const val DAY_2 = "Day 2"
+        private const val DAY_3 = "Day 3"
+        private const val DAY_4 = "Day 4"
+        private const val DAY_5 = "Day 5"
     }
 }

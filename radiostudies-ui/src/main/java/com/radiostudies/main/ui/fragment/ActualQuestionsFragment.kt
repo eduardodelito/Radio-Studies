@@ -61,11 +61,11 @@ class ActualQuestionsFragment :
 
         manual_input.afterTextChanged {
             if (isHours) {
-                if (!it.isNullOrEmpty() && it.toInt() <= MAX_HOURS) {
+                if (it.isNotEmpty() && it.toInt() <= MAX_HOURS) {
                     actual_next_btn.setEnable(true)
                 } else {
                     actual_next_btn.setEnable(false)
-                    if (!it.isNullOrEmpty()) {
+                    if (it.isNotEmpty()) {
                         Toast.makeText(
                             context,
                             "Reach the maximum limit of 24 hours.",
@@ -138,7 +138,7 @@ class ActualQuestionsFragment :
             }
 
             is ActualQuestionModel -> {
-                var actualQuestion = state.actualQuestion
+                val actualQuestion = state.actualQuestion
                 actual_question_number.text = actualQuestion.code
                 actual_question_header_label.setViewVisibility(actualQuestion.header)
                 actual_question_label.text = actualQuestion.question
@@ -227,7 +227,7 @@ class ActualQuestionsFragment :
     }
 
     private fun addOptions(selectedList: MutableList<Option>) {
-        var selectedOptions = mutableListOf<Option>()
+        val selectedOptions = mutableListOf<Option>()
         actual_selection_layout.apply {
             removeAllViews()
             invalidate()
@@ -242,7 +242,7 @@ class ActualQuestionsFragment :
                 val tv = AppCompatTextView(context)
                 TextViewCompat.setTextAppearance(tv, R.style.AvenirHeavy_Black)
                 tv.layoutParams = params
-                tv.text = "[${i + 1}] ${selectedList[i].option}"
+                tv.text = String.format(resources.getString(R.string.text_option), i + 1, selectedList[i].option)
                 addView(tv)
 
 //                if (actual_question_number.text.toString() == "Q5a") {
@@ -355,15 +355,19 @@ class ActualQuestionsFragment :
                     }
                     else -> {
                         for (i in listItems.indices) {
-                            if (listItems[i].contains(NONE)) {
-                                dListView.setItemChecked(i, false)
-                                checkedItems[i] = false
-                            } else if (listItems[i].contains(OTHER)) {
-                                dListView.setItemChecked(i, false)
-                                checkedItems[i] = false
-                            } else if (listItems[i].contains(NOT_LISTEN)) {
-                                dListView.setItemChecked(i, false)
-                                checkedItems[i] = false
+                            when {
+                                listItems[i].contains(NONE) -> {
+                                    dListView.setItemChecked(i, false)
+                                    checkedItems[i] = false
+                                }
+                                listItems[i].contains(OTHER) -> {
+                                    dListView.setItemChecked(i, false)
+                                    checkedItems[i] = false
+                                }
+                                listItems[i].contains(NOT_LISTEN) -> {
+                                    dListView.setItemChecked(i, false)
+                                    checkedItems[i] = false
+                                }
                             }
                         }
                         checkedItems[which] = isChecked
@@ -441,7 +445,7 @@ class ActualQuestionsFragment :
         private const val MAIN_INFO = "main_info"
 //        private const val RADIO_DEVICE = "radio_device.json"
         private const val MAX_HOURS = 24
-        private const val EXIT = "exit"
+        private const val EXIT = "exit Actual Questions"
         fun newInstance() = ActualQuestionsFragment()
     }
 }

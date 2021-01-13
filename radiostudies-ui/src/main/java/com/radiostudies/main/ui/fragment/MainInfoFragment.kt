@@ -13,14 +13,13 @@ import com.radiostudies.main.ui.fragment.databinding.MainInfoFragmentBinding
 import com.radiostudies.main.ui.model.main.*
 import com.radiostudies.main.ui.viewmodel.MainInfoViewModel
 import kotlinx.android.synthetic.main.main_info_fragment.*
-import java.util.*
 import javax.inject.Inject
 
 class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel>(),
     DatePickerDialog.OnDateSetListener {
 
     private var listener: MainInfoFragmentListener? = null
-    private val cal: Calendar = Calendar.getInstance()
+//    private val cal: Calendar = Calendar.getInstance()
 
     @Inject
     override lateinit var viewModel: MainInfoViewModel
@@ -176,16 +175,16 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         fun exit(message: String?)
     }
 
-    private fun openDatePicker() {
-        var day = cal.get(Calendar.DAY_OF_MONTH)
-        var month = cal.get(Calendar.MONTH)
-        var year = cal.get(Calendar.YEAR)
-        val datePickerDialog = DatePickerDialog(requireActivity(), this, year, month, day)
-        datePickerDialog.show()
-    }
+//    private fun openDatePicker() {
+//        val day = cal.get(Calendar.DAY_OF_MONTH)
+//        val month = cal.get(Calendar.MONTH)
+//        val year = cal.get(Calendar.YEAR)
+//        val datePickerDialog = DatePickerDialog(requireActivity(), this, year, month, day)
+//        datePickerDialog.show()
+//    }
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
-        date_of_interview_field.setText("${month + 1}/$dayOfMonth/$year")
+        date_of_interview_field.setText(String.format(resources.getString(R.string.date_of_interview), month + 1, dayOfMonth, year))
     }
 
     private fun dialogList(field: EditText, list: Array<String>) {
@@ -214,6 +213,17 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         dialog.show()
     }
 
+    fun clear() {
+        panel_number_field.setText("")
+        member_number_field.setText("")
+        municipality_field.setText("")
+        barangay_field.setText("")
+        name_of_respondent_field.setText("")
+        address_field.setText("")
+        age_field.setText("")
+        contact_number_field.setText("")
+    }
+
     companion object {
         private const val MALE = "MALE"
         private const val FEMALE = "FEMALE"
@@ -224,9 +234,9 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         private const val D = "D"
         private const val E = "E"
 
-        private const val TIME_FORMAT = "hh:mm:ss a"
+//        private const val TIME_FORMAT = "hh:mm:ss a"
         const val MAIN_INFO = "main_info"
-        const val EXIT = "exit"
+        const val EXIT = "exit Main Information"
 
         fun newInstance() = MainInfoFragment()
     }

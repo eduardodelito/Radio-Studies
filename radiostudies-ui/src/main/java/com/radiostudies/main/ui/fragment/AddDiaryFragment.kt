@@ -1,11 +1,13 @@
 package com.radiostudies.main.ui.fragment
 
+import android.app.DatePickerDialog
 import android.content.Context
 import android.text.InputFilter
 import android.text.InputType
 import android.text.method.ScrollingMovementMethod
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
@@ -24,9 +26,11 @@ import kotlinx.android.synthetic.main.add_diary_fragment.*
 import java.util.*
 import javax.inject.Inject
 
-class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel>() {
+class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel>(),
+    DatePickerDialog.OnDateSetListener {
 
     private var listener: AddDiaryFragmentListener? = null
+    private val cal: Calendar = Calendar.getInstance()
 
     @Inject
     override lateinit var viewModel: AddDiaryViewModel
@@ -37,12 +41,22 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
 
     override fun initViews() {
         listener?.showAppBar(false)
-
-        add_time_of_listening.setOnClickListener {
-            dialogOptions(add_time_of_listening_layout, viewModel.timeOfListeningList, false, viewModel.selectedTimeOfListeningList)
-        }
         val selectedArea = arguments?.getString(AREA)
         val selectedDiary = arguments?.getSerializable(DIARY) as Diary
+
+        add_day_of_study.setOnClickListener {
+            viewModel.dayOfStudy()
+        }
+
+        add_diary_date.setOnClickListener {
+            openDatePicker()
+        }
+
+        add_time_of_listening.setOnClickListener {
+            val mainInfo = selectedDiary.mainInfo as String
+            viewModel.queryTimeOfListening(mainInfo)
+        }
+
         add_radio_stations.setOnClickListener {
             selectedArea?.let { area -> viewModel.queryStations(area) }
         }
@@ -67,7 +81,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
         }
     }
 
-    private fun onDiaryStateChanged(state: DiaryModelState?) {
+    private fun onDiaryStateChanged(state: AddDiaryModelState?) {
         when (state) {
             is AddDiaryForm -> {
                 viewModel.parseTimeOfListening(
@@ -84,6 +98,14 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
                 dialogOptions(add_radio_stations_layout, state.list, true, viewModel.selectedStations)
             }
 
+            is AddDayOfStudyForm -> {
+                dialogOptions(add_day_of_study_layout, state.list, true, viewModel.selectedDayOfStudy)
+            }
+
+            is TimeOfListeningForm -> {
+                dialogOptions(add_time_of_listening_layout, state.list, false, viewModel.selectedTimeOfListeningList)
+            }
+
             is PlaceOfListeningForm -> {
                 dialogOptions(add_place_of_listening_layout, state.list, true, viewModel.selectedPlaceOfListening)
             }
@@ -95,8 +117,6 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
             is CompletedDiaryForm -> {
                 if (state.isCompleted) {
                     listener?.navigateBack()
-                } else {
-                    // Do nothing for now
                 }
             }
         }
@@ -198,7 +218,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
     }
 
     private fun addOptions(view: LinearLayout, selectedList: MutableList<Option>) {
-        var selectedOptions = mutableListOf<Option>()
+        val selectedOptions = mutableListOf<Option>()
         view.apply {
             visibility = if (selectedList.isEmpty()) View.GONE else View.VISIBLE
             removeAllViews()
@@ -209,9 +229,9 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
                     LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
                 )
                 val tv = AppCompatTextView(context)
-                TextViewCompat.setTextAppearance(tv, R.style.AvenirHeavy_Black);
+                TextViewCompat.setTextAppearance(tv, R.style.AvenirHeavy_Black)
                 tv.layoutParams = params
-                tv.text = "[${i + 1}] ${selectedList[i].option}"
+                tv.text = String.format(resources.getString(R.string.text_option), i + 1, selectedList[i].option)
                 addView(tv)
                 if (option.option.contains(OTHER)) {
                     val editText = EditText(context)
@@ -234,6 +254,32 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
                 }
             }
             btn_add_diary.setEnable(isLayoutsHasContent())
+        }
+    }
+
+    private fun openDatePicker() {
+        val day = cal.get(Calendar.DAY_OF_MONTH)
+        val month = cal.get(Calendar.MONTH)
+        val year = cal.get(Calendar.YEAR)
+        val datePickerDialog = DatePickerDialog(requireActivity(), this, year, month, day)
+        datePickerDialog.show()
+    }
+
+    override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
+        add_diary_date_layout.apply {
+            removeAllViews()
+            invalidate()
+            val params = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+            val tv = AppCompatTextView(context)
+            TextViewCompat.setTextAppearance(tv, R.style.AvenirHeavy_Black)
+            tv.layoutParams = params
+            val selectedDateValue = String.format(resources.getString(R.string.date_of_interview), month + 1, dayOfMonth, year)
+            tv.text = selectedDateValue
+            viewModel.selectedDiaryDate.add(Option("1", selectedDateValue))
+            addView(tv)
+            visibility = if (selectedDateValue.isNullOrEmpty()) View.GONE else View.VISIBLE
         }
     }
 

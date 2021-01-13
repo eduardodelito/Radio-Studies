@@ -20,6 +20,8 @@ data class DiaryEntity(
 )
 
 data class Diaries(
+    val dayOfStudy: List<Option>,
+    val diaryDate: List<Option>,
     val timeOfListening: List<Option>,
     val stations: List<Option>,
     val placeOfListening: List<Option>,

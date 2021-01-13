@@ -17,7 +17,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="@dimen/padding16">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -49,7 +49,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/line1"
-                tools:text="@{String.format(@string/diary_panel_number, diaryDetailsViewModel.diaryModel.memberNumber)}" />
+                tools:text="@{String.format(@string/diary_member_number, diaryDetailsViewModel.diaryModel.memberNumber)}" />
 
             <View
                 android:id="@+id/line2"
@@ -69,7 +69,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/line2"
-                tools:text="@{String.format(@string/diary_panel_number, diaryDetailsViewModel.diaryModel.nameOfRespondent)}" />
+                tools:text="@{String.format(@string/diary_name_of_respondent, diaryDetailsViewModel.diaryModel.nameOfRespondent)}" />
 
             <View
                 android:id="@+id/line3"

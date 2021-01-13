@@ -46,7 +46,7 @@
     <!--Main Info Screen Error message-->
     <string name="panel_number_error">Must be equal to 7 character.</string>
     <string name="member_number_error">Must be equal to 2 character.</string>
-    <string name="municipality_error">Municipality annot be empty.</string>
+    <string name="municipality_error">Municipality cannot be empty.</string>
     <string name="barangay_error">Barangay cannot be empty.</string>
     <string name="name_of_respondent_error">Name of respondent cannot be empty.</string>
     <string name="address_error">Address cannot be empty.</string>
@@ -98,9 +98,9 @@
     <string name="actual_q14_label">Q14: Does (NAME) have children?</string>
     <string name="actual_q14a_label">Q14a: Mother or Not</string>
     <string name="actual_q14b_label">Q14b: Father or Not</string>
-    <string name="actual_q14c_label">Q14c: Mother with Children 0-2</string>
-    <string name="actual_q14d_label">Q14d: Mother with Children 3-6</string>
-    <string name="actual_q14e_label">Q14e: Mother with Children 7-12</string>
+    <string name="actual_q14c_label">Q14c: Mother with Children 0&#8211;2</string>
+    <string name="actual_q14d_label">Q14d: Mother with Children 3&#8211;6</string>
+    <string name="actual_q14e_label">Q14e: Mother with Children 7&#8211;12</string>
 
     <string name="actual_q15_label">Q15: Occupation</string>
     <string name="actual_q15a_label">Q15a: Employer</string>
@@ -151,16 +151,22 @@
     <string name="diary_member_number">Member Number: %1s</string>
     <string name="diary_name_of_respondent">Name of Respondent: %1s</string>
 
+    <string name="add_diary_btn">Add Diary</string>
+
     <string name="date_from">Date From: %1s</string>
     <string name="date_to">Date To: %1s</string>
 
     <string name="no_diary_available_msg">No Diary available. Please select HRF.</string>
 
+    <string name="details_day_of_study_label">Day of Study</string>
+    <string name="details_diary_date_label">Diary Date</string>
     <string name="details_time_of_listening_label">Time of Listening</string>
     <string name="details_radio_stations_label">Radio Stations</string>
     <string name="details_place_of_listening_label">Select Place Of Listening</string>
     <string name="details_device_label">Device</string>
 
+    <string name="tap_select_day_of_study">[ Tap Here ] Select Day of Study</string>
+    <string name="tap_select_diary_date">[ Tap Here ] Select Diary Date</string>
     <string name="tap_select_time_of_listening">[ Tap Here ] Select Time of Listening</string>
     <string name="tap_select_radio_stations">[ Tap Here ] Select Radio Stations</string>
     <string name="tap_select_place_of_listening">[ Tap Here ] Select Place Of Listening</string>
@@ -172,4 +178,7 @@
     <string name="main_info_error_msg">Unable to save Main info, please try again.</string>
 
     <string name="exit">Do you want to %1s?</string>
+
+    <string name="date_of_interview">%1s/%2s/%3s</string>
+    <string name="text_option">[%1s] %2s</string>
 </resources>
