@@ -100,6 +100,22 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
         }
     }
 
+    fun clearInfoAfterActualQuestionCompleted(panelNumber: String, memberNumber: String) {
+        launch {
+            validateMainInfoIfCompletedFromDB(panelNumber, memberNumber)
+        }
+    }
+
+    private suspend fun validateMainInfoIfCompletedFromDB(panelNumber: String, memberNumber: String) {
+        withContext(Dispatchers.IO) {
+          try {
+              mainInfoState.postValue(ClearMainInfo(actualManager.validateMainInfo(panelNumber, memberNumber)))
+          } catch (e: Exception) {
+              e.printStackTrace()
+          }
+        }
+    }
+
     /**
      * A placeholder value validation check if 1 up to the max value.
      */

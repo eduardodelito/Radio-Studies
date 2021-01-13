@@ -25,3 +25,5 @@ data class MainInfoForm(
 data class MainInfoData(val mainInfo: MainInfo?) : MainInfoState()
 
 data class MainInfoErrorMessage(val msg: Int) : MainInfoState()
+
+data class ClearMainInfo(val exist: Boolean) : MainInfoState()

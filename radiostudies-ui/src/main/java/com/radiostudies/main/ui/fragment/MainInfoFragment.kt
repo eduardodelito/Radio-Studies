@@ -78,6 +78,10 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     override fun subscribeUi() {
         with(viewModel) {
             reObserve(getMainInfoLiveData(), ::onMainInfoStateChanged)
+            clearInfoAfterActualQuestionCompleted(
+                panel_number_field.text.toString(),
+                member_number_field.text.toString()
+            )
         }
     }
 
@@ -152,6 +156,12 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
             is MainInfoErrorMessage -> {
                 dialog(getString(state.msg))
             }
+
+            is ClearMainInfo -> {
+                if (state.exist) {
+                    clear()
+                }
+            }
         }
     }
 
@@ -221,7 +231,9 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         name_of_respondent_field.setText("")
         address_field.setText("")
         age_field.setText("")
+        gender_field.setText("")
         contact_number_field.setText("")
+        eco_class_label.setText("")
     }
 
     companion object {
