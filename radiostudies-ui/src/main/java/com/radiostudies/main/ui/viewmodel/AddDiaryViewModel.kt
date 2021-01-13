@@ -31,7 +31,7 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
     var selectedPlaceOfListening = mutableListOf<Option>()
     var selectedDevice = mutableListOf<Option>()
 
-    var timeOfListeningList = mutableListOf<Option>()
+    private var timeOfListeningList = mutableListOf<Option>()
     init {
         diaryState.postValue(AddDiaryForm(TIME_OF_LISTENING))
     }
@@ -64,7 +64,7 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
                     }
                 }
 
-                var newTimeOfListeningList = mutableListOf<Option>()
+                val newTimeOfListeningList = mutableListOf<Option>()
 
                 for (k in timeOfListeningList.indices) {
                     if (!options.contains(timeOfListeningList[k].option)) {
@@ -101,6 +101,8 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
         options.add(Option("3", DAY_3))
         options.add(Option("4", DAY_4))
         options.add(Option("5", DAY_5))
+        options.add(Option("6", DAY_6))
+        options.add(Option("7", DAY_7))
         diaryState.postValue(AddDayOfStudyForm(options))
     }
 
@@ -203,5 +205,7 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
         private const val DAY_3 = "Day 3"
         private const val DAY_4 = "Day 4"
         private const val DAY_5 = "Day 5"
+        private const val DAY_6 = "Day 6"
+        private const val DAY_7 = "Day 7"
     }
 }
