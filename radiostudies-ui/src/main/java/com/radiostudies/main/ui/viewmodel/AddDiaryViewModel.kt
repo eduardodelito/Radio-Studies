@@ -78,18 +78,21 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
         }
     }
 
-    fun queryStations(place: String) {
-        launch {
-            stations(place)
-        }
-    }
-
-    private suspend fun stations(place: String) {
-        withContext(Dispatchers.IO) {
-            try {
-                diaryState.postValue(StationsForm(actualManager.getSelectedArea(place)))
-            } catch (e: Exception) {
-                e.printStackTrace()
+    fun loadStations(station: String?, selectedArea: String?) {
+        val jsonArray = JSONArray(station)
+        for (i in 0 until jsonArray.length()) {
+            val jsonObject = jsonArray.getJSONObject(i)
+            val place = jsonObject.getString(PLACE)
+            if (place == selectedArea) {
+                val stationsJSONArray = jsonObject.getJSONArray(OPTIONS)
+                val options = mutableListOf<Option>()
+                for (j in 0 until stationsJSONArray.length()) {
+                    val jsonArrayObj = stationsJSONArray.getJSONObject(j)
+                    val optionCode = jsonArrayObj.getString(CODE)
+                    val optionValue = jsonArrayObj.getString(OPTION)
+                    options.add(Option(optionCode, optionValue))
+                }
+                diaryState.postValue(StationsForm(options))
             }
         }
     }
@@ -207,5 +210,11 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
         private const val DAY_5 = "Day 5"
         private const val DAY_6 = "Day 6"
         private const val DAY_7 = "Day 7"
+
+        //Stations
+        private const val PLACE = "place"
+        private const val OPTIONS = "options"
+        private const val CODE = "code"
+        private const val OPTION = "option"
     }
 }

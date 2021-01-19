@@ -58,7 +58,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
         }
 
         add_radio_stations.setOnClickListener {
-            selectedArea?.let { area -> viewModel.queryStations(area) }
+            viewModel.loadStations(getJsonDataFromAsset(requireContext(), STATIONS), selectedArea)
         }
 
         add_place_of_listening.setOnClickListener {
@@ -295,6 +295,8 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
         private const val DONE = "Done"
         const val AREA = "area"
         const val DIARY = "diary"
+
+        private const val STATIONS = "radio_stations.json"
 
         fun newInstance() = AddDiaryFragment()
     }

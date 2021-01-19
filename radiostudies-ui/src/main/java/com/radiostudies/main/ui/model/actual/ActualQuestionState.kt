@@ -10,13 +10,7 @@ sealed class ActualQuestionState
 data class AreaForm(val fileName: String?, val genderCode: String?) :
     ActualQuestionState()
 
-data class StationForm(val fileName: String?, val genderCode: String?) :
-    ActualQuestionState()
-
 data class ActualQuestionForm(val fileName: String?, val genderCode: String?) :
-    ActualQuestionState()
-
-data class DeviceForm(val fileName: String?) :
     ActualQuestionState()
 
 data class ActualQuestionModel(

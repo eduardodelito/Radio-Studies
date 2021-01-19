@@ -1,0 +1,3045 @@
+[
+  {
+    "place": "Mega Manila",
+    "options": [
+      {
+        "code": "025",
+        "option": "DWJM-88.3Mhz Jam 88.3 (Manila)"
+      },
+      {
+        "code": "026",
+        "option": "DWAV-89.1Mhz Wave 89.1 (Manila)"
+      },
+      {
+        "code": "027",
+        "option": "DWTM-89.9Mhz Magic 89.9 (Manila)"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz Love Radio (Manila)"
+      },
+      {
+        "code": "029",
+        "option": "DWKY-91.5Mhz Win Radio (Manila) - Ini-ini-ni!"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz Radyo5 92.3 News FM (Manila)"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz Monster RX 93.1 (Manila)"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz 93.9 iFM Manila Ang Bestfriend Mong FM"
+      },
+      {
+        "code": "033",
+        "option": "DWLL-94.7Mhz Mellow 94.7 (Manila)"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz Pinas FM 95.5 (Manila)"
+      },
+      {
+        "code": "035",
+        "option": "DWRK-96.3Mhz Easy Rock (Manila)"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz Barangay LS 97.1"
+      },
+      {
+        "code": "037",
+        "option": "DWQZ-97.9Mhz 97.9 Home Radio (Manila)"
+      },
+      {
+        "code": "038",
+        "option": "DZFE-98.7Mhz The Master's Touch 98.7 (Manila)"
+      },
+      {
+        "code": "039",
+        "option": "DWRT-99.5Mhz  99.5 Play FM (Manila)"
+      },
+      {
+        "code": "040",
+        "option": "DZRJ-100.3Mhz RJ 100 (Manila)"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz 101.1 Yes! The BEST 101.1"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz MOR 101.9 For Life! (Manila)"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz Star FM (Manila)"
+      },
+      {
+        "code": "044",
+        "option": "DWKX-103.5Mhz K-Lite FM (Manila)"
+      },
+      {
+        "code": "045",
+        "option": "DWFT-104.3Mhz 104.3 FM2"
+      },
+      {
+        "code": "046",
+        "option": "DWBM-105.1Mhz Crossover (Manila)"
+      },
+      {
+        "code": "047",
+        "option": "DWLA-105.9Mhz Lite FM 105.9"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz Energy FM (Manila)"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz Wish 1075 Radio (Manila)"
+      },
+      {
+        "code": "050",
+        "option": "DZUR-107.9Mhz 107.9 U Radio (Manila)"
+      },
+      {
+        "code": "096",
+        "option": "DWKI-95.1Mhz Kiss FM (Lucena)"
+      },
+      {
+        "code": "101",
+        "option": "DWEY-104.7Mhz 104.7 Brigada News FM (Batangas)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "346",
+        "option": "DWGV-99.1Mhz"
+      },
+      {
+        "code": "477",
+        "option": "DWSP-101.5Mhz"
+      },
+      {
+        "code": "636",
+        "option": "107.1Mhz DCG FM Heartbeat of the City (San Pablo)"
+      },
+      {
+        "code": "612",
+        "option": "DWFO 87.5Mhz 87.5 FM 1 (Manila)"
+      },
+      {
+        "code": "618",
+        "option": "SPOTIFY"
+      }
+    ]
+  },
+  {
+    "place": "Baguio",
+    "options": [
+      {
+        "code": "062",
+        "option": "DWIM-89.5Mhz Star FM"
+      },
+      {
+        "code": "063",
+        "option": "DWDJ-91.1Mhz RJ 100"
+      },
+      {
+        "code": "064",
+        "option": "DZYS-91.9Mhz Easy Rock"
+      },
+      {
+        "code": "065",
+        "option": "DWRA-92.7Mhz Barangay 92.7"
+      },
+      {
+        "code": "066",
+        "option": "DWMB-95.1Mhz Love Radio"
+      },
+      {
+        "code": "067",
+        "option": "DWBG-95.9Mhz Big Sound FM"
+      },
+      {
+        "code": "068",
+        "option": "DWSK-96.7Mhz K-Lite"
+      },
+      {
+        "code": "069",
+        "option": "DWLY-97.5Mhz Cool FM"
+      },
+      {
+        "code": "070",
+        "option": "DWUB-98.7Mhz Z Radio"
+      },
+      {
+        "code": "071",
+        "option": "DZWR-99.9Mhz 99.9 Country"
+      },
+      {
+        "code": "072",
+        "option": "DZYB-102.3Mhz 102.3 News FM"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz MOR 103.1 For Life! (Baguio)"
+      },
+      {
+        "code": "074",
+        "option": "DWHB-103.9Mhz iFM"
+      },
+      {
+        "code": "046",
+        "option": "DWBM-105.1Mhz Crossover (Manila)"
+      },
+      {
+        "code": "076",
+        "option": "DZLL-107.1Mhz Smooth FM"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz Radyo5 92.3 News FM (Manila)"
+      }
+    ]
+  },
+  {
+    "place": "Batangas",
+    "options": [
+      {
+        "code": "026",
+        "option": "DWAV-89.1Mhz Wave 89.1 (Manila)"
+      },
+      {
+        "code": "095",
+        "option": "DWCX-91.9Mhz Air1 Radio FM"
+      },
+      {
+        "code": "096",
+        "option": "DWKI-95.1Mhz Kiss FM (Lucena)"
+      },
+      {
+        "code": "097",
+        "option": "DWAL-95.9Mhz DWAL-FM Radyo Totoo"
+      },
+      {
+        "code": "098",
+        "option": "DZLC-98.5Mhz Click 98.5 (Lipa City)"
+      },
+      {
+        "code": "099",
+        "option": "DWAM-99.1Mhz 99.1 Spirit FM"
+      },
+      {
+        "code": "100",
+        "option": "DZGV-99.9Mhz GV 99.9 FM"
+      },
+      {
+        "code": "101",
+        "option": "DWEY-104.7Mhz 104.7 Brigada News FM (Batangas)"
+      },
+      {
+        "code": "103",
+        "option": "DWKV-102.3Mhz Citi Beat 102.3"
+      },
+      {
+        "code": "104",
+        "option": "DZUN-88.7Mhz Magik FM"
+      },
+      {
+        "code": "105",
+        "option": "89.5Mhz Smile FM"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz Love Radio (Manila)"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz Radyo5 92.3 News FM (Manila)"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz Monster RX 93.1 (Manila)"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz 93.9 iFM Manila Ang Bestfriend Mong FM"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz Pinas FM 95.5 (Manila)"
+      },
+      {
+        "code": "035",
+        "option": "DWRK-96.3Mhz Easy Rock (Manila)"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz Barangay LS 97.1"
+      },
+      {
+        "code": "037",
+        "option": "DWQZ-97.9Mhz 97.9 Home Radio (Manila)"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz 101.1 Yes! The BEST 101.1"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz MOR 101.9 For Life! (Manila)"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz Star FM (Manila)"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz Wish 1075 Radio (Manila)"
+      },
+      {
+        "code": "607",
+        "option": "DWPB-107.3Mhz Radyo ng Bayan para sa Kaunlaran"
+      }
+    ]
+  },
+  {
+    "place": "Butuan",
+    "options": [
+      {
+        "code": "119",
+        "option": "DXGL-88.7Mhz Real Radio"
+      },
+      {
+        "code": "120",
+        "option": "DXJJ-91.7Mhz"
+      },
+      {
+        "code": "121",
+        "option": "DXMB-95.1Mhz Love Radio"
+      },
+      {
+        "code": "122",
+        "option": "DXEY-96.7Mhz"
+      },
+      {
+        "code": "123",
+        "option": "DXMK-97.5Mhz Magik FM"
+      },
+      {
+        "code": "124",
+        "option": "DXBB-98.5Mhz Wild FM"
+      },
+      {
+        "code": "126",
+        "option": "DXXX-100.7Mhz Ang Bestfriend Mo"
+      },
+      {
+        "code": "127",
+        "option": "DXNS-102.3Mhz Bee FM"
+      },
+      {
+        "code": "130",
+        "option": "103.9Mhz Radyo Trumpeta"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "693",
+        "option": "103.1 Mhz Sunny FM"
+      },
+      {
+        "code": "694",
+        "option": "107.8 Power FM"
+      },
+      {
+        "code": "521",
+        "option": "DXIM-93.5Mhz Hope Radio"
+      }
+    ]
+  },
+  {
+    "place": "Cabanatuan",
+    "options": [
+      {
+        "code": "147",
+        "option": "DWUP-89.7Mhz Radio Wesleyan 89.7"
+      },
+      {
+        "code": "148",
+        "option": "DWDC-101.3Mhz Big Sound FM (Nueva Viscaya)"
+      },
+      {
+        "code": "150",
+        "option": "DWTX-106.5Mhz TX 106.5"
+      },
+      {
+        "code": "151",
+        "option": "DWYC-88.7Mhz Radyo 5 News FM"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz Love Radio (Manila)"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz Barangay LS 97.1"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz MOR 101.9 For Life! (Manila)"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz MOR 103.1 For Life! (Baguio)"
+      }
+    ]
+  },
+  {
+    "place": "Dumaguete",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "177",
+        "option": "DYKI-89.9Mhz Smooth FM 89.9 (Dumaguete)"
+      },
+      {
+        "code": "178",
+        "option": "DXNA-91.3Mhz"
+      },
+      {
+        "code": "179",
+        "option": "DYGB-91.7Mhz Power 91 FM"
+      },
+      {
+        "code": "180",
+        "option": "DYWF-93.1Mhz Brigada News FM (Cebu)"
+      },
+      {
+        "code": "181",
+        "option": "DYSR-95.1 Mhz SR95"
+      },
+      {
+        "code": "182",
+        "option": "DYIF-95.9Mhz Star FM (Bacolod)"
+      },
+      {
+        "code": "183",
+        "option": "DYEM-96.7Mhz Bai Radio"
+      },
+      {
+        "code": "184",
+        "option": "DYLS-97.1Mhz  MOR 97.1 Lupig Sila! For Life!"
+      },
+      {
+        "code": "185",
+        "option": "DYRT-99.5Mhz Barangay RT 99.5 (Cebu)"
+      },
+      {
+        "code": "186",
+        "option": "DYFU-101.3Mhz Greyhound Radio"
+      },
+      {
+        "code": "187",
+        "option": "DYSK-100.1Mhz Radyo Natin (Guilungan)"
+      },
+      {
+        "code": "188",
+        "option": "DYSJ-105.7Mhz Radyo Natin (Bayawan)"
+      },
+      {
+        "code": "189",
+        "option": "DYYD-106.3Mhz Yes! The Best"
+      },
+      {
+        "code": "661",
+        "option": "DYMD-93.7 Mhz Energy FM"
+      },
+      {
+        "code": "541",
+        "option": "DYRL-90.5Mhz Like Radio"
+      },
+      {
+        "code": "340",
+        "option": "DYKC-675Khz RPN DYKC Kusog Cebu"
+      }
+    ]
+  },
+  {
+    "place": "Iligan",
+    "options": [
+      {
+        "code": "219",
+        "option": "DXND-90.1Mhz Super Radyo DZBB"
+      },
+      {
+        "code": "221",
+        "option": "DZMA-95.9Mhz The Edge FM"
+      },
+      {
+        "code": "222",
+        "option": "DXRI-98.3Mhz NBC Radio"
+      },
+      {
+        "code": "223",
+        "option": "DXIX-102.3Mhz Ang Bestfriend Mo"
+      },
+      {
+        "code": "224",
+        "option": "DXIL-103.1Mhz Wild FM"
+      },
+      {
+        "code": "225",
+        "option": "DXIV-104.1Mhz Star FM"
+      },
+      {
+        "code": "226",
+        "option": "DXTL-105.5Mhz Yes! FM"
+      },
+      {
+        "code": "227",
+        "option": "DXLS-107.1Mhz Love Radio"
+      },
+      {
+        "code": "228",
+        "option": "DXMC-100.1Mhz Hope Channel"
+      },
+      {
+        "code": "229",
+        "option": "DXMA-97.5Mhz Muews Radio (Digos)"
+      },
+      {
+        "code": "230",
+        "option": "DXTA-92.7Mhz Real Radio"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "674",
+        "option": "DXDY-95.1Mhz Brigada News FM (Iligan)"
+      }
+    ]
+  },
+  {
+    "place": "Olongapo",
+    "options": [
+      {
+        "code": "243",
+        "option": "DWSB-89.5Mhz Subic Bay"
+      },
+      {
+        "code": "244",
+        "option": "DWSL-96.7Mhz K-Lite"
+      },
+      {
+        "code": "245",
+        "option": "DWOK-97.5Mhz 97.5 DWOK FM"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz Love Radio (Manila)"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz 93.9 iFM Manila Ang Bestfriend Mong FM"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz Barangay LS 97.1"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz MOR 101.9 For Life! (Manila)"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz Energy FM (Manila)"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz 101.1 Yes! The BEST 101.1"
+      },
+      {
+        "code": "640",
+        "option": "DWTY-93.5Mhz Brigada News FM (Olongapo)"
+      },
+      {
+        "code": "527",
+        "option": "DZFQ-95.9Mhz Radio Maria 95.9"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz Star FM (Manila)"
+      },
+      {
+        "code": "029",
+        "option": "DWKY-91.5Mhz Win Radio (Manila) - Ini-ini-ni!"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz Monster RX 93.1 (Manila)"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz Radyo5 92.3 News FM (Manila)"
+      }
+    ]
+  },
+  {
+    "place": "Puerto Princesa",
+    "options": [
+      {
+        "code": "040",
+        "option": "DZRJ-100.3Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "280",
+        "option": "DYEH-95.9Mhz"
+      },
+      {
+        "code": "281",
+        "option": "DYHY-97.5Mhz Barangay 97.5"
+      },
+      {
+        "code": "282",
+        "option": "DYEZ-98.3Mhz Love Radio"
+      },
+      {
+        "code": "283",
+        "option": "DWWA-98.5Mhz Radyo Cabayugan"
+      },
+      {
+        "code": "284",
+        "option": "DYCU-99.9Mhz MOR 99.9 For Life! (Palawan)"
+      },
+      {
+        "code": "287",
+        "option": "DWAR-103.9Mhz RMN FM"
+      },
+      {
+        "code": "288",
+        "option": "DYWA-106.3Mhz Lips FM"
+      },
+      {
+        "code": "650",
+        "option": "88.7Mhz Radyo Bandera"
+      },
+      {
+        "code": "651",
+        "option": "DYOP-94.3Mhz Home Radio"
+      },
+      {
+        "code": "652",
+        "option": "DYRT-102.3Mhz Radyo Tandikan"
+      },
+      {
+        "code": "653",
+        "option": "DWYD-103.1Mhz Brigada News FM"
+      },
+      {
+        "code": "193",
+        "option": "90.3Mhz Smile FM"
+      },
+      {
+        "code": "415",
+        "option": "BLANKDWIZ 94.3Mhz The Music & News Radio"
+      },
+      {
+        "code": "452",
+        "option": "DYRJ-99.1Mhz RJ100"
+      },
+      {
+        "code": "475",
+        "option": "DWOK 107.9 Mhz FM Palawan"
+      },
+      {
+        "code": "197",
+        "option": "91.1Mhz Radyo Palaueno"
+      },
+      {
+        "code": "331",
+        "option": "91.5Mhz Radyo Totoo Wow FM"
+      },
+      {
+        "code": "544",
+        "option": "107.1Mhz Power FM"
+      },
+      {
+        "code": "245",
+        "option": "DWOK-97.5Mhz 97.5 DWOK FM"
+      }
+    ]
+  },
+  {
+    "place": "Surigao",
+    "options": [
+      {
+        "code": "307",
+        "option": "DXSJ-93.3Mhz Infinite Radio"
+      },
+      {
+        "code": "308",
+        "option": "DYXL-93.9Mhz 93.9 IFM Cebu Ang Idol Mong FM"
+      },
+      {
+        "code": "309",
+        "option": "DXKE-94.1Mhz Ang Bestfriend Mo"
+      },
+      {
+        "code": "310",
+        "option": "DXSP-96.1Mhz One FM"
+      },
+      {
+        "code": "184",
+        "option": "DYLS-97.1Mhz  MOR 97.1 Lupig Sila! For Life!"
+      },
+      {
+        "code": "312",
+        "option": "DXTS-99.7Mhz"
+      },
+      {
+        "code": "313",
+        "option": "DXRZ-104.7Mhz Real Radio"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "692",
+        "option": "DXHL-94.9Mhz Joy Radio"
+      }
+    ]
+  },
+  {
+    "place": "Tarlac",
+    "options": [
+      {
+        "code": "343",
+        "option": "DZMC-91.1Mhz DZMCFM 91.1"
+      },
+      {
+        "code": "344",
+        "option": "DWXT-96.1Mhz One FM"
+      },
+      {
+        "code": "345",
+        "option": "DZRM-99.7Mhz Radio Maria 99.7"
+      },
+      {
+        "code": "346",
+        "option": "DWGV-99.1Mhz GVFM 99.1 Drive Radio (Angeles)"
+      },
+      {
+        "code": "347",
+        "option": "DWDU-105.5Mhz UFM (Clark)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "027",
+        "option": "DWTM-89.9Mhz Magic 89.9 (Manila)"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz Love Radio (Manila)"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz Pinas FM 95.5 (Manila)"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz Barangay LS 97.1"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz 101.1 Yes! The BEST 101.1"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz MOR 101.9 For Life! (Manila)"
+      },
+      {
+        "code": "044",
+        "option": "DWKX-103.5Mhz K-Lite FM (Manila)"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz Energy FM (Manila)"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz Wish 1075 Radio (Manila)"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz MOR 103.1 For Life! (Baguio)"
+      },
+      {
+        "code": "639",
+        "option": "DZLT-97.7Mhz Love Radio (Tarlac)"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz Star FM (Manila)"
+      }
+    ]
+  },
+  {
+    "place": "Zamboanga",
+    "options": [
+      {
+        "code": "369",
+        "option": "DXMG-88.7Mhz"
+      },
+      {
+        "code": "370",
+        "option": "DXTZ-90.7Mhz  Love Radio"
+      },
+      {
+        "code": "371",
+        "option": "DXKZ-91.5Mhz Mango Radio"
+      },
+      {
+        "code": "372",
+        "option": "DXRX-93.1Mhz Dream Radio"
+      },
+      {
+        "code": "373",
+        "option": "DXCB-93.9Mhz Star FM"
+      },
+      {
+        "code": "374",
+        "option": "DXEL-95.5Mhz Magik 95.5"
+      },
+      {
+        "code": "375",
+        "option": "DXWR-96.3Mhz  96.3 iFM Music and News"
+      },
+      {
+        "code": "377",
+        "option": "DXCM-97.9Mhz Love Radio"
+      },
+      {
+        "code": "378",
+        "option": "DXFH-98.7Mhz MOR 98.7 For Life! (Zamboanga)"
+      },
+      {
+        "code": "380",
+        "option": "DXTY-101.1Mhz Radyo5 News FM"
+      },
+      {
+        "code": "381",
+        "option": "DXHT-102.7Mhz Yes! The BEST FM"
+      },
+      {
+        "code": "382",
+        "option": "DXUE-103.5Mhz Halo Halo 103.5 Zamboanga"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz 93.9 iFM Manila Ang Bestfriend Mong FM"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz 101.1 Yes! The BEST 101.1"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz Star FM (Manila)"
+      },
+      {
+        "code": "691",
+        "option": "DXBY-89.9 Mhz Brigada News FM Zamboanga"
+      },
+      {
+        "code": "708",
+        "option": "DXWW-105.9Mhz e105.9 Emedia Mo! Solid!"
+      }
+    ]
+  },
+  {
+    "place": "Tacloban",
+    "options": [
+      {
+        "code": "400",
+        "option": "DYTM-91.1Mhz Love Radio"
+      },
+      {
+        "code": "401",
+        "option": "DYTY-93.5Mhz Dream Radio"
+      },
+      {
+        "code": "402",
+        "option": "DYTC-94.3Mhz MOR 101.5 For Life! (Bacolod)"
+      },
+      {
+        "code": "403",
+        "option": "DYTX-95.1Mhz Bombo Radyo"
+      },
+      {
+        "code": "405",
+        "option": "DYOU-97.5Mhz"
+      },
+      {
+        "code": "406",
+        "option": "DYXV-98.3Mhz Magic"
+      },
+      {
+        "code": "407",
+        "option": "DYXY-99.1Mhz RMN Tacloban"
+      },
+      {
+        "code": "408",
+        "option": "DYDR-100.7Mhz Kaugop Radio"
+      },
+      {
+        "code": "716",
+        "option": "103.1Mhz Dream Radio"
+      },
+      {
+        "code": "717",
+        "option": "DYAB-104.7Mhz Kaboses Radio"
+      },
+      {
+        "code": "540",
+        "option": "96.7Mhz One FM"
+      }
+    ]
+  },
+  {
+    "place": "Angeles-San Fernando",
+    "options": [
+      {
+        "code": "025",
+        "option": "DWJM-88.3Mhz Jam 88.3 (Manila)"
+      },
+      {
+        "code": "026",
+        "option": "DWAV-89.1Mhz Wave 89.1 (Manila)"
+      },
+      {
+        "code": "027",
+        "option": "DWTM-89.9Mhz Magic 89.9 (Manila)"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz Love Radio (Manila)"
+      },
+      {
+        "code": "029",
+        "option": "DWKY-91.5Mhz Win Radio (Manila) - Ini-ini-ni!"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz Radyo5 92.3 News FM (Manila)"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz Monster RX 93.1 (Manila)"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz 93.9 iFM Manila Ang Bestfriend Mong FM"
+      },
+      {
+        "code": "033",
+        "option": "DWLL-94.7Mhz Mellow 94.7 (Manila)"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz Pinas FM 95.5 (Manila)"
+      },
+      {
+        "code": "035",
+        "option": "DWRK-96.3Mhz Easy Rock (Manila)"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz Barangay LS 97.1"
+      },
+      {
+        "code": "037",
+        "option": "DWQZ-97.9Mhz 97.9 Home Radio (Manila)"
+      },
+      {
+        "code": "038",
+        "option": "DZFE-98.7Mhz The Master's Touch 98.7 (Manila)"
+      },
+      {
+        "code": "039",
+        "option": "DWRT-99.5Mhz  99.5 Play FM (Manila)"
+      },
+      {
+        "code": "040",
+        "option": "DZRJ-100.3Mhz RJ 100 (Manila)"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz 101.1 Yes! The BEST 101.1"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz MOR 101.9 For Life! (Manila)"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz Star FM (Manila)"
+      },
+      {
+        "code": "044",
+        "option": "DWKX-103.5Mhz K-Lite FM (Manila)"
+      },
+      {
+        "code": "045",
+        "option": "DWFT-104.3Mhz 104.3 FM2"
+      },
+      {
+        "code": "046",
+        "option": "DWBM-105.1Mhz Crossover (Manila)"
+      },
+      {
+        "code": "047",
+        "option": "DWLA-105.9Mhz Lite FM 105.9"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz Energy FM (Manila)"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz"
+      },
+      {
+        "code": "050",
+        "option": "DWNU-107.5Mhz Wish 1075 Radio (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "346",
+        "option": "DWGV-99.1Mhz GVFM 99.1 Drive Radio (Angeles)"
+      },
+      {
+        "code": "523",
+        "option": "DWBL-91.9Mhz 91.9 Bright FM"
+      },
+      {
+        "code": "525",
+        "option": "DWCL-92.7Mhz 92.7 Brigada News FM"
+      },
+      {
+        "code": "526",
+        "option": "DWRW-95.1Mhz RW 95.1FM"
+      },
+      {
+        "code": "612",
+        "option": "DWFO 87.5Mhz 87.5 FM 1 (Manila)"
+      }
+    ]
+  },
+  {
+    "place": "Bacolod",
+    "options": [
+      {
+        "code": "083",
+        "option": "DYCP-90.3Mhz Mom's Radio"
+      },
+      {
+        "code": "084",
+        "option": "DYKS-91.9Mhz Love Radio"
+      },
+      {
+        "code": "086",
+        "option": "DYHT-94.3Mhz 94.3 iFM Bacolod"
+      },
+      {
+        "code": "182",
+        "option": "DYIF-95.9Mhz Star FM (Bacolod)"
+      },
+      {
+        "code": "089",
+        "option": "DYBM-99.1Mhz Crossover"
+      },
+      {
+        "code": "090",
+        "option": "DYFJ-99.9Mhz RJ FM"
+      },
+      {
+        "code": "091",
+        "option": "DYOO-101.5Mhz M.O.R. (For Life) (Bacolod)"
+      },
+      {
+        "code": "092",
+        "option": "DYBC-102.3Mhz Radyo 5 News FM"
+      },
+      {
+        "code": "094",
+        "option": "DYMG-103.1Mhz Radyo Kumando"
+      },
+      {
+        "code": "102",
+        "option": "DYMY-105.5Mhz Easy Rock"
+      },
+      {
+        "code": "106",
+        "option": "DYBE-106.3Mhz Magic 106.3"
+      },
+      {
+        "code": "107",
+        "option": "DYEN-107.1Mhz Barangay 107.1"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Cagayan De Oro",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "629",
+        "option": "DXYW-102.5 Mhz Brigada News FM"
+      },
+      {
+        "code": "630",
+        "option": "DXNY-107.9Mhz Win Radio (CDO) - Ini-ini-ni!"
+      },
+      {
+        "code": "631",
+        "option": "DXBC-103.9Mhz Radyo Bandera  Marian Radio"
+      }
+    ]
+  },
+  {
+    "place": "Dagupan",
+    "options": [
+      {
+        "code": "231",
+        "option": "DWIZ-89.3Mhz Music and News Radio"
+      },
+      {
+        "code": "232",
+        "option": "DWKT-90.3Mhz Energy FM"
+      },
+      {
+        "code": "233",
+        "option": "DWTL-93.5Mhz Barangay 93.5S"
+      },
+      {
+        "code": "234",
+        "option": "DWEC-94.3Mhz MOR 94.3 For Life!"
+      },
+      {
+        "code": "235",
+        "option": "DWID-98.3Mhz Love Radio"
+      },
+      {
+        "code": "236",
+        "option": "DWHY-100.7Mhz Star FM"
+      },
+      {
+        "code": "237",
+        "option": "DWON-104.7Mhz iFM IDOL"
+      },
+      {
+        "code": "238",
+        "option": "DWHR-106.3Mhz Yes! The Best FM"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "714",
+        "option": "DWRD-102.5 Mhz Manaoag Dominican Radio"
+      }
+    ]
+  },
+  {
+    "place": "Davao",
+    "options": [
+      {
+        "code": "265",
+        "option": "DXDR-88.3Mhz Energy FM"
+      },
+      {
+        "code": "266",
+        "option": "DXBE-89.1Mhz Magic 89.1"
+      },
+      {
+        "code": "267",
+        "option": "DXGN-89.8Mhz"
+      },
+      {
+        "code": "268",
+        "option": "DXBM-90.7Mhz Love Radio"
+      },
+      {
+        "code": "270",
+        "option": "DXWT-92.3Mhz Wild FM"
+      },
+      {
+        "code": "271",
+        "option": "DXLR-93.1Mhz 93.1 Crossover"
+      },
+      {
+        "code": "272",
+        "option": "DXXL-93.9Mhz 93.9 iFM I na Taaah!"
+      },
+      {
+        "code": "285",
+        "option": "DXLL-94.7Mhz One Radio"
+      },
+      {
+        "code": "286",
+        "option": "DXKR-95.5Mhz Retro 95.5"
+      },
+      {
+        "code": "290",
+        "option": "DXFX-96.3Mhz Star FM"
+      },
+      {
+        "code": "291",
+        "option": "DXUR-97.1Mhz Halo Halo Radio"
+      },
+      {
+        "code": "292",
+        "option": "DXSS-97.9Mhz Mom's Radio"
+      },
+      {
+        "code": "293",
+        "option": "DXQM-98.7Mhz Home Radio"
+      },
+      {
+        "code": "294",
+        "option": "DXBT-99.5Mhz Monster Radio BT 99.5"
+      },
+      {
+        "code": "295",
+        "option": "DXDJ-100.3Mhz RJ100"
+      },
+      {
+        "code": "296",
+        "option": "DXRR-101.1Mhz MOR 101.1 For Life!"
+      },
+      {
+        "code": "297",
+        "option": "DXFM-101.9Mhz Radyo5 101.9 News FM"
+      },
+      {
+        "code": "298",
+        "option": "DXRV-103.5Mhz Barangay 103.5"
+      },
+      {
+        "code": "299",
+        "option": "DXMA-104.3Mhz Hope Radio"
+      },
+      {
+        "code": "300",
+        "option": "DXYS-105.1Mhz Easy Rock"
+      },
+      {
+        "code": "301",
+        "option": "DXMX-105.9Mhz Power FM"
+      },
+      {
+        "code": "306",
+        "option": "DXNU-107.5Mhz Win Radio - Ini-ini-ni!"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "673",
+        "option": "DXKX-91.5Mhz Brigada News FM (Davao)"
+      },
+      {
+        "code": "528",
+        "option": "DXGN-89.9Mhz Spirit FM"
+      },
+      {
+        "code": "531",
+        "option": "DXYP-102.7Mhz Mango Radio"
+      },
+      {
+        "code": "543",
+        "option": "DXRP-87.5Mhz Radio Pilipinas"
+      }
+    ]
+  },
+  {
+    "place": "General Santos",
+    "options": [
+      {
+        "code": "328",
+        "option": "DXYM-89.5Mhz Brigada News FM"
+      },
+      {
+        "code": "329",
+        "option": "DXCK-91.9Mhz  91.9 iFM Bestfriend Mo"
+      },
+      {
+        "code": "330",
+        "option": "DXBC-92.7Mhz MOR 92.7 For Life!"
+      },
+      {
+        "code": "332",
+        "option": "DZRH-94.3Mhz DZRH NEWS FM"
+      },
+      {
+        "code": "333",
+        "option": "DXRG-96.7Mhz Infinite FM"
+      },
+      {
+        "code": "334",
+        "option": "DXVI-97.5Mhz Radyo 5 News FM"
+      },
+      {
+        "code": "335",
+        "option": "DXQS-98.3Mhz Home Radio"
+      },
+      {
+        "code": "336",
+        "option": "DXRT-99.1Mhz Wild FM"
+      },
+      {
+        "code": "337",
+        "option": "DXWK-101.5Mhz Love Radio"
+      },
+      {
+        "code": "338",
+        "option": "DXCJ-102.3Mhz Baranga 102.3"
+      },
+      {
+        "code": "341",
+        "option": "DXKM-106.3Mhz  Magic 106.3"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "633",
+        "option": "DXMA-94.9Mhz News FM"
+      },
+      {
+        "code": "634",
+        "option": "DXWW -103.9Mhz Gold FM"
+      },
+      {
+        "code": "635",
+        "option": "91.1 Mhz Kees FM"
+      },
+      {
+        "code": "560",
+        "option": "103.1Mhz Radyo Bandera News FM"
+      },
+      {
+        "code": "562",
+        "option": "DXEZ-88.7Mhz Monster Radio EZ"
+      },
+      {
+        "code": "542",
+        "option": "DXIC-95.3Mhz Hope Radio"
+      }
+    ]
+  },
+  {
+    "place": "Legaspi",
+    "options": [
+      {
+        "code": "383",
+        "option": "DWFX-89.9Mhz 89.9 Fox"
+      },
+      {
+        "code": "384",
+        "option": "DWWF-91.5Mhz Brigada News FM"
+      },
+      {
+        "code": "385",
+        "option": "DWQA-92.3Mhz Home Radio"
+      },
+      {
+        "code": "386",
+        "option": "DWRD-93.9Mhz MOR 93.9 For Life (Legaspi)"
+      },
+      {
+        "code": "387",
+        "option": "DWBS-94.7Mhz 94.7 SPIRIT FM"
+      },
+      {
+        "code": "388",
+        "option": "DWRC-95.5Mhz Sigaw 95.5 Music & News FM"
+      },
+      {
+        "code": "389",
+        "option": "DWCW-96.3Mhz Barangay FM 96.3"
+      },
+      {
+        "code": "390",
+        "option": "DWGB-97.1Mhz 97.1 OK FM"
+      },
+      {
+        "code": "391",
+        "option": "DWMR-97.9Mhz"
+      },
+      {
+        "code": "392",
+        "option": "DWCM-99.5Mhz Love Radio"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "669",
+        "option": "DWAY-104.3 Mhz Care 104.3"
+      },
+      {
+        "code": "504",
+        "option": "DWHI-100.3Mhz Zagitsit Z100.3 News FM"
+      },
+      {
+        "code": "506",
+        "option": "DWMV-89.1Mhz Bicol 89.1 Idol FM"
+      },
+      {
+        "code": "507",
+        "option": "DWML-90.7Mhz 90.7 Radyo Oragon"
+      },
+      {
+        "code": "520",
+        "option": "DWCZ-94.7Mhz Spirit FM"
+      }
+    ]
+  },
+  {
+    "place": "Lucena",
+    "options": [
+      {
+        "code": "422",
+        "option": "DWQL-91.1Mhz  Campus Radio Ayos!"
+      },
+      {
+        "code": "423",
+        "option": "DWKL-92.7Mhz Brigada News FM (Lucena)"
+      },
+      {
+        "code": "424",
+        "option": "DWEJ-93.5Mhz Power 93.5"
+      },
+      {
+        "code": "096",
+        "option": "DWKI-95.1Mhz Kiss FM (Lucena)"
+      },
+      {
+        "code": "426",
+        "option": "DWNG-97.5Mhz  Big Sound FM"
+      },
+      {
+        "code": "427",
+        "option": "DZLQ-98.3Mhz  One FM"
+      },
+      {
+        "code": "428",
+        "option": "DWLW-100.7Mhz  Love Radio"
+      },
+      {
+        "code": "431",
+        "option": "DWVM-103.9Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "432",
+        "option": "DZCT-105.3Mhz Radio City (Tayabas)"
+      },
+      {
+        "code": "101",
+        "option": "DWEY-104.7Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Malaybalay",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "191",
+        "option": "DXYR-104.7Mhz Yes! The Best"
+      },
+      {
+        "code": "440",
+        "option": "DXGT-92.1Mhz DXGT FM / Radyo Abante (Maramag)"
+      },
+      {
+        "code": "441",
+        "option": "DXWB-92.9Mhz Wild FM (Valencia)"
+      },
+      {
+        "code": "442",
+        "option": "DXEM-96.1Mhz Gold FM (Valencia)"
+      },
+      {
+        "code": "443",
+        "option": "DXBU-104.5Mhz DXBU 104.5 FM"
+      },
+      {
+        "code": "444",
+        "option": "MPR-105.3Mhz  Mindanao Praise Radio"
+      },
+      {
+        "code": "445",
+        "option": "DXIQ-106.3Mhz Love Radio"
+      },
+      {
+        "code": "446",
+        "option": "DXDM-88.7Mhz Happy FM (Kidapawan)"
+      },
+      {
+        "code": "672",
+        "option": "94.5Mhz Radyo ni Juan (Valencia)"
+      },
+      {
+        "code": "701",
+        "option": "DXGG-107.1Mhz Happy FM (Malaybalay)"
+      },
+      {
+        "code": "508",
+        "option": "88.1Mhz Bandera News FM"
+      }
+    ]
+  },
+  {
+    "place": "Naga",
+    "options": [
+      {
+        "code": "459",
+        "option": "DZTR-89.5Mhz 89.5 Radyo Natin"
+      },
+      {
+        "code": "460",
+        "option": "DWNX-91.1Mhz RMN (Naga)"
+      },
+      {
+        "code": "461",
+        "option": "DZLR-91.1Mhz  Magic FM"
+      },
+      {
+        "code": "462",
+        "option": "DWAC-93.5Mhz MOR 93.5 For Life (Naga)"
+      },
+      {
+        "code": "463",
+        "option": "DWQJ-95.1Mhz Home Radio"
+      },
+      {
+        "code": "465",
+        "option": "DZOK-97.5Mhz 97.5 OKFM"
+      },
+      {
+        "code": "467",
+        "option": "DWYN-99.1Mhz Love Radio"
+      },
+      {
+        "code": "468",
+        "option": "DWEB-99.9Mhz The Webb"
+      },
+      {
+        "code": "469",
+        "option": "DWQW-101.5Mhz Barangay FM 101.5"
+      },
+      {
+        "code": "471",
+        "option": "DWBQ-106.3Mhz Energy FM Naga"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "472",
+        "option": "DWOS-103.1Mhz DWOS 103.1 Magic FM"
+      },
+      {
+        "code": "646",
+        "option": "DWKM-100.7Mhz KMFM Kakampi Mo"
+      },
+      {
+        "code": "509",
+        "option": "DWRV-98.3Mhz 98.3 Mother's Touch"
+      },
+      {
+        "code": "516",
+        "option": "DWJR-96.1Mhz Farm Radio 96.1"
+      },
+      {
+        "code": "518",
+        "option": "103.1Mhz Brigada News FM Naga"
+      },
+      {
+        "code": "519",
+        "option": "DWOS-103.9Mhz DWOS FM 103.9"
+      },
+      {
+        "code": "593",
+        "option": "91.9Mhz BBS FM 91.9"
+      },
+      {
+        "code": "245",
+        "option": "DWOK-97.5Mhz 97.5 DWOK FM"
+      }
+    ]
+  },
+  {
+    "place": "San Pablo",
+    "options": [
+      {
+        "code": "025",
+        "option": "DWJM-88.3Mhz Jam 88.3 (Manila)"
+      },
+      {
+        "code": "026",
+        "option": "DWAV-89.1Mhz Wave 89.1 (Manila)"
+      },
+      {
+        "code": "027",
+        "option": "DWTM-89.9Mhz Magic 89.9 (Manila)"
+      },
+      {
+        "code": "028",
+        "option": "DZMB-90.7Mhz Love Radio (Manila)"
+      },
+      {
+        "code": "029",
+        "option": "DWKY-91.5Mhz Win Radio (Manila) - Ini-ini-ni!"
+      },
+      {
+        "code": "030",
+        "option": "DWFM-92.3Mhz Radyo5 92.3 News FM (Manila)"
+      },
+      {
+        "code": "031",
+        "option": "DWRX-93.1Mhz Monster RX 93.1 (Manila)"
+      },
+      {
+        "code": "032",
+        "option": "DWKC-93.9Mhz 93.9 iFM Manila Ang Bestfriend Mong FM"
+      },
+      {
+        "code": "033",
+        "option": "DWLL-94.7Mhz Mellow 94.7 (Manila)"
+      },
+      {
+        "code": "034",
+        "option": "DWDM-95.5Mhz Pinas FM 95.5 (Manila)"
+      },
+      {
+        "code": "035",
+        "option": "DWRK-96.3Mhz Easy Rock (Manila)"
+      },
+      {
+        "code": "036",
+        "option": "DWLS-97.1Mhz Barangay LS 97.1"
+      },
+      {
+        "code": "037",
+        "option": "DWQZ-97.9Mhz 97.9 Home Radio (Manila)"
+      },
+      {
+        "code": "038",
+        "option": "DZFE-98.7Mhz The Master's Touch 98.7 (Manila)"
+      },
+      {
+        "code": "039",
+        "option": "DWRT-99.5Mhz  99.5 Play FM (Manila)"
+      },
+      {
+        "code": "040",
+        "option": "DZRJ-100.3Mhz RJ 100 (Manila)"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz 101.1 Yes! The BEST 101.1"
+      },
+      {
+        "code": "042",
+        "option": "DWRR-101.9Mhz MOR 101.9 For Life! (Manila)"
+      },
+      {
+        "code": "043",
+        "option": "DWSM-102.7Mhz Star FM (Manila)"
+      },
+      {
+        "code": "044",
+        "option": "DWKX-103.5Mhz K-Lite FM (Manila)"
+      },
+      {
+        "code": "045",
+        "option": "DWFT-104.3Mhz 104.3 FM2"
+      },
+      {
+        "code": "046",
+        "option": "DWBM-105.1Mhz Crossover (Manila)"
+      },
+      {
+        "code": "047",
+        "option": "DWLA-105.9Mhz Lite FM 105.9"
+      },
+      {
+        "code": "048",
+        "option": "DWET-106.7Mhz Energy FM (Manila)"
+      },
+      {
+        "code": "049",
+        "option": "DWNU-107.5Mhz Wish 1075 Radio (Manila)"
+      },
+      {
+        "code": "050",
+        "option": "DZUR-107.9Mhz 107.9 U Radio (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "477",
+        "option": "DWSP-101.5Mhz Hot FM (San Pablo)"
+      },
+      {
+        "code": "096",
+        "option": "DWKI-95.1Mhz"
+      },
+      {
+        "code": "101",
+        "option": "DWEY-104.7Mhz"
+      },
+      {
+        "code": "636",
+        "option": "107.1Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Sorsogon",
+    "options": [
+      {
+        "code": "482",
+        "option": "DWCA/DWGA Channel 13"
+      },
+      {
+        "code": "483",
+        "option": "DWSG-91.9Mhz Radyo Natin"
+      },
+      {
+        "code": "484",
+        "option": "DWAM-94.3Mhz Campus Radio"
+      },
+      {
+        "code": "485",
+        "option": "DWLH-101.5Mhz The Wave"
+      },
+      {
+        "code": "486",
+        "option": "DZGN-102.3Mhz Spirit FM"
+      },
+      {
+        "code": "487",
+        "option": "DWOL-103.9Mhz Padaba"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "488",
+        "option": "DWSN-91.9Mhz"
+      },
+      {
+        "code": "386",
+        "option": "DWRD-93.9Mhz MOR 93.9 For Life (Legaspi)"
+      },
+      {
+        "code": "644",
+        "option": "92.7Mhz Wow Smile Radio"
+      }
+    ]
+  },
+  {
+    "place": "Cebu",
+    "options": [
+      {
+        "code": "109",
+        "option": "DYHR-91.5Mhz Yes FM"
+      },
+      {
+        "code": "177",
+        "option": "DYKI-89.9Mhz Smooth FM 89.9 (Dumaguete)"
+      },
+      {
+        "code": "180",
+        "option": "DYWF-93.1Mhz Brigada News FM (Cebu)"
+      },
+      {
+        "code": "184",
+        "option": "DYLS-97.1Mhz  MOR 97.1 Lupig Sila! For Life!"
+      },
+      {
+        "code": "185",
+        "option": "DYRT-99.5Mhz Barangay RT 99.5 (Cebu)"
+      },
+      {
+        "code": "308",
+        "option": "DYXL-93.9Mhz 93.9 IFM Cebu Ang Idol Mong FM"
+      },
+      {
+        "code": "490",
+        "option": "DYAP-88.3Mhz FM Cebu"
+      },
+      {
+        "code": "491",
+        "option": "DYDW-89.1Mhz Power 891"
+      },
+      {
+        "code": "492",
+        "option": "DYAC-90.7Mhz 90.7 Crossover"
+      },
+      {
+        "code": "545",
+        "option": "DYBN-92.3Mhz Magic 92.3"
+      },
+      {
+        "code": "546",
+        "option": "DYLL-94.7Mhz Energy FM"
+      },
+      {
+        "code": "547",
+        "option": "DYMX-95.5Mhz Star FM"
+      },
+      {
+        "code": "548",
+        "option": "DYRK-96.3Mhz WRock"
+      },
+      {
+        "code": "549",
+        "option": "DYBU-97.9Mhz Love Radio"
+      },
+      {
+        "code": "550",
+        "option": "DYFR-98.7Mhz UP 98.7 DYFR FM Life-Changing"
+      },
+      {
+        "code": "551",
+        "option": "DYRJ-100.3Mhz RJ100"
+      },
+      {
+        "code": "552",
+        "option": "DYIO-101.1Mhz Y101 (Always First)"
+      },
+      {
+        "code": "553",
+        "option": "DYNC-101.9Mhz Radyo5 101.9 News FM"
+      },
+      {
+        "code": "554",
+        "option": "DYTC-102.7Mhz Easy Rock"
+      },
+      {
+        "code": "555",
+        "option": "DYCD-103.5Mhz Retro Cebu"
+      },
+      {
+        "code": "556",
+        "option": "DYUR-105.1Mhz Halo Halo 105.1"
+      },
+      {
+        "code": "557",
+        "option": "DYBT-105.9Mhz Monster Radio"
+      },
+      {
+        "code": "558",
+        "option": "DYQC-106.7Mhz Home Radio"
+      },
+      {
+        "code": "559",
+        "option": "DYNU-107.5Mhz Win Radio - Ini-ini-ni!"
+      },
+      {
+        "code": "610",
+        "option": "DYPC-88.7Mhz DYPC 88.7 FM Cebu"
+      }
+    ]
+  },
+  {
+    "place": "Iloilo",
+    "options": [
+      {
+        "code": "573",
+        "option": "DYKU-88.7Mhz Radio One 88.7"
+      },
+      {
+        "code": "574",
+        "option": "DYQN-89.5Mhz Home Radio"
+      },
+      {
+        "code": "575",
+        "option": "DYMC-91.1Mhz  MOR 91.1 For Life!"
+      },
+      {
+        "code": "576",
+        "option": "DYYS-92.3Mhz Easy Rock"
+      },
+      {
+        "code": "085",
+        "option": "DYWT-92.7 Wild Radio"
+      },
+      {
+        "code": "577",
+        "option": "DYMK-93.5Mhz Barangay 93.5"
+      },
+      {
+        "code": "578",
+        "option": "DYIC-95.1Mhz 95.1 iFM Bestfriend Mo"
+      },
+      {
+        "code": "579",
+        "option": "DYMB-97.5Mhz Love Radio"
+      },
+      {
+        "code": "580",
+        "option": "DYNJ-98.3Mhz RJ100"
+      },
+      {
+        "code": "581",
+        "option": "DYRF-99.5Mhz Star FM"
+      },
+      {
+        "code": "582",
+        "option": "DYOZ-100.7Mhz Z100"
+      },
+      {
+        "code": "584",
+        "option": "DYOT-103.5Mhz Mix FM Oton"
+      },
+      {
+        "code": "585",
+        "option": "101.9Mhz Hope 101.9"
+      },
+      {
+        "code": "586",
+        "option": "DYBE-103.9Mhz  The Beat FM"
+      },
+      {
+        "code": "587",
+        "option": "DYCR-104.7Mhz  CRES FM"
+      },
+      {
+        "code": "588",
+        "option": "DYTD-105.9Mhz Shine Radio Pototan"
+      },
+      {
+        "code": "589",
+        "option": "DYNY-107.9Mhz Win Radio - Ini-ini-ni!"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "715",
+        "option": "106.3Mhz The Anchor"
+      },
+      {
+        "code": "563",
+        "option": "DYWT-105.9Mhz Wild FM"
+      }
+    ]
+  },
+  {
+    "place": "Kalibo",
+    "options": [
+      {
+        "code": "600",
+        "option": "DYQM-90.7Mhz"
+      },
+      {
+        "code": "601",
+        "option": "DYYR-91.1 Yes! The Best (Boracay)"
+      },
+      {
+        "code": "602",
+        "option": "DYRU-92.9Mhz Barangay RU 92.9 Super Radyo"
+      },
+      {
+        "code": "603",
+        "option": "DYYM-98.5Mhz Radyo Natin Kalibo"
+      },
+      {
+        "code": "604",
+        "option": "DYKY-99.3Mhz"
+      },
+      {
+        "code": "605",
+        "option": "DYKL-100.1Mhz Love Radio"
+      },
+      {
+        "code": "583",
+        "option": "DYRX-103.7Mhz  Star FM (Roxas)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "647",
+        "option": "DYAZ-107.7Mhz Energy FM (Kalibo)"
+      },
+      {
+        "code": "648",
+        "option": "DYCF-88.5Mhz Radyo Todo (Kalibo)"
+      },
+      {
+        "code": "649",
+        "option": "DYKY-89.3Mhz Brigada News FM (Kalibo)"
+      },
+      {
+        "code": "615",
+        "option": "DYKP-97.3Mhz Dream FM (Boracay)"
+      },
+      {
+        "code": "662",
+        "option": "DYSM-98.5Mhz Hot FM"
+      },
+      {
+        "code": "663",
+        "option": "99.3Mhz"
+      },
+      {
+        "code": "664",
+        "option": "DYMT-100.9Mhz Voice of Mt. Manduyog (Radyo"
+      },
+      {
+        "code": "665",
+        "option": "DYEY-93.5Mhz Easy Rock (Boracay)"
+      },
+      {
+        "code": "718",
+        "option": "94.5Mhz Drive FM (Kalibo)"
+      },
+      {
+        "code": "583",
+        "option": "DYRX-103.7Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Roxas",
+    "options": [
+      {
+        "code": "091",
+        "option": "DYOO-101.5Mhz M.O.R. (For Life) (Bacolod)"
+      },
+      {
+        "code": "583",
+        "option": "DYRX-103.7Mhz  Star FM (Roxas)"
+      },
+      {
+        "code": "613",
+        "option": "DYCN-88.9Mhz"
+      },
+      {
+        "code": "614",
+        "option": "DYXZ-96.9Mhz Barangay 96.9"
+      },
+      {
+        "code": "615",
+        "option": "DYKP-97.3Mhz Dream FM (Boracay)"
+      },
+      {
+        "code": "654",
+        "option": "DYML-105.7Mhz Love Radio"
+      },
+      {
+        "code": "594",
+        "option": "DYCL-97.7Mhz Radyo Todo 97.7 Capiz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Tagbilaran",
+    "options": [
+      {
+        "code": "184",
+        "option": "DYLS-97.1Mhz  MOR 97.1 Lupig Sila! For Life!"
+      },
+      {
+        "code": "308",
+        "option": "DYXL-93.9Mhz 93.9 IFM Cebu Ang Idol Mong FM"
+      },
+      {
+        "code": "622",
+        "option": "DYZD-1422Khz"
+      },
+      {
+        "code": "623",
+        "option": "DYTR-91.1Mhz True Radio"
+      },
+      {
+        "code": "624",
+        "option": "DYRD-102.3Mhz Kiss FM"
+      },
+      {
+        "code": "185",
+        "option": "DYRT-99.5Mhz"
+      },
+      {
+        "code": "109",
+        "option": "DYHR-91.5Mhz Yes FM"
+      },
+      {
+        "code": "180",
+        "option": "DYWF-93.1Mhz Brigada News FM (Cebu)"
+      },
+      {
+        "code": "546",
+        "option": "DYLL-94.7Mhz Energy FM"
+      },
+      {
+        "code": "548",
+        "option": "DYRK-96.3Mhz WRock"
+      },
+      {
+        "code": "549",
+        "option": "DYBU-97.9Mhz Love Radio"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Santiago",
+    "options": [
+      {
+        "code": "058",
+        "option": "DWYE-89.7Mhz Yes! The Best 89.7 FM (Cauayan)"
+      },
+      {
+        "code": "110",
+        "option": "DWWC-95.3Mhz Big Sound FM (Cauayan)"
+      },
+      {
+        "code": "198",
+        "option": "DWTR-93.7Mhz Radyo Natin FM"
+      },
+      {
+        "code": "240",
+        "option": "DWIP-94.5Mhz Love Radio"
+      },
+      {
+        "code": "246",
+        "option": "DWMX-97.7Mhz 97.7 Mix-FM"
+      }
+    ]
+  },
+  {
+    "place": "Tuguegarao",
+    "options": [
+      {
+        "code": "351",
+        "option": "DWWQ-89.3Mhz Barangay 89.3"
+      },
+      {
+        "code": "411",
+        "option": "DWCN-91.7Mhz Magik FM"
+      },
+      {
+        "code": "412",
+        "option": "DWYA-92.5Mhz Bay Radio"
+      },
+      {
+        "code": "413",
+        "option": "DWIC-93.3Mhz Star FM"
+      },
+      {
+        "code": "414",
+        "option": "DWMN-94.1Mhz Love Radio"
+      },
+      {
+        "code": "434",
+        "option": "DWRJ-96.5Mhz 96.5 RJFM Tuguegarao"
+      },
+      {
+        "code": "435",
+        "option": "DWXY-100.5Mhz 100.5 Big Sound FM Tuguegarao"
+      },
+      {
+        "code": "436",
+        "option": "101.5Mhz Radyo Maria-FM"
+      },
+      {
+        "code": "447",
+        "option": "DWWW-102.1Mhz Radyo Natin (Aparri)"
+      },
+      {
+        "code": "616",
+        "option": "DWGN 101.5Mhz Radio Maria 101.5 Tuguegarao"
+      },
+      {
+        "code": "617",
+        "option": "DWDA 105.3Mhz Radyo Pangkaunlaran"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "San Fernando, La Union",
+    "options": [
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz MOR 103.1 For Life! (Baguio)"
+      },
+      {
+        "code": "535",
+        "option": "DWLU-88.7Mhz Digital Planet 88.7"
+      },
+      {
+        "code": "536",
+        "option": "DWPZ-97.9Mhz DWPZ"
+      },
+      {
+        "code": "537",
+        "option": "DWST-101.7Mhz Love Radio"
+      },
+      {
+        "code": "538",
+        "option": "DZUL-104.3Mhz Spirit FM"
+      },
+      {
+        "code": "539",
+        "option": "DWAA-105.5Mhz Big Sound FM"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Loang",
+    "options": [
+      {
+        "code": "497",
+        "option": "DWIL-90.7Mhz Love Radio"
+      },
+      {
+        "code": "498",
+        "option": "DWEL-95.5Mhz MOR 95.5 For Life!"
+      },
+      {
+        "code": "499",
+        "option": "DWEL-95.5Mhz MOR 95.5 For Life!"
+      },
+      {
+        "code": "500",
+        "option": "DZLS-97.1Mhz Campus Radio"
+      },
+      {
+        "code": "501",
+        "option": "DWSN-97.9Mhz Mom's Radio"
+      },
+      {
+        "code": "502",
+        "option": "DWHP-99.5Mhz 99.5 iFM IDOL"
+      },
+      {
+        "code": "503",
+        "option": "DWPL-103.7Mhz The Beat FM"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "641",
+        "option": "DWCK92.3MHz Magik FM Laoag"
+      }
+    ]
+  },
+  {
+    "place": "Marbel (Koronadal)",
+    "options": [
+      {
+        "code": "379",
+        "option": "DXME-100.1Mhz Love Radio"
+      },
+      {
+        "code": "456",
+        "option": "95.7 Mhz Brigada News FM"
+      },
+      {
+        "code": "667",
+        "option": "97.9Mhz Spring Radio"
+      },
+      {
+        "code": "668",
+        "option": "96.9 Gold FM Astig"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "719",
+        "option": "96.5Mhz Infinite FM"
+      },
+      {
+        "code": "720",
+        "option": "104.7Mhz Energy FM"
+      },
+      {
+        "code": "721",
+        "option": "90.5Mhz Jack Radio"
+      },
+      {
+        "code": "722",
+        "option": "103.5Mhz Dans Radio"
+      },
+      {
+        "code": "723",
+        "option": "92.5Mhz Radyo Rapido"
+      }
+    ]
+  },
+  {
+    "place": "Pagadian",
+    "options": [ 
+      {
+        "code": "248",
+        "option": "88.7Mhz LCM FM"
+      },
+      {
+        "code": "311",
+        "option": "DXKV-91.1Mhz The Voice of the City"
+      },
+      {
+        "code": "314",
+        "option": "DXMD-91.9Mhz Radyo Natin"
+      },
+      {
+        "code": "315",
+        "option": "DXLN-94.1Mhz Radio One"
+      },
+      {
+        "code": "448",
+        "option": "DXWO-99.9Mhz Power FM"
+      },
+      {
+        "code": "449",
+        "option": "DXID-101.5Mhz 101.5FM"
+      },
+      {
+        "code": "450",
+        "option": "DXCA-106.3Mhz Bell FM (Pagadian)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "690",
+        "option": "DXKV-97.1Mhz Wild FM (Pagadian)"
+      },
+      {
+        "code": "698",
+        "option": "DXRC-98.3Mhz Energy FM"
+      }
+    ]
+  },
+  {
+    "place": "Ozamis",
+    "options": [
+      {
+        "code": "418",
+        "option": "DXEL-89.1 Mhz Sharp Radio"
+      },
+      {
+        "code": "421",
+        "option": "DXLU-94.5 Mhz LSU FM"
+      },
+      {
+        "code": "425",
+        "option": "DXSY-96.1 Mhz Y96"
+      },
+      {
+        "code": "429",
+        "option": "DXLM-97.5 Mhz Radio One"
+      },
+      {
+        "code": "430",
+        "option": "DXDD-100.7 Mhz Cool Radio"
+      },
+      {
+        "code": "450",
+        "option": "DXCA-106.3Mhz Bell FM (Pagadian)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "216",
+        "option": "DXSY-1242Khz Radyo Bantay (Ozamis)"
+      }
+    ]
+  },
+  {
+    "place": "Cotobato",
+    "options": [
+      {
+        "code": "305",
+        "option": "DXFD-93.7Mhz Star FM"
+      },
+      {
+        "code": "324",
+        "option": "DXPS-95.1Mhz MOR 95.1 For Life! (Cotabato)"
+      },
+      {
+        "code": "466",
+        "option": "DXTC-95.9Mhz Hot FM"
+      },
+      {
+        "code": "670",
+        "option": "DXYC-89.3Mhz Brigada News FM"
+      },
+      {
+        "code": "529",
+        "option": "DXWD-90.9Mhz 90.9 iFM Bestfriend Mo"
+      },
+      {
+        "code": "530",
+        "option": "DXJC-990Mhz Voice FM"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "193",
+        "option": "90.3Mhz Smile FM"
+      },
+      {
+        "code": "125",
+        "option": "DWSR-94.1Mhz  Power Radio"
+      }
+    ]
+  },
+  {
+    "place": "Cauayan",
+    "options": [
+      {
+        "code": "057",
+        "option": "DWND-88.5Mhz DWND FM 88.5"
+      },
+      {
+        "code": "058",
+        "option": "DWYE-89.7Mhz Yes! The Best 89.7 FM (Cauayan)"
+      },
+      {
+        "code": "110",
+        "option": "DWWC-95.3Mhz Big Sound FM (Cauayan)"
+      },
+      {
+        "code": "111",
+        "option": "DWRA099.7Mhz Core FM (Vigan)"
+      },
+      {
+        "code": "240",
+        "option": "DWIP-94.5Mhz Love Radio"
+      },
+      {
+        "code": "660",
+        "option": "DWIX-90.5Mhz Magik FM Cauayan"
+      },
+      {
+        "code": "608",
+        "option": "DWKD 98.5Mhz 98.5 FM RMN"
+      },
+      {
+        "code": "609",
+        "option": "DWYI-92.9Mhz Brigada News FM Cauayan"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Vigan",
+    "options": [
+      {
+        "code": "514",
+        "option": "DWVN-94.1Mhz Magik FM"
+      },
+      {
+        "code": "515",
+        "option": "DWNP-100.5Mhz Campus Radio"
+      },
+      {
+        "code": "111",
+        "option": "DWRA099.7Mhz Core FM (Vigan)"
+      },
+      {
+        "code": "538",
+        "option": "DZUL-104.3Mhz Spirit FM"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz MOR 103.1 For Life! (Baguio)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "065",
+        "option": "DWRA-92.7Mhz Barangay 92.7"
+      },
+      {
+        "code": "516",
+        "option": "DWJR-96.1Mhz Farm Radio 96.1"
+      }
+    ]
+  },
+  {
+    "place": "Daet",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "125",
+        "option": "DWSR-94.1Mhz  Power Radio"
+      },
+      {
+        "code": "131",
+        "option": "DWBY 102.9Mhz Bay Radio"
+      },
+      {
+        "code": "195",
+        "option": "DWSL-103.7Mhz"
+      },
+      {
+        "code": "196",
+        "option": "96.1Mhz Radyo ng Bayan FM"
+      },
+      {
+        "code": "462",
+        "option": "DWAC-93.5Mhz MOR 93.5 For Life (Naga)"
+      },
+      {
+        "code": "524",
+        "option": "DWKS-95.3Mhz Love Radio"
+      },
+      {
+        "code": "655",
+        "option": "DWLB-89.7 Mhz"
+      },
+      {
+        "code": "656",
+        "option": "DWKP-96.9Mhz Radyo ng Bayan"
+      },
+      {
+        "code": "657",
+        "option": "DWEN-100.5Mhz Cool Radio"
+      },
+      {
+        "code": "658",
+        "option": "DWAT-102.1Mhz"
+      },
+      {
+        "code": "659",
+        "option": "DWYD-102.9Mhz Brigada News FM"
+      },
+      {
+        "code": "469",
+        "option": "DWQW-101.5Mhz Barangay FM 101.5"
+      }
+    ]
+  },
+  {
+    "place": "Tagum",
+    "options": [
+      {
+        "code": "676",
+        "option": "DXKS-95.1 Mhz Energy FM"
+      },
+      {
+        "code": "677",
+        "option": "DXKN-98.3Mhz Gold FM"
+      },
+      {
+        "code": "678",
+        "option": "DXTG-107.9Mhz Radyo Natin"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "268",
+        "option": "DXBM-90.7Mhz Love Radio"
+      },
+      {
+        "code": "265",
+        "option": "DXDR-88.3Mhz Energy FM"
+      },
+      {
+        "code": "286",
+        "option": "DXKR-95.5Mhz Retro 95.5"
+      },
+      {
+        "code": "673",
+        "option": "DXKX-91.5Mhz Brigada News FM (Davao)"
+      },
+      {
+        "code": "293",
+        "option": "DXQM-98.7Mhz Home Radio"
+      },
+      {
+        "code": "296",
+        "option": "DXRR-101.1Mhz MOR 101.1 For Life!"
+      },
+      {
+        "code": "298",
+        "option": "DXRV-103.5Mhz Barangay 103.5"
+      },
+      {
+        "code": "270",
+        "option": "DXWT-92.3Mhz Wild FM"
+      },
+      {
+        "code": "272",
+        "option": "DXXL-93.9Mhz 93.9 iFM I na Taaah!"
+      },
+      {
+        "code": "300",
+        "option": "DXYS-105.1Mhz Easy Rock"
+      },
+      {
+        "code": "695",
+        "option": "100.7Mhz One Radio Tagum"
+      },
+      {
+        "code": "696",
+        "option": "103.9Mhz Charm Radio Tagum "
+      },
+      {
+        "code": "290",
+        "option": "DXFX-96.3Mhz Star FM"
+      }
+    ]
+  },
+  {
+    "place": "Bayombong",
+    "options": [
+      {
+        "code": "680",
+        "option": "DWRV-90.1Mhz Spirit FM"
+      },
+      {
+        "code": "681",
+        "option": "DWGL-104.5Mhz Radyo Natin"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "148",
+        "option": "DWDC-101.3Mhz Big Sound FM (Nueva Viscaya)"
+      }
+    ]
+  },
+  {
+    "place": "Catanduanes",
+    "options": [
+      {
+        "code": "682",
+        "option": "DWDF-94.3 Mhz Radyo ng Bayan (Virac)"
+      },
+      {
+        "code": "683",
+        "option": "DWJS-107.1 Mhz Radyo Natin (Virac)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "707",
+        "option": "93.3Mhz 93.3 Padaba (Virac)"
+      },
+      {
+        "code": "386",
+        "option": "DWRD-93.9Mhz MOR 93.9 For Life (Legaspi)"
+      }
+    ]
+  },
+  {
+    "place": "Dipolog",
+    "options": [
+      {
+        "code": "685",
+        "option": "DXFB-93.3Mhz Star FM"
+      },
+      {
+        "code": "686",
+        "option": "DXLJ-103.7Mhz Energy FM"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "709",
+        "option": "100.5Mhz Hot FM (Todays Best Music)"
+      },
+      {
+        "code": "710",
+        "option": "90.9Mhz Magik FM"
+      },
+      {
+        "code": "711",
+        "option": "DXAA-92.5Mhz"
+      },
+      {
+        "code": "712",
+        "option": "DXFL-88.9Mhz First Love Radio"
+      }
+    ]
+  },
+  {
+    "place": "Kidapawan",
+    "options": [
+      {
+        "code": "446",
+        "option": "DXDM-88.7Mhz"
+      },
+      {
+        "code": "688",
+        "option": "DXYZ-97.5Mhz"
+      },
+      {
+        "code": "689",
+        "option": "102.3Mhz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "371",
+        "option": "DXKZ-91.5Mhz"
+      },
+      {
+        "code": "704",
+        "option": "107.9Mhz"
+      },
+      {
+        "code": "705",
+        "option": "DXCA-90.3Mhz"
+      },
+      {
+        "code": "706",
+        "option": "DXRL-105.7Mhz"
+      }
+    ]
+  },
+  {
+    "place": "Valencia",
+    "options": [
+      {
+        "code": "672",
+        "option": "94.5Mhz Radyo ni Juan (Valencia)"
+      },
+      {
+        "code": "442",
+        "option": "DXEM-96.1Mhz Gold FM (Valencia)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "440",
+        "option": "DXGT-92.1Mhz DXGT FM / Radyo Abante (Maramag)"
+      },
+      {
+        "code": "445",
+        "option": "DXIQ-106.3Mhz Love Radio"
+      },
+      {
+        "code": "441",
+        "option": "DXWB-92.9Mhz Wild FM (Valencia)"
+      },
+      {
+        "code": "699",
+        "option": "89.5Mhz Power Radyo 97.7 simulcast 89.5"
+      },
+      {
+        "code": "700",
+        "option": "99.9Mhz RP FM Ang Radyo sa Masa (Tagum)"
+      },
+      {
+        "code": "701",
+        "option": "DXGG-107.1Mhz Happy FM (Malaybalay)"
+      },
+      {
+        "code": "702",
+        "option": "DXJL 93.7Mhz Spider Radio"
+      },
+      {
+        "code": "703",
+        "option": "DXMU-88.9Mhz Development Radio (Maramag)"
+      }
+    ]
+  }
+]

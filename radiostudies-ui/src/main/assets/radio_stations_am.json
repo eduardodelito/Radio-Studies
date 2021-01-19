@@ -1,0 +1,2476 @@
+[
+  {
+    "place": "Mega Manila",
+    "options": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz Agapay ng Sambayanan (Manila)"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz Radyo Pilipinas"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz Your Ultimate NewSic Radio"
+      },
+      {
+        "code": "008",
+        "option": "DZRJ-810Khz DZRJ 810 AM Radyo Bandido (Manila)"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz Veritas 846 Ang Radyo ng Simbahan(Manila)"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz DWIZ 882 Mas Todong Lakas! (Manila)"
+      },
+      {
+        "code": "011",
+        "option": "DZEM-954Khz INC Radio DZEM 954 (Manila)"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz INC Radio DZEM 954 (Manila)"
+      },
+      {
+        "code": "013",
+        "option": "DZIQ-990Khz DZIQ RADYO INQUIRER Nuebe Nubenta"
+      },
+      {
+        "code": "014",
+        "option": "DZAR-1026Khz Sonshine Radio (Manila)"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz DZEC 1062 Radyo Agila"
+      },
+      {
+        "code": "016",
+        "option": "DWAD-1098Khz DWAD 1098 Now Radio"
+      },
+      {
+        "code": "017",
+        "option": "DWDD-1134Khz Katropa Radio (Manila)"
+      },
+      {
+        "code": "018",
+        "option": "DWBL-1242Khz DWBL Serbisyo Publiko! (Manila)"
+      },
+      {
+        "code": "019",
+        "option": "DZRM-1278Khz Radyo Magasin (Manila)"
+      },
+      {
+        "code": "020",
+        "option": "DWXI-1314Khz Himpilang Pinagpala! (Manila)"
+      },
+      {
+        "code": "021",
+        "option": "DWUN-1350Khz UNTV Radio La Verdad 1350 (Manila)"
+      },
+      {
+        "code": "022",
+        "option": "DWSS-1494Khz DWSS/Entertainment Radio (Manila)"
+      },
+      {
+        "code": "023",
+        "option": "DZME-1530Khz DZME Kinse Trenta"
+      },
+      {
+        "code": "024",
+        "option": "DZUP-1602Khz DZUP 1602 Kasali Ka! (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "477",
+        "option": "DWSP-101.5Mhz"
+      },
+      {
+        "code": "474",
+        "option": "DWGV-792Khz"
+      }
+    ]
+  },
+  {
+    "place": "Baguio",
+    "options": [
+      {
+        "code": "056",
+        "option": "DZWT-540Khz Radyo Totoo"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "059",
+        "option": "DZEQ-999Khz Radyo ng Bayan"
+      },
+      {
+        "code": "060",
+        "option": "DZWX-1035Khz Bombo Radyo"
+      },
+      {
+        "code": "061",
+        "option": "DZBS-1368Khz Radyo Ronda"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "470",
+        "option": "DWSP-612Khz"
+      }
+    ]
+  },
+  {
+    "place": "Batangas",
+    "options": [
+      {
+        "code": "087",
+        "option": "DZBR-531Khz"
+      },
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz Veritas 846 Ang Radyo ng Simbahan(Manila)"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz DWIZ 882 Mas Todong Lakas! (Manila)"
+      },
+      {
+        "code": "093",
+        "option": "DWAW-999Khz"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      }
+    ]
+  },
+  {
+    "place": "Butuan",
+    "options": [
+      {
+        "code": "112",
+        "option": "DXBC-693Khz RMN (Butuan)"
+      },
+      {
+        "code": "113",
+        "option": "DXJM-756Khz Radyo Asenso"
+      },
+      {
+        "code": "114",
+        "option": "DXBN-792Khz Radyo Pilipinas"
+      },
+      {
+        "code": "115",
+        "option": "DXRB-837Khz Sonshine Radio"
+      },
+      {
+        "code": "116",
+        "option": "DXDV-945Khz"
+      },
+      {
+        "code": "117",
+        "option": "DXBR-981Khz Bombo Radyo"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz RMN (Cebu)"
+      },
+      {
+        "code": "129",
+        "option": "DXHR-1323Khz Hope Radio"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Cabanatuan",
+    "options": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "142",
+        "option": "DWJJ-684Khz DWJJ 684"
+      },
+      {
+        "code": "143",
+        "option": "DYSM-972Khz"
+      },
+      {
+        "code": "144",
+        "option": "DYSM-972Khz Aksyon Radyo"
+      },
+      {
+        "code": "145",
+        "option": "DWAY-1332Khz Sonshine Radio"
+      },
+      {
+        "code": "146",
+        "option": "DWWG-101.5Mhz Big Sound FM"
+      },
+      {
+        "code": "149",
+        "option": "DWNE-900Khz DWNE 900 (Cabanatuan)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz Your Ultimate NewSic Radio"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz DWIZ 882 Mas Todong Lakas! (Manila)"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz Agapay ng Sambayanan (Manila)"
+      }
+    ]
+  },
+  {
+    "place": "Dumaguete",
+    "options": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz Radyo Pilipinas"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz RMN (Cebu)"
+      },
+      {
+        "code": "156",
+        "option": "DYRB-540Khz Radyo Asenso (Cebu)"
+      },
+      {
+        "code": "160",
+        "option": "DXIC-711Khz RMN (Iligan)"
+      },
+      {
+        "code": "162",
+        "option": "DYWC-801Khz Radyo Bandilyo (Dumaguete)"
+      },
+      {
+        "code": "163",
+        "option": "DYSR-891Khz Radyo Serbisyo"
+      },
+      {
+        "code": "164",
+        "option": "DYLA-909Khz  DYLA 909 (Cebu)"
+      },
+      {
+        "code": "165",
+        "option": "DYMF-963Khz Bombo Radyo (Cebu)"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz  Super Radyo DYSS (Cebu)"
+      },
+      {
+        "code": "167",
+        "option": "DXKD-1054Khz (Dipolog)"
+      },
+      {
+        "code": "168",
+        "option": "DYTR-1116Khz Radyo Serbisyo (Tagbilaran)"
+      },
+      {
+        "code": "169",
+        "option": "DYRM-1134Khz Radyo Asenso"
+      },
+      {
+        "code": "170",
+        "option": "DYRD-1161Khz Radyo Balita (Tagbilaran)"
+      },
+      {
+        "code": "171",
+        "option": "DXIF-729Khz Bombo Radyo (Cagayan De Oro)"
+      },
+      {
+        "code": "172",
+        "option": "DYRF-1215Khz  Radyo Fuerza"
+      },
+      {
+        "code": "173",
+        "option": "DYDD-1260Khz  El-Nuevo Bantay Radyo (Cebu)"
+      },
+      {
+        "code": "174",
+        "option": "DYZZ-1458Khz Bantay Radyo (Guilungan)"
+      },
+      {
+        "code": "175",
+        "option": "DXRJ-1476Khz Radyo Bandido"
+      },
+      {
+        "code": "176",
+        "option": "DYAB-1512Khz Radyo Patrol 1512 (Cebu)"
+      }
+    ]
+  },
+  {
+    "place": "Iligan",
+    "options": [
+      {
+        "code": "200",
+        "option": "DYMR-576Khz Radyo Pilipinas Cebu"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz RMN (Cebu)"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "203",
+        "option": "DXDD-657Khz Radyo Kampana (Ozamis)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "160",
+        "option": "DXIC-711Khz RMN (Iligan)"
+      },
+      {
+        "code": "162",
+        "option": "DYWC-801Khz Radyo Bandilyo (Dumaguete)"
+      },
+      {
+        "code": "207",
+        "option": "DXCC-828Khz RMN (Cagayan De Oro)"
+      },
+      {
+        "code": "208",
+        "option": "DXWG-855Khz Radyo Budyong"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz DWIZ 882 Mas Todong Lakas! (Manila)"
+      },
+      {
+        "code": "210",
+        "option": "DXIM-936Khz Radyo Pilipinas Cagayan De Oro"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz  Super Radyo DYSS (Cebu)"
+      },
+      {
+        "code": "212",
+        "option": "DXMI-1026Khz"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz DZEC 1062 Radyo Agila"
+      },
+      {
+        "code": "168",
+        "option": "DYTR-1116Khz Radyo Serbisyo (Tagbilaran)"
+      },
+      {
+        "code": "172",
+        "option": "DYRF-1215Khz  Radyo Fuerza"
+      },
+      {
+        "code": "216",
+        "option": "DXSY-1242Khz Radyo Bantay (Ozamis)"
+      },
+      {
+        "code": "170",
+        "option": "DYRD-1161Khz Radyo Balita (Tagbilaran)"
+      },
+      {
+        "code": "175",
+        "option": "DXRJ-1476Khz Radyo Bandido"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      }
+    ]
+  },
+  {
+    "place": "Olongapo",
+    "options": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "241",
+        "option": "DWHL-756Khz Radyo Apo"
+      },
+      {
+        "code": "242",
+        "option": "DWGO-1008Khz GO AM 1008"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz Your Ultimate NewSic Radio"
+      },
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      }
+    ]
+  },
+  {
+    "place": "Puerto Princesa",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "273",
+        "option": "DWRM-648Khz Radyo Pilipinas"
+      },
+      {
+        "code": "274",
+        "option": "DYPH-693Khz DZRH Relay"
+      },
+      {
+        "code": "275",
+        "option": "DYAP-765Khz  Radyo Patrol"
+      },
+      {
+        "code": "276",
+        "option": "DWAJ-792Khz"
+      },
+      {
+        "code": "277",
+        "option": "DYSP-909Khz Super Radyo DYSP (Palawan)"
+      },
+      {
+        "code": "278",
+        "option": "DYEC-1062Khz Environmental Radio"
+      },
+      {
+        "code": "279",
+        "option": "DWJA-1134Khz"
+      },
+      {
+        "code": "289",
+        "option": "DZIP-864Khz Radyo Palaueno"
+      }
+    ]
+  },
+  {
+    "place": "Surigao",
+    "options": [
+      {
+        "code": "164",
+        "option": "DYLA-909Khz  DYLA 909 (Cebu)"
+      },
+      {
+        "code": "165",
+        "option": "DYMF-963Khz Bombo Radyo (Cebu)"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz  Super Radyo DYSS (Cebu)"
+      },
+      {
+        "code": "302",
+        "option": "DXSN-1017Khz Radyo Magbalantay"
+      },
+      {
+        "code": "303",
+        "option": "DXKS-1080Khz Radyo Ronda"
+      },
+      {
+        "code": "304",
+        "option": "DXRS-918Khz DXRS-918Khz RMN (Surigao)"
+      },
+      {
+        "code": "173",
+        "option": "DYDD-1260Khz  El-Nuevo Bantay Radyo (Cebu)"
+      },
+      {
+        "code": "176",
+        "option": "DYAB-1512Khz Radyo Patrol 1512 (Cebu)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz RMN (Cebu)"
+      }
+    ]
+  },
+  {
+    "place": "Tarlac",
+    "options": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "339",
+        "option": "DZTC-828Khz Radyo Asenso"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz Agapay ng Sambayanan (Manila)"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz Your Ultimate NewSic Radio"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz Veritas 846 Ang Radyo ng Simbahan(Manila)"
+      },
+      {
+        "code": "149",
+        "option": "DWNE-900Khz DWNE 900 (Cabanatuan)"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz INC Radio DZEM 954 (Manila)"
+      }
+    ]
+  },
+  {
+    "place": "Zamboanga",
+    "options": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "358",
+        "option": "DXZH-855Khz DZRH Relay"
+      },
+      {
+        "code": "008",
+        "option": "DZRJ-810Khz DZRJ 810 AM Radyo Bandido (Manila)"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz Radyo Pilipinas"
+      },
+      {
+        "code": "361",
+        "option": "DXRZ-900Khz RMN (Zamboanga)"
+      },
+      {
+        "code": "363",
+        "option": "DXXX-1008Khz Radyo Ronda"
+      },
+      {
+        "code": "364",
+        "option": "DXRH-1080Khz"
+      },
+      {
+        "code": "365",
+        "option": "DXAS-1116Khz Your Community Radio"
+      },
+      {
+        "code": "366",
+        "option": "DXMR-1170Khz Radyo Pilipinas Zamboanga"
+      },
+      {
+        "code": "368",
+        "option": "DXVP-1467Khz Radio Verdadero"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "671",
+        "option": "DXRC-1287Khz Super Radyo DXRC"
+      }
+    ]
+  },
+  {
+    "place": "Tacloban",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "393",
+        "option": "DYDW-531Khz Radyo Diwa"
+      },
+      {
+        "code": "394",
+        "option": "DYWR-594Khz"
+      },
+      {
+        "code": "395",
+        "option": "DYBR-711Khz Apple Radio"
+      },
+      {
+        "code": "396",
+        "option": "DYVL-819Khz Aksyon Radyo"
+      },
+      {
+        "code": "397",
+        "option": "DYTH-990Khz DZRH Relay"
+      },
+      {
+        "code": "399",
+        "option": "DYMP-1566Khz Radyo ng Bayan"
+      }
+    ]
+  },
+  {
+    "place": "Angeles-San Fernando",
+    "options": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz Agapay ng Sambayanan (Manila)"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz Radyo Pilipinas"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz Your Ultimate NewSic Radio"
+      },
+      {
+        "code": "008",
+        "option": "DZRJ-810Khz DZRJ 810 AM Radyo Bandido (Manila)"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz Veritas 846 Ang Radyo ng Simbahan(Manila)"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz DWIZ 882 Mas Todong Lakas! (Manila)"
+      },
+      {
+        "code": "011",
+        "option": "DZSR-918Khz Radyo Pilipinas Dos"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz INC Radio DZEM 954 (Manila)"
+      },
+      {
+        "code": "013",
+        "option": "DZIQ-990Khz DZIQ RADYO INQUIRER Nuebe Nubenta"
+      },
+      {
+        "code": "014",
+        "option": "DZAR-1026Khz Sonshine Radio (Manila)"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz DZEC 1062 Radyo Agila"
+      },
+      {
+        "code": "016",
+        "option": "DWAD-1098Khz DWAD 1098 Now Radio"
+      },
+      {
+        "code": "017",
+        "option": "DWDD-1134Khz Katropa Radio (Manila)"
+      },
+      {
+        "code": "018",
+        "option": "DWBL-1242Khz DWBL Serbisyo Publiko! (Manila)"
+      },
+      {
+        "code": "019",
+        "option": "DZRM-1278Khz Radyo Magasin (Manila)"
+      },
+      {
+        "code": "020",
+        "option": "DWXI-1314Khz Himpilang Pinagpala! (Manila)"
+      },
+      {
+        "code": "021",
+        "option": "DWUN-1350Khz UNTV Radio La Verdad 1350 (Manila)"
+      },
+      {
+        "code": "022",
+        "option": "DWSS-1494Khz DWSS/Entertainment Radio (Manila)"
+      },
+      {
+        "code": "023",
+        "option": "DZME-1530Khz DZME Kinse Trenta"
+      },
+      {
+        "code": "024",
+        "option": "DZUP-1602Khz DZUP 1602 Kasali Ka! (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "474",
+        "option": "DWGV-792Khz GVAM 792 (Angeles)"
+      }
+    ]
+  },
+  {
+    "place": "Bacolod",
+    "options": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "075",
+        "option": "DYEZ-684Khz Aksyon Radyo (Bacolod)"
+      },
+      {
+        "code": "077",
+        "option": "DYHB-747Khz RMN (Bacolod)"
+      },
+      {
+        "code": "078",
+        "option": "DYRL-1035Khz Abyan Radyo"
+      },
+      {
+        "code": "079",
+        "option": "DYAF-1143Khz Radyo Veritas Global Bacolod"
+      },
+      {
+        "code": "080",
+        "option": "DYSB-1179Khz Super Radyo DYSB (Bacolod)"
+      },
+      {
+        "code": "081",
+        "option": "DYVS-1233Khz Voice of Salvation"
+      },
+      {
+        "code": "082",
+        "option": "DYKB-1404Khz Radyo Ronda"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "108",
+        "option": "DYWB-630Khz Bombo Radyo"
+      },
+      {
+        "code": "637",
+        "option": "DYBH-1080Khz DZRH Relay"
+      },
+      {
+        "code": "564",
+        "option": "100.5Mhz Radyo Bandera Sweet FM"
+      },
+      {
+        "code": "619",
+        "option": "103.9Mhz Radyo Bandera Sweet FM"
+      },
+      {
+        "code": "524",
+        "option": "DXIC-95.3Mhz Hope Radio"
+      }
+    ]
+  },
+  {
+    "place": "Cagayan De Oro",
+    "options": [
+      {
+        "code": "171",
+        "option": "DXIF-729Khz Bombo Radyo (Cagayan De Oro)"
+      },
+      {
+        "code": "132",
+        "option": "DXUM-819Khz Radyo Ukay (Davao)"
+      },
+      {
+        "code": "207",
+        "option": "DXCC-828Khz RMN (Cagayan De Oro)"
+      },
+      {
+        "code": "210",
+        "option": "DXIM-936Khz Radyo Pilipinas Cagayan De Oro"
+      },
+      {
+        "code": "134",
+        "option": "DXKH-972Khz DZRH Relay"
+      },
+      {
+        "code": "135",
+        "option": "DXCO-1044Khz Radyo Asenso"
+      },
+      {
+        "code": "136",
+        "option": "DXCL-1098Khz Sonshine Radio"
+      },
+      {
+        "code": "168",
+        "option": "DYTR-1116Khz"
+      },
+      {
+        "code": "170",
+        "option": "DYRD-1161Khz"
+      },
+      {
+        "code": "138",
+        "option": "DXJR-1575Khz Media Higala"
+      },
+      {
+        "code": "139",
+        "option": "DXRJ-88.5Mhz RJFM"
+      },
+      {
+        "code": "140",
+        "option": "DXKB-89.3Mhz Magic 89.3"
+      },
+      {
+        "code": "141",
+        "option": "DXEC-91.9Mhz MOR 91.9 For Life!"
+      },
+      {
+        "code": "152",
+        "option": "DXQR-93.5Mhz"
+      },
+      {
+        "code": "153",
+        "option": "DXQR-93.5Mhz Home Radio"
+      },
+      {
+        "code": "154",
+        "option": "DXBL-95.7Mhz Mellow Touch"
+      },
+      {
+        "code": "155",
+        "option": "DXKS-96.9Mhz Easy Rock"
+      },
+      {
+        "code": "157",
+        "option": "DXVM-99.1Mhz 99.1 iFM I na Taah!"
+      },
+      {
+        "code": "158",
+        "option": "DXRK-99.9Mhz Magnum Radyo"
+      },
+      {
+        "code": "159",
+        "option": "DXLX-100.7Mhz Campus Radio"
+      },
+      {
+        "code": "161",
+        "option": "DXRL-101.5Mhz Radyo 5 News FM"
+      },
+      {
+        "code": "190",
+        "option": "DXJL-103.3Mhz The NewJ"
+      },
+      {
+        "code": "191",
+        "option": "DXYR-104.7Mhz Yes! The Best"
+      },
+      {
+        "code": "192",
+        "option": "DXHY-106.3Mhz Radyo Natin"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "194",
+        "option": "DXRU-1188Khz Radyo Ultra"
+      },
+      {
+        "code": "628",
+        "option": "DXKO-1368Khz Radyo Ronda"
+      }
+    ]
+  },
+  {
+    "place": "Dagupan",
+    "options": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      },
+      {
+        "code": "199",
+        "option": "DZMQ-576Khz Radyo Pilipinas"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "201",
+        "option": "DWAA-684Khz Pambansang Radyo"
+      },
+      {
+        "code": "202",
+        "option": "DWRS-756Khz Radyo ng Bayan (Tayug)"
+      },
+      {
+        "code": "205",
+        "option": "DZRD-981Khz Sonshine Radio"
+      },
+      {
+        "code": "206",
+        "option": "DWDW-1017Khz DWDW"
+      },
+      {
+        "code": "060",
+        "option": "DZWX-1035Khz Bombo Radyo"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz DZEC 1062 Radyo Agila"
+      },
+      {
+        "code": "209",
+        "option": "DWIN-1080Khz Radyo Agila"
+      },
+      {
+        "code": "211",
+        "option": "DZWN-1125Khz Bombo Radyo"
+      },
+      {
+        "code": "213",
+        "option": "DWCM-1161Khz Aksyon Radyo"
+      },
+      {
+        "code": "214",
+        "option": "DZAG-1224Khz Radyo ng Bayan (Dagupan)"
+      },
+      {
+        "code": "215",
+        "option": "DWPR-1296Khz Radyo Asenso"
+      },
+      {
+        "code": "217",
+        "option": "DWDH-1440Khz DZRH Relay"
+      },
+      {
+        "code": "218",
+        "option": "DZSD-1548Khz Super Radyo DZBB(Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "627",
+        "option": "DZWM-864Khz Radyo Veritas"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz DWIZ 882 Mas Todong Lakas! (Manila)"
+      },
+      {
+        "code": "073",
+        "option": "DZRR-103.1Mhz MOR 103.1 For Life! (Baguio)"
+      }
+    ]
+  },
+  {
+    "place": "Davao",
+    "options": [
+      {
+        "code": "249",
+        "option": "DXMF-576Khz Bombo Radyo"
+      },
+      {
+        "code": "250",
+        "option": "DXDC-621Khz RMN (Davao)"
+      },
+      {
+        "code": "251",
+        "option": "DXRP-675Khz Radyo ng Bayan"
+      },
+      {
+        "code": "252",
+        "option": "DXRD-711Khz Sonshine Radio"
+      },
+      {
+        "code": "253",
+        "option": "DXRA-783Khz Radyo ni Juan"
+      },
+      {
+        "code": "132",
+        "option": "DXUM-819Khz Radyo Ukay (Davao)"
+      },
+      {
+        "code": "254",
+        "option": "DXGO-855Khz Aksyon Radyo"
+      },
+      {
+        "code": "255",
+        "option": "DXIP-900Khz El Nuevo Bantay Radyo"
+      },
+      {
+        "code": "256",
+        "option": "DXOW-981Khz Radyo Asenso"
+      },
+      {
+        "code": "257",
+        "option": "DXRR-1017Khz Radyo Rapido"
+      },
+      {
+        "code": "258",
+        "option": "DXKT-1071Khz Radyo Ronda"
+      },
+      {
+        "code": "259",
+        "option": "DXGM-1125Khz Super Radyo DXGM"
+      },
+      {
+        "code": "260",
+        "option": "DXFE-1197Khz Good News Radio"
+      },
+      {
+        "code": "261",
+        "option": "DXED-1224Khz Radyo Agila"
+      },
+      {
+        "code": "262",
+        "option": "DXRF-1260Khz DZRH Relay"
+      },
+      {
+        "code": "263",
+        "option": "DXAB-1296Khz Radyo Patrol"
+      },
+      {
+        "code": "264",
+        "option": "DXAQ-1404Khz Kingdom Radio"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "General Santos",
+    "options": [
+      {
+        "code": "318",
+        "option": "DXCP-585Khz Radio Totoo"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "250",
+        "option": "DXDC-621Khz RMN (Davao)"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "320",
+        "option": "DXDX-693Khz Radyo Ronda"
+      },
+      {
+        "code": "252",
+        "option": "DXRD-711Khz Sonshine Radio"
+      },
+      {
+        "code": "322",
+        "option": "DXGS-765Khz Radyo Asenso"
+      },
+      {
+        "code": "323",
+        "option": "DXES-801Khz Bombo Radio"
+      },
+      {
+        "code": "325",
+        "option": "DXMD-927Khz RMN (GenSan)"
+      },
+      {
+        "code": "326",
+        "option": "DXBB-1107Khz Radyo Alerto"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "632",
+        "option": "DXGH-531Khz DZRH Relay"
+      }
+    ]
+  },
+  {
+    "place": "Legaspi",
+    "options": [
+      {
+        "code": "352",
+        "option": "DZBU-621Khz Radyo ng Bayan"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "353",
+        "option": "DZGB-729Khz RADYO DZGB"
+      },
+      {
+        "code": "354",
+        "option": "DWZR-828Khz Zoom Radio 828"
+      },
+      {
+        "code": "355",
+        "option": "DZRC-873Khz DZRC Radyo Champion"
+      },
+      {
+        "code": "356",
+        "option": "DZLG-927Khz Bombo Radyo (Legaspi)"
+      },
+      {
+        "code": "357",
+        "option": "DWBS-1008Khz Radyo Veritas"
+      },
+      {
+        "code": "359",
+        "option": "DWRL-1080Khz DWRL Radyo Asenso"
+      },
+      {
+        "code": "360",
+        "option": "DWAS-1125Khz Christian Radio"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "505",
+        "option": "DWJS-621Khz Radyo Pilipinas 621"
+      },
+      {
+        "code": "590",
+        "option": "DWCT-1557Khz Radyo Uno"
+      }
+    ]
+  },
+  {
+    "place": "Lucena",
+    "options": [
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "416",
+        "option": "DWLC-1017Khz Radyo ng Bayan"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz DZEC 1062 Radyo Agila"
+      },
+      {
+        "code": "417",
+        "option": "DZLT-1188Khz"
+      },
+      {
+        "code": "419",
+        "option": "DZEL-1260Khz Radyo Agila"
+      },
+      {
+        "code": "420",
+        "option": "DZAT-1512Khz Ang Himpilan ng Katotohanan"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      },
+      {
+        "code": "642",
+        "option": "DWSR-1224Khz DZRH Relay"
+      },
+      {
+        "code": "645",
+        "option": "DWMZ-90.3Mhz Magik FM (Lucena)"
+      }
+    ]
+  },
+  {
+    "place": "Malaybalay",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "437",
+        "option": "DXDB-594Khz Radyo Bandilyo"
+      },
+      {
+        "code": "438",
+        "option": "DXMB-648Khz RMN (Malaybalay)"
+      },
+      {
+        "code": "439",
+        "option": "DXMV-1134Khz Radyo Ukay (Valencia)"
+      }
+    ]
+  },
+  {
+    "place": "Naga",
+    "options": [
+      {
+        "code": "451",
+        "option": "DWRB-549Khz Radyo ng Bayan"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "453",
+        "option": "DWRN-657Khz Radyo Pilipino"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "454",
+        "option": "DZLW-711Khz  Kasurog"
+      },
+      {
+        "code": "455",
+        "option": "DZGE-855Khz"
+      },
+      {
+        "code": "457",
+        "option": "DZNG-1044Khz Bombo Radyo Naga"
+      },
+      {
+        "code": "458",
+        "option": "DZKI-1322Khz RPN"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "517",
+        "option": "DWMT-981Khz DZRH Relay"
+      },
+      {
+        "code": "592",
+        "option": "DWNX-1611Khz DWNX RMN Naga 1611"
+      }
+    ]
+  },
+  {
+    "place": "San Pablo",
+    "options": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz Agapay ng Sambayanan (Manila)"
+      },
+      {
+        "code": "006",
+        "option": "DZRB-738Khz Radyo Pilipinas"
+      },
+      {
+        "code": "007",
+        "option": "DWWW-774Khz Your Ultimate NewSic Radio"
+      },
+      {
+        "code": "008",
+        "option": "DZRJ-810Khz DZRJ 810 AM Radyo Bandido (Manila)"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz Veritas 846 Ang Radyo ng Simbahan(Manila)"
+      },
+      {
+        "code": "010",
+        "option": "DWIZ-882Khz DWIZ 882 Mas Todong Lakas! (Manila)"
+      },
+      {
+        "code": "011",
+        "option": "DZSR-918Khz Radyo Pilipinas Dos"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz INC Radio DZEM 954 (Manila)"
+      },
+      {
+        "code": "013",
+        "option": "DZIQ-990Khz DZIQ RADYO INQUIRER Nuebe Nubenta"
+      },
+      {
+        "code": "014",
+        "option": "DZAR-1026Khz Sonshine Radio (Manila)"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz DZEC 1062 Radyo Agila"
+      },
+      {
+        "code": "016",
+        "option": "DWAD-1098Khz DWAD 1098 Now Radio"
+      },
+      {
+        "code": "017",
+        "option": "DWDD-1134Khz Katropa Radio (Manila)"
+      },
+      {
+        "code": "018",
+        "option": "DWBL-1242Khz DWBL Serbisyo Publiko! (Manila)"
+      },
+      {
+        "code": "019",
+        "option": "DZRM-1278Khz Radyo Magasin (Manila)"
+      },
+      {
+        "code": "020",
+        "option": "DWXI-1314Khz Himpilang Pinagpala! (Manila)"
+      },
+      {
+        "code": "021",
+        "option": "DWUN-1350Khz UNTV Radio La Verdad 1350 (Manila)"
+      },
+      {
+        "code": "022",
+        "option": "DWSS-1494Khz DWSS/Entertainment Radio (Manila)"
+      },
+      {
+        "code": "023",
+        "option": "DZME-1530Khz DZME Kinse Trenta"
+      },
+      {
+        "code": "024",
+        "option": "DZUP-1602Khz DZUP 1602 Kasali Ka! (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Sorsogon",
+    "options": [
+      {
+        "code": "319",
+        "option": "DZRS-1179Khz"
+      },
+      {
+        "code": "321",
+        "option": "DZMS-1251Khz"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "489",
+        "option": "DZZH-1287Khz DZRH Relay"
+      },
+      {
+        "code": "356",
+        "option": "DZLG-927Khz Bombo Radyo (Legaspi)"
+      }
+    ]
+  },
+  {
+    "place": "Cebu",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz RMN (Cebu)"
+      },
+      {
+        "code": "156",
+        "option": "DYRB-540Khz Radyo Asenso (Cebu)"
+      },
+      {
+        "code": "164",
+        "option": "DYLA-909Khz"
+      },
+      {
+        "code": "165",
+        "option": "DYLA-909Khz  DYLA 909 (Cebu)"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz  Super Radyo DYSS (Cebu)"
+      },
+      {
+        "code": "172",
+        "option": "DYRF-1215Khz  Radyo Fuerza"
+      },
+      {
+        "code": "173",
+        "option": "DYDD-1260Khz  El-Nuevo Bantay Radyo (Cebu)"
+      },
+      {
+        "code": "176",
+        "option": "DYAB-1512Khz Radyo Patrol 1512 (Cebu)"
+      },
+      {
+        "code": "200",
+        "option": "DYMR-576Khz Radyo Pilipinas Cebu"
+      },
+      {
+        "code": "220",
+        "option": "DYCM-1152Khz Bag-ong Adlaw DYCM"
+      },
+      {
+        "code": "239",
+        "option": "DYAR-765Khz Sonshine Radio Cebu"
+      },
+      {
+        "code": "340",
+        "option": "DYKC-675Khz RPN DYKC Kusog Cebu"
+      },
+      {
+        "code": "410",
+        "option": "DYBG-864Khz Radyo Budyong"
+      },
+      {
+        "code": "433",
+        "option": "DYFX-1332Khz DYFX Radyo Agila Cebu"
+      },
+      {
+        "code": "473",
+        "option": "DYXR-1395Khz DZRH Relay"
+      },
+      {
+        "code": "561",
+        "option": "DYRC-648Khz Aksyon Radyo"
+      },
+      {
+        "code": "611",
+        "option": "DYFX-1305Khz DYFX Radyo Agila Cebu"
+      }
+    ]
+  },
+  {
+    "place": "Iloilo",
+    "options": [
+      {
+        "code": "565",
+        "option": "DYLL-585Khz Radyo ng Bayan"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz"
+      },
+      {
+        "code": "566",
+        "option": "DYOK-720Khz Aksyon Radyo"
+      },
+      {
+        "code": "567",
+        "option": "DYRI-774Khz RMN Iloilo"
+      },
+      {
+        "code": "568",
+        "option": "DYFM-837Khz Bombo Radyo"
+      },
+      {
+        "code": "569",
+        "option": "DYUP-873Khz DYUP-AM"
+      },
+      {
+        "code": "570",
+        "option": "DYBQ-981Khz Radyo Budyong"
+      },
+      {
+        "code": "571",
+        "option": "DYSI-1323Khz Super Radyo DYSI"
+      },
+      {
+        "code": "572",
+        "option": "DYDH-1485Khz DZRH Relay"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "638",
+        "option": "DYSA-1053Khz DYSA AM 1053 Ang Dios Gugma Radio"
+      }
+    ]
+  },
+  {
+    "place": "Kalibo",
+    "options": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "595",
+        "option": "DYVR-657Khz RMN (Roxas)"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz Agapay ng Sambayanan (Manila)"
+      },
+      {
+        "code": "596",
+        "option": "DYOW-900Khz Bombo Radyo (Roxas)"
+      },
+      {
+        "code": "012",
+        "option": "DZEM-954Khz INC Radio DZEM 954 (Manila)"
+      },
+      {
+        "code": "166",
+        "option": "DYSS-999Khz  Super Radyo DYSS (Cebu)"
+      },
+      {
+        "code": "597",
+        "option": "DYIN-1107Khz Bombo Radyo (Kalibo)"
+      },
+      {
+        "code": "598",
+        "option": "DYKR-1161Khz RMN Kalibo"
+      },
+      {
+        "code": "599",
+        "option": "DYRG-1251Khz Radyo Budyong (Kalibo)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Roxas",
+    "options": [
+      {
+        "code": "001",
+        "option": "DZXL-558Khz RMN Manila"
+      },
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "005",
+        "option": "DZAS-702Khz Agapay ng Sambayanan (Manila)"
+      },
+      {
+        "code": "009",
+        "option": "DZRV-846Khz Veritas 846 Ang Radyo ng Simbahan(Manila)"
+      },
+      {
+        "code": "041",
+        "option": "DWYS-101.1Mhz 101.1 Yes! The BEST 101.1"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "075",
+        "option": "DYEZ-684Khz Aksyon Radyo (Bacolod)"
+      },
+      {
+        "code": "077",
+        "option": "DYHB-747Khz RMN (Bacolod)"
+      },
+      {
+        "code": "080",
+        "option": "DYSB-1179Khz Super Radyo DYSB (Bacolod)"
+      },
+      {
+        "code": "566",
+        "option": "DYOK-720Khz Aksyon Radyo"
+      },
+      {
+        "code": "595",
+        "option": "DYVR-657Khz RMN (Roxas)"
+      },
+      {
+        "code": "596",
+        "option": "DYOW-900Khz Bombo Radyo (Roxas)"
+      },
+      {
+        "code": "597",
+        "option": "DYIN-1107Khz Bombo Radyo (Kalibo)"
+      },
+      {
+        "code": "598",
+        "option": "DYKR-1161Khz RMN Kalibo"
+      },
+      {
+        "code": "599",
+        "option": "DYRG-1251Khz Radyo Budyong (Kalibo)"
+      },
+      {
+        "code": "606",
+        "option": "DYJJ-1296Khz Radyo Budyong Roxas"
+      }
+    ]
+  },
+  {
+    "place": "Tagbilaran",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "118",
+        "option": "DYHP-612Khz RMN (Cebu)"
+      },
+      {
+        "code": "164",
+        "option": "DYLA-909Khz  DYLA 909 (Cebu)"
+      },
+      {
+        "code": "168",
+        "option": "DYTR-1116Khz Radyo Serbisyo (Tagbilaran)"
+      },
+      {
+        "code": "170",
+        "option": "DYRD-1161Khz Radyo Balita (Tagbilaran)"
+      },
+      {
+        "code": "622",
+        "option": "DYZD-1422Khz"
+      }
+    ]
+  },
+  {
+    "place": "Santiago",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "053",
+        "option": "DWRH-648Khz DZRH Relay (Santiago)"
+      },
+      {
+        "code": "054",
+        "option": "DZNC-801Khz Bombo Radyo (Cauayan)"
+      },
+      {
+        "code": "055",
+        "option": "DWDY-1107Khz DWDY AM 1107 Cauayan"
+      }
+    ]
+  },
+  {
+    "place": "Tuguegarao",
+    "options": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "316",
+        "option": "DWRH-576Khz DZRH Relay"
+      },
+      {
+        "code": "317",
+        "option": "DZTG-621Khz Radyo Ronda"
+      },
+      {
+        "code": "342",
+        "option": "DZCV-684Khz Radyo DZCV 684 Tuguegarao"
+      },
+      {
+        "code": "348",
+        "option": "DWPE-729Khz Radyo ng Bayan"
+      },
+      {
+        "code": "349",
+        "option": "DZYT-765Khz DZYT Sonshine Radio 765 Tuguegarao"
+      },
+      {
+        "code": "350",
+        "option": "DZGR-891Khz Bombo Radyo"
+      }
+    ]
+  },
+  {
+    "place": "San Fernando, La Union",
+    "options": [
+      {
+        "code": "002",
+        "option": "DZBB-594Khz Super Radyo DZBB (Manila)"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "015",
+        "option": "DZEC-1062Khz DZEC 1062 Radyo Agila"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "204",
+        "option": "DZNL-783Khz Aksyon Radyo"
+      },
+      {
+        "code": "211",
+        "option": "DZWN-1125Khz Bombo Radyo"
+      },
+      {
+        "code": "213",
+        "option": "DWCM-1161Khz Aksyon Radyo"
+      },
+      {
+        "code": "214",
+        "option": "DZAG-1224Khz Radyo ng Bayan (Dagupan)"
+      },
+      {
+        "code": "215",
+        "option": "DWPR-1296Khz Radyo Asenso"
+      },
+      {
+        "code": "532",
+        "option": "DZLU-657Khz 657 DZLU"
+      },
+      {
+        "code": "533",
+        "option": "DZSO-720Khz Bombo Radyo"
+      },
+      {
+        "code": "534",
+        "option": "DZYR-1359Khz DZYR Phil. Radio Corp."
+      }
+    ]
+  },
+  {
+    "place": "Loang",
+    "options": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "476",
+        "option": "DZRL-639Khz Radyo Ronda (Batac)"
+      },
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "478",
+        "option": "DWLW-675Khz RMN (Laoag)"
+      },
+      {
+        "code": "479",
+        "option": "DZVR-711Khz Bombo Radyo (Laoag)"
+      },
+      {
+        "code": "480",
+        "option": "DZJC-747Khz Aksyon Radyo (Laoag)"
+      },
+      {
+        "code": "481",
+        "option": "DWAR-819Khz Sonshine Radio"
+      },
+      {
+        "code": "493",
+        "option": "DZEA-909Khz Radyo Totoo"
+      },
+      {
+        "code": "494",
+        "option": "DWFB-954Khz Radyo ng Bayan 954"
+      },
+      {
+        "code": "495",
+        "option": "DZMT-990Khz DZRH Relay"
+      },
+      {
+        "code": "496",
+        "option": "DWRC-1269Khz Super Radyo"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Marbel (Koronadal)",
+    "options": [
+      {
+        "code": "004",
+        "option": "DZRH-666Khz Kaunaunahan sa Pilipinas (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "327",
+        "option": "DXKR-639Khz RMN Koronadal"
+      },
+      {
+        "code": "362",
+        "option": "DXMC-1026Khz Bombo Radyo"
+      },
+      {
+        "code": "367",
+        "option": "DXKI-1062Khz DXKI AM The Friendly Voice"
+      },
+      {
+        "code": "376",
+        "option": "DXOM-91.7Mhz Happy FM"
+      },
+      {
+        "code": "666",
+        "option": "DXOM 963 Khz Radyo Bida"
+      }
+    ]
+  },
+  {
+    "place": "Pagadian",
+    "options": [
+      {
+        "code": "404",
+        "option": "DXPR-603Khz RMN (Pagadian)"
+      },
+      {
+        "code": "409",
+        "option": "DXBZ-756Khz Radyo Bagting"
+      },
+      {
+        "code": "247",
+        "option": "DXKP-1377Khz Radyo Ronda"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Ozamis",
+    "options": [
+      {
+        "code": "398",
+        "option": "DXOC-1494Khz RMN (Ozamis)"
+      },
+      {
+        "code": "203",
+        "option": "DXDD-657Khz Radyo Kampana (Ozamis)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Cotobato",
+    "options": [
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "088",
+        "option": "DXCH-567Khz DZCH"
+      },
+      {
+        "code": "128",
+        "option": "DXMY-729Khz RMN (Cotabato)"
+      },
+      {
+        "code": "133",
+        "option": "DXMS-882Khz Radyo Bida Cotabato"
+      },
+      {
+        "code": "137",
+        "option": "DXCM-1089Khz"
+      },
+      {
+        "code": "269",
+        "option": "DXOL-92.7Mhz DXOL Happy FM"
+      },
+      {
+        "code": "366",
+        "option": "DXMR-1170Khz Radyo Pilipinas"
+      },
+      {
+        "code": "404",
+        "option": "DXPR-603Khz RMN (Pagadian)"
+      }
+    ]
+  },
+  {
+    "place": "Cauayan",
+    "options": [
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "014",
+        "option": "DZAR-1026Khz Sonshine Radio (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "053",
+        "option": "DWRH-648Khz DZRH Relay (Santiago"
+      },
+      {
+        "code": "054",
+        "option": "DZNC-801Khz Bombo Radyo (Cauayan)"
+      },
+      {
+        "code": "055",
+        "option": "DWDY-1107Khz DWDY AM 1107 Cauayan"
+      }
+    ]
+  },
+  {
+    "place": "Vigan",
+    "options": [
+      {
+        "code": "510",
+        "option": "DZVV-603Khz Bombo Radyo"
+      },
+      {
+        "code": "511",
+        "option": "DZTP-693Khz Tirad Pass Radio (Candon)"
+      },
+      {
+        "code": "480",
+        "option": "DZJC-747Khz Aksyon Radyo (Laoag)"
+      },
+      {
+        "code": "512",
+        "option": "DWRS-927Khz RMN (Vigan)"
+      },
+      {
+        "code": "513",
+        "option": "DZNS-963Khz Radyo Totoo"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      }
+    ]
+  },
+  {
+    "place": "Daet",
+    "options": [ 
+      {
+        "code": "522",
+        "option": "DZMD-1161Khz DZMD AM"
+      },
+      {
+        "code": "003",
+        "option": "DZMM-630Khz DZMM Radyo Patrol 630 (Manila)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Tagum",
+    "options": [
+      {
+        "code": "675",
+        "option": "DXDN-936Khz Radyo Ukay"
+      },
+      {
+        "code": "250",
+        "option": "DXDC-621Khz RMN (Davao)"
+      },
+      {
+        "code": "259",
+        "option": "DXGM-1125Khz Super Radyo DXGM"
+      },
+      {
+        "code": "254",
+        "option": "DXGO-855Khz Aksyon Radyo"
+      },
+      {
+        "code": "249",
+        "option": "DXMF-576Khz Bombo Radyo"
+      },
+      {
+        "code": "256",
+        "option": "DXOW-981Khz Radyo Asenso"
+      },
+      {
+        "code": "132",
+        "option": "DXUM-819Khz Radyo Ukay (Davao)"
+      },
+      {
+        "code": "252",
+        "option": "DXRD-711Khz Sonshine Radio"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Bayombong",
+    "options": [
+      {
+        "code": "679",
+        "option": "DWRV-1233Khz Radyo Totoo"
+      },
+      {
+        "code": "697",
+        "option": "DWMG-1395Khz DWMG 1395"
+      },
+      {
+        "code": "054",
+        "option": "DZNC-801Khz Bombo Radyo (Cauayan)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Don't Know option_Others"
+      }
+    ]
+  },
+  {
+    "place": "Dipolog",
+    "options": [
+      {
+        "code": "684",
+        "option": "DXDR-981Khz RMN Dipolog"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      }
+    ]
+  },
+  {
+    "place": "Kidapawan",
+    "options": [
+      {
+        "code": "687",
+        "option": "DYCM-1089Khz"
+      },
+      {
+        "code": "713",
+        "option": "DXND-747Khz"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      }
+    ]
+  },
+  {
+    "place": "Valencia",
+    "options": [
+      {
+        "code": "438",
+        "option": "DXMB-648Khz RMN (Malaybalay)"
+      },
+      {
+        "code": "439",
+        "option": "DXMV-1134Khz Radyo Ukay (Valencia)"
+      },
+      {
+        "code": "051",
+        "option": "Not Listen"
+      },
+      {
+        "code": "052",
+        "option": "Dont Know option_Others"
+      }
+    ]
+  }
+]

@@ -53,6 +53,7 @@ class ActualQuestionsFragment :
         actual_next_btn.setOnClickListener {
             viewModel.queryActualQuestion(viewModel.plus(), true)
             actual_selection_layout.removeAllViews()
+            hideKeyboard()
         }
 
         load_options_label.setOnClickListener {
@@ -115,15 +116,6 @@ class ActualQuestionsFragment :
                 }, state.genderCode)
             }
 
-            is StationForm -> {
-                viewModel.parseStation(state.fileName?.let {
-                    getJsonDataFromAsset(
-                        requireContext(),
-                        it
-                    )
-                }, state.genderCode)
-            }
-
             is ActualQuestionForm -> {
                 viewModel.parseActualQuestions(state.fileName?.let {
                     getJsonDataFromAsset(
@@ -131,10 +123,6 @@ class ActualQuestionsFragment :
                         it
                     )
                 }, state.genderCode)
-            }
-
-            is DeviceForm -> {
-
             }
 
             is ActualQuestionModel -> {
@@ -151,10 +139,10 @@ class ActualQuestionsFragment :
                         viewModel.loadAreas()
                     }
                     STATIONS_AM -> {
-                        viewModel.loadStations(FM)
+                        viewModel.loadStations(getJsonDataFromAsset(requireContext(), STATION_AM))
                     }
                     STATIONS_FM -> {
-                        viewModel.loadStations(AM)
+                        viewModel.loadStations(getJsonDataFromAsset(requireContext(), STATION_FM))
                     }
                     HOURS -> {
                         isHours = true
@@ -434,6 +422,8 @@ class ActualQuestionsFragment :
         private const val AREA = "Area"
         private const val STATIONS_AM = "stations_am"
         private const val STATIONS_FM = "stations_fm"
+        private const val STATION_AM = "radio_stations_am.json"
+        private const val STATION_FM = "radio_stations_fm.json"
         private const val AM = "Khz"
         private const val FM = "Mhz"
         private const val HOURS = "hour/s"

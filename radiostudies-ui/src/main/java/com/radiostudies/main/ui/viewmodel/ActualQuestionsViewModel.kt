@@ -14,7 +14,6 @@ import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.mapper.*
 import com.radiostudies.main.ui.model.actual.*
 import com.radiostudies.main.ui.model.main.MainInfo
-import com.radiostudies.main.ui.model.station.Station
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -61,24 +60,24 @@ class ActualQuestionsViewModel @Inject constructor(
         insertArea(areas, genderCode)
     }
 
-    fun parseStation(station: String?, genderCode: String?) {
-        val jsonArray = JSONArray(station)
-        val stations = mutableListOf<Station>()
-        for (i in 0 until jsonArray.length()) {
-            val jsonObject = jsonArray.getJSONObject(i)
-            val place = jsonObject.getString(PLACE)
-            val stationsJSONArray = jsonObject.getJSONArray(OPTIONS)
-            val options = mutableListOf<Option>()
-            for (j in 0 until stationsJSONArray.length()) {
-                val jsonArrayObj = stationsJSONArray.getJSONObject(j)
-                val optionCode = jsonArrayObj.getString(CODE)
-                val optionValue = jsonArrayObj.getString(OPTION)
-                options.add(Option(optionCode, optionValue))
-            }
-            stations.add(Station(place, options))
-        }
-        insertStation(stations, genderCode)
-    }
+//    fun parseStation(station: String?, genderCode: String?) {
+//        val jsonArray = JSONArray(station)
+//        val stations = mutableListOf<Station>()
+//        for (i in 0 until jsonArray.length()) {
+//            val jsonObject = jsonArray.getJSONObject(i)
+//            val place = jsonObject.getString(PLACE)
+//            val stationsJSONArray = jsonObject.getJSONArray(OPTIONS)
+//            val options = mutableListOf<Option>()
+//            for (j in 0 until stationsJSONArray.length()) {
+//                val jsonArrayObj = stationsJSONArray.getJSONObject(j)
+//                val optionCode = jsonArrayObj.getString(CODE)
+//                val optionValue = jsonArrayObj.getString(OPTION)
+//                options.add(Option(optionCode, optionValue))
+//            }
+//            stations.add(Station(place, options))
+//        }
+//        insertStation(stations, genderCode)
+//    }
 
     private fun insertArea(areas: MutableList<Option>, genderCode: String?) {
         launch {
@@ -94,25 +93,25 @@ class ActualQuestionsViewModel @Inject constructor(
                 e.printStackTrace()
             }
         }
-        actualState.postValue(StationForm(STATION, genderCode))
-    }
-
-    private fun insertStation(stations: MutableList<Station>, genderCode: String?) {
-        launch {
-            insertStationToDB(stations, genderCode)
-        }
-    }
-
-    private suspend fun insertStationToDB(stations: MutableList<Station>, genderCode: String?) {
-        withContext(Dispatchers.IO) {
-            try {
-                actualManager.insertStation(stations.optionListModelToStationEntity())
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
         actualState.postValue(ActualQuestionForm(ACTUAL_QUESTIONS, genderCode))
     }
+
+//    private fun insertStation(stations: MutableList<Station>, genderCode: String?) {
+//        launch {
+//            insertStationToDB(stations, genderCode)
+//        }
+//    }
+//
+//    private suspend fun insertStationToDB(stations: MutableList<Station>, genderCode: String?) {
+//        withContext(Dispatchers.IO) {
+//            try {
+//                actualManager.insertStation(stations.optionListModelToStationEntity())
+//            } catch (e: Exception) {
+//                e.printStackTrace()
+//            }
+//        }
+//        actualState.postValue(ActualQuestionForm(ACTUAL_QUESTIONS, genderCode))
+//    }
 
     fun parseActualQuestions(actual: String?, genderCode: String?) {
         val jsonArray = JSONArray(actual)
@@ -245,26 +244,39 @@ class ActualQuestionsViewModel @Inject constructor(
     }
 
     fun loadStations(station: String?) {
-        launch {
-            loadStationsFromDB(station)
-        }
-    }
-
-    private suspend fun loadStationsFromDB(station: String?) {
-        withContext(Dispatchers.IO) {
-            try {
-                val newOptions = mutableListOf<Option>()
-                currentOptions = actualManager.getSelectedArea(selectedArea)
-                currentOptions.forEach {
-                    if (!it.option.contains(station.toString()))
-                        newOptions.add(it)
+        val jsonArray = JSONArray(station)
+        for (i in 0 until jsonArray.length()) {
+            val jsonObject = jsonArray.getJSONObject(i)
+            val place = jsonObject.getString(PLACE)
+            if (place == selectedArea) {
+                val stationsJSONArray = jsonObject.getJSONArray(OPTIONS)
+                val options = mutableListOf<Option>()
+                for (j in 0 until stationsJSONArray.length()) {
+                    val jsonArrayObj = stationsJSONArray.getJSONObject(j)
+                    val optionCode = jsonArrayObj.getString(CODE)
+                    val optionValue = jsonArrayObj.getString(OPTION)
+                    options.add(Option(optionCode, optionValue))
                 }
-                currentOptions = newOptions
-            } catch (e: Exception) {
-                e.printStackTrace()
+                currentOptions = options
             }
         }
     }
+
+//    private suspend fun loadStationsFromDB(station: String?) {
+//        withContext(Dispatchers.IO) {
+//            try {
+//                val newOptions = mutableListOf<Option>()
+//                currentOptions = actualManager.getSelectedArea(selectedArea)
+//                currentOptions.forEach {
+//                    if (!it.option.contains(station.toString()))
+//                        newOptions.add(it)
+//                }
+//                currentOptions = newOptions
+//            } catch (e: Exception) {
+//                e.printStackTrace()
+//            }
+//        }
+//    }
 
     private suspend fun queryActualQuestionFromDB(qId: Int, isPlus: Boolean) {
         withContext(Dispatchers.IO) {
@@ -405,34 +417,6 @@ class ActualQuestionsViewModel @Inject constructor(
         }
     }
 
-//    fun parseDevice(device: String?, selectedDevice: String?) {
-//        val jsonArray = JSONArray(device)
-//        for (i in 0 until jsonArray.length()) {
-//            val jsonObject = jsonArray.getJSONObject(i)
-////            val code = jsonObject.getString("code")
-//            val option = jsonObject.getString(OPTION)
-//            if (option == selectedDevice) {
-//                val childQuestionsArr = jsonObject.getJSONArray(CHILD_QUESTIONS)
-//                for (j in 0 until childQuestionsArr.length()) {
-//                    val childQuestionsJObj = childQuestionsArr.getJSONObject(j)
-//                    val childCode = childQuestionsJObj.getString(CODE)
-//                    val childHeader = childQuestionsJObj.getString(HEADER)
-//                    val childQuestion = childQuestionsJObj.getString(QUESTION)
-//                    val childType = childQuestionsJObj.getString(TYPE)
-//                    val childOptions = mutableListOf<Option>()
-//                    val childOptionsArr = childQuestionsJObj.getJSONArray(OPTIONS)
-//                    for (k in 0 until childOptionsArr.length()) {
-//                        val childOptionsJObj = childOptionsArr.getJSONObject(k)
-//                        val subChildCode = childOptionsJObj.getString(CODE)
-//                        val subChildOption = childOptionsJObj.getString(OPTION)
-//                        childOptions.add(Option(subChildCode, subChildOption))
-//                    }
-//                    devicesQuestion.add(ActualQuestion(i, childCode, childHeader, childQuestion, childType, childOptions, false))
-//                }
-//            }
-//        }
-//    }
-
     fun querySelectedAnswer(code: String?) {
         launch {
             querySelectedAnswerFromDB(code)
@@ -454,7 +438,6 @@ class ActualQuestionsViewModel @Inject constructor(
 
     companion object {
         private const val AREA = "area.json"
-        private const val STATION = "radio_stations.json"
         private const val ACTUAL_QUESTIONS = "actual_questions.json"
         private const val Q2 = "Q2"
         private const val Q11 = "Q11"
