@@ -392,7 +392,6 @@ class ActualQuestionsViewModel @Inject constructor(
                 actualManager.saveCompletedActualQuestions(
                     diary.diaryModelToDiaryEntity()
                 )
-                questionManager.deleteQuestion()
                 actualManager.deleteSaveDataQuestions()
             } catch (e: Exception) {
                 e.printStackTrace()

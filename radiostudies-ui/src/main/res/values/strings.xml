@@ -181,4 +181,6 @@
 
     <string name="date_of_interview">%1s/%2s/%3s</string>
     <string name="text_option">[%1s] %2s</string>
+
+    <string name="success">Successfully completed actual questions.</string>
 </resources>

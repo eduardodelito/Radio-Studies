@@ -209,7 +209,10 @@ class ActualQuestionsFragment :
             }
 
             is ActualQuestionComplete -> {
-                if(state.isComplete) listener?.navigateBack()
+                if(state.isComplete) {
+                    listener?.navigateBack()
+                    Toast.makeText(context, getString(R.string.success), Toast.LENGTH_LONG).show()
+                }
             }
         }
     }
