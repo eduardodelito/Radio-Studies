@@ -78,21 +78,29 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
         }
     }
 
-    fun loadStations(station: String?, selectedArea: String?) {
-        val jsonArray = JSONArray(station)
+    fun loadStations(stationAM: String?, stationFM: String?, selectedArea: String?) {
+        val options = mutableListOf<Option>()
+        parseStations(options, stationAM, selectedArea)
+        parseStations(options, stationFM, selectedArea)
+        diaryState.postValue(StationsForm(options))
+    }
+
+    fun parseStations(options: MutableList<Option>, stations: String?, selectedArea: String?) {
+        val jsonArray = JSONArray(stations)
         for (i in 0 until jsonArray.length()) {
             val jsonObject = jsonArray.getJSONObject(i)
             val place = jsonObject.getString(PLACE)
             if (place == selectedArea) {
                 val stationsJSONArray = jsonObject.getJSONArray(OPTIONS)
-                val options = mutableListOf<Option>()
                 for (j in 0 until stationsJSONArray.length()) {
                     val jsonArrayObj = stationsJSONArray.getJSONObject(j)
                     val optionCode = jsonArrayObj.getString(CODE)
                     val optionValue = jsonArrayObj.getString(OPTION)
-                    options.add(Option(optionCode, optionValue))
+                    val optionVal = options.find { opt: Option ->  opt.option == optionValue}
+                    if (optionVal == null) {
+                        options.add(Option(optionCode, optionValue))
+                    }
                 }
-                diaryState.postValue(StationsForm(options))
             }
         }
     }
