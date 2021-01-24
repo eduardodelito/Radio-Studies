@@ -105,7 +105,7 @@ class ActualQuestionsFragment :
         }
     }
 
-    private fun onActualQuestionStateChanged(state: ActualQuestionState?) {
+    private fun onActualQuestionStateChanged(state: ActualQuestionViewState?) {
         when (state) {
             is AreaForm -> {
                 viewModel.parseArea(state.fileName?.let {
@@ -427,8 +427,6 @@ class ActualQuestionsFragment :
         private const val STATIONS_FM = "stations_fm"
         private const val STATION_AM = "radio_stations_am.json"
         private const val STATION_FM = "radio_stations_fm.json"
-        private const val AM = "Khz"
-        private const val FM = "Mhz"
         private const val HOURS = "hour/s"
         private const val OTHER = "Other"
         private const val EMPLOYER = "Employer"
@@ -436,7 +434,6 @@ class ActualQuestionsFragment :
         private const val NONE = "None"
         private const val NOT_LISTEN = "Not Listen"
         private const val MAIN_INFO = "main_info"
-//        private const val RADIO_DEVICE = "radio_device.json"
         private const val MAX_HOURS = 24
         private const val EXIT = "exit Actual Questions"
         fun newInstance() = ActualQuestionsFragment()

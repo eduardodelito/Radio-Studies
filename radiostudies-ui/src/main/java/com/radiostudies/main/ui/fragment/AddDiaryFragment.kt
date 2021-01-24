@@ -83,7 +83,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
         }
     }
 
-    private fun onDiaryStateChanged(state: AddDiaryModelState?) {
+    private fun onDiaryStateChanged(state: AddDiaryModelViewState?) {
         when (state) {
             is AddDiaryForm -> {
                 viewModel.parseTimeOfListening(
@@ -281,7 +281,7 @@ class AddDiaryFragment : BaseFragment<AddDiaryFragmentBinding, AddDiaryViewModel
             tv.text = selectedDateValue
             viewModel.selectedDiaryDate.add(Option("1", selectedDateValue))
             addView(tv)
-            visibility = if (selectedDateValue.isNullOrEmpty()) View.GONE else View.VISIBLE
+            visibility = View.VISIBLE
         }
     }
 

@@ -10,7 +10,7 @@ import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.mapper.diaryEntityModelToDiaryList
 import com.radiostudies.main.ui.model.diary.DiaryForm
 import com.radiostudies.main.ui.model.diary.DiaryModel
-import com.radiostudies.main.ui.model.diary.DiaryModelState
+import com.radiostudies.main.ui.model.diary.DiaryModelViewState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,8 +24,8 @@ class DiaryViewModel @Inject constructor(private val actualManager: ActualManage
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
 
-    private val diaryState = SingleLiveEvent<DiaryModelState>()
-    internal fun getDiaryLiveData(): SingleLiveEvent<DiaryModelState> = diaryState
+    private val diaryState = SingleLiveEvent<DiaryModelViewState>()
+    internal fun getDiaryLiveData(): SingleLiveEvent<DiaryModelViewState> = diaryState
 
     fun loadDiary() {
         launch {

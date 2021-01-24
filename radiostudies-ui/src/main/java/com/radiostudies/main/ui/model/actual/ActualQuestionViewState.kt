@@ -6,12 +6,12 @@ import com.radiostudies.main.db.model.ActualQuestion
 /**
  * Created by eduardo.delito on 10/4/20.
  */
-sealed class ActualQuestionState
+sealed class ActualQuestionViewState
 data class AreaForm(val fileName: String?, val genderCode: String?) :
-    ActualQuestionState()
+    ActualQuestionViewState()
 
 data class ActualQuestionForm(val fileName: String?, val genderCode: String?) :
-    ActualQuestionState()
+    ActualQuestionViewState()
 
 data class ActualQuestionModel(
     val actualQuestion: ActualQuestion,
@@ -19,9 +19,9 @@ data class ActualQuestionModel(
     val isNextEnable: Boolean,
     val isPlus: Boolean
 ) :
-    ActualQuestionState()
+    ActualQuestionViewState()
 
 data class SelectedOptionForm(val selectedOptions: MutableList<Option>) :
-    ActualQuestionState()
+    ActualQuestionViewState()
 
-data class ActualQuestionComplete(val isComplete: Boolean) : ActualQuestionState()
+data class ActualQuestionComplete(val isComplete: Boolean) : ActualQuestionViewState()

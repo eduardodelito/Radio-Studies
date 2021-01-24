@@ -12,7 +12,7 @@ import com.radiostudies.main.ui.adapter.DiaryAdapter
 import com.radiostudies.main.ui.fragment.databinding.DiaryFragmentBinding
 import com.radiostudies.main.ui.model.diary.DiaryForm
 import com.radiostudies.main.ui.model.diary.DiaryModel
-import com.radiostudies.main.ui.model.diary.DiaryModelState
+import com.radiostudies.main.ui.model.diary.DiaryModelViewState
 import com.radiostudies.main.ui.viewmodel.DiaryViewModel
 import kotlinx.android.synthetic.main.diary_fragment.*
 import javax.inject.Inject
@@ -65,7 +65,7 @@ class DiaryFragment : BaseFragment<DiaryFragmentBinding, DiaryViewModel>() {
         }
     }
 
-    private fun onDiaryStateChanged(state: DiaryModelState?) {
+    private fun onDiaryStateChanged(state: DiaryModelViewState?) {
         when(state) {
             is DiaryForm -> {
                 diaryAdapter.updateData(state.list)

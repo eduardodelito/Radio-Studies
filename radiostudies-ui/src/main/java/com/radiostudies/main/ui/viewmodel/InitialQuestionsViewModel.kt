@@ -20,8 +20,8 @@ class InitialQuestionsViewModel @Inject constructor(private val questionManager:
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
 
-    private val screenState = MediatorLiveData<ScreenQuestionState>()
-    internal fun getScreenLiveData(): LiveData<ScreenQuestionState> = screenState
+    private val screenState = MediatorLiveData<ScreenQuestionViewState>()
+    internal fun getScreenLiveData(): LiveData<ScreenQuestionViewState> = screenState
     private val list = mutableListOf<ScreenQuestion>()
 
     var index = -1

@@ -85,7 +85,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         }
     }
 
-    private fun onMainInfoStateChanged(state: MainInfoState?) {
+    private fun onMainInfoStateChanged(state: MainInfoViewState?) {
         when (state) {
             is MainInfoForm -> {
                 if (state.panelNumber != null) {

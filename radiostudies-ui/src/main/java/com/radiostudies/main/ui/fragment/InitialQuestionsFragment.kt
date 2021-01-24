@@ -14,7 +14,7 @@ import com.radiostudies.main.common.util.setEnable
 import com.radiostudies.main.ui.fragment.databinding.InitialQuestionsFragmentBinding
 import com.radiostudies.main.ui.model.initial.ScreenQuestionListModel
 import com.radiostudies.main.ui.model.initial.ScreenQuestionModel
-import com.radiostudies.main.ui.model.initial.ScreenQuestionState
+import com.radiostudies.main.ui.model.initial.ScreenQuestionViewState
 import com.radiostudies.main.ui.viewmodel.InitialQuestionsViewModel
 import kotlinx.android.synthetic.main.initial_questions_fragment.*
 import javax.inject.Inject
@@ -76,7 +76,7 @@ class InitialQuestionsFragment :
         }
     }
 
-    private fun onScreenStateChanged(state: ScreenQuestionState?) {
+    private fun onScreenStateChanged(state: ScreenQuestionViewState?) {
         when (state) {
             is ScreenQuestionModel -> viewModel.parseScreenQuestion(context?.let {
                 state.fileName?.let { fileName ->
@@ -88,8 +88,8 @@ class InitialQuestionsFragment :
             })
 
             is ScreenQuestionListModel -> {
-                var screenQuestion = state.screenQuestion
-                var selectedOption = state.selectedOption
+                val screenQuestion = state.screenQuestion
+                val selectedOption = state.selectedOption
                 viewModel.currentQuestion = screenQuestion?.question
 
                 question_number.text = "Question No. ${screenQuestion?.number}"
@@ -201,7 +201,7 @@ class InitialQuestionsFragment :
             tag = 0
             removeAllViews()
             invalidate()
-            var radioGroup = RadioGroup(context)
+            val radioGroup = RadioGroup(context)
             radioGroup.orientation = RadioGroup.VERTICAL
             for (i in list.indices) {
                 val rb = RadioButton(context)

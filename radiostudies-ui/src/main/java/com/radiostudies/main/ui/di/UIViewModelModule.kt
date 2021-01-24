@@ -37,10 +37,9 @@ class UIViewModelModule {
     @IntoMap
     @ViewModelKey(ActualQuestionsViewModel::class)
     fun provideActualQuestionsViewModel(
-        questionManager: QuestionManager,
         actualManager: ActualManager
     ): ViewModel =
-        ActualQuestionsViewModel(questionManager, actualManager)
+        ActualQuestionsViewModel(actualManager)
 
     @Provides
     @IntoMap

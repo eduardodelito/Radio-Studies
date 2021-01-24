@@ -7,7 +7,6 @@ import com.radiostudies.main.common.util.toStringDateTime
 import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.db.manager.ActualManager
-import com.radiostudies.main.db.manager.QuestionManager
 import com.radiostudies.main.db.model.ActualQuestion
 import com.radiostudies.main.db.model.DataQuestion
 import com.radiostudies.main.db.model.Diary
@@ -23,7 +22,6 @@ import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
 class ActualQuestionsViewModel @Inject constructor(
-    private val questionManager: QuestionManager,
     private val actualManager: ActualManager
 ) :
     BaseViewModel(), CoroutineScope {
@@ -31,8 +29,8 @@ class ActualQuestionsViewModel @Inject constructor(
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
 
-    private val actualState = SingleLiveEvent<ActualQuestionState>()
-    internal fun getActualLiveData(): SingleLiveEvent<ActualQuestionState> = actualState
+    private val actualState = SingleLiveEvent<ActualQuestionViewState>()
+    internal fun getActualLiveData(): SingleLiveEvent<ActualQuestionViewState> = actualState
     private val actualQuestions = mutableListOf<ActualQuestion>()
     var currentOptions = listOf<Option>()
 //    val devicesQuestion = mutableListOf<ActualQuestion>()

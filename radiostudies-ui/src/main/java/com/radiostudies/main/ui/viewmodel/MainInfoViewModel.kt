@@ -20,8 +20,8 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
 
-    private val mainInfoState = SingleLiveEvent<MainInfoState>()
-    internal fun getMainInfoLiveData(): SingleLiveEvent<MainInfoState> = mainInfoState
+    private val mainInfoState = SingleLiveEvent<MainInfoViewState>()
+    internal fun getMainInfoLiveData(): SingleLiveEvent<MainInfoViewState> = mainInfoState
 
     fun mainInfoDataChanged(
         panelNumber: String,

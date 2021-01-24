@@ -3,7 +3,7 @@ package com.radiostudies.main.ui.model.main
 /**
  * Created by eduardo.delito on 9/29/20.
  */
-sealed class MainInfoState
+sealed class MainInfoViewState
 data class MainInfoForm(
     val panelNumber: Int? = null,
     val memberNumber: Int? = null,
@@ -20,10 +20,10 @@ data class MainInfoForm(
     val contactNumber: Int? = null,
     val ecoClass: Int? = null
 ) :
-    MainInfoState()
+    MainInfoViewState()
 
-data class MainInfoData(val mainInfo: MainInfo?) : MainInfoState()
+data class MainInfoData(val mainInfo: MainInfo?) : MainInfoViewState()
 
-data class MainInfoErrorMessage(val msg: Int) : MainInfoState()
+data class MainInfoErrorMessage(val msg: Int) : MainInfoViewState()
 
-data class ClearMainInfo(val exist: Boolean) : MainInfoState()
+data class ClearMainInfo(val exist: Boolean) : MainInfoViewState()

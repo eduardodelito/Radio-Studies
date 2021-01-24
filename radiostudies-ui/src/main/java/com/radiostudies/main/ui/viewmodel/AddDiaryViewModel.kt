@@ -21,8 +21,8 @@ class AddDiaryViewModel @Inject constructor(private val actualManager: ActualMan
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
 
-    private val diaryState = SingleLiveEvent<AddDiaryModelState>()
-    internal fun getDiaryLiveData(): SingleLiveEvent<AddDiaryModelState> = diaryState
+    private val diaryState = SingleLiveEvent<AddDiaryModelViewState>()
+    internal fun getDiaryLiveData(): SingleLiveEvent<AddDiaryModelViewState> = diaryState
 
     var selectedDayOfStudy = mutableListOf<Option>()
     var selectedDiaryDate = mutableListOf<Option>()

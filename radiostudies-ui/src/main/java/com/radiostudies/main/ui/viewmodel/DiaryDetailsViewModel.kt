@@ -7,7 +7,7 @@ import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.mapper.diaryModelToDiaryEntity
 import com.radiostudies.main.ui.model.DiaryDetailsForm
-import com.radiostudies.main.ui.model.DiaryDetailsState
+import com.radiostudies.main.ui.model.DiaryDetailsViewState
 import com.radiostudies.main.ui.model.diary.DiaryModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -21,8 +21,8 @@ class DiaryDetailsViewModel @Inject constructor(private val actualManager: Actua
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
 
-    private val diaryDetailsState = SingleLiveEvent<DiaryDetailsState>()
-    internal fun getDiaryDetailsLiveData(): SingleLiveEvent<DiaryDetailsState> = diaryDetailsState
+    private val diaryDetailsState = SingleLiveEvent<DiaryDetailsViewState>()
+    internal fun getDiaryDetailsLiveData(): SingleLiveEvent<DiaryDetailsViewState> = diaryDetailsState
 
     var diaryModel: DiaryModel?= null
 

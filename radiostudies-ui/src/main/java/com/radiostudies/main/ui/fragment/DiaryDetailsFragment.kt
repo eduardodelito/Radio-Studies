@@ -13,7 +13,7 @@ import com.radiostudies.main.db.entity.Diaries
 import com.radiostudies.main.db.model.Diary
 import com.radiostudies.main.ui.fragment.databinding.DiaryDetailsFragmentBinding
 import com.radiostudies.main.ui.model.DiaryDetailsForm
-import com.radiostudies.main.ui.model.DiaryDetailsState
+import com.radiostudies.main.ui.model.DiaryDetailsViewState
 import com.radiostudies.main.ui.model.diary.DiaryModel
 import com.radiostudies.main.ui.viewmodel.DiaryDetailsViewModel
 import kotlinx.android.synthetic.main.diary_details_fragment.*
@@ -46,7 +46,7 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
         }
     }
 
-    private fun onDiaryDetailsStateChanged(state: DiaryDetailsState?) {
+    private fun onDiaryDetailsStateChanged(state: DiaryDetailsViewState?) {
         when (state) {
             is DiaryDetailsForm -> {
                 addDetailsItem(state.diaries)
