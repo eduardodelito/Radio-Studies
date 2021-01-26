@@ -18,6 +18,9 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
     DiaryFragment.OnDiaryFragmentListener,
     DiaryDetailsFragment.DiaryDetailsFragmentListener,
     AddDiaryFragment.AddDiaryFragmentListener {
+
+    private var isClear: Boolean? = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,6 +33,10 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
 
     override fun navigateBack() {
         findNavController(R.id.navHostFragment).navigateUp()
+    }
+
+    override fun completeAndClose() {
+        finish()
     }
 
     override fun exit(message: String?) {
@@ -83,4 +90,6 @@ class MainActivity : DaggerAppCompatActivity(), LoginFragment.LoginFragmentListe
         bundle.putSerializable(AddDiaryFragment.DIARY, diary)
         view.findNavController().navigate(action.actionId, bundle)
     }
+
+    fun isClear() = isClear
 }

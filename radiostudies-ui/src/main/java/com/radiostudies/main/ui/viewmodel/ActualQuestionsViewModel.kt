@@ -2,6 +2,7 @@ package com.radiostudies.main.ui.viewmodel
 
 import com.google.gson.Gson
 import com.radiostudies.main.common.livedata.SingleLiveEvent
+import com.radiostudies.main.common.manager.SharedPreferencesManager
 import com.radiostudies.main.common.util.getCurrentDateTime
 import com.radiostudies.main.common.util.toStringDateTime
 import com.radiostudies.main.common.viewmodel.BaseViewModel
@@ -22,7 +23,8 @@ import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
 class ActualQuestionsViewModel @Inject constructor(
-    private val actualManager: ActualManager
+    private val actualManager: ActualManager,
+    private val sharedPreferencesManager: SharedPreferencesManager
 ) :
     BaseViewModel(), CoroutineScope {
 
@@ -56,6 +58,10 @@ class ActualQuestionsViewModel @Inject constructor(
             areas.add(Option(code, option))
         }
         insertArea(areas, genderCode)
+    }
+
+    fun setClearPanelAndMemberNumber(isClear: Boolean?) {
+        sharedPreferencesManager.savePrefs(IS_CLEAR, isClear)
     }
 
 //    fun parseStation(station: String?, genderCode: String?) {
@@ -367,6 +373,7 @@ class ActualQuestionsViewModel @Inject constructor(
     fun saveActualQuestions(
         mainInfo: MainInfo?
     ) {
+        setClearPanelAndMemberNumber(false)
         launch {
             saveActualQuestionsIntoDB(mainInfo)
         }
@@ -458,5 +465,7 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val FEMALE = "female"
         private const val IS_MANUAL_INPUT = "isManualInput"
         private const val TIME_FORMAT = "hh:mm:ss a"
+
+        private const val IS_CLEAR = "is_clear"
     }
 }

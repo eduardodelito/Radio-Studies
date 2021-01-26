@@ -26,4 +26,6 @@ data class MainInfoData(val mainInfo: MainInfo?) : MainInfoViewState()
 
 data class MainInfoErrorMessage(val msg: Int) : MainInfoViewState()
 
-data class ClearMainInfo(val exist: Boolean) : MainInfoViewState()
+data class LoadMainInfoForm(val mainInfo: MainInfo?) : MainInfoViewState()
+
+data class ClearMainInfo(val isClear: Boolean) : MainInfoViewState()

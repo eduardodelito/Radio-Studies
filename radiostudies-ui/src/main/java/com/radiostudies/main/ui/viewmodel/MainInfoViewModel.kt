@@ -1,6 +1,7 @@
 package com.radiostudies.main.ui.viewmodel
 
 import com.radiostudies.main.common.livedata.SingleLiveEvent
+import com.radiostudies.main.common.manager.SharedPreferencesManager
 import com.radiostudies.main.common.util.getCurrentDateTime
 import com.radiostudies.main.common.util.toStringDateTime
 import com.radiostudies.main.common.viewmodel.BaseViewModel
@@ -11,10 +12,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.json.JSONObject
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
-class MainInfoViewModel @Inject constructor(private val actualManager: ActualManager) :
+class MainInfoViewModel @Inject constructor(private val actualManager: ActualManager, private val sharedPreferencesManager: SharedPreferencesManager) :
     BaseViewModel(), CoroutineScope {
 
     override val coroutineContext: CoroutineContext
@@ -100,21 +102,21 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
         }
     }
 
-    fun clearInfoAfterActualQuestionCompleted(panelNumber: String, memberNumber: String) {
-        launch {
-            validateMainInfoIfCompletedFromDB(panelNumber, memberNumber)
-        }
-    }
-
-    private suspend fun validateMainInfoIfCompletedFromDB(panelNumber: String, memberNumber: String) {
-        withContext(Dispatchers.IO) {
-          try {
-              mainInfoState.postValue(ClearMainInfo(actualManager.validateMainInfo(panelNumber, memberNumber)))
-          } catch (e: Exception) {
-              e.printStackTrace()
-          }
-        }
-    }
+//    fun clearInfoAfterActualQuestionCompleted(panelNumber: String, memberNumber: String) {
+//        launch {
+//            validateMainInfoIfCompletedFromDB(panelNumber, memberNumber)
+//        }
+//    }
+//
+//    private suspend fun validateMainInfoIfCompletedFromDB(panelNumber: String, memberNumber: String) {
+//        withContext(Dispatchers.IO) {
+//          try {
+//              mainInfoState.postValue(ClearMainInfo(actualManager.validateMainInfo(panelNumber, memberNumber)))
+//          } catch (e: Exception) {
+//              e.printStackTrace()
+//          }
+//        }
+//    }
 
     /**
      * A placeholder value validation check if 1 up to the max value.
@@ -130,23 +132,61 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
         return value.length == max
     }
 
-//    private fun insertMainInfo(mainInfo: MainInfo) {
-//        launch {
-//            insertMainInfoToDB(mainInfo)
-//        }
-//    }
-//
-//    private suspend fun insertMainInfoToDB(mainInfo: MainInfo) {
-//        withContext(Dispatchers.IO) {
-//            try {
-//                mainInfoManager.insertMainInfo(mainInfo.mainInfoModelToMainInfoEntity())
-//                mainInfoState.postValue(MainInfoValid(isSuccess = true))
-//            } catch (e: Exception) {
-//                mainInfoState.postValue(MainInfoValid(isSuccess = false))
-//                e.printStackTrace()
-//            }
-//        }
-//    }
+    fun loadMainInfo(panelNumber: String) {
+        if (sharedPreferencesManager.savePrefs(IS_CLEAR)) {
+            mainInfoState.postValue(ClearMainInfo(true))
+        } else {
+            if (panelNumber.isNotEmpty()) {
+                launch {
+                    loadMainInfoDB(panelNumber)
+                }
+            }
+        }
+    }
+
+    private suspend fun loadMainInfoDB(panelNumber: String) {
+        withContext(Dispatchers.IO) {
+            try {
+                val mainInfoStr = actualManager.loadMainInfo(panelNumber)
+                if (mainInfoStr.isNotEmpty()) {
+                    val jsonObject = JSONObject(mainInfoStr)
+                    val panelNumberJObj = jsonObject.getString("panelNumber")
+                    val memberNumber = jsonObject.getString("memberNumber").toInt() + 1
+                    val stringBuilder = StringBuilder()
+                    if (memberNumber < 10) {
+                        stringBuilder.append("0$memberNumber")
+                    } else {
+                        stringBuilder.append(memberNumber)
+                    }
+                    val municipality = jsonObject.getString("municipality")
+                    val barangay = jsonObject.getString("barangay")
+                    val nameOfRespondent = jsonObject.getString("nameOfRespondent")
+                    val address = jsonObject.getString("address")
+                    val ecoClass = jsonObject.getString("ecoClass")
+
+                    val mainInfo = MainInfo(
+                        panelNumberJObj,
+                        stringBuilder.toString(),
+                        municipality,
+                        barangay,
+                        nameOfRespondent,
+                        address,
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ecoClass
+                    )
+                    mainInfoState.postValue(LoadMainInfoForm(mainInfo))
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
 
     fun getDate() = getCurrentDateTime(null, null, 0).toStringDateTime(DATE_FORMAT)
 
@@ -178,5 +218,6 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
         private const val SUN = "Sun"
 
         private const val EMPTY_STRING = ""
+        private const val IS_CLEAR = "is_clear"
     }
 }

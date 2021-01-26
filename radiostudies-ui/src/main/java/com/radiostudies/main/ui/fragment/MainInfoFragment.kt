@@ -19,7 +19,6 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     DatePickerDialog.OnDateSetListener {
 
     private var listener: MainInfoFragmentListener? = null
-//    private val cal: Calendar = Calendar.getInstance()
 
     @Inject
     override lateinit var viewModel: MainInfoViewModel
@@ -78,10 +77,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
     override fun subscribeUi() {
         with(viewModel) {
             reObserve(getMainInfoLiveData(), ::onMainInfoStateChanged)
-            clearInfoAfterActualQuestionCompleted(
-                panel_number_field.text.toString(),
-                member_number_field.text.toString()
-            )
+            loadMainInfo(panel_number_field.text.toString())
         }
     }
 
@@ -157,10 +153,23 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 dialog(getString(state.msg))
             }
 
+            is LoadMainInfoForm -> {
+                val mainInfo = state.mainInfo
+                panel_number_field.setText(mainInfo?.panelNumber)
+                member_number_field.setText(mainInfo?.memberNumber)
+                municipality_field.setText(mainInfo?.municipality)
+                barangay_field.setText(mainInfo?.barangay)
+                name_of_respondent_field.setText(mainInfo?.nameOfRespondent)
+                address_field.setText(mainInfo?.address)
+                age_field.setText("")
+                gender_field.setText("")
+                contact_number_field.setText("")
+                eco_class_label.setText(mainInfo?.ecoClass)
+            }
+
             is ClearMainInfo -> {
-                if (state.exist) {
+                if (state.isClear)
                     clear()
-                }
             }
         }
     }
@@ -184,14 +193,6 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
 
         fun exit(message: String?)
     }
-
-//    private fun openDatePicker() {
-//        val day = cal.get(Calendar.DAY_OF_MONTH)
-//        val month = cal.get(Calendar.MONTH)
-//        val year = cal.get(Calendar.YEAR)
-//        val datePickerDialog = DatePickerDialog(requireActivity(), this, year, month, day)
-//        datePickerDialog.show()
-//    }
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         date_of_interview_field.setText(String.format(resources.getString(R.string.date_of_interview), month + 1, dayOfMonth, year))
@@ -246,9 +247,9 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
         private const val D = "D"
         private const val E = "E"
 
-//        private const val TIME_FORMAT = "hh:mm:ss a"
         const val MAIN_INFO = "main_info"
         const val EXIT = "exit Main Information"
+        const val REQUEST_CODE = 1000
 
         fun newInstance() = MainInfoFragment()
     }

@@ -210,8 +210,8 @@ class ActualQuestionsFragment :
 
             is ActualQuestionComplete -> {
                 if(state.isComplete) {
-                    listener?.navigateBack()
-                    Toast.makeText(context, getString(R.string.success), Toast.LENGTH_LONG).show()
+                    dialogOption()
+//                    Toast.makeText(context, getString(R.string.success), Toast.LENGTH_LONG).show()
                 }
             }
         }
@@ -399,6 +399,35 @@ class ActualQuestionsFragment :
         dialog.show()
     }
 
+    private fun dialogOption() {
+        // setup the alert builder
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setCancelable(false)
+        builder.setTitle(R.string.success)
+        // add a list
+        val options = arrayOf("Other Panel number", "Other member number", "Exit")
+        builder.setItems(options) { dialog, which ->
+            when (which) {
+                0 -> {
+                    viewModel.setClearPanelAndMemberNumber(true)
+                    listener?.navigateBack()
+                }
+                1 -> {
+                    viewModel.setClearPanelAndMemberNumber(false)
+                    listener?.navigateBack()
+                }
+                2 -> {
+                    listener?.completeAndClose()
+                }
+            }
+            dialog.dismiss()
+        }
+
+        // create and show the alert dialog
+        val dialog = builder.create()
+        dialog.show()
+    }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is ActualQuestionsFragmentListener) {
@@ -412,11 +441,13 @@ class ActualQuestionsFragment :
     }
 
     interface ActualQuestionsFragmentListener {
-        fun navigateBack()
-
         fun exit(message: String?)
 
         fun showAppBar(show: Boolean)
+
+        fun completeAndClose()
+
+        fun navigateBack()
     }
 
     companion object {
@@ -436,6 +467,7 @@ class ActualQuestionsFragment :
         private const val MAIN_INFO = "main_info"
         private const val MAX_HOURS = 24
         private const val EXIT = "exit Actual Questions"
+
         fun newInstance() = ActualQuestionsFragment()
     }
 }

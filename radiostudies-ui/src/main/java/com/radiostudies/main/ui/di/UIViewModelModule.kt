@@ -1,6 +1,7 @@
 package com.radiostudies.main.ui.di
 
 import androidx.lifecycle.ViewModel
+import com.radiostudies.main.common.manager.SharedPreferencesManager
 import com.radiostudies.main.common.viewmodel.ViewModelKey
 import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.db.manager.DBManager
@@ -30,16 +31,19 @@ class UIViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(MainInfoViewModel::class)
-    fun provideMainInfoViewModel(actualManager: ActualManager): ViewModel =
-        MainInfoViewModel(actualManager)
+    fun provideMainInfoViewModel(
+        actualManager: ActualManager,
+        sharedPreferencesManager: SharedPreferencesManager
+    ): ViewModel =
+        MainInfoViewModel(actualManager, sharedPreferencesManager)
 
     @Provides
     @IntoMap
     @ViewModelKey(ActualQuestionsViewModel::class)
     fun provideActualQuestionsViewModel(
-        actualManager: ActualManager
+        actualManager: ActualManager, sharedPreferencesManager: SharedPreferencesManager
     ): ViewModel =
-        ActualQuestionsViewModel(actualManager)
+        ActualQuestionsViewModel(actualManager, sharedPreferencesManager)
 
     @Provides
     @IntoMap

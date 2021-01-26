@@ -37,6 +37,8 @@ interface ActualManager {
     fun queryDataQuestion(qCode: String?): DataQuestionEntity?
 
     fun validateMainInfo(panelNumber: String?, memberNumber: String?): Boolean
+
+    fun loadMainInfo(panelNumber: String?): String
 }
 
 class ActualManagerImpl(
@@ -93,4 +95,6 @@ class ActualManagerImpl(
 
     override fun validateMainInfo(panelNumber: String?, memberNumber: String?) =
         diaryDao.validateMainInfo(panelNumber, memberNumber)
+
+    override fun loadMainInfo(panelNumber: String?) = diaryDao.loadMainInfo(panelNumber)
 }
