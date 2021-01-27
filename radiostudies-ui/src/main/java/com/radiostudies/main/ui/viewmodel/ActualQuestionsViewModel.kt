@@ -286,11 +286,6 @@ class ActualQuestionsViewModel @Inject constructor(
         withContext(Dispatchers.IO) {
             try {
                 var actualQuestion: ActualQuestion?
-//                if (devicesQuestion.size > 0 && deviceIndex < (devicesQuestion.size - 1)) {
-//                    deviceIndex++
-//                    actualQuestion = devicesQuestion[deviceIndex]
-//                    id = 5
-//                } else {
                     val dataQuestion = actualManager.queryDataQuestion(Q2)?.dataQuestionEntityToDataQuestionModel()
                     val dataQuestionQ17 = actualManager.queryDataQuestion(Q17)?.dataQuestionEntityToDataQuestionModel()
                     val dataQuestionQ18 = actualManager.queryDataQuestion(Q18)?.dataQuestionEntityToDataQuestionModel()
@@ -336,7 +331,6 @@ class ActualQuestionsViewModel @Inject constructor(
                             actualQuestion = actualManager.queryQuestion(id)
                         }
                     }
-//                }
 
                 actualState.postValue(
                     ActualQuestionModel(
@@ -346,6 +340,32 @@ class ActualQuestionsViewModel @Inject constructor(
                         isPlus
                     )
                 )
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    fun validateCode(codeStr: String, panelNumber: String?) {
+        val code = arrayOf(
+            Q1, Q2, Q2A, Q3, Q4, Q5a, Q5b, Q6, Q7,
+            Q26, Q27a, Q27b, Q27c, Q27d, Q27e, Q27f, Q27g, Q28, Q29
+        )
+        if (code.contains(codeStr)) {
+            launch {
+                queryOptions(codeStr, panelNumber)
+            }
+        }
+    }
+
+    private suspend fun queryOptions(codeStr: String, panelNumber: String?) {
+        withContext(Dispatchers.IO) {
+            try {
+                if (actualManager.isPanelNUmberExist(panelNumber)) {
+                    val diary = actualManager.queryDiary(panelNumber)
+                    val dataQuestion = diary?.dataQuestions?.find { it.code == codeStr }
+                    actualState.postValue(dataQuestion?.options?.let { LoadOptions(it) })
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -443,12 +463,30 @@ class ActualQuestionsViewModel @Inject constructor(
     companion object {
         private const val AREA = "area.json"
         private const val ACTUAL_QUESTIONS = "actual_questions.json"
+        private const val Q1 = "Q1"
         private const val Q2 = "Q2"
+        private const val Q2A = "Q2a"
+        private const val Q3 = "Q3"
+        private const val Q4 = "Q4"
+        private const val Q5a = "Q5a"
+        private const val Q5b = "Q5b"
+        private const val Q6 = "Q6"
+        private const val Q7 = "Q7"
         private const val Q11 = "Q11"
         private const val Q17 = "Q17"
         private const val Q18 = "Q18"
         private const val Q19A = "Q19a"
         private const val Q19B = "Q19b"
+        private const val Q26 = "Q26"
+        private const val Q27a = "Q27a"
+        private const val Q27b = "Q27b"
+        private const val Q27c = "Q27c"
+        private const val Q27d = "Q27d"
+        private const val Q27e = "Q27e"
+        private const val Q27f = "Q27f"
+        private const val Q27g = "Q27g"
+        private const val Q28 = "Q28"
+        private const val Q29 = "Q29"
         private const val CODE_1 = "1"
         private const val CODE_3 = "3"
         private const val CODE_5 = "5"
@@ -469,3 +507,4 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val IS_CLEAR = "is_clear"
     }
 }
+

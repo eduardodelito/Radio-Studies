@@ -24,4 +24,10 @@ interface DiaryDao : BaseDao<DiaryEntity> {
 
     @Query("SELECT mainInfo from DiaryEntity WHERE panelNumber = :panelNumber ORDER BY memberNumber DESC LIMIT 1")
     fun loadMainInfo(panelNumber: String?): String
+
+    @Query("SELECT * from DiaryEntity WHERE panelNumber = :panelNumber LIMIT 1")
+    fun panelNumberExist(panelNumber: String?): Boolean
+
+    @Query("SELECT * from DiaryEntity WHERE panelNumber = :panelNumber LIMIT 1")
+    fun getDiary(panelNumber: String?): DiaryEntity
 }

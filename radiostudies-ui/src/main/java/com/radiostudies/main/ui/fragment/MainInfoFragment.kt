@@ -165,7 +165,7 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 gender_field.setText("")
                 contact_number_field.setText("")
                 val ecoClass = arrayOf(AB, C1, C2, D, E)
-                val index = mainInfo?.ecoClass?.toInt() as Int
+                val index = mainInfo?.ecoClass?.toInt() as Int - 1
                 eco_class_label.setText(ecoClass[index])
             }
 

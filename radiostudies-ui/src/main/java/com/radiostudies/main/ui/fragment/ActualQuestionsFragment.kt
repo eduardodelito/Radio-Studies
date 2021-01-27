@@ -32,6 +32,7 @@ class ActualQuestionsFragment :
 
     private var listener: ActualQuestionsFragmentListener? = null
     private var isHours = false
+    private lateinit var mainInfo: MainInfo
 
     @Inject
     override lateinit var viewModel: ActualQuestionsViewModel
@@ -42,7 +43,7 @@ class ActualQuestionsFragment :
 
     override fun initViews() {
         listener?.showAppBar(false)
-        val mainInfo = arguments?.getSerializable(MAIN_INFO) as MainInfo
+        mainInfo = arguments?.getSerializable(MAIN_INFO) as MainInfo
         viewModel.initViews(mainInfo.gender)
 
         activity?.actionBar?.title = getString(R.string.actual_question_title)
@@ -199,6 +200,10 @@ class ActualQuestionsFragment :
                     manual_input.text.clear()
                 }
 
+                actualQuestion.code?.let {
+                    viewModel.validateCode(it, mainInfo.panelNumber)
+                }
+
                 if (!state.isPlus) {
                     viewModel.querySelectedAnswer(actualQuestion.code)
                 }
@@ -208,10 +213,16 @@ class ActualQuestionsFragment :
                 addOptions(state.selectedOptions)
             }
 
+            is LoadOptions -> {
+                if (!state.selectedOptions.isNullOrEmpty()) {
+                    val options = Collections.unmodifiableList(state.selectedOptions)
+                    addOptions(options)
+                }
+            }
+
             is ActualQuestionComplete -> {
                 if(state.isComplete) {
                     dialogOption()
-//                    Toast.makeText(context, getString(R.string.success), Toast.LENGTH_LONG).show()
                 }
             }
         }
@@ -222,9 +233,6 @@ class ActualQuestionsFragment :
         actual_selection_layout.apply {
             removeAllViews()
             invalidate()
-//            if (viewModel.devicesQuestion.size == viewModel.deviceIndex) {
-//                viewModel.devicesQuestion.clear()
-//            }
             for (i in selectedList.indices) {
                 val option = selectedList[i]
                 val params = LinearLayout.LayoutParams(
@@ -235,10 +243,6 @@ class ActualQuestionsFragment :
                 tv.layoutParams = params
                 tv.text = String.format(resources.getString(R.string.text_option), i + 1, selectedList[i].option)
                 addView(tv)
-
-//                if (actual_question_number.text.toString() == "Q5a") {
-//                    viewModel.parseDevice(getJsonDataFromAsset(requireContext(), RADIO_DEVICE), selectedList[i].option)
-//                }
 
                 if (option.option.contains(OTHER)) {
                     val editText = EditText(context)

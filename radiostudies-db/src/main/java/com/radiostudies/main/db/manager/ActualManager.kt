@@ -39,6 +39,10 @@ interface ActualManager {
     fun validateMainInfo(panelNumber: String?, memberNumber: String?): Boolean
 
     fun loadMainInfo(panelNumber: String?): String
+
+    fun isPanelNUmberExist(panelNumber: String?): Boolean
+
+    fun queryDiary(panelNumber: String?): DiaryEntity?
 }
 
 class ActualManagerImpl(
@@ -97,4 +101,8 @@ class ActualManagerImpl(
         diaryDao.validateMainInfo(panelNumber, memberNumber)
 
     override fun loadMainInfo(panelNumber: String?) = diaryDao.loadMainInfo(panelNumber)
+
+    override fun isPanelNUmberExist(panelNumber: String?) = diaryDao.panelNumberExist(panelNumber)
+
+    override fun queryDiary(panelNumber: String?) =  diaryDao.getDiary(panelNumber)
 }
