@@ -1324,5 +1324,79 @@
       }
     ],
     "isManualInput": 0
+  },
+  {
+    "code": "Q28",
+    "header": "Anu-anong mga social media applications and karaniwan ninyong ginagamit?",
+    "question": "What are the SOCIAL MEDIA APPLICATIONS that you normally use?",
+    "type": "Multiple Answer",
+    "options": [
+      {
+        "code": "01",
+        "option": "Facebook"
+      },
+      {
+        "code": "02",
+        "option": "Instagram"
+      },
+      {
+        "code": "03",
+        "option": "Twitter"
+      },
+      {
+        "code": "05,06,07",
+        "option": "Other Apps"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q29",
+    "header": "Anu-anong mga OTT (Over the top Video / Audio Applications) ang karaniwan ninyong ginagamit?",
+    "question": "What are the OTT OVER THE TOP VIDEO / AUDIO APPLICATIONS that you normally use?",
+    "type": "Multiple Answer",
+    "options": [
+      {
+        "code": "01",
+        "option": "Netflix"
+      },
+      {
+        "code": "02",
+        "option": "iFlix"
+      },
+      {
+        "code": "03",
+        "option": "Spotify"
+      },
+      {
+        "code": "04",
+        "option": "Viu"
+      },
+      {
+        "code": "05",
+        "option": "Apple Music"
+      },
+      {
+        "code": "06",
+        "option": "Youtube"
+      },
+      {
+        "code": "07",
+        "option": "Youtube Music"
+      },
+      {
+        "code": "08",
+        "option": "HBO Go"
+      },
+      {
+        "code": "09",
+        "option": "Iwant"
+      },
+      {
+        "code": "10",
+        "option": "Other Apps"
+      }
+    ],
+    "isManualInput": 0
   }
 ]

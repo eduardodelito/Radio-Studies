@@ -245,31 +245,112 @@ class ActualQuestionsFragment :
                 addView(tv)
 
                 if (option.option.contains(OTHER)) {
-                    val editText = EditText(context)
-                    editText.isSingleLine = false
-                    editText.imeOptions = EditorInfo.IME_FLAG_NO_ENTER_ACTION
-                    editText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
-                    val maxLength = 60
-                    val fArray = arrayOfNulls<InputFilter>(1)
-                    fArray[0] = LengthFilter(maxLength)
-                    editText.filters = fArray
-                    editText.isVerticalScrollBarEnabled = true
-                    editText.movementMethod = ScrollingMovementMethod.getInstance()
-                    editText.scrollBarStyle = View.SCROLLBARS_INSIDE_INSET
-                    editText.layoutParams = params
-                    editText.afterTextChanged {
-                        selectedOptions.clear()
-                        selectedOptions.add(Option("0", it))
-                        viewModel.saveQuestion(
-                            DataQuestion(
-                                actual_question_number.text.toString(),
-                                getQuestionLabelText(),
-                                actual_question_label.text.toString(),
-                                selectedOptions
+                    when (option.code) {
+                        CODE_10 -> {
+                            generateFieldView(this, params, selectedOptions, option.code)
+                        }
+                        CODE_05_06_07 -> {
+                            val maxLength = 60
+                            val fArray = arrayOfNulls<InputFilter>(1)
+
+                            val editText1 = EditText(context)
+                            editText1.isSingleLine = false
+                            editText1.imeOptions = EditorInfo.IME_FLAG_NO_ENTER_ACTION
+                            editText1.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
+                            fArray[0] = LengthFilter(maxLength)
+                            editText1.filters = fArray
+                            editText1.isVerticalScrollBarEnabled = true
+                            editText1.movementMethod = ScrollingMovementMethod.getInstance()
+                            editText1.scrollBarStyle = View.SCROLLBARS_INSIDE_INSET
+                            editText1.layoutParams = params
+
+                            val editText2 = EditText(context)
+                            editText2.isSingleLine = false
+                            editText2.imeOptions = EditorInfo.IME_FLAG_NO_ENTER_ACTION
+                            editText2.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
+                            fArray[0] = LengthFilter(maxLength)
+                            editText2.filters = fArray
+                            editText2.isVerticalScrollBarEnabled = true
+                            editText2.movementMethod = ScrollingMovementMethod.getInstance()
+                            editText2.scrollBarStyle = View.SCROLLBARS_INSIDE_INSET
+                            editText2.layoutParams = params
+
+                            val editText3 = EditText(context)
+                            editText3.isSingleLine = false
+                            editText3.imeOptions = EditorInfo.IME_FLAG_NO_ENTER_ACTION
+                            editText3.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
+                            fArray[0] = LengthFilter(maxLength)
+                            editText3.filters = fArray
+                            editText3.isVerticalScrollBarEnabled = true
+                            editText3.movementMethod = ScrollingMovementMethod.getInstance()
+                            editText3.scrollBarStyle = View.SCROLLBARS_INSIDE_INSET
+                            editText3.layoutParams = params
+
+                            editText1.afterTextChanged {
+                                selectedOptions.clear()
+                                selectedOptions.add(Option(CODE_05, editText1.text.toString()))
+                                selectedOptions.add(Option(CODE_06, editText2.text.toString()))
+                                selectedOptions.add(Option(CODE_05, editText3.text.toString()))
+                                viewModel.saveQuestion(
+                                    DataQuestion(
+                                        actual_question_number.text.toString(),
+                                        getQuestionLabelText(),
+                                        actual_question_label.text.toString(),
+                                        selectedOptions
+                                    )
+                                )
+                            }
+
+                            editText2.afterTextChanged {
+                                selectedOptions.clear()
+                                selectedOptions.add(Option(CODE_05, editText1.text.toString()))
+                                selectedOptions.add(Option(CODE_06, editText2.text.toString()))
+                                selectedOptions.add(Option(CODE_07, editText3.text.toString()))
+                                viewModel.saveQuestion(
+                                    DataQuestion(
+                                        actual_question_number.text.toString(),
+                                        getQuestionLabelText(),
+                                        actual_question_label.text.toString(),
+                                        selectedOptions
+                                    )
+                                )
+                            }
+
+                            editText3.afterTextChanged {
+                                selectedOptions.clear()
+                                selectedOptions.add(Option(CODE_05, editText1.text.toString()))
+                                selectedOptions.add(Option(CODE_06, editText2.text.toString()))
+                                selectedOptions.add(Option(CODE_07, editText3.text.toString()))
+                                viewModel.saveQuestion(
+                                    DataQuestion(
+                                        actual_question_number.text.toString(),
+                                        getQuestionLabelText(),
+                                        actual_question_label.text.toString(),
+                                        selectedOptions
+                                    )
+                                )
+                            }
+
+                            selectedOptions.add(Option(CODE_05, editText1.text.toString()))
+                            selectedOptions.add(Option(CODE_06, editText2.text.toString()))
+                            selectedOptions.add(Option(CODE_05, editText3.text.toString()))
+                            viewModel.saveQuestion(
+                                DataQuestion(
+                                    actual_question_number.text.toString(),
+                                    getQuestionLabelText(),
+                                    actual_question_label.text.toString(),
+                                    selectedOptions
+                                )
                             )
-                        )
+
+                            addView(editText1)
+                            addView(editText2)
+                            addView(editText3)
+                        }
+                        else -> {
+                            generateFieldView(this, params, selectedOptions, "0")
+                        }
                     }
-                    addView(editText)
                 } else {
                     selectedOptions.add(Option(option.code, option.option))
                     viewModel.saveQuestion(
@@ -290,6 +371,49 @@ class ActualQuestionsFragment :
                 actual_next_btn.setEnable(true)
             }
         }
+    }
+
+    private fun generateFieldView(
+        view: LinearLayout,
+        params: LinearLayout.LayoutParams,
+        selectedOptions: MutableList<Option>,
+        code: String
+    ) {
+        val editText = EditText(context)
+        editText.isSingleLine = false
+        editText.imeOptions = EditorInfo.IME_FLAG_NO_ENTER_ACTION
+        editText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
+        val maxLength = 60
+        val fArray = arrayOfNulls<InputFilter>(1)
+        fArray[0] = LengthFilter(maxLength)
+        editText.filters = fArray
+        editText.isVerticalScrollBarEnabled = true
+        editText.movementMethod = ScrollingMovementMethod.getInstance()
+        editText.scrollBarStyle = View.SCROLLBARS_INSIDE_INSET
+        editText.layoutParams = params
+
+        editText.afterTextChanged {
+            selectedOptions.clear()
+            selectedOptions.add(Option(code, it))
+            viewModel.saveQuestion(
+                DataQuestion(
+                    actual_question_number.text.toString(),
+                    getQuestionLabelText(),
+                    actual_question_label.text.toString(),
+                    selectedOptions
+                )
+            )
+        }
+        selectedOptions.add(Option(code, editText.text.toString()))
+        viewModel.saveQuestion(
+            DataQuestion(
+                actual_question_number.text.toString(),
+                getQuestionLabelText(),
+                actual_question_label.text.toString(),
+                selectedOptions
+            )
+        )
+        view.addView(editText)
     }
 
     private fun dialogOptions(list: List<Option>, isSingleChoice: Boolean) {
@@ -340,6 +464,15 @@ class ActualQuestionsFragment :
                         }
                     }
 
+                    listItems[which].contains(OTHER_APPS) -> {
+                        for (i in listItems.indices) {
+                            if (!listItems[i].contains(OTHER_APPS)) {
+                                dListView.setItemChecked(i, false)
+                                checkedItems[i] = false
+                            }
+                        }
+                    }
+
                     listItems[which].contains(NOT_LISTEN) -> {
                         for (i in listItems.indices) {
                             if (!listItems[i].contains(NOT_LISTEN)) {
@@ -356,6 +489,10 @@ class ActualQuestionsFragment :
                                     checkedItems[i] = false
                                 }
                                 listItems[i].contains(OTHER) -> {
+                                    dListView.setItemChecked(i, false)
+                                    checkedItems[i] = false
+                                }
+                                listItems[i].contains(OTHER_APPS) -> {
                                     dListView.setItemChecked(i, false)
                                     checkedItems[i] = false
                                 }
@@ -464,6 +601,7 @@ class ActualQuestionsFragment :
         private const val STATION_FM = "radio_stations_fm.json"
         private const val HOURS = "hour/s"
         private const val OTHER = "Other"
+        private const val OTHER_APPS = "Other Apps"
         private const val EMPLOYER = "Employer"
         private const val OTHERS = "Others (Specify)"
         private const val NONE = "None"
@@ -471,6 +609,12 @@ class ActualQuestionsFragment :
         private const val MAIN_INFO = "main_info"
         private const val MAX_HOURS = 24
         private const val EXIT = "exit Actual Questions"
+
+        private const val CODE_05 = "05"
+        private const val CODE_06 = "06"
+        private const val CODE_07 = "07"
+        private const val CODE_10 = "10"
+        private const val CODE_05_06_07 = "05,06,07"
 
         fun newInstance() = ActualQuestionsFragment()
     }
