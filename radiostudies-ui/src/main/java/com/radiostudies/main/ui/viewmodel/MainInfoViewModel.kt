@@ -160,7 +160,6 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
                     }
                     val municipality = jsonObject.getString("municipality")
                     val barangay = jsonObject.getString("barangay")
-                    val nameOfRespondent = jsonObject.getString("nameOfRespondent")
                     val address = jsonObject.getString("address")
                     val ecoClass = jsonObject.getString("ecoClass")
 
@@ -169,7 +168,7 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
                         stringBuilder.toString(),
                         municipality,
                         barangay,
-                        nameOfRespondent,
+                        "",
                         address,
                         "",
                         "",

@@ -159,12 +159,14 @@ class MainInfoFragment : BaseFragment<MainInfoFragmentBinding, MainInfoViewModel
                 member_number_field.setText(mainInfo?.memberNumber)
                 municipality_field.setText(mainInfo?.municipality)
                 barangay_field.setText(mainInfo?.barangay)
-                name_of_respondent_field.setText(mainInfo?.nameOfRespondent)
+                name_of_respondent_field.setText("")
                 address_field.setText(mainInfo?.address)
                 age_field.setText("")
                 gender_field.setText("")
                 contact_number_field.setText("")
-                eco_class_label.setText(mainInfo?.ecoClass)
+                val ecoClass = arrayOf(AB, C1, C2, D, E)
+                val index = mainInfo?.ecoClass?.toInt() as Int
+                eco_class_label.setText(ecoClass[index])
             }
 
             is ClearMainInfo -> {
