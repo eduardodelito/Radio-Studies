@@ -114,14 +114,6 @@
         "option": "Bicolano"
       },
       {
-        "code": "6",
-        "option": "Cebuano"
-      },
-      {
-        "code": "7",
-        "option": "Bisaya"
-      },
-      {
         "code": "8",
         "option": "Ilonggo"
       },
@@ -378,8 +370,15 @@
             "option": "OTHERS"
           },
           {
+            "code": "6",
+            "option": "Both Household Head & Housewife"
+          },
+          {
             "code": "8",
-            "option": "Non-relatives"
+            "option": "Other Relatives"
+          },{
+            "code": "9",
+            "option": "Other Non-Relatives"
           }
         ],
         "female": [
@@ -401,7 +400,11 @@
           },
           {
             "code": "8",
-            "option": "Non-relatives"
+            "option": "Other Relatives"
+          },
+          {
+            "code": "9",
+            "option": "Other Non-Relatives"
           }
         ]
       }
@@ -844,7 +847,7 @@
   {
     "code": "Q21b",
     "header": "FM Radio Stations Listened To",
-    "question": "How many hours in a day do you usually listen to these AM stations?",
+    "question": "How many hours in a day do you usually listen to these FM stations?",
     "type": "Single Answer",
     "options": [
       {
@@ -1295,7 +1298,7 @@
   {
     "code": "Q27g",
     "header": "Which of the following do you have in your household and are operable / in working order?",
-    "question": "AUTOMOBILE",
+    "question": "Other Facilities",
     "type": "Multiple Answer",
     "options": [
       {
