@@ -6,7 +6,7 @@ object Application {
 
 object Versions {
     const val compileSdkVersion = 29
-    const val buildToolsVersion = "30.0.1"
+    const val buildToolsVersion = "30.0.3"
 
     const val minSdkVersion = 23
     const val targetSdkVersion = 29
@@ -14,7 +14,7 @@ object Versions {
     const val versionCode = 1
     const val versionName = "1.0"
 
-    const val gradle = "4.2.0-beta02"
+    const val gradle = "4.2.0-beta04"
 
     //Android
     const val kotlin_version = "1.4.20"
@@ -41,6 +41,7 @@ object Libs {
     private object Gradle {
         const val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
         const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin_version}"
+        const val kotlinAndroidExtensions = "org.jetbrains.kotlin:kotlin-android-extensions:${Versions.kotlin_version}"
     }
 
     private object Android {

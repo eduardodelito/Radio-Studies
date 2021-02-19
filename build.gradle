@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath Libs.Gradle.gradle
         classpath Libs.Gradle.kotlinGradlePlugin
+        classpath Libs.Gradle.kotlinAndroidExtensions
         classpath Libs.Android.navigationPlugin
 
         // NOTE: Do not place your application dependencies here; they belong
