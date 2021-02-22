@@ -1,6 +1,7 @@
 package com.radiostudies.main.ui.di
 
 import androidx.lifecycle.ViewModel
+import com.radiostudies.main.LoginRepository
 import com.radiostudies.main.common.manager.SharedPreferencesManager
 import com.radiostudies.main.common.viewmodel.ViewModelKey
 import com.radiostudies.main.db.manager.ActualManager
@@ -19,8 +20,8 @@ class UIViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(LoginViewModel::class)
-    fun provideLoginViewModel(dbManager: DBManager): ViewModel =
-        LoginViewModel(dbManager)
+    fun provideLoginViewModel(dbManager: DBManager, loginRepository: LoginRepository): ViewModel =
+        LoginViewModel(dbManager, loginRepository)
 
     @Provides
     @IntoMap

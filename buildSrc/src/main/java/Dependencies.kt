@@ -31,6 +31,9 @@ object Versions {
     //Google
     const val dagger = "2.25.3"
 
+    const val retrofit = "2.6.0"
+    const val loggingInterceptor = "3.12.0"
+
     //Test
     const val junit = "4.+"
     const val ext_junit = "1.1.2"
@@ -69,6 +72,12 @@ object Libs {
         const val androidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
         const val processor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
         const val compiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    }
+
+    private object Retrofit {
+        const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+        const val retrofitGSONConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+        const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
     }
 
     private object Room {

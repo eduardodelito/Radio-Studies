@@ -62,9 +62,9 @@ dependencies {
     implementation Libs.Room.roomRxJava
     implementation Libs.Room.roomGuava
 
-//    implementation Libs.Retrofit.retrofit
-//    implementation Libs.Retrofit.retrofitGSONConverter
-//    implementation Libs.Retrofit.loggingInterceptor
+    implementation Libs.Retrofit.retrofit
+    implementation Libs.Retrofit.retrofitGSONConverter
+    implementation Libs.Retrofit.loggingInterceptor
 
     testImplementation Libs.Test.junit
     androidTestImplementation Libs.Test.ext_junit

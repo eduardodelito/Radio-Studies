@@ -2,6 +2,7 @@ package com.radiostudies.main.ui.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
+import com.radiostudies.main.LoginRepository
 import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.entity.UserEntity
 import com.radiostudies.main.db.manager.DBManager
@@ -18,7 +19,10 @@ import java.util.*
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
-class LoginViewModel @Inject constructor(var dbManager: DBManager) : BaseViewModel(),
+class LoginViewModel @Inject constructor(
+    private var dbManager: DBManager,
+    private var loginRepository: LoginRepository
+) : BaseViewModel(),
     CoroutineScope {
 
     override val coroutineContext: CoroutineContext

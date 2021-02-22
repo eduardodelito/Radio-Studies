@@ -2,6 +2,7 @@ package com.radiostudies.main.ui.di.component
 
 import android.app.Application
 import com.radiostudies.main.common.di.CommonModule
+import com.radiostudies.main.di.ClientModule
 import com.radiostudies.main.di.DBModule
 import com.radiostudies.main.ui.RadioStudiesApplication
 import com.radiostudies.main.ui.di.module.ActivityBindingModule
@@ -31,6 +32,7 @@ interface RadioStudiesComponent : AndroidInjector<RadioStudiesApplication> {
         @BindsInstance
         fun application(application: Application): Builder
         fun database(dbModule: DBModule): Builder
+        fun client(clientModule: ClientModule): Builder
         fun common(commonModule: CommonModule): Builder
         fun build(): RadioStudiesComponent
     }

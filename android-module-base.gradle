@@ -17,13 +17,11 @@ android {
     }
     buildTypes {
         debug {
-//            buildConfigField 'String', 'BASE_HTTP_URL', '"https://"'
-//            buildConfigField 'String', 'COUNTRY_BASE_HTTP_URL', '"https://"'
+            buildConfigField 'String', 'BASE_HTTP_URL', '"http://apiservices.phoenixkm.net/"'
         }
         release {
             minifyEnabled false
-//            buildConfigField 'String', 'BASE_HTTP_URL', '"https://"'
-//            buildConfigField 'String', 'COUNTRY_BASE_HTTP_URL', '"https://"'
+            buildConfigField 'String', 'BASE_HTTP_URL', '"http://apiservices.phoenixkm.net/"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

@@ -1,5 +1,4 @@
 apply from: "$rootDir/android-module-base.gradle"
-apply plugin: 'kotlin-android'
 
 android {
     sourceSets {
@@ -14,7 +13,4 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation project(':radiostudies-client')
-    implementation project(':radiostudies-common')
-    implementation project(':radiostudies-db')
 }

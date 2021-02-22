@@ -1,6 +1,7 @@
 package com.radiostudies.main.ui.di.module
 
 import com.radiostudies.main.common.di.CommonModule
+import com.radiostudies.main.di.ClientModule
 import com.radiostudies.main.di.DBModule
 import dagger.Module
 
@@ -9,6 +10,7 @@ import dagger.Module
  */
 @Module(includes = [
     DBModule::class,
+    ClientModule::class,
     CommonModule::class
 ])
 class AppModule
