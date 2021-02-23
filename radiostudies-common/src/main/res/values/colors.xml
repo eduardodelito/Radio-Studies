@@ -7,4 +7,6 @@
     <color name="disabledColorPrimary">#5931B2</color>
     <color name="red">#E91121</color>
     <color name="line_bg">#818285</color>
+    <color name="colorAccent_transparent">#66000000</color>
+
 </resources>

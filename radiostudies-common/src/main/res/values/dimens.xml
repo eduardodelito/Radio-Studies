@@ -6,6 +6,7 @@
     <dimen name="margin20">20dp</dimen>
     <dimen name="margin50">50dp</dimen>
     <dimen name="margin100">100dp</dimen>
+    <dimen name="margin120">120dp</dimen>
 
     <!--Padding-->
     <dimen name="padding5">5dp</dimen>

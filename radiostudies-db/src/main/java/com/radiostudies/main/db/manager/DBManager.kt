@@ -8,6 +8,9 @@ import com.radiostudies.main.db.entity.UserEntity
  */
 interface DBManager {
     fun insertUsers(users: List<UserEntity>)
+
+    fun insertUser(user: UserEntity)
+
     fun isUsernamePasswordValid(userName: String?, password: String?): Boolean
 }
 
@@ -15,6 +18,10 @@ class DBManagerImpl(var userDao: UserDao) : DBManager {
     override fun insertUsers(users: List<UserEntity>) {
         userDao.deleteUsers()
         userDao.insertUsers(users)
+    }
+
+    override fun insertUser(user: UserEntity) {
+        userDao.insertUser(user)
     }
 
     override fun isUsernamePasswordValid(userName: String?, password: String?) =

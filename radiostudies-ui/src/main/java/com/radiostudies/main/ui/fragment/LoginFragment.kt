@@ -8,10 +8,7 @@ import com.radiostudies.main.common.util.hideKeyboard
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.common.util.setViewVisibility
 import com.radiostudies.main.ui.fragment.databinding.LoginFragmentBinding
-import com.radiostudies.main.ui.model.login.ErrorModel
-import com.radiostudies.main.ui.model.login.LoginSuccessModel
-import com.radiostudies.main.ui.model.login.LoginValidModel
-import com.radiostudies.main.ui.model.login.LoginViewState
+import com.radiostudies.main.ui.model.login.*
 import com.radiostudies.main.ui.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.login_fragment.*
 import javax.inject.Inject
@@ -34,6 +31,7 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
     override fun initViews() {
         listener?.showAppBar(false)
         login_button.setOnClickListener {
+            loading_layout.visibility = View.VISIBLE
             viewModel.onLogin(editText_username.text.toString(), editText_password.text.toString())
         }
     }
@@ -41,7 +39,6 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
     override fun subscribeUi() {
         with(viewModel) {
             reObserve(getLoginLiveData(), ::onLoginStateChanged)
-            insertUser()
         }
     }
 
@@ -71,6 +68,7 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
                     hideKeyboard()
                     dialogOptions()
                 }
+                loading_layout.visibility = View.GONE
             }
 
             is ErrorModel -> login_error_message.setViewVisibility(getString(state.message))

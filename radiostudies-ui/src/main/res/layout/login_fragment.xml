@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -12,8 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/color_bg"
-        android:padding="@dimen/padding16">
+        android:background="@color/color_bg">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/radio_studies_label"
@@ -31,7 +31,9 @@
             style="@style/AvenirMedium.Black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding16"
             android:layout_marginTop="@dimen/margin50"
+            android:layout_marginEnd="@dimen/padding16"
             android:ems="10"
             android:hint="@string/user_name"
             android:inputType="textEmailAddress"
@@ -45,7 +47,9 @@
             style="@style/AvenirMedium.Black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding16"
             android:layout_marginTop="@dimen/margin20"
+            android:layout_marginEnd="@dimen/padding16"
             android:ems="10"
             android:hint="@string/password"
             android:inputType="textPassword"
@@ -73,7 +77,9 @@
             style="@style/AvenirMedium"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height50"
+            android:layout_marginStart="@dimen/padding16"
             android:layout_marginTop="@dimen/margin100"
+            android:layout_marginEnd="@dimen/padding16"
             android:background="@color/disabledColorPrimary"
             android:enabled="false"
             android:gravity="center_vertical|center_horizontal"
@@ -82,5 +88,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_password" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent_transparent"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="198dp">
+
+            <TextView
+                style="@style/AvenirHeavy.Black"
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin120"
+                android:text="Please wait..."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loading"
+                android:layout_marginTop="@dimen/margin20"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -4,17 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.radiostudies.main.LoginRepository
 import com.radiostudies.main.common.viewmodel.BaseViewModel
-import com.radiostudies.main.db.entity.UserEntity
 import com.radiostudies.main.db.manager.DBManager
+import com.radiostudies.main.model.User
 import com.radiostudies.main.ui.fragment.R
-import com.radiostudies.main.ui.model.login.ErrorModel
-import com.radiostudies.main.ui.model.login.LoginSuccessModel
-import com.radiostudies.main.ui.model.login.LoginValidModel
-import com.radiostudies.main.ui.model.login.LoginViewState
+import com.radiostudies.main.ui.mapper.userModelToUserEntity
+import com.radiostudies.main.ui.model.login.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.json.JSONObject
 import java.util.*
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
@@ -32,39 +31,6 @@ class LoginViewModel @Inject constructor(
     internal fun getLoginLiveData(): LiveData<LoginViewState> = login
     private var userName: String = EMPTY_STRING
     private var password: String = EMPTY_STRING
-
-    fun insertUser() {
-        // Load default user
-        var users = mutableListOf<UserEntity>()
-        users.add(
-            UserEntity(
-                0,
-                "John",
-                "Doe",
-                "johndoe",
-                "123456",
-                "1234",
-                "subCon",
-                "userType",
-                false,
-                "cavite",
-                Calendar.getInstance().time.toString()
-            )
-        )
-        launch {
-            insertUserToDB(users)
-        }
-    }
-
-    private suspend fun insertUserToDB(users: List<UserEntity>) {
-        withContext(Dispatchers.IO) {
-            try {
-                dbManager.insertUsers(users)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
-    }
 
     /**
      * Textwatcher method for username.
@@ -113,13 +79,17 @@ class LoginViewModel @Inject constructor(
      * @param userName
      * @param password
      */
-    private suspend fun login(userName: String, password: String) {
+    private suspend fun login(mUserName: String, mPassword: String) {
         withContext(Dispatchers.IO) {
             try {
-                if (dbManager.isUsernamePasswordValid(userName, password)) {
+                if (dbManager.isUsernamePasswordValid(mUserName, mPassword)) {
                     login.postValue(LoginSuccessModel(true))
                 } else {
-                    login.postValue(ErrorModel(R.string.invalid))
+                    val loginUser = loginRepository.login(mUserName, mPassword)
+                    loginUser?.let {
+                        dbManager.insertUser(it.userModelToUserEntity())
+                    }
+                    login.postValue(LoginSuccessModel(true))
                 }
             } catch (e: Exception) {
                 login.postValue(ErrorModel(R.string.invalid))

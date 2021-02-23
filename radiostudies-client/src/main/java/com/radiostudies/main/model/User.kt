@@ -20,11 +20,14 @@ data class User(
     @SerializedName("UserType")
     val UserType: String?,
     @SerializedName("Status")
-    val Status: String?,
+    val Status: Boolean?,
     @SerializedName("Area")
     val Area: String?,
     @SerializedName("CreatedDate")
     val CreatedDate: String?
 )
 
-data class Login(val userName: String?, val password: String?)
+data class Login(
+    @SerializedName("userName") val userName: String?,
+    @SerializedName("password") val password: String?
+)
