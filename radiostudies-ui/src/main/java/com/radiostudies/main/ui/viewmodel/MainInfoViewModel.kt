@@ -62,6 +62,7 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
             mainInfoState.postValue(MainInfoForm(ecoClass = R.string.eco_class_error))
         } else {
                 val mainInfo = MainInfo(
+                    sharedPreferencesManager.saveUserId(USER_ID),
                     panelNumber,
                     memberNumber,
                     municipality,
@@ -164,6 +165,7 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
                     val ecoClass = jsonObject.getString("ecoClass")
 
                     val mainInfo = MainInfo(
+                        sharedPreferencesManager.saveUserId(USER_ID),
                         panelNumberJObj,
                         stringBuilder.toString(),
                         municipality,
@@ -218,5 +220,6 @@ class MainInfoViewModel @Inject constructor(private val actualManager: ActualMan
 
         private const val EMPTY_STRING = ""
         private const val IS_CLEAR = "is_clear"
+        private const val USER_ID = "user_id"
     }
 }

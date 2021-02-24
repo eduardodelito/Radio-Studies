@@ -10,6 +10,8 @@ interface SharedPreferencesManager {
      * @param value
      */
     fun savePrefs(key: String?, value: Boolean? = null): Boolean
+
+    fun saveUserId(key: String?, value: String? = null): String
 }
 
 class SharedPreferencesManagerImpl(private val sharedPreferences: SharedPreferences): SharedPreferencesManager {
@@ -28,6 +30,16 @@ class SharedPreferencesManagerImpl(private val sharedPreferences: SharedPreferen
             }
         }
         return sharedPreferences.getBoolean(key, false)
+    }
+
+    override fun saveUserId(key: String?, value: String?): String {
+        value?.run {
+            with(sharedPreferences.edit()) {
+                putString(key, value)
+                apply()
+            }
+        }
+        return sharedPreferences.getString(key, EMPTY_STRING) ?: EMPTY_STRING
     }
 
     companion object {

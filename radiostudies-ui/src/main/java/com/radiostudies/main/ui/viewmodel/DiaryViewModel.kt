@@ -7,9 +7,10 @@ import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.model.DataQuestion
 import com.radiostudies.main.model.Diary
+import com.radiostudies.main.repository.DiariesRepository
 import com.radiostudies.main.ui.mapper.diaryEntityModelToDiaryList
 import com.radiostudies.main.ui.model.diary.DiaryForm
-import com.radiostudies.main.ui.model.diary.DiaryModel
+import com.radiostudies.main.model.DiaryModel
 import com.radiostudies.main.ui.model.diary.DiaryModelViewState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -19,7 +20,7 @@ import org.json.JSONObject
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
-class DiaryViewModel @Inject constructor(private val actualManager: ActualManager): BaseViewModel(), CoroutineScope {
+class DiaryViewModel @Inject constructor(private val actualManager: ActualManager, private val diariesRepository: DiariesRepository): BaseViewModel(), CoroutineScope {
 
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main
@@ -50,6 +51,7 @@ class DiaryViewModel @Inject constructor(private val actualManager: ActualManage
 
     private fun parseMainInfo(diary: Diary): DiaryModel {
         val jsonObject = JSONObject(diary.mainInfo.toString())
+        val userId = jsonObject.getString(USER_ID)
         val panelNumber = jsonObject.getString(PANEL_NUMBER)
         val memberNumber = jsonObject.getString(MEMBER_NUMBER)
         val memberName = jsonObject.getString(NAME_OF_RESPONDENT)
@@ -60,11 +62,12 @@ class DiaryViewModel @Inject constructor(private val actualManager: ActualManage
         val selectedOption = selectedQuestion.options
         val selectedArea = selectedOption?.get(0)?.option
 
-        return DiaryModel(panelNumber, memberNumber, memberName, dateOfInterview, getCurrentDateTime(dateOfInterview, DATE_FORMAT, 7).toStringDateTime(DATE_FORMAT
+        return DiaryModel(userId, panelNumber, memberNumber, memberName, dateOfInterview, getCurrentDateTime(dateOfInterview, DATE_FORMAT, 7).toStringDateTime(DATE_FORMAT
         ), selectedArea, diary)
     }
 
     companion object {
+        private const val USER_ID = "userId"
         private const val PANEL_NUMBER = "panelNumber"
         private const val MEMBER_NUMBER = "memberNumber"
         private const val NAME_OF_RESPONDENT = "nameOfRespondent"

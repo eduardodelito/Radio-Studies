@@ -1,5 +1,7 @@
 package com.radiostudies.main.ui.model.diary
 
+import com.radiostudies.main.model.DiaryModel
+
 /**
  * Created by eduardo.delito on 10/18/20.
  */

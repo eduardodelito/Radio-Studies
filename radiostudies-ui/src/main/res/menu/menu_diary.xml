@@ -4,4 +4,9 @@
         android:id="@+id/add_menu"
         android:icon="@drawable/ic_baseline_add_24"
         android:title="Add" />
+
+    <item
+        android:id="@+id/send_menu"
+        android:icon="@drawable/ic_baseline_send_24"
+        android:title="Send" />
 </menu>

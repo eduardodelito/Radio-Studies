@@ -7,6 +7,7 @@ import com.radiostudies.main.common.viewmodel.ViewModelKey
 import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.db.manager.DBManager
 import com.radiostudies.main.db.manager.QuestionManager
+import com.radiostudies.main.repository.DiariesRepository
 import com.radiostudies.main.ui.viewmodel.*
 import dagger.Module
 import dagger.Provides
@@ -20,8 +21,8 @@ class UIViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(LoginViewModel::class)
-    fun provideLoginViewModel(dbManager: DBManager, loginRepository: LoginRepository): ViewModel =
-        LoginViewModel(dbManager, loginRepository)
+    fun provideLoginViewModel(dbManager: DBManager, loginRepository: LoginRepository, sharedPreferencesManager: SharedPreferencesManager): ViewModel =
+        LoginViewModel(dbManager, loginRepository, sharedPreferencesManager)
 
     @Provides
     @IntoMap
@@ -49,14 +50,20 @@ class UIViewModelModule {
     @Provides
     @IntoMap
     @ViewModelKey(DiaryViewModel::class)
-    fun provideDiaryViewModel(actualManager: ActualManager): ViewModel =
-        DiaryViewModel(actualManager)
+    fun provideDiaryViewModel(
+        actualManager: ActualManager,
+        diariesRepository: DiariesRepository
+    ): ViewModel =
+        DiaryViewModel(actualManager, diariesRepository)
 
     @Provides
     @IntoMap
     @ViewModelKey(DiaryDetailsViewModel::class)
-    fun provideDiaryDetailsViewModel(actualManager: ActualManager): ViewModel =
-        DiaryDetailsViewModel(actualManager)
+    fun provideDiaryDetailsViewModel(
+        actualManager: ActualManager,
+        diariesRepository: DiariesRepository
+    ): ViewModel =
+        DiaryDetailsViewModel(actualManager, diariesRepository)
 
     @Provides
     @IntoMap

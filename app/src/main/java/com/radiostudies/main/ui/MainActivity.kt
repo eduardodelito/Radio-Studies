@@ -7,7 +7,7 @@ import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import com.radiostudies.main.model.Diary
 import com.radiostudies.main.ui.fragment.*
-import com.radiostudies.main.ui.model.diary.DiaryModel
+import com.radiostudies.main.model.DiaryModel
 import com.radiostudies.main.ui.model.main.MainInfo
 import dagger.android.support.DaggerAppCompatActivity
 

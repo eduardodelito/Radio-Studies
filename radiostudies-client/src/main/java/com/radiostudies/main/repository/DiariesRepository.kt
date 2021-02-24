@@ -2,12 +2,13 @@ package com.radiostudies.main.repository
 
 import com.radiostudies.main.client.RadioStudiesApiClient
 import com.radiostudies.main.model.Diary
+import com.radiostudies.main.model.DiaryResponse
 
 interface DiariesRepository {
-    suspend fun sendDiaryList(diaries: List<Diary>): String?
+    suspend fun sendDiary(diary: Diary?): DiaryResponse?
 }
 
 class DiariesRepositoryImpl(private val client: RadioStudiesApiClient) : DiariesRepository {
 
-    override suspend fun sendDiaryList(diaries: List<Diary>) = client.getRadioStudiesResponse().sendDiaries(diaries)
+    override suspend fun sendDiary(diary: Diary?) = client.getRadioStudiesResponse().sendDiary(diary)
 }

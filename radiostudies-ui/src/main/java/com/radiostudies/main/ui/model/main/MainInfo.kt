@@ -6,6 +6,7 @@ import java.io.Serializable
  * Created by eduardo.delito on 10/1/20.
  */
 data class MainInfo(
+    var userId: String?,
     var panelNumber: String?,
     var memberNumber: String?,
     var municipality: String?,

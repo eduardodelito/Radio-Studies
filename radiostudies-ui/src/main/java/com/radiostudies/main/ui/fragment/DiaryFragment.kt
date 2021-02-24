@@ -11,7 +11,7 @@ import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.ui.adapter.DiaryAdapter
 import com.radiostudies.main.ui.fragment.databinding.DiaryFragmentBinding
 import com.radiostudies.main.ui.model.diary.DiaryForm
-import com.radiostudies.main.ui.model.diary.DiaryModel
+import com.radiostudies.main.model.DiaryModel
 import com.radiostudies.main.ui.model.diary.DiaryModelViewState
 import com.radiostudies.main.ui.viewmodel.DiaryViewModel
 import kotlinx.android.synthetic.main.diary_fragment.*

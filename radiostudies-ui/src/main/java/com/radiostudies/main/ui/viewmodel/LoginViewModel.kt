@@ -3,9 +3,9 @@ package com.radiostudies.main.ui.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.radiostudies.main.LoginRepository
+import com.radiostudies.main.common.manager.SharedPreferencesManager
 import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.manager.DBManager
-import com.radiostudies.main.model.User
 import com.radiostudies.main.ui.fragment.R
 import com.radiostudies.main.ui.mapper.userModelToUserEntity
 import com.radiostudies.main.ui.model.login.*
@@ -13,14 +13,14 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.json.JSONObject
 import java.util.*
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
 class LoginViewModel @Inject constructor(
     private var dbManager: DBManager,
-    private var loginRepository: LoginRepository
+    private var loginRepository: LoginRepository,
+    private var sharedPreferencesManager: SharedPreferencesManager
 ) : BaseViewModel(),
     CoroutineScope {
 
@@ -86,13 +86,14 @@ class LoginViewModel @Inject constructor(
                     login.postValue(LoginSuccessModel(true))
                 } else {
                     val loginUser = loginRepository.login(mUserName, mPassword)
+                    sharedPreferencesManager.saveUserId(USER_ID, loginUser?.UserID)
                     loginUser?.let {
                         dbManager.insertUser(it.userModelToUserEntity())
                     }
                     login.postValue(LoginSuccessModel(true))
                 }
             } catch (e: Exception) {
-                login.postValue(ErrorModel(R.string.invalid))
+                login.postValue(ErrorModel(e.message))
                 login.postValue(LoginSuccessModel(false))
                 e.printStackTrace()
             }
@@ -101,5 +102,6 @@ class LoginViewModel @Inject constructor(
 
     companion object {
         private const val EMPTY_STRING = ""
+        private const val USER_ID = "user_id"
     }
 }

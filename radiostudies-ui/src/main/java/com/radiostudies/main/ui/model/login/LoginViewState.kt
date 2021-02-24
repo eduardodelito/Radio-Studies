@@ -6,4 +6,4 @@ package com.radiostudies.main.ui.model.login
 sealed class LoginViewState
 class LoginValidModel(var isValid: Boolean) : LoginViewState()
 class LoginSuccessModel(var isSuccess: Boolean) : LoginViewState()
-class ErrorModel(val message: Int) : LoginViewState()
+class ErrorModel(val message: String?) : LoginViewState()

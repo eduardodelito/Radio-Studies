@@ -14,7 +14,7 @@ import com.radiostudies.main.model.Diary
 import com.radiostudies.main.ui.fragment.databinding.DiaryDetailsFragmentBinding
 import com.radiostudies.main.ui.model.DiaryDetailsForm
 import com.radiostudies.main.ui.model.DiaryDetailsViewState
-import com.radiostudies.main.ui.model.diary.DiaryModel
+import com.radiostudies.main.model.DiaryModel
 import com.radiostudies.main.ui.viewmodel.DiaryDetailsViewModel
 import kotlinx.android.synthetic.main.diary_details_fragment.*
 import javax.inject.Inject
@@ -68,6 +68,10 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
                         it
                     )
                 }
+                true
+            }
+            R.id.send_menu -> {
+                viewModel.sendDiaries(diaryModel)
                 true
             }
             else -> super.onOptionsItemSelected(item)

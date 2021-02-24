@@ -1,12 +1,12 @@
-package com.radiostudies.main.ui.model.diary
+package com.radiostudies.main.model
 
-import com.radiostudies.main.model.Diary
 import java.io.Serializable
 
 /**
  * Created by eduardo.delito on 10/11/20.
  */
 data class DiaryModel(
+    val userId: String?,
     val panelNumber: String?,
     val memberNumber: String?,
     val nameOfRespondent: String?,
@@ -15,3 +15,5 @@ data class DiaryModel(
     val selectedArea: String?,
     val diary: Diary
 ) : Serializable
+
+data class DiaryResponse(val status: String?, val code: Int?)

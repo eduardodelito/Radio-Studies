@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.radiostudies.main.ui.fragment.R
 import com.radiostudies.main.ui.fragment.databinding.ItemDiaryBinding
-import com.radiostudies.main.ui.model.diary.DiaryModel
+import com.radiostudies.main.model.DiaryModel
 
 /**
  * Created by eduardo.delito on 10/11/20.

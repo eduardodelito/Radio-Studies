@@ -408,6 +408,7 @@ class ActualQuestionsViewModel @Inject constructor(
                 mainInfo?.timeEnd = getTime()
                 val mainInfoString = Gson().toJson(mainInfo)
                 val diary = Diary(
+                    mainInfo?.userId,
                     mainInfo?.panelNumber,
                     mainInfo?.memberNumber,
                     mainInfoString,

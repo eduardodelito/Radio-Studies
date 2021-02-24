@@ -6,6 +6,7 @@ import java.io.Serializable
  * Created by eduardo.delito on 10/11/20.
  */
 data class Diary(
+    var userId: String?,
     var panelNumber: String?,
     var memberNumber: String?,
     var mainInfo: String?,

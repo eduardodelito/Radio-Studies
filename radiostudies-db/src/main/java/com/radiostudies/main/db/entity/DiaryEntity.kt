@@ -12,6 +12,7 @@ import com.radiostudies.main.model.Diaries
 data class DiaryEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
+    @ColumnInfo(name = "userId") var userId: String?,
     @ColumnInfo(name = "panelNumber") var panelNumber: String?,
     @ColumnInfo(name = "memberNumber") var memberNumber: String?,
     @ColumnInfo(name = "mainInfo") var mainInfo: String?,

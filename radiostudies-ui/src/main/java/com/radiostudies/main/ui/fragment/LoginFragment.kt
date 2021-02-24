@@ -71,7 +71,7 @@ class LoginFragment : BaseFragment<LoginFragmentBinding, LoginViewModel>() {
                 loading_layout.visibility = View.GONE
             }
 
-            is ErrorModel -> login_error_message.setViewVisibility(getString(state.message))
+            is ErrorModel -> login_error_message.setViewVisibility(state.message)
         }
     }
 
