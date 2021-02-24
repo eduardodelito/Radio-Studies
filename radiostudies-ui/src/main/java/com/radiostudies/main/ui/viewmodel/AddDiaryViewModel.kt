@@ -2,10 +2,10 @@ package com.radiostudies.main.ui.viewmodel
 
 import com.radiostudies.main.common.livedata.SingleLiveEvent
 import com.radiostudies.main.common.viewmodel.BaseViewModel
-import com.radiostudies.main.db.entity.Diaries
-import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.db.manager.ActualManager
-import com.radiostudies.main.db.model.Diary
+import com.radiostudies.main.model.Diaries
+import com.radiostudies.main.model.Diary
+import com.radiostudies.main.model.Option
 import com.radiostudies.main.ui.mapper.diaryModelToDiaryEntity
 import com.radiostudies.main.ui.model.diary.*
 import kotlinx.coroutines.CoroutineScope

@@ -1,6 +1,6 @@
 package com.radiostudies.main.ui.model.diary
 
-import com.radiostudies.main.db.model.Diary
+import com.radiostudies.main.model.Diary
 import java.io.Serializable
 
 /**

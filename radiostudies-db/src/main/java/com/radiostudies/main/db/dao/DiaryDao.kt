@@ -2,8 +2,8 @@ package com.radiostudies.main.db.dao
 
 import androidx.room.Dao
 import androidx.room.Query
-import com.radiostudies.main.db.entity.Diaries
 import com.radiostudies.main.db.entity.DiaryEntity
+import com.radiostudies.main.model.Diaries
 
 /**
  * Created by eduardo.delito on 10/11/20.

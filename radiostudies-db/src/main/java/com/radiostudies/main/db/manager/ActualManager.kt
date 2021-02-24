@@ -3,6 +3,8 @@ package com.radiostudies.main.db.manager
 import com.radiostudies.main.db.dao.*
 import com.radiostudies.main.db.entity.*
 import com.radiostudies.main.db.model.ActualQuestion
+import com.radiostudies.main.model.Diaries
+import com.radiostudies.main.model.Option
 
 /**
  * Created by eduardo.delito on 10/4/20.

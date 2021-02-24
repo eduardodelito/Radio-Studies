@@ -17,8 +17,8 @@ import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.getJsonDataFromAsset
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.common.util.setEnable
-import com.radiostudies.main.db.entity.Option
-import com.radiostudies.main.db.model.Diary
+import com.radiostudies.main.model.Diary
+import com.radiostudies.main.model.Option
 import com.radiostudies.main.ui.fragment.databinding.AddDiaryFragmentBinding
 import com.radiostudies.main.ui.model.diary.*
 import com.radiostudies.main.ui.viewmodel.AddDiaryViewModel

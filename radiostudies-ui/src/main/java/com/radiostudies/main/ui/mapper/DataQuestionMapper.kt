@@ -1,7 +1,7 @@
 package com.radiostudies.main.ui.mapper
 
 import com.radiostudies.main.db.entity.DataQuestionEntity
-import com.radiostudies.main.db.model.DataQuestion
+import com.radiostudies.main.model.DataQuestion
 
 /**
  * Created by eduardo.delito on 10/11/20.

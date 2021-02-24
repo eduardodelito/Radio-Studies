@@ -1,5 +1,6 @@
 package com.radiostudies.main.client
 
+import com.radiostudies.main.BuildConfig
 import okhttp3.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -14,7 +15,7 @@ class RadioStudiesApiClient(okHttp: OkHttpClient.Builder) : Interceptor, Authent
         retrofit = Retrofit.Builder()
             .client(okHttp.build())
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("http://apiservices.phoenixkm.net/api/")
+            .baseUrl(BuildConfig.BASE_HTTP_URL)
             .build()
     }
 

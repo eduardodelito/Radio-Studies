@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Transaction
 import com.radiostudies.main.db.entity.DataQuestionEntity
-import com.radiostudies.main.db.entity.Option
+import com.radiostudies.main.model.Option
 
 /**
  * Created by eduardo.delito on 10/8/20.

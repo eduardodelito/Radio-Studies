@@ -1,6 +1,6 @@
 package com.radiostudies.main.ui.model
 
-import com.radiostudies.main.db.entity.Diaries
+import com.radiostudies.main.model.Diaries
 
 /**
  * Created by eduardo.delito on 10/26/20.

@@ -3,6 +3,7 @@ package com.radiostudies.main.db.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.radiostudies.main.model.Option
 
 /**
  * Created by eduardo.delito on 10/3/20.

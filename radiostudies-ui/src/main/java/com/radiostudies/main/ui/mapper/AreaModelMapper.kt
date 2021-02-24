@@ -1,7 +1,7 @@
 package com.radiostudies.main.ui.mapper
 
 import com.radiostudies.main.db.entity.AreaEntity
-import com.radiostudies.main.db.entity.Option
+import com.radiostudies.main.model.Option
 
 /**
  * Created by eduardo.delito on 10/4/20.

@@ -5,7 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.radiostudies.main.db.entity.AreaEntity
-import com.radiostudies.main.db.entity.Option
+import com.radiostudies.main.model.Option
 
 /**
  * Created by eduardo.delito on 10/3/20.

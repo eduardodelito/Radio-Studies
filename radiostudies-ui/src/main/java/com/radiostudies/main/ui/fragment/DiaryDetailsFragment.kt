@@ -9,8 +9,8 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.reObserve
-import com.radiostudies.main.db.entity.Diaries
-import com.radiostudies.main.db.model.Diary
+import com.radiostudies.main.model.Diaries
+import com.radiostudies.main.model.Diary
 import com.radiostudies.main.ui.fragment.databinding.DiaryDetailsFragmentBinding
 import com.radiostudies.main.ui.model.DiaryDetailsForm
 import com.radiostudies.main.ui.model.DiaryDetailsViewState

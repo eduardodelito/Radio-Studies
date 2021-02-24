@@ -1,7 +1,7 @@
 package com.radiostudies.main.ui.mapper
 
 import com.radiostudies.main.db.entity.DiaryEntity
-import com.radiostudies.main.db.model.Diary
+import com.radiostudies.main.model.Diary
 
 /**
  * Created by eduardo.delito on 10/11/20.

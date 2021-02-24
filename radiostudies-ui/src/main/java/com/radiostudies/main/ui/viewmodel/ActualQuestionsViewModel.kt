@@ -6,11 +6,11 @@ import com.radiostudies.main.common.manager.SharedPreferencesManager
 import com.radiostudies.main.common.util.getCurrentDateTime
 import com.radiostudies.main.common.util.toStringDateTime
 import com.radiostudies.main.common.viewmodel.BaseViewModel
-import com.radiostudies.main.db.entity.Option
 import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.db.model.ActualQuestion
-import com.radiostudies.main.db.model.DataQuestion
-import com.radiostudies.main.db.model.Diary
+import com.radiostudies.main.model.DataQuestion
+import com.radiostudies.main.model.Diary
+import com.radiostudies.main.model.Option
 import com.radiostudies.main.ui.mapper.*
 import com.radiostudies.main.ui.model.actual.*
 import com.radiostudies.main.ui.model.main.MainInfo

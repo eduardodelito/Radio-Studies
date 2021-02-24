@@ -1,6 +1,4 @@
-package com.radiostudies.main.db.model
-
-import com.radiostudies.main.db.entity.Option
+package com.radiostudies.main.model
 
 /**
  * Created by eduardo.delito on 10/8/20.

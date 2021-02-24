@@ -16,8 +16,8 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
 import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.*
-import com.radiostudies.main.db.entity.Option
-import com.radiostudies.main.db.model.DataQuestion
+import com.radiostudies.main.model.DataQuestion
+import com.radiostudies.main.model.Option
 import com.radiostudies.main.ui.fragment.databinding.ActualQuestionsFragmentBinding
 import com.radiostudies.main.ui.model.actual.*
 import com.radiostudies.main.ui.model.main.MainInfo

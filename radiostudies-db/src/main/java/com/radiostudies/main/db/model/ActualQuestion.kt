@@ -1,6 +1,6 @@
 package com.radiostudies.main.db.model
 
-import com.radiostudies.main.db.entity.Option
+import com.radiostudies.main.model.Option
 import java.io.Serializable
 
 /**
