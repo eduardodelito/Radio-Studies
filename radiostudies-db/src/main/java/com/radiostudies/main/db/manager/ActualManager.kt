@@ -45,6 +45,8 @@ interface ActualManager {
     fun isPanelNUmberExist(panelNumber: String?): Boolean
 
     fun queryDiary(panelNumber: String?): DiaryEntity?
+
+    fun deleteSubmittedDiary(mainInfo: String?)
 }
 
 class ActualManagerImpl(
@@ -107,4 +109,8 @@ class ActualManagerImpl(
     override fun isPanelNUmberExist(panelNumber: String?) = diaryDao.panelNumberExist(panelNumber)
 
     override fun queryDiary(panelNumber: String?) =  diaryDao.getDiary(panelNumber)
+
+    override fun deleteSubmittedDiary(mainInfo: String?) {
+        diaryDao.deleteSubmittedDiary(mainInfo)
+    }
 }

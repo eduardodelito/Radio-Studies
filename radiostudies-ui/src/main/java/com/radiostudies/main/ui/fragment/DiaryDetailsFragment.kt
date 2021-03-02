@@ -11,10 +11,12 @@ import com.radiostudies.main.common.fragment.BaseFragment
 import com.radiostudies.main.common.util.reObserve
 import com.radiostudies.main.model.Diaries
 import com.radiostudies.main.model.Diary
+import com.radiostudies.main.model.DiaryModel
 import com.radiostudies.main.ui.fragment.databinding.DiaryDetailsFragmentBinding
+import com.radiostudies.main.ui.model.DeleteForm
 import com.radiostudies.main.ui.model.DiaryDetailsForm
 import com.radiostudies.main.ui.model.DiaryDetailsViewState
-import com.radiostudies.main.model.DiaryModel
+import com.radiostudies.main.ui.model.DiarySubmitForm
 import com.radiostudies.main.ui.viewmodel.DiaryDetailsViewModel
 import kotlinx.android.synthetic.main.diary_details_fragment.*
 import javax.inject.Inject
@@ -51,6 +53,22 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
             is DiaryDetailsForm -> {
                 addDetailsItem(state.diaries)
             }
+
+            is DiarySubmitForm -> {
+                if (state.complete == true) {
+                    viewModel.deleteSubmittedDiary(state.mainInfo)
+                } else {
+                    llProgressBar.visibility = View.GONE
+                }
+                submitDialog(state.diaryResponse.status)
+            }
+
+            is DeleteForm -> {
+                if (state.isDeleted == true) {
+                    llProgressBar.visibility = View.GONE
+                    listener?.navigateBack()
+                }
+            }
         }
     }
 
@@ -71,6 +89,7 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
                 true
             }
             R.id.send_menu -> {
+                llProgressBar.visibility = View.VISIBLE
                 viewModel.sendDiaries(diaryModel)
                 true
             }
@@ -189,6 +208,8 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
     }
 
     interface DiaryDetailsFragmentListener {
+        fun navigateBack()
+
         fun showAppBar(show: Boolean)
 
         fun navigateToAddDiaryScreen(view: View, selectedArea: String?, diary: Diary)
@@ -202,6 +223,16 @@ class DiaryDetailsFragment : BaseFragment<DiaryDetailsFragmentBinding, DiaryDeta
             dialog.dismiss()
         }
         builder.setNegativeButton(getString(R.string.no_label)) { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
+    }
+
+    private fun submitDialog(error: String?) {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setMessage(error)
+        builder.setNegativeButton(getString(R.string.ok_label)) { dialog, _ ->
             dialog.dismiss()
         }
         val dialog = builder.create()

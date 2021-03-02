@@ -30,4 +30,7 @@ interface DiaryDao : BaseDao<DiaryEntity> {
 
     @Query("SELECT * from DiaryEntity WHERE panelNumber = :panelNumber LIMIT 1")
     fun getDiary(panelNumber: String?): DiaryEntity
+
+    @Query("DELETE FROM DiaryEntity WHERE mainInfo = :mainInfo")
+    fun deleteSubmittedDiary(mainInfo: String?)
 }

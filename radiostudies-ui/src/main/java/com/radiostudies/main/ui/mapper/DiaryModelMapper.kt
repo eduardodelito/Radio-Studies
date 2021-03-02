@@ -9,7 +9,7 @@ import com.radiostudies.main.model.Diary
 fun Diary.diaryModelToDiaryEntity(): DiaryEntity {
     return DiaryEntity(
         id = 0,
-        userId = userId,
+        userId = UserID,
         panelNumber = panelNumber,
         memberNumber = memberNumber,
         mainInfo = mainInfo,
@@ -21,7 +21,7 @@ fun Diary.diaryModelToDiaryEntity(): DiaryEntity {
 fun List<DiaryEntity>.diaryEntityModelToDiaryList(): List<Diary> {
     return this.map {
         Diary(
-            userId = it.userId,
+            UserID = it.userId,
             panelNumber = it.panelNumber,
             memberNumber = it.memberNumber,
             mainInfo = it.mainInfo,

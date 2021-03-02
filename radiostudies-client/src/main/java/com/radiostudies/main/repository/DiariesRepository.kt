@@ -10,5 +10,7 @@ interface DiariesRepository {
 
 class DiariesRepositoryImpl(private val client: RadioStudiesApiClient) : DiariesRepository {
 
-    override suspend fun sendDiary(diary: Diary?) = client.getRadioStudiesResponse().sendDiary(diary)
+    override suspend fun sendDiary(diary: Diary?) = client.getRadioStudiesResponse().sendDiary(
+        listOf(diary)
+    )
 }

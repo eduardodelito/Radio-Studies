@@ -10,117 +10,127 @@
             type="com.radiostudies.main.ui.viewmodel.DiaryDetailsViewModel" />
     </data>
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/color_bg">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/padding16">
+            android:layout_height="match_parent"
+            android:background="@color/color_bg">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/details_panel_number"
-                style="@style/AvenirHeavy.Black"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin20"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="@{String.format(@string/diary_panel_number, diaryDetailsViewModel.diaryModel.panelNumber)}" />
+                android:padding="@dimen/padding16">
 
-            <View
-                android:id="@+id/line1"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorPrimaryDark"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/details_panel_number" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/details_panel_number"
+                    style="@style/AvenirHeavy.Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@{String.format(@string/diary_panel_number, diaryDetailsViewModel.diaryModel.panelNumber)}" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/details_member_number"
-                style="@style/AvenirHeavy.Black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin10"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line1"
-                tools:text="@{String.format(@string/diary_member_number, diaryDetailsViewModel.diaryModel.memberNumber)}" />
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_panel_number" />
 
-            <View
-                android:id="@+id/line2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorPrimaryDark"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/details_member_number" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/details_member_number"
+                    style="@style/AvenirHeavy.Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line1"
+                    tools:text="@{String.format(@string/diary_member_number, diaryDetailsViewModel.diaryModel.memberNumber)}" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/details_member_name"
-                style="@style/AvenirHeavy.Black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin10"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line2"
-                tools:text="@{String.format(@string/diary_name_of_respondent, diaryDetailsViewModel.diaryModel.nameOfRespondent)}" />
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_member_number" />
 
-            <View
-                android:id="@+id/line3"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorPrimaryDark"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/details_member_name" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/details_member_name"
+                    style="@style/AvenirHeavy.Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line2"
+                    tools:text="@{String.format(@string/diary_name_of_respondent, diaryDetailsViewModel.diaryModel.nameOfRespondent)}" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/details_date_from"
-                style="@style/AvenirHeavy.Black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin10"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line3"
-                tools:text="@{String.format(@string/date_from, diaryDetailsViewModel.diaryModel.dateFrom)}" />
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_member_name" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/details_date_to"
-                style="@style/AvenirHeavy.Black"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin10"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/details_date_from"
-                tools:text="@{String.format(@string/date_to, diaryDetailsViewModel.diaryModel.dateTo)}" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/details_date_from"
+                    style="@style/AvenirHeavy.Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line3"
+                    tools:text="@{String.format(@string/date_from, diaryDetailsViewModel.diaryModel.dateFrom)}" />
 
-            <View
-                android:id="@+id/line4"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorPrimaryDark"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/details_date_to" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/details_date_to"
+                    style="@style/AvenirHeavy.Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_date_from"
+                    tools:text="@{String.format(@string/date_to, diaryDetailsViewModel.diaryModel.dateTo)}" />
 
-            <LinearLayout
-                android:id="@+id/details_items_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line4"
-                android:layout_marginTop="@dimen/padding16"/>
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details_date_to" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                <LinearLayout
+                    android:id="@+id/details_items_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding16"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/llProgressBar"
+            layout="@layout/layout_progress_bar_with_text"
+            android:visibility="gone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -196,52 +196,56 @@
     "type": "Multiple Answer",
     "options": [
       {
-        "code": "",
+        "code": "1",
         "option": "Radio Cassette Recorder"
       },
       {
-        "code": "",
+        "code": "2",
         "option": "Stereo Component"
       },
       {
-        "code": "",
+        "code": "3",
         "option": "Karaoke"
       },
       {
-        "code": "",
+        "code": "4",
         "option": "DVD/CD Players"
       },
       {
-        "code": "",
+        "code": "5",
         "option": "Car Radio"
       },
       {
-        "code": "",
+        "code": "6",
         "option": "Transistor Radio"
       },
       {
-        "code": "",
+        "code": "7",
         "option": "Cellphone"
       },
       {
-        "code": "",
+        "code": "8",
         "option": "MP3"
       },
       {
-        "code": "",
+        "code": "9",
         "option": "iPod/iPad"
       },
       {
-        "code": "",
+        "code": "0",
         "option": "Internet Streaming (PC/ Laptop)"
       },
       {
-        "code": "",
+        "code": "A",
         "option": "Others(Specify)"
       },
       {
-        "code": "",
+        "code": "B",
         "option": "None"
+      },
+      {
+        "code": "C",
+        "option": "TV"
       }
     ],
     "isManualInput": 0
@@ -418,23 +422,23 @@
     "type": "Single Answer",
     "options": [
       {
-        "code": "",
+        "code": "1",
         "option": "SINGLE"
       },
       {
-        "code": "",
+        "code": "2",
         "option": "MARRIED"
       },
       {
-        "code": "",
+        "code": "3",
         "option": "SEPARATED/DIVORCED"
       },
       {
-        "code": "",
+        "code": "4",
         "option": "WIDOWED"
       },
       {
-        "code": "",
+        "code": "0",
         "option": "NOT KNOWN/REFUSED"
       }
     ],

@@ -1,17 +1,18 @@
 package com.radiostudies.main.ui.viewmodel
 
-import android.util.Log
-import com.google.gson.GsonBuilder
 import com.radiostudies.main.common.livedata.SingleLiveEvent
 import com.radiostudies.main.common.viewmodel.BaseViewModel
 import com.radiostudies.main.db.manager.ActualManager
 import com.radiostudies.main.model.Diaries
 import com.radiostudies.main.model.Diary
+import com.radiostudies.main.model.DiaryModel
+import com.radiostudies.main.model.DiaryResponse
 import com.radiostudies.main.repository.DiariesRepository
 import com.radiostudies.main.ui.mapper.diaryModelToDiaryEntity
+import com.radiostudies.main.ui.model.DeleteForm
 import com.radiostudies.main.ui.model.DiaryDetailsForm
 import com.radiostudies.main.ui.model.DiaryDetailsViewState
-import com.radiostudies.main.model.DiaryModel
+import com.radiostudies.main.ui.model.DiarySubmitForm
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -79,8 +80,21 @@ class DiaryDetailsViewModel @Inject constructor(
     }
 
     fun sendDiaries(diaryModel: DiaryModel?) {
-        launch {
-            sendDiariesToService(diaryModel)
+        val diaries = diaryModel?.diary?.diaries
+        val value = diaries?.find { selectedDiaries -> selectedDiaries.dayOfStudy[0].option == DAY_7 }
+        if (diaries?.size == 7 && value != null) {
+            launch {
+                sendDiariesToService(diaryModel)
+            }
+        } else {
+            diaryDetailsState.postValue(
+                DiarySubmitForm(
+                    false, DiaryResponse(
+                        "Incomplete diary.",
+                        500
+                    )
+                )
+            )
         }
     }
 
@@ -88,13 +102,42 @@ class DiaryDetailsViewModel @Inject constructor(
         withContext(Dispatchers.IO) {
             try {
                 diaryModel?.let {
-                    Log.d("JSON", GsonBuilder().create().toJson(it.diary))
                     val diaryResponse = diariesRepository.sendDiary(it.diary)
-                    println("${diaryResponse?.status}=========${diaryResponse?.code}")
+                    diaryDetailsState.postValue(
+                        DiarySubmitForm(
+                            true, DiaryResponse(
+                                diaryResponse?.status,
+                                diaryResponse?.code
+                            ), it.diary.mainInfo
+                        )
+                    )
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
+                diaryDetailsState.postValue(DiarySubmitForm(false, DiaryResponse(e.message, 500)))
             }
         }
+    }
+
+    fun deleteSubmittedDiary(mainInfo: String?) {
+        launch {
+            deleteSubmittedDiaryFromDB(mainInfo)
+        }
+    }
+
+    private suspend fun deleteSubmittedDiaryFromDB(mainInfo: String?) {
+        withContext(Dispatchers.IO) {
+            try {
+                actualManager.deleteSubmittedDiary(mainInfo)
+                diaryDetailsState.postValue(DeleteForm(true))
+            } catch (e: Exception) {
+                e.printStackTrace()
+                diaryDetailsState.postValue(DeleteForm(false))
+            }
+        }
+    }
+
+    companion object {
+        private const val DAY_7 = "Day 7"
     }
 }

@@ -12,5 +12,5 @@ interface RadioStudiesApiService {
     suspend fun login(@Body body: Login): User?
 
     @POST("api/Panels")
-    suspend fun sendDiary(@Body body: Diary?): DiaryResponse?
+    suspend fun sendDiary(@Body diaryList: List<Diary?>): DiaryResponse?
 }
