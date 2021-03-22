@@ -18,6 +18,8 @@ interface ActualManager {
 
     fun queryQuestion(qID: Int): ActualQuestion
 
+    fun queryActualQuestions(): List<ActualQuestionEntity>
+
     fun queryAreas(): List<Option>
 
     fun saveDataQuestion(dataQuestionEntity: DataQuestionEntity)
@@ -71,6 +73,9 @@ class ActualManagerImpl(
         actualQuestionDao.insertActualQuestion(actualQuestionEntity)
     }
 
+    override fun queryActualQuestions(): List<ActualQuestionEntity> =
+        actualQuestionDao.queryActualQuestion()
+
     override fun queryQuestion(qID: Int) = actualQuestionDao.queryActualQuestion(qID)
 
     override fun queryAreas() = areaDao.queryArea()
@@ -108,7 +113,7 @@ class ActualManagerImpl(
 
     override fun isPanelNUmberExist(panelNumber: String?) = diaryDao.panelNumberExist(panelNumber)
 
-    override fun queryDiary(panelNumber: String?) =  diaryDao.getDiary(panelNumber)
+    override fun queryDiary(panelNumber: String?) = diaryDao.getDiary(panelNumber)
 
     override fun deleteSubmittedDiary(mainInfo: String?) {
         diaryDao.deleteSubmittedDiary(mainInfo)

@@ -15,6 +15,9 @@ interface ActualQuestionDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertActualQuestion(actualQuestionEntity: List<ActualQuestionEntity>)
 
+    @Query("SELECT * from ActualQuestionEntity ORDER BY id ASC")
+    fun queryActualQuestion(): MutableList<ActualQuestionEntity>
+
     @Query("SELECT * FROM ActualQuestionEntity WHERE qId = :qId LIMIT 1")
     fun queryActualQuestion(qId: Int): ActualQuestion
 

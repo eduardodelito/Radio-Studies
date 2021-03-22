@@ -21,3 +21,17 @@ fun List<ActualQuestion>.actualQuestionListModelToActualQuestionEntity(): List<A
         )
     }
 }
+
+fun List<ActualQuestionEntity>.actualQuestionEntityToActualQuestionListModel(): List<ActualQuestion> {
+    return this.map {
+        ActualQuestion(
+            qId = it.qId,
+            code = it.code,
+            header = it.header,
+            question = it.question,
+            type = it.type,
+            options = it.options,
+            isManualInput = it.isManualInput
+        )
+    }
+}

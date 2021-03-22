@@ -187,7 +187,7 @@ class ActualQuestionsFragment :
                         it
                     )
                 }
-                if (actualQuestion.isManualInput) {
+                if (actualQuestion.isManualInput == true) {
                     line3.visibility = View.GONE
                     load_options_label.visibility = View.GONE
                     manual_input.visibility = View.VISIBLE
@@ -516,6 +516,7 @@ class ActualQuestionsFragment :
                         selectedList.add(Option(code, item))
                     }
                 }
+                viewModel.reWriteActualQuestions(actual_question_number.text.toString(), selectedList)
                 addOptions(selectedList)
                 dialog.dismiss()
             }

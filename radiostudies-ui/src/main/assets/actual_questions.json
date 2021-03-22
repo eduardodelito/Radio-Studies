@@ -190,7 +190,7 @@
     "isManualInput": 0
   },
   {
-    "code": "Q5a",
+    "code": "Q5",
     "header": "",
     "question": "What type of radio device do you have in your home?",
     "type": "Multiple Answer",
@@ -251,9 +251,259 @@
     "isManualInput": 0
   },
   {
+    "code": "Q5a",
+    "header": "Does it have radio broadcast?",
+    "question": "Radio Cassette Recorder",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
     "code": "Q5b",
     "header": "Does it have radio broadcast?",
-    "question": "What transistor radio?",
+    "question": "Stereo Component",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q5c",
+    "header": "Does it have radio broadcast?",
+    "question": "Karaoke",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q5d",
+    "header": "Does it have radio broadcast?",
+    "question": "DVD/CD Players",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q5e",
+    "header": "Does it have radio broadcast?",
+    "question": "Car Radio",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q5f",
+    "header": "Does it have radio broadcast?",
+    "question": "Transistor Radio",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q5g",
+    "header": "Does it have radio broadcast?",
+    "question": "Cellphone",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q5h",
+    "header": "Does it have radio broadcast?",
+    "question": "MP3",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q5i",
+    "header": "Does it have radio broadcast?",
+    "question": "iPod/iPad",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q5j",
+    "header": "Does it have radio broadcast?",
+    "question": "Internet Streaming (PC/ Laptop)",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
+    "code": "Q5k",
+    "header": "Does it have radio broadcast?",
+    "question": "TV",
     "type": "Single Answer",
     "options": [
       {

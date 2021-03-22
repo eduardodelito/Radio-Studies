@@ -14,10 +14,10 @@ object Versions {
     const val versionCode = 1
     const val versionName = "1.0"
 
-    const val gradle = "4.2.0-beta04"
+    const val gradle = "7.0.0-alpha09"
 
     //Android
-    const val kotlin_version = "1.4.20"
+    const val kotlin_version = "1.4.21"
     const val core_ktx = "1.3.1"
     const val appcompat = "1.2.0"
     const val constraint_layout = "2.0.1"

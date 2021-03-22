@@ -33,12 +33,9 @@ class ActualQuestionsViewModel @Inject constructor(
 
     private val actualState = SingleLiveEvent<ActualQuestionViewState>()
     internal fun getActualLiveData(): SingleLiveEvent<ActualQuestionViewState> = actualState
-    private val actualQuestions = mutableListOf<ActualQuestion>()
+    private var origActualQuestions = mutableListOf<ActualQuestion>()
+    private var actualQuestions = mutableListOf<ActualQuestion>()
     var currentOptions = listOf<Option>()
-//    val devicesQuestion = mutableListOf<ActualQuestion>()
-//    var deviceIndex = -1
-
-    //    var selectedOptions = mutableListOf<Option>()
     var isSingleAnswer = false
     var selectedArea = ""
     private var id = -1
@@ -64,25 +61,6 @@ class ActualQuestionsViewModel @Inject constructor(
         sharedPreferencesManager.savePrefs(IS_CLEAR, isClear)
     }
 
-//    fun parseStation(station: String?, genderCode: String?) {
-//        val jsonArray = JSONArray(station)
-//        val stations = mutableListOf<Station>()
-//        for (i in 0 until jsonArray.length()) {
-//            val jsonObject = jsonArray.getJSONObject(i)
-//            val place = jsonObject.getString(PLACE)
-//            val stationsJSONArray = jsonObject.getJSONArray(OPTIONS)
-//            val options = mutableListOf<Option>()
-//            for (j in 0 until stationsJSONArray.length()) {
-//                val jsonArrayObj = stationsJSONArray.getJSONObject(j)
-//                val optionCode = jsonArrayObj.getString(CODE)
-//                val optionValue = jsonArrayObj.getString(OPTION)
-//                options.add(Option(optionCode, optionValue))
-//            }
-//            stations.add(Station(place, options))
-//        }
-//        insertStation(stations, genderCode)
-//    }
-
     private fun insertArea(areas: MutableList<Option>, genderCode: String?) {
         launch {
             insertAreaToDB(areas, genderCode)
@@ -99,23 +77,6 @@ class ActualQuestionsViewModel @Inject constructor(
         }
         actualState.postValue(ActualQuestionForm(ACTUAL_QUESTIONS, genderCode))
     }
-
-//    private fun insertStation(stations: MutableList<Station>, genderCode: String?) {
-//        launch {
-//            insertStationToDB(stations, genderCode)
-//        }
-//    }
-//
-//    private suspend fun insertStationToDB(stations: MutableList<Station>, genderCode: String?) {
-//        withContext(Dispatchers.IO) {
-//            try {
-//                actualManager.insertStation(stations.optionListModelToStationEntity())
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            }
-//        }
-//        actualState.postValue(ActualQuestionForm(ACTUAL_QUESTIONS, genderCode))
-//    }
 
     fun parseActualQuestions(actual: String?, genderCode: String?) {
         val jsonArray = JSONArray(actual)
@@ -176,7 +137,7 @@ class ActualQuestionsViewModel @Inject constructor(
                 selectedQId++
             }
         }
-
+        origActualQuestions = actualQuestions
         insertActualQuestion(actualQuestions)
     }
 
@@ -266,22 +227,6 @@ class ActualQuestionsViewModel @Inject constructor(
         }
     }
 
-//    private suspend fun loadStationsFromDB(station: String?) {
-//        withContext(Dispatchers.IO) {
-//            try {
-//                val newOptions = mutableListOf<Option>()
-//                currentOptions = actualManager.getSelectedArea(selectedArea)
-//                currentOptions.forEach {
-//                    if (!it.option.contains(station.toString()))
-//                        newOptions.add(it)
-//                }
-//                currentOptions = newOptions
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            }
-//        }
-//    }
-
     private suspend fun queryActualQuestionFromDB(qId: Int, isPlus: Boolean) {
         withContext(Dispatchers.IO) {
             try {
@@ -348,7 +293,7 @@ class ActualQuestionsViewModel @Inject constructor(
 
     fun validateCode(codeStr: String, panelNumber: String?) {
         val code = arrayOf(
-            Q1, Q2, Q2A, Q3, Q4, Q5a, Q5b, Q6, Q7,
+            Q1, Q2, Q2A, Q3, Q4, Q5, Q5a, Q5b, Q5c, Q5d, Q5e, Q5f, Q5g, Q5h, Q5i, Q5j, Q5k, Q6, Q7,
             Q26, Q27a, Q27b, Q27c, Q27d, Q27e, Q27f, Q27g, Q28, Q29
         )
         if (code.contains(codeStr)) {
@@ -459,6 +404,52 @@ class ActualQuestionsViewModel @Inject constructor(
         }
     }
 
+    fun reWriteActualQuestions(selectedCode: String, options: List<Option>) {
+        if (selectedCode == "Q5") {
+            launch {
+                reWriteActualQuestions(options)
+            }
+        }
+
+    }
+
+    private suspend fun reWriteActualQuestions(options: List<Option>) {
+        val newActualQuestions = mutableListOf<ActualQuestion>()
+        var newIndex = 0
+        withContext(Dispatchers.IO) {
+            try {
+                origActualQuestions.forEach { actualQuestion ->
+                    actualQuestion.code?.let {
+                        if (it.contains("Q5")) {
+                            if (it == "Q5") {
+                                actualQuestion.qId = newIndex
+                                newActualQuestions.add(actualQuestion)
+                                newIndex++
+                            }
+                            options.forEach { option ->
+                                if (option.option == actualQuestion.question) {
+                                    actualQuestion.qId = newIndex
+                                    actualQuestion.question = option.option
+                                    newActualQuestions.add(actualQuestion)
+                                    newIndex++
+                                }
+                            }
+                        } else {
+                            actualQuestion.qId = newIndex
+                            newActualQuestions.add(actualQuestion)
+                            newIndex++
+
+                        }
+                    }
+                }
+                actualQuestions = newActualQuestions
+                actualManager.insertActualQuestion(actualQuestions.actualQuestionListModelToActualQuestionEntity())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
     private fun getTime() = getCurrentDateTime(null, null,0).toStringDateTime(TIME_FORMAT)
 
     companion object {
@@ -469,8 +460,18 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val Q2A = "Q2a"
         private const val Q3 = "Q3"
         private const val Q4 = "Q4"
+        private const val Q5 = "Q5"
         private const val Q5a = "Q5a"
         private const val Q5b = "Q5b"
+        private const val Q5c = "Q5c"
+        private const val Q5d = "Q5d"
+        private const val Q5e = "Q5e"
+        private const val Q5f = "Q5f"
+        private const val Q5g = "Q5g"
+        private const val Q5h = "Q5h"
+        private const val Q5i = "Q5i"
+        private const val Q5j = "Q5j"
+        private const val Q5k = "Q5k"
         private const val Q6 = "Q6"
         private const val Q7 = "Q7"
         private const val Q11 = "Q11"

@@ -35,6 +35,18 @@ interface DataQuestionDao: BaseDao<DataQuestionEntity> {
         } else {
             if (dq.code == Q2) {
                 deleteByQCode(Q2a)
+            } else if (dq.code == Q5) {
+                deleteByQCode(Q5a)
+                deleteByQCode(Q5b)
+                deleteByQCode(Q5c)
+                deleteByQCode(Q5d)
+                deleteByQCode(Q5e)
+                deleteByQCode(Q5f)
+                deleteByQCode(Q5g)
+                deleteByQCode(Q5h)
+                deleteByQCode(Q5i)
+                deleteByQCode(Q5j)
+                deleteByQCode(Q5k)
             }
             update(dq.code, dataQuestionEntity.options)
         }
@@ -43,5 +55,17 @@ interface DataQuestionDao: BaseDao<DataQuestionEntity> {
     companion object {
         private const val Q2 = "Q2"
         private const val Q2a = "Q2a"
+        private const val Q5 = "Q5"
+        private const val Q5a = "Q5a"
+        private const val Q5b = "Q5b"
+        private const val Q5c = "Q5c"
+        private const val Q5d = "Q5d"
+        private const val Q5e = "Q5e"
+        private const val Q5f = "Q5f"
+        private const val Q5g = "Q5g"
+        private const val Q5h = "Q5h"
+        private const val Q5i = "Q5i"
+        private const val Q5j = "Q5j"
+        private const val Q5k = "Q5k"
     }
 }
