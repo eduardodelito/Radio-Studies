@@ -526,6 +526,31 @@
     "isManualInput": 0
   },
   {
+    "code": "Q5l",
+    "header": "Does it have radio broadcast?",
+    "question": "Others(Specify)",
+    "type": "Single Answer",
+    "options": [
+      {
+        "code": "1",
+        "option": "AM"
+      },
+      {
+        "code": "2",
+        "option": "FM"
+      },
+      {
+        "code": "3",
+        "option": "BOTH"
+      },
+      {
+        "code": "4",
+        "option": "None"
+      }
+    ],
+    "isManualInput": 0
+  },
+  {
     "code": "Q6",
     "header": "",
     "question": "Number of Radio Sets Owned in the Household (including Car radio, portable radio, cellular phones with radio, etc.) ",

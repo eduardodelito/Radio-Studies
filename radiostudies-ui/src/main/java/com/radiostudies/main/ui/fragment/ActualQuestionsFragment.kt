@@ -130,7 +130,19 @@ class ActualQuestionsFragment :
                 val actualQuestion = state.actualQuestion
                 actual_question_number.text = actualQuestion.code
                 actual_question_header_label.setViewVisibility(actualQuestion.header)
-                actual_question_label.text = actualQuestion.question
+                actualQuestion.question?.let { question ->
+                    if (question.contains(OTHER)) {
+                        actualQuestion.code?.let { code ->
+                            if (code == CODE_Q5l)
+                                viewModel.queryQuestionNameForOther(question, CODE_Q5)
+                            else
+                                actual_question_label.text = actualQuestion.question
+                        }
+                    } else {
+                        actual_question_label.text = actualQuestion.question
+                    }
+                }
+
                 actual_prev_btn.setEnable(state.isPrevEnable)
                 actual_next_btn.setEnable(state.isNextEnable)
                 btn_save.visibility = View.GONE
@@ -207,6 +219,10 @@ class ActualQuestionsFragment :
                 if (!state.isPlus) {
                     viewModel.querySelectedAnswer(actualQuestion.code)
                 }
+            }
+
+            is LoadQuestionNameForOther -> {
+                actual_question_label.text = state.nameForOther
             }
 
             is SelectedOptionForm -> {
@@ -616,6 +632,8 @@ class ActualQuestionsFragment :
         private const val CODE_07 = "07"
         private const val CODE_10 = "10"
         private const val CODE_05_06_07 = "05,06,07"
+        private const val CODE_Q5 = "Q5"
+        private const val CODE_Q5l = "Q5l"
 
         fun newInstance() = ActualQuestionsFragment()
     }

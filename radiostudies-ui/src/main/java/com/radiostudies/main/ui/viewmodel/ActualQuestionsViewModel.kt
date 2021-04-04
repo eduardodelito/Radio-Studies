@@ -420,8 +420,8 @@ class ActualQuestionsViewModel @Inject constructor(
             try {
                 origActualQuestions.forEach { actualQuestion ->
                     actualQuestion.code?.let {
-                        if (it.contains("Q5")) {
-                            if (it == "Q5") {
+                        if (it.contains(Q5)) {
+                            if (it == Q5) {
                                 actualQuestion.qId = newIndex
                                 newActualQuestions.add(actualQuestion)
                                 newIndex++
@@ -444,6 +444,31 @@ class ActualQuestionsViewModel @Inject constructor(
                 }
                 actualQuestions = newActualQuestions
                 actualManager.insertActualQuestion(actualQuestions.actualQuestionListModelToActualQuestionEntity())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    fun queryQuestionNameForOther(question: String, code: String) {
+        launch {
+            questionNameForOther(question, code)
+        }
+    }
+
+    private suspend fun questionNameForOther(question: String, code: String) {
+        withContext(Dispatchers.IO) {
+            try {
+                val dataQuestionEntity = actualManager.queryDataQuestion(code)
+                actualState.postValue(
+                    LoadQuestionNameForOther(
+                        "$question - ${
+                            dataQuestionEntity?.options?.get(
+                                0
+                            )?.option
+                        }"
+                    )
+                )
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -494,7 +519,6 @@ class ActualQuestionsViewModel @Inject constructor(
         private const val CODE_5 = "5"
         private const val PLACE = "place"
         private const val HEADER = "header"
-//        private const val CHILD_QUESTIONS = "childQuestions"
         private const val QUESTION = "question"
         private const val TYPE = "type"
         private const val GENDER_CODE = "genderCode"

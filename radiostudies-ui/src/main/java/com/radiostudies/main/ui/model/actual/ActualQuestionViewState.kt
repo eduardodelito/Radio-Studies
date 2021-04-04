@@ -27,3 +27,5 @@ data class SelectedOptionForm(val selectedOptions: MutableList<Option>) :
 data class ActualQuestionComplete(val isComplete: Boolean) : ActualQuestionViewState()
 
 data class LoadOptions(val selectedOptions: List<Option>) : ActualQuestionViewState()
+
+data class LoadQuestionNameForOther(val nameForOther: String?) : ActualQuestionViewState()
