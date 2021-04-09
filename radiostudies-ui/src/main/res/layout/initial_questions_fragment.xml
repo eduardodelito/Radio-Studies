@@ -37,25 +37,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/screen_label" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/question_label"
-            style="@style/AvenirHeavy.Black"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin10"
+            android:layout_height="0dp"
+            android:fillViewport="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/question_number" />
+            app:layout_constraintTop_toBottomOf="@+id/question_number">
 
-        <LinearLayout
-            android:id="@+id/selection_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin10"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/question_label" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding150">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/question_label"
+                    style="@style/AvenirHeavy.Black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10" />
+
+                <LinearLayout
+                    android:id="@+id/selection_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </ScrollView>
 
         <Button
             android:id="@+id/prev_btn"

@@ -1,9 +1,9 @@
 [
   {
     "number" : 1,
-    "question" : "Are you willing to participate in the study?",
+    "question" : "Ma’am/Sir, bago tayo magsimula, nais kong ipaalam sa inyo na kukuhanin namin ang inyong impormasyon para sa pagpapanatili ng kalidad ng interbyu. Sa pagsang-ayon dito, tinatanggap  ninyo na ang lahat ng datos na ibibigay ninyo sa amin at lahat ng makukuha namin sa survey na ito, kasama ang lahat ng personal na impormasyon na ibibgay ninyo, ay kokolektahin, itatabi,  gagamitin at ipo-proseso para sa aming pag-aaral. Tinitiyak namin na ang inyong personal na impormasyon ay pananalitihin naming ligtas at pribado sa pamamagitan ng pagpapatupad ng mga naaayong hakbangin sa pagpo-proteka ng datos.\nSumasang-ayon ba kayo na makibahagi sa aming survey?\nMa’am/Sir, before we start with the survey, please be informed that we will get your information for quality assurance purposes. By agreeing, you acknowledge that all data you give us and the data we collect from this survey, including all personal information you provide, shall be collected, stored, used and processed for research purposes. Rest assured that we will keep your personal information secure and private through our implementation of reasonable data protection measures as the circumstances warrant.\n\nAre you willing to participate in the study?\n",
     "type" : "Single Answer",
-    "options" : ["AGREE", "DISAGREE"],
+    "options" : ["Sumasang-ayon / Agree", "Hindi Sumasang-ayon / Disagree"],
     "action" : ["Continue", "Terminate"]
   },
   {

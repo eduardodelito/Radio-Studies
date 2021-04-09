@@ -271,7 +271,7 @@ class InitialQuestionsFragment :
     }
 
     companion object {
-        private const val DISAGREE = "DISAGREE"
+        private const val DISAGREE = "Hindi Sumasang-ayon / Disagree"
         private const val NONE_OF_THE_ABOVE = "NONE OF THE ABOVE"
         private const val LOGOUT = "logout"
         private const val DEFAULT_END_QUESTION = "Have you or any immediate member of your family participated in any promos in your barangay in the past six (6) months"

@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Radio_Studies.iml" filepath="$PROJECT_DIR$/.idea/modules/Radio_Studies.iml" group="Radio_Studies" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Radio_Studies_buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/Radio_Studies_buildSrc.iml" group="Radio Studies/Radio_Studies_buildSrc" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="Radio Studies/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/radiostudies-common/radiostudies-common.iml" filepath="$PROJECT_DIR$/.idea/modules/radiostudies-common/radiostudies-common.iml" group="Radio Studies/radiostudies-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Radio_Studies.iml" filepath="$PROJECT_DIR$/.idea/modules/Radio_Studies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Radio_Studies.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Radio_Studies.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Radio_Studies.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/Radio_Studies.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/radiostudies-client/Radio_Studies.radiostudies-client.iml" filepath="$PROJECT_DIR$/.idea/modules/radiostudies-client/Radio_Studies.radiostudies-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/radiostudies-common/Radio_Studies.radiostudies-common.iml" filepath="$PROJECT_DIR$/.idea/modules/radiostudies-common/Radio_Studies.radiostudies-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/radiostudies-db/Radio_Studies.radiostudies-db.iml" filepath="$PROJECT_DIR$/.idea/modules/radiostudies-db/Radio_Studies.radiostudies-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/radiostudies-ui/Radio_Studies.radiostudies-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/radiostudies-ui/Radio_Studies.radiostudies-ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/radiostudies-db/radiostudies-db.iml" filepath="$PROJECT_DIR$/.idea/modules/radiostudies-db/radiostudies-db.iml" group="Radio Studies/radiostudies-db" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/radiostudies-ui/radiostudies-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/radiostudies-ui/radiostudies-ui.iml" group="Radio Studies/radiostudies-ui" />
     </modules>
   </component>
 </project>
