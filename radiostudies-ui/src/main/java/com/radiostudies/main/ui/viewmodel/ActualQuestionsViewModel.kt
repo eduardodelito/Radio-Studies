@@ -309,7 +309,7 @@ class ActualQuestionsViewModel @Inject constructor(
                 if (actualManager.isPanelNUmberExist(panelNumber)) {
                     val diary = actualManager.queryDiary(panelNumber)
                     val dataQuestion = diary?.dataQuestions?.find { it.code == codeStr }
-                    actualState.postValue(dataQuestion?.options?.let { LoadOptions(it) })
+                    actualState.postValue(dataQuestion?.options?.let { LoadOptions(dataQuestion.code, it) })
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -405,12 +405,13 @@ class ActualQuestionsViewModel @Inject constructor(
     }
 
     fun reWriteActualQuestions(selectedCode: String, options: List<Option>) {
-        if (selectedCode == "Q5") {
+        if (selectedCode == Q5) {
             launch {
                 reWriteActualQuestions(options)
             }
+        } else if (selectedCode == Q1) {
+            selectedArea = options[0].option
         }
-
     }
 
     private suspend fun reWriteActualQuestions(options: List<Option>) {

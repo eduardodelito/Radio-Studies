@@ -233,6 +233,9 @@ class ActualQuestionsFragment :
                 if (!state.selectedOptions.isNullOrEmpty()) {
                     val options = Collections.unmodifiableList(state.selectedOptions)
                     addOptions(options)
+                    state.selectedCode?.let {
+                        viewModel.reWriteActualQuestions(it, options)
+                    }
                 }
             }
 
@@ -626,7 +629,6 @@ class ActualQuestionsFragment :
         private const val MAIN_INFO = "main_info"
         private const val MAX_HOURS = 24
         private const val EXIT = "exit Actual Questions"
-
         private const val CODE_05 = "05"
         private const val CODE_06 = "06"
         private const val CODE_07 = "07"
